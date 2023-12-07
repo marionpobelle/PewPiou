@@ -11,7 +11,7 @@ namespace Nano.Entity
 
         public EntityData Data { get => data; set => data = value; }
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             Data = new EntityData();
         }

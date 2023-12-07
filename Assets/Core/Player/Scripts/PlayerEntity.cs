@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Nano.Entity
+namespace Nano.Player
 {
-    public class PlayerEntity : Entity
+    public class PlayerEntity : Entity.Entity
     {
         //casts our data as player data
         public PlayerData playerData => (PlayerData)Data;
 
-        protected override void Start()
+        protected override void Awake()
         {
             Data = new PlayerData();
         }
