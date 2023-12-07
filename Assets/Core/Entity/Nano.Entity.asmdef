@@ -1,9 +1,8 @@
 {
-    "name": "Nano.Player",
+    "name": "Nano.Entity",
     "rootNamespace": "",
     "references": [
-        "GUID:12801b610db72d7459e9ccd6e76884a1",
-        "GUID:71b46394e3d9268479165a5f7f746498"
+        "GUID:12801b610db72d7459e9ccd6e76884a1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
