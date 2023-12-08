@@ -82,6 +82,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3102294281736776593}
   shieldCollider: {fileID: 9066931282230283505}
+  shieldPrefab: {fileID: 4134994799886400185, guid: 2a1d228c2be4b0d4d945069c31a7c854,
+    type: 3}
+  shieldSizeAugmentation: 1
+  shieldResetTime: 3
+  maxShieldSize: 10
+  maxNumberShield: 5
 --- !u!114 &-1819600930041283465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 3966735157569731449}
+  shieldManager: {fileID: 1700397858319444203}
 --- !u!114 &6263265036738986578
 MonoBehaviour:
   m_ObjectHideFlags: 0

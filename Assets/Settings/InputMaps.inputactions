@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ButtonNorth",
+                    "name": "ButtonSouth",
                     "type": "Button",
                     "id": "5500b2d9-0caf-4cd5-8bcb-d7cf21c562c2",
                     "expectedControlType": "Button",
@@ -79,11 +79,11 @@
                 {
                     "name": "",
                     "id": "d1ca8aa3-72fa-4b10-a38c-671aafbcfbc2",
-                    "path": "<Gamepad>/buttonNorth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ButtonNorth",
+                    "action": "ButtonSouth",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
