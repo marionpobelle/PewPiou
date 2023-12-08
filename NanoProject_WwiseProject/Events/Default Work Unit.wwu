@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="TestDefaultWwiseEvent" ID="{58F77A1D-8CBA-43A8-A508-1CE439E0F3CA}">
+					<ChildrenList>
+						<Action Name="" ID="{B9B7683D-B2C0-4313-97FA-0D7AD8169918}" ShortID="556643925">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="02 Footsteps, Wood Male Leather Sole" ID="{7584DF09-32AD-47B6-9986-142171FE8884}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
