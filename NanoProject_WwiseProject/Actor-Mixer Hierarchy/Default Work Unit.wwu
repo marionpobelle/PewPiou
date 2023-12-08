@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8290883E-6857-41B6-8948-3D852C4E3FDF}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{8290883E-6857-41B6-8948-3D852C4E3FDF}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="02 Footsteps, Wood Male Leather Sole" ID="{7584DF09-32AD-47B6-9986-142171FE8884}" ShortID="844279824">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="02 Footsteps, Wood Male Leather Sole" ID="{C9C6AA16-593E-4D57-B9C7-51691E8039C9}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.150470989793885"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.290194051745349"/>
+								<Property Name="LoopBegin" Type="Real64" Value="3.47045564771245"/>
+								<Property Name="LoopEnd" Type="Real64" Value="3.81385158455072"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="3.39522015281551"/>
+								<Property Name="TrimEnd" Type="Real64" Value="4.08254978061124"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>02 Footsteps, Wood Male Leather Sole.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="162369936"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="02 Footsteps, Wood Male Leather Sole" ID="{C9C6AA16-593E-4D57-B9C7-51691E8039C9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
