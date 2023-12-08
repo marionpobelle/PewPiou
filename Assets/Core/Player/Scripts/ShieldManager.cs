@@ -46,13 +46,13 @@ namespace Nano.Player
             switch (_shieldType)
             {
                 case Data.BulletType.Red:
-                    _newShield.GetComponent<MeshRenderer>().material.color = Color.red;
+                    _newShield.GetComponent<MeshRenderer>().material.color = new Color(1, 0, 0, .5f);
                     break;
                 case Data.BulletType.Blue:
-                    _newShield.GetComponent<MeshRenderer>().material.color = Color.blue;
+                    _newShield.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 1, .5f);
                     break;
                 case Data.BulletType.Green:
-                    _newShield.GetComponent<MeshRenderer>().material.color = Color.green;
+                    _newShield.GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0, .5f);
                     break;
             }
         }

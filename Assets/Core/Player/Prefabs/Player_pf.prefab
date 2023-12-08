@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 3966735157569731449}
+  shieldManager: {fileID: 1700397858319444203}
 --- !u!114 &6263265036738986578
 MonoBehaviour:
   m_ObjectHideFlags: 0
