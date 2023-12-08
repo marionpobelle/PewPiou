@@ -14,11 +14,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] protected float maxDurationPhase2 = 5.0f;
 
     protected Vector3 spawnPoint;
-    [SerializeField] float screenBorderOffset = 2.0f;
-    [SerializeField] Vector2 screenBoundX;
-    [SerializeField] Vector2 screenBoundY;
+    float screenBorderOffset = 2.0f;
+    Vector2 screenBoundX;
+    Vector2 screenBoundY;
 
-    [SerializeField] float screenInnerOffset = 2.0f;
+    float screenInnerOffset = 2.0f;
     protected Vector3 originScreenPoint;
 
     protected enum Pattern { Horizontal, Vertical, Circle };
@@ -31,6 +31,8 @@ public class EnemyMovement : MonoBehaviour
 
     protected void InitializeMovement()
     {
+        screenBoundX = new Vector2(0, 535);
+        screenBoundY = new Vector2(-34, 34);
         isRecruted = false;
         //Phase
         currentPhase = Phase.Phase0;

@@ -122,8 +122,8 @@ MonoBehaviour:
   maxDurationPhase1: 10
   maxDurationPhase2: 5
   screenBorderOffset: 2
-  screenBoundX: {x: 0, y: 100}
-  screenBoundY: {x: -100, y: 100}
+  screenBoundX: {x: 0, y: 535}
+  screenBoundY: {x: -34, y: 34}
   screenInnerOffset: 2
   animCurve:
     serializedVersion: 2
