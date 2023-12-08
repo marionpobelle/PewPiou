@@ -27,7 +27,7 @@ namespace Nano.Player
             shieldManager.AddShield(Data.BulletType.Blue);
         }
 
-        public void OnButtonNorth(InputValue value)
+        public void OnButtonSouth(InputValue value)
         {
             Debug.Log("BUTTON");
             shieldManager.AddShield(Data.BulletType.Green);

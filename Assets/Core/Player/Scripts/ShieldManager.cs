@@ -15,6 +15,7 @@ namespace Nano.Player
         [SerializeField] Shield shieldPrefab;
         [SerializeField] float shieldSizeAugmentation;
         [SerializeField] float shieldResetTime;
+        [SerializeField] float maxShieldSize;
         float shieldTimer;
         [SerializeField] int maxNumberShield;
         List<Shield> shieldList = new List<Shield>();
@@ -27,20 +28,19 @@ namespace Nano.Player
             if (shieldList.Count >= maxNumberShield) return;
             Shield _newShield = Instantiate(shieldPrefab, transform);
             _newShield.shieldType = _shieldType;
-            _newShield.fixedScale = _newShield.transform.localScale.x - shieldSizeAugmentation;
+            _newShield.fixedScale = maxShieldSize - shieldSizeAugmentation * shieldList.Count;
             _newShield.transform.localScale = Vector3.zero;
             shieldList.Add(_newShield);
             player.playerData.shieldTypeList.Add(_newShield.shieldType);
             for (int i = 0; i < shieldList.Count; i++)
             {
                 Shield _shield = shieldList[i];
-                _shield.fixedScale += shieldSizeAugmentation;
                 _shield.transform.DOScale(_shield.fixedScale + 0.3f, .3f).OnComplete(() =>
                 {
                     _shield.transform.DOScale(_shield.fixedScale, .1f);
                 });
             }
-            shieldCollider.radius = shieldSizeAugmentation / 2 * shieldList.Count + 0.5f;
+            if (shieldList.Count > 0) shieldCollider.radius = maxShieldSize / 2;
             shieldTimer = shieldResetTime;
 
             switch (_shieldType)
@@ -67,7 +67,7 @@ namespace Nano.Player
                 {
                     _shield.DOKill();
                     Destroy(_shield.gameObject);
-                    shieldCollider.radius = shieldSizeAugmentation / 2 * shieldList.Count + 1;
+                    shieldCollider.radius = .5f;
                 });
             });
         }

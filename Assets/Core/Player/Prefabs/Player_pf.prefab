@@ -85,6 +85,7 @@ MonoBehaviour:
     type: 3}
   shieldSizeAugmentation: 1
   shieldResetTime: 3
+  maxShieldSize: 10
   maxNumberShield: 5
 --- !u!114 &-1819600930041283465
 MonoBehaviour:
