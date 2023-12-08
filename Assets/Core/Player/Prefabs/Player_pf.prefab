@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1700397858319444203}
   - component: {fileID: -1819600930041283465}
   - component: {fileID: 6263265036738986578}
+  - component: {fileID: 1618316304505318745}
   - component: {fileID: 3019712171074787442}
   m_Layer: 0
   m_Name: Player_pf
@@ -66,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3102294281736776593}
   rb: {fileID: 3019712171074787442}
-  moveSpeed: 60
+  moveSpeed: 35
 --- !u!114 &1700397858319444203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +126,27 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1618316304505318745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045446031766755295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42276e73a7d7fc347be2ef15366b1791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xOffset: -2
+  yOffset: 0.6
+  lerpStrength: 10
+  followPlayerDelay: 0.05
+  noiseSpeed: 1
+  noiseStrength: 1
+  storedPlayerPos: []
+  TestFollowerObject: {fileID: 6247949361240894289, guid: a9befcabb5bb7c54eb04dd1f6dd033da,
+    type: 3}
 --- !u!54 &3019712171074787442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,7 +171,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &3532802493737266439

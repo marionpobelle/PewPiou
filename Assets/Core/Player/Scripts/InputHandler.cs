@@ -13,5 +13,15 @@ namespace Nano.Player
         {
             playerMovement.OnNewMoveInput(value.Get<Vector2>());
         }
+
+        public void OnButtonNorth(InputValue value)
+        {
+#if UNITY_EDITOR
+            if (value.Get<float>() > .5f)
+            {
+                GetComponent<SquadronManager>().TestAddSquadronMember();
+            }
+#endif
+        }
     }
 }
