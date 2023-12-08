@@ -17,25 +17,22 @@ namespace Nano.Player
 
         public void OnButtonEast(InputValue value)
         {
-            Debug.Log("BUTTON");
             shieldManager.AddShield(Data.BulletType.Red);
         }
 
         public void OnButtonWest(InputValue value)
         {
-            Debug.Log("BUTTON");
             shieldManager.AddShield(Data.BulletType.Blue);
         }
 
         public void OnButtonSouth(InputValue value)
         {
-            Debug.Log("BUTTON");
             shieldManager.AddShield(Data.BulletType.Green);
 #if UNITY_EDITOR
-            if (value.Get<float>() > .5f)
-            {
-                GetComponent<SquadronManager>().TestAddSquadronMember();
-            }
+            //if (value.Get<float>() > .5f)
+            //{
+            //    GetComponent<SquadronManager>().TestAddSquadronMember();
+            //}
 #endif
         }
     }
