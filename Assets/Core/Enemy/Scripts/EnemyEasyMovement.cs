@@ -6,19 +6,15 @@ using UnityEngine;
 
 public class EnemyEasyMovement : EnemyMovement
 {
-    [SerializeField]float movementHorizontalStep = 25.0f;
-    [SerializeField] float movementVerticalStep = 5.0f;
+    [SerializeField, Tooltip("How large the pattern is, float")]float movementHorizontalStep = 25.0f;
+    [SerializeField, Tooltip("How hight the pattern is, float")] float movementVerticalStep = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
         InitializeMovement();
         InitSequence();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     protected override void EnemyMovementLoop()

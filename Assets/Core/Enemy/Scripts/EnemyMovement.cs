@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System;
 using System.Linq;
+using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,9 +10,9 @@ public class EnemyMovement : MonoBehaviour
     protected enum Phase { Phase0, Phase1, Phase2 };
     protected Phase currentPhase;
 
-    [SerializeField] protected float maxDurationPhase0 = 5.0f;
-    [SerializeField] protected float maxDurationPhase1 = 10.0f;
-    [SerializeField] protected float maxDurationPhase2 = 5.0f;
+    [SerializeField, Tooltip("Duration Phase 0 in seconds")] protected float maxDurationPhase0 = 5.0f;
+    [SerializeField, Tooltip("Duration Phase 1 in seconds")] protected float maxDurationPhase1 = 10.0f;
+    [SerializeField, Tooltip("Duration Phase 2 in seconds")] protected float maxDurationPhase2 = 5.0f;
 
     protected Vector3 spawnPoint;
     float screenBorderOffset = 2.0f;
@@ -24,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
     protected enum Pattern { Horizontal, Vertical, Circle };
     protected Pattern pattern;
 
-    [SerializeField] protected AnimationCurve animCurve;
+    [SerializeField, Tooltip("Varies the speed of the object in one movement")] protected AnimationCurve animCurve;
     protected Sequence movementSequence;
 
     public bool isRecruted;
