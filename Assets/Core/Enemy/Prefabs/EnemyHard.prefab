@@ -118,9 +118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8c66cd87ab84747b12348e6c045ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDurationPhase0: 5
+  maxDurationPhase1: 10
+  maxDurationPhase2: 5
   screenBorderOffset: 2
-  screenBoundX: {x: 0, y: 100}
-  screenBoundY: {x: -100, y: 100}
+  screenBoundX: {x: 0, y: 535}
+  screenBoundY: {x: -34, y: 34}
   screenInnerOffset: 2
   animCurve:
     serializedVersion: 2
@@ -128,3 +131,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  isRecruted: 0
