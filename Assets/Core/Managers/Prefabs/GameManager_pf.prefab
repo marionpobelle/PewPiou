@@ -121,3 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfbe7077a3dd010419cb5e3711479f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyList:
+  - {fileID: 1127147056238669463, guid: 0646fc9a0acd645449aae86c17786e30, type: 3}
+  - {fileID: 1127147056238669463, guid: 04626d73c054dae4f85aac573f8dcc19, type: 3}
+  - {fileID: 1127147056238669463, guid: fab8460b0feb2594195d39d410bf4ebd, type: 3}
+  currentLevel: {fileID: 11400000, guid: 21c445b16e16ff1499169e73ca9d6534, type: 2}
