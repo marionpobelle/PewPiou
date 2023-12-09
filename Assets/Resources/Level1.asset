@@ -14,6 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseList:
   - startTime: 10
+    timeBetweenEachSpawn: 1
     enemyEntryList:
     - enemyType: 0
       number: 3
+  - startTime: 15
+    timeBetweenEachSpawn: 0.1
+    enemyEntryList:
+    - enemyType: 1
+      number: 2
+    - enemyType: 2
+      number: 1
+  - startTime: 24
+    timeBetweenEachSpawn: 1
+    enemyEntryList:
+    - enemyType: 1
+      number: 4
