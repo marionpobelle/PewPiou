@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class EnemyAverageMovement : EnemyMovement
 {
-    [SerializeField, Tooltip("How large the pattern is, float")] float movementHorizontalStep = 25.0f;
-    [SerializeField, Tooltip("How hight the pattern is, float")] float movementVerticalStep = 5.0f;
-
-    [SerializeField, Tooltip("Radius of the circle")] float rotationRadius = 20.0f;
+    [SerializeField, Tooltip("Radius of the circle")] float rotationRadius = 10.0f;
     [SerializeField, Tooltip("Speed at which the enemy goes in a circle")] float rotationSpeed = 30.0f;
 
     // Start is called before the first frame update
@@ -19,10 +16,11 @@ public class EnemyAverageMovement : EnemyMovement
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(currentPhase == Phase.Phase1)
         {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             transform.RotateAround(new Vector3(originScreenPoint.x - rotationRadius, originScreenPoint.y, 0), Vector3.forward, rotationSpeed * Time.deltaTime);
         }
     }

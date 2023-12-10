@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class EnemyMovement : MonoBehaviour
 {
-    protected enum Phase { Phase0, Phase1, Phase2 };
+    public enum Phase { Phase0, Phase1, Phase2 };
     protected Phase currentPhase;
 
     [SerializeField, Tooltip("Duration Phase 0 in seconds")] protected float maxDurationPhase0 = 5.0f;
@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
 
     protected void InitializeMovement()
     {
-        screenBoundX = new Vector2(0, 535);
+        screenBoundX = new Vector2(0, 55);
         screenBoundY = new Vector2(-34, 34);
         isRecruted = false;
         //Phase
@@ -70,5 +70,10 @@ public class EnemyMovement : MonoBehaviour
     protected virtual void InitSequence()
     {
         Debug.Log("Enemy Sequence");
+    }
+
+    public Phase GetPhase()
+    {
+        return currentPhase;
     }
 }

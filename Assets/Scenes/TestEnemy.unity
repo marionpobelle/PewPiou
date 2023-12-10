@@ -560,6 +560,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4476770246318342361, guid: 0646fc9a0acd645449aae86c17786e30,
+        type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -4476770246318342361, guid: 0646fc9a0acd645449aae86c17786e30,
+        type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4476770246318342361, guid: 0646fc9a0acd645449aae86c17786e30,
+        type: 3}
+      propertyPath: maxAmountProjectiles
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -3848386617463979995, guid: 0646fc9a0acd645449aae86c17786e30,
         type: 3}
       propertyPath: animCurve.m_Curve.Array.size

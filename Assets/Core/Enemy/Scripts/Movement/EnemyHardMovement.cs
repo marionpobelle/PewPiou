@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class EnemyHardMovement : EnemyMovement
 {
-    [SerializeField, Tooltip("How large the pattern is, float")] float movementHorizontalStep = 25.0f;
-    [SerializeField, Tooltip("How hight the pattern is, float")] float movementVerticalStep = 5.0f;
+    [SerializeField, Tooltip("How large the pattern is, float")] float movementHorizontalStep = 5.0f;
+    [SerializeField, Tooltip("How hight the pattern is, float")] float movementVerticalStep = 2.0f;
 
     // Start is called before the first frame update
     void Start()

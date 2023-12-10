@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2655732023688199725}
   - component: {fileID: 5216102549423524151}
   - component: {fileID: -3848386617463979995}
+  - component: {fileID: -4476770246318342361}
   m_Layer: 0
   m_Name: EnemyEasy
   m_TagString: Untagged
@@ -32,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1542963690271037803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &7323161867490542478
@@ -121,10 +123,6 @@ MonoBehaviour:
   maxDurationPhase0: 5
   maxDurationPhase1: 10
   maxDurationPhase2: 5
-  screenBorderOffset: 2
-  screenBoundX: {x: 0, y: 535}
-  screenBoundY: {x: -34, y: 34}
-  screenInnerOffset: 2
   animCurve:
     serializedVersion: 2
     m_Curve:
@@ -138,35 +136,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.13103321
-      value: 0.13854986
-      inSlope: 2.084326
-      outSlope: 2.084326
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.38599455
-      value: 0.29419476
-      inSlope: 2.4245284
-      outSlope: 2.4245284
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.5749952
-      value: 0.6436508
-      inSlope: 0.78371614
-      outSlope: 0.78371614
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9999799
-      value: 1.0037673
+      time: 1
+      value: 1
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -177,3 +148,56 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   isRecruted: 0
+  movementHorizontalStep: 5
+  movementVerticalStep: 2
+--- !u!114 &-4476770246318342361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127147056238669463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72253db12d742d84a9de600feb247243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 9041946037074857555, guid: ad4bf7b433c145f45841aab267b02a34,
+    type: 3}
+  firedBulletSequence: []
+  speed: 100
+  playerTransforms: []
+  fireDelay: 2
+  shortfireRate: 1
+  fireRate: 2
+--- !u!1 &8758475412933852275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1542963690271037803}
+  m_Layer: 0
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1542963690271037803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758475412933852275}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4428436085327462907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
