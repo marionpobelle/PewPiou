@@ -42,28 +42,32 @@ namespace Nano.Player
             }
             if (shieldList.Count > 0) shieldCollider.radius = maxShieldSize / 2;
             shieldTimer = shieldResetTime;
-
             switch (_shieldType)
             {
                 case Data.BulletType.Red:
-                    _newShield.GetComponent<MeshRenderer>().material.color = new Color(1, 0, 0, .5f);
+                    _newShield.shieldRenderer.material.SetColor("_Color", Color.red);
                     break;
                 case Data.BulletType.Blue:
-                    _newShield.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 1, .5f);
+                    _newShield.shieldRenderer.material.SetColor("_Color", Color.blue);
                     break;
                 case Data.BulletType.Green:
-                    _newShield.GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0, .5f);
+                    _newShield.shieldRenderer.material.SetColor("_Color", Color.green);
                     break;
             }
+            _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
+            Debug.Log(_newShield.shieldRenderer.material.GetFloat("_wiggle_seed"));
         }
 
         public void RemoveShield(Shield _shield)
         {
             shieldList.Remove(_shield);
             player.playerData.shieldTypeList.Remove(player.playerData.shieldTypeList[0]);
-            _shield.transform.DOScale(_shield.fixedScale - 0.1f, .3f).OnComplete(() =>
+            _shield.shieldRenderer.material.DOFloat(0.19f, "_wiggle_size", .3f);
+            _shield.shieldRenderer.material.DOFloat(0f, "_circle_stroke_width", .3f);
+            _shield.transform.DOScale(_shield.fixedScale - 2f, .3f).OnComplete(() =>
             {
-                _shield.transform.DOScale(_shield.fixedScale + 0.3f, .2f).OnComplete(() =>
+                _shield.shieldRenderer.material.DOColor(new Color(0,0,0,0), "_Color", .2f);
+                _shield.transform.DOScale(_shield.fixedScale + 5f, .2f).OnComplete(() =>
                 {
                     _shield.DOKill();
                     Destroy(_shield.gameObject);
