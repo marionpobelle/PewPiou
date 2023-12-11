@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6247949361240894289}
   m_Layer: 0
-  m_Name: capsule
+  m_Name: TestSquadronMember
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

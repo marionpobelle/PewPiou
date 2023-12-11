@@ -16,6 +16,7 @@ namespace Nano.UI
         [Header("Settings")]
         [SerializeField] float menuFadeDuration = .3f;
 
+        [Header("Setup - Do not modify")]
         [SerializeField] InputAction hideOptionsInput;
         [SerializeField] CanvasGroup optionsCanvasGroup;
         [SerializeField] Button quitOptionsButton;
@@ -23,8 +24,9 @@ namespace Nano.UI
         [SerializeField] SliderHandler bgmVolumeSlider;
         [SerializeField] SliderHandler sfxVolumeSlider;
         [SerializeField] ToggleHandler backgroundEnabledToggle;
-        Action onHideOptionsScreenCallback;
+        [SerializeField] bool useTweening = true;
 
+        Action onHideOptionsScreenCallback;
         bool isOptionsShown = false;
 
         public void ShowOptionsScreen(Action onHideTutorialCallback)
@@ -46,7 +48,11 @@ namespace Nano.UI
 
             optionsCanvasGroup.blocksRaycasts = true;
             optionsCanvasGroup.interactable = true;
-            optionsCanvasGroup.DOFade(1, menuFadeDuration);
+
+            if (useTweening)
+                optionsCanvasGroup.DOFade(1, menuFadeDuration);
+            else
+                optionsCanvasGroup.alpha = 1;
 
             isOptionsShown = true;
             masterVolumeSlider.Select();
@@ -77,7 +83,11 @@ namespace Nano.UI
 
             optionsCanvasGroup.blocksRaycasts = false;
             optionsCanvasGroup.interactable = false;
-            optionsCanvasGroup.DOFade(0, menuFadeDuration);
+
+            if (useTweening)
+                optionsCanvasGroup.DOFade(0, menuFadeDuration);
+            else
+                optionsCanvasGroup.alpha = 0;
         }
 
         public void CheckPlayerPrefsInitiated()

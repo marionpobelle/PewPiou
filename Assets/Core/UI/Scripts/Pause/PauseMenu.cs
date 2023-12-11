@@ -1,25 +1,23 @@
+using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System;
-using DG.Tweening;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace Nano.UI
 {
-    public class MainMenu : MonoBehaviour
+    public class PauseMenu : MonoBehaviour
     {
-        [Header("Settings")]
-        [SerializeField] float menuFadeDuration = .3f;
-
         [Header("Setup - Do not modify")]
         [SerializeField] InputAction directionalInput;
-        [SerializeField] Button startButton;
+        [SerializeField] Button resumeButton;
         [SerializeField] Button tutorialButton;
         [SerializeField] Button optionsButton;
+        [SerializeField] Button returnToTitleButton;
         [SerializeField] Button quitButton;
-        [SerializeField] CanvasGroup mainMenuGroup;
+        [SerializeField] CanvasGroup pauseMenuGroup;
         [SerializeField] TutorialScreen tutorialScreen;
         [SerializeField] OptionsMenu optionsScreen;
         [SerializeField] List<Selectable> availableButtons;
@@ -27,51 +25,61 @@ namespace Nano.UI
         Selectable selectedOption;
 
         bool isMoving = false;
-        bool isMenuShown = true;
+        bool isMenuShown = false;
 
-        public static event Action OnStartButtonClicked;
+        public static event Action onResumeButtonClicked;
+        public static event Action onReturnToTitleButtonClicked;
 
         void Awake()
         {
-            startButton.onClick.AddListener(StartButton);
+            resumeButton.onClick.AddListener(ResumeButton);
             tutorialButton.onClick.AddListener(TutorialButton);
             optionsButton.onClick.AddListener(OptionsButton);
+            returnToTitleButton.onClick.AddListener(ReturnToTitleButton);
             quitButton.onClick.AddListener(QuitButton);
             optionsScreen.CheckPlayerPrefsInitiated();
-            ShowMainMenu();
             SelectNewOption(0);
         }
 
         private void OnDestroy()
         {
-            startButton.onClick.RemoveListener(StartButton);
+            resumeButton.onClick.RemoveListener(ResumeButton);
             tutorialButton.onClick.RemoveListener(TutorialButton);
             optionsButton.onClick.RemoveListener(OptionsButton);
+            returnToTitleButton.onClick.RemoveListener(ReturnToTitleButton);
             quitButton.onClick.RemoveListener(QuitButton);
         }
 
-        private void StartButton()
+        private void ResumeButton()
         {
             if (!isMenuShown)
                 return;
-            OnStartButtonClicked?.Invoke();
-            HideMainMenu();
+            HidePauseMenu();
+            onResumeButtonClicked?.Invoke();
         }
 
         private void TutorialButton()
         {
             if (!isMenuShown)
                 return;
-            HideMainMenu();
-            tutorialScreen.ShowTutorialScreen(ShowMainMenu);
+            HidePauseMenu();
+            tutorialScreen.ShowTutorialScreen(ShowPauseMenu);
         }
 
         private void OptionsButton()
         {
             if (!isMenuShown)
                 return;
-            HideMainMenu();
-            optionsScreen.ShowOptionsScreen(ShowMainMenu);
+            HidePauseMenu();
+            optionsScreen.ShowOptionsScreen(ShowPauseMenu);
+        }
+
+        private void ReturnToTitleButton()
+        {
+            if (!isMenuShown)
+                return;
+            HidePauseMenu();
+            onReturnToTitleButtonClicked?.Invoke();
         }
 
         private void QuitButton()
@@ -83,15 +91,15 @@ namespace Nano.UI
             Application.Quit();
         }
 
-        void ShowMainMenu()
+        public void ShowPauseMenu()
         {
             isMenuShown = true;
             directionalInput.Enable();
             directionalInput.started += OnDirectionalInput;
             directionalInput.canceled += OnDirectionalInputCanceled;
-            mainMenuGroup.DOFade(1, menuFadeDuration);
-            mainMenuGroup.blocksRaycasts = true;
-            mainMenuGroup.interactable = true;
+            pauseMenuGroup.alpha = 1;
+            pauseMenuGroup.blocksRaycasts = true;
+            pauseMenuGroup.interactable = true;
             SelectNewOption(availableButtons.IndexOf(selectedOption));
         }
 
@@ -110,12 +118,12 @@ namespace Nano.UI
             }
         }
 
-        void HideMainMenu()
+        public void HidePauseMenu()
         {
             isMenuShown = false;
-            mainMenuGroup.DOFade(0, menuFadeDuration);
-            mainMenuGroup.blocksRaycasts = false;
-            mainMenuGroup.interactable = false;
+            pauseMenuGroup.alpha = 0;
+            pauseMenuGroup.blocksRaycasts = false;
+            pauseMenuGroup.interactable = false;
             directionalInput.started -= OnDirectionalInput;
             directionalInput.canceled -= OnDirectionalInputCanceled;
         }

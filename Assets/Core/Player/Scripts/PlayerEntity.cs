@@ -9,6 +9,9 @@ namespace Nano.Player
     {
         //casts our data as player data
         public PlayerData playerData => (PlayerData)Data;
+        public InputHandler InputHandler => inputHandler;
+
+        [SerializeField] private InputHandler inputHandler;
 
         protected override void Awake()
         {
