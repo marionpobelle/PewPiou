@@ -32,7 +32,7 @@ public class EnemyAverageFiring : EnemyFiring
         firingSequence.AppendInterval(fireRate);
         firingSequence.AppendCallback(() => Fire());
         firingSequence.AppendInterval(shortfireRate);
-        firingSequence.AppendCallback(() => Fire());
+        firingSequence.AppendCallback(() => Fire(true));
     }
 
 }

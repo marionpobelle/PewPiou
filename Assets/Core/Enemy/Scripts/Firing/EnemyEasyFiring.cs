@@ -28,7 +28,7 @@ public class EnemyEasyFiring : EnemyFiring
         firingSequence.AppendInterval(fireDelay);
         firingSequence.AppendCallback(() => Fire());
         firingSequence.AppendInterval(fireRate);
-        firingSequence.AppendCallback(() => Fire());
+        firingSequence.AppendCallback(() => Fire(true));
     }
 
 

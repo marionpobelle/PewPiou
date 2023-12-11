@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba102f595b0f654e82bf77f6aa8a766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squadronManager: {fileID: 1618316304505318745}
 --- !u!114 &3966735157569731449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,9 +112,9 @@ MonoBehaviour:
   followPlayerDelay: 0.05
   noiseSpeed: 1
   noiseStrength: 1
-  storedPlayerPos: []
-  TestFollowerObject: {fileID: 6247949361240894289, guid: a9befcabb5bb7c54eb04dd1f6dd033da,
+  followerObject: {fileID: 6247949361240894289, guid: a9befcabb5bb7c54eb04dd1f6dd033da,
     type: 3}
+  storedPlayerPos: []
 --- !u!114 &-1819600930041283465
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -78,7 +78,13 @@ namespace Nano.Player
             });
             for (int i = 0; i < shieldList.Count; i++)
             {
-                shieldList[i].shieldRenderer.material.DOFloat(shieldList.Count - .5f, "_bubble_angle", .2f);
+                Shield _sizeFixShield = shieldList[i];
+                _sizeFixShield.fixedScale = maxShieldSize - shieldSizeAugmentation * i;
+                _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale + 0.3f, .3f).OnComplete(() =>
+                {
+                    _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale, .1f);
+                });
+                _sizeFixShield.shieldRenderer.material.DOFloat(i - .5f, "_bubble_angle", .2f);
             }
         }
 
@@ -115,10 +121,23 @@ namespace Nano.Player
                 {
                     Debug.Log("Good shield");
                     RemoveShield(shieldList[0]);
+
+                    if (_bullet.convertingBullet)
+                    {
+                        _bullet.BackToSender();
+                        DOVirtual.DelayedCall(.5f, () => player.squadronManager.AddFollower());
+                    } else
+                    {
+                        //SHOW JUICY SCORE
+                        _bullet.ExplodeBullet();
+                    }
+
                 }
                 else //WRONG SHIELD
                 {
                     Debug.Log("Wrong shield");
+                    RemoveShield(shieldList[0]);
+                    Destroy(other.gameObject);
                 }
             }
         }

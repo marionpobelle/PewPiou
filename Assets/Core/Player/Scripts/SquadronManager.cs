@@ -17,7 +17,7 @@ namespace Nano.Player
         [SerializeField] float followPlayerDelay = .05f;
         [SerializeField] float noiseSpeed = 1f;
         [SerializeField] float noiseStrength = 1f;
-
+        [SerializeField] Transform followerObject;
         List<Transform> followers = new List<Transform>();
         public List<Vector3> storedPlayerPos = new List<Vector3>();
         float nextPosUpdate;
@@ -55,7 +55,7 @@ namespace Nano.Player
             float xTargetPos = xOffset + xOffset * (followerIndex / 2);
             float yTargetPos = yOffset * (followerIndex / 2) * (followerIndex % 2 == 1 ? 1 : -1) + yOffset * (followerIndex % 2 == 1 ? 1 : -1);
 
-            return storedPlayerPos[followerIndex/2] + new Vector3(xTargetPos, yTargetPos, 0);
+            return storedPlayerPos[followerIndex / 2] + new Vector3(xTargetPos, yTargetPos, 0);
         }
 
         private Vector3 GetRandomNoise(int yPos)
@@ -66,9 +66,11 @@ namespace Nano.Player
             return new Vector3(xNoise, yNoise, 0);
         }
 
-        public void AddFollower(Transform newFollower)
+        [Button("ADD SQUADRON FOLLOWER")]
+        public void AddFollower()
         {
-            followers.Add(newFollower);
+            Transform _newFollower = Instantiate(followerObject);
+            followers.Add(_newFollower);
 
             if (followers.Count % 2 == 1)
             {
@@ -78,7 +80,7 @@ namespace Nano.Player
 
         [Button("REMOVE SQUADRON FOLLOWER")]
         public void RemoveFollower()
-        {     
+        {
             Transform _follower = followers[followers.Count - 1];
             followers.Remove(_follower);
             _follower.DOScale(.9f, .2f).OnComplete(() =>
@@ -90,16 +92,5 @@ namespace Nano.Player
                 });
             });
         }
-
-#if UNITY_EDITOR
-        [SerializeField]
-        Transform TestFollowerObject;
-
-        [Button("ADD SQUADRON FOLLOWER")]
-        public void TestAddSquadronMember()
-        {
-            AddFollower(Instantiate(TestFollowerObject));
-        }
     }
-#endif
 }

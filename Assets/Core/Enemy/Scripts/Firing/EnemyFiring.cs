@@ -27,11 +27,12 @@ public class EnemyFiring : MonoBehaviour
         //remplir playerTransforms
         currentPhase = (Phase)gameObject.GetComponent<EnemyMovement>().GetPhase();
     }
-    protected void Fire()
+    protected void Fire(bool _convertingBullet = false)
     {
         Bullet bullet = Instantiate(bulletPrefab, firePoint.position + Vector3.left, Quaternion.identity);
         firedBulletSequence.Add(bullet);
         bullet.SetParentEnemy(gameObject);
+        bullet.convertingBullet = _convertingBullet;
         //int randomPlayer = Random.Range(0, 2);
         //Vector3 directionTowardsPlayer;
         //if (randomPlayer == 0) directionTowardsPlayer = ComputePlayerDirection(playerTransforms[0]);
