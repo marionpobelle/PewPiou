@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +9,10 @@ namespace Nano.Player
         [SerializeField] PlayerMovement playerMovement;
         [SerializeField] ShieldManager shieldManager;
 
+        public static event Action onPausePressed;
+
+        private bool isInputsFrozen = false;
+
         public void OnMove(InputValue value)
         {
             playerMovement.OnNewMoveInput(value.Get<Vector2>());
@@ -17,16 +20,22 @@ namespace Nano.Player
 
         public void OnButtonEast(InputValue value)
         {
+            if (isInputsFrozen)
+                return;
             shieldManager.AddShield(Data.BulletType.Red);
         }
 
         public void OnButtonWest(InputValue value)
         {
+            if (isInputsFrozen)
+                return;
             shieldManager.AddShield(Data.BulletType.Blue);
         }
 
         public void OnButtonSouth(InputValue value)
         {
+            if (isInputsFrozen)
+                return;
             shieldManager.AddShield(Data.BulletType.Green);
 #if UNITY_EDITOR
             //if (value.Get<float>() > .5f)
@@ -34,6 +43,22 @@ namespace Nano.Player
             //    GetComponent<SquadronManager>().TestAddSquadronMember();
             //}
 #endif
+        }
+
+        public void OnPause(InputValue value)
+        {
+            if (value.Get<float>() > .5f)
+                onPausePressed?.Invoke();
+        }
+
+        public void FreezeInputs()
+        {
+            isInputsFrozen = true;
+        }
+
+        public void UnfreezeInputs()
+        {
+            isInputsFrozen = false;
         }
     }
 }

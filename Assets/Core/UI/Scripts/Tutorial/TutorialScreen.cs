@@ -11,11 +11,13 @@ namespace Nano.UI
         [Header("Settings")]
         [SerializeField] float menuFadeDuration = .3f;
 
+        [Header("Setup - Do not modify")]
         [SerializeField] InputAction hideTutorialInput;
         [SerializeField] CanvasGroup tutorialCanvasGroup;
         [SerializeField] Button quitTutorialButton;
-        Action onHideTutorialScreenCallback;
+        [SerializeField] bool useTweening = true;
 
+        Action onHideTutorialScreenCallback;
         bool isTutorialShown = false;
 
         public void ShowTutorialScreen(Action onHideTutorialCallback)
@@ -30,7 +32,10 @@ namespace Nano.UI
 
             tutorialCanvasGroup.blocksRaycasts = true;
             tutorialCanvasGroup.interactable = true;
-            tutorialCanvasGroup.DOFade(1, menuFadeDuration);
+            if (useTweening)
+                tutorialCanvasGroup.DOFade(1, menuFadeDuration);
+            else
+                tutorialCanvasGroup.alpha = 1;
 
             isTutorialShown = true;
         }
@@ -54,7 +59,11 @@ namespace Nano.UI
 
             tutorialCanvasGroup.blocksRaycasts = true;
             tutorialCanvasGroup.interactable = true;
-            tutorialCanvasGroup.DOFade(0, menuFadeDuration);
+
+            if (useTweening)
+                tutorialCanvasGroup.DOFade(0, menuFadeDuration);
+            else
+                tutorialCanvasGroup.alpha = 0;
         }
     }
 }
