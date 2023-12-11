@@ -116,8 +116,12 @@ namespace Nano.Player
             {
                 if (shieldList.Count == 0) //NO SHIELD
                 {
+                    player.squadronManager.RemoveFollower();
+                    _bullet.ExplodeBullet();
+                    Debug.Log("BIRD HIT");
                     //DAMAGE ?
-                } else if (_bullet.bulletType == shieldList[0].shieldType) //GOOD SHIELD
+                }
+                else if (_bullet.bulletType == shieldList[0].shieldType) //GOOD SHIELD
                 {
                     Debug.Log("Good shield");
                     RemoveShield(shieldList[0]);

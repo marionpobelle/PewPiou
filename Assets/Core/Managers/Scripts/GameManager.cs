@@ -1,3 +1,4 @@
+using Nano.UI;
 using Nano.Player;
 using System;
 using System.Collections;
@@ -23,10 +24,22 @@ namespace Nano.Managers
         public LevelScriptable currentLevel;
         float levelTimer;
         int phaseNumber = 0;
+        bool isGamePaused = false;
+
+        [Header("UI")]
+        [SerializeField] PauseMenu pauseMenu;
 
         void Awake()
         {
             PlayerJoinManager.OnPlayerAdded += OnPlayerAdded;
+            InputHandler.onPausePressed += PauseInput;
+        }
+
+
+        private void OnDestroy()
+        {
+            InputHandler.onPausePressed -= PauseInput;
+            PlayerJoinManager.OnPlayerAdded -= OnPlayerAdded;
         }
 
         private void Update()
@@ -86,9 +99,46 @@ namespace Nano.Managers
             onGameStart?.Invoke();
         }
 
+        private void PauseInput()
+        {
+            if (isGamePaused)
+            {
+                UnpauseGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+
+        void PauseGame()
+        {
+            Time.timeScale = Mathf.Epsilon;
+            isGamePaused = true;
+            pauseMenu.ShowPauseMenu();
+            PauseMenu.onResumeButtonClicked += UnpauseGame;
+
+            foreach (PlayerEntity player in players)
+            {
+                player.InputHandler.FreezeInputs();
+            }
+        }
+
+        void UnpauseGame()
+        {
+            Time.timeScale = 1;
+            isGamePaused = false;
+            pauseMenu.HidePauseMenu();
+            PauseMenu.onResumeButtonClicked -= UnpauseGame;
+            foreach (PlayerEntity player in players)
+            {
+                player.InputHandler.UnfreezeInputs();
+            }
+        }
+
         private void GameOver()
         {
-
+            Debug.LogError("Not implemented yet");
         }
     }
 }
