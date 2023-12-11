@@ -81,6 +81,7 @@ namespace Nano.Player
         [Button("REMOVE SQUADRON FOLLOWER")]
         public void RemoveFollower()
         {
+            if (followers.Count == 0) return;
             Transform _follower = followers[followers.Count - 1];
             followers.Remove(_follower);
             _follower.DOScale(.9f, .2f).OnComplete(() =>
