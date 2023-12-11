@@ -34,11 +34,11 @@ namespace Nano.Managers
             if (phaseNumber < currentLevel.phaseList.Count && levelTimer >= currentLevel.phaseList[phaseNumber].startTime)
             {
                 SpawnPhase(phaseNumber);
-            } 
-            //else if (phaseNumber >= currentLevel.phaseList.Count) //AND NO ENEMY FOUND 
-            //{
-            //    //GAME OVER
-            //}
+            }
+            else if (phaseNumber >= currentLevel.phaseList.Count && levelTimer >= currentLevel.levelTime) //AND NO ENEMY FOUND 
+            {
+                GameOver();
+            }
         }
 
         private void SpawnPhase(int _phaseNumber)
@@ -81,6 +81,11 @@ namespace Nano.Managers
             Debug.Log($"{this.GetType()} >> Starting Game");
 
             onGameStart?.Invoke();
+        }
+
+        private void GameOver()
+        {
+
         }
     }
 }
