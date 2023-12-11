@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5216102549423524151}
   - component: {fileID: -3848386617463979995}
   - component: {fileID: -4476770246318342361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EnemyEasy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,13 +162,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72253db12d742d84a9de600feb247243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 9041946037074857555, guid: ad4bf7b433c145f45841aab267b02a34,
+  bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
   speed: 100
   playerTransforms: []
   fireDelay: 2
-  shortfireRate: 1
   fireRate: 2
 --- !u!1 &8758475412933852275
 GameObject:
@@ -179,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1542963690271037803}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
