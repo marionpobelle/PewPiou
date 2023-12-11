@@ -1,3 +1,16 @@
 {
-	"name": "Nano.Enemy"
+    "name": "Nano.Enemy",
+    "rootNamespace": "",
+    "references": [
+        "GUID:94df7a1a1ff767743983d26e11a57e86"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
