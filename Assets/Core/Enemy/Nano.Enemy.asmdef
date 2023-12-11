@@ -2,7 +2,8 @@
     "name": "Nano.Enemy",
     "rootNamespace": "",
     "references": [
-        "GUID:94df7a1a1ff767743983d26e11a57e86"
+        "GUID:94df7a1a1ff767743983d26e11a57e86",
+        "GUID:eeed7d378828971469d9676927a169d6"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

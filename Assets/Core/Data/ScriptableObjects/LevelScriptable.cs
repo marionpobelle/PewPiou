@@ -41,5 +41,6 @@ public class LevelScriptable : ScriptableObject
         }
     }
 
+    public float levelTime;
     public List<Phase> phaseList = new List<Phase>();
 }

@@ -9,7 +9,6 @@ public class EnemyEasyFiring : EnemyFiring
     void Start()
     {
         InitFiring();
-        InitSequence();
     }
 
     private void FixedUpdate()
@@ -18,6 +17,7 @@ public class EnemyEasyFiring : EnemyFiring
         if(currentPhase == Phase.Phase1 && isFiringSequencePlaying == false)
         {
             isFiringSequencePlaying = true;
+            InitSequence();
             firingSequence.Play();
         }
     }
@@ -28,7 +28,7 @@ public class EnemyEasyFiring : EnemyFiring
         firingSequence.AppendInterval(fireDelay);
         firingSequence.AppendCallback(() => Fire());
         firingSequence.AppendInterval(fireRate);
-        firingSequence.AppendCallback(() => Fire());
+        firingSequence.AppendCallback(() => Fire(true));
     }
 
 

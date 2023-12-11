@@ -19,6 +19,7 @@ namespace Nano.Player
         float shieldTimer;
         [SerializeField] int maxNumberShield;
         List<Shield> shieldList = new List<Shield>();
+        [SerializeField] List<Texture> inputSpriteList = new List<Texture>();
 
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
@@ -44,12 +45,15 @@ namespace Nano.Player
             {
                 case Data.BulletType.Red:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.red);
+                    _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[0]);
                     break;
                 case Data.BulletType.Blue:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.blue);
+                    _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[1]);
                     break;
                 case Data.BulletType.Green:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.green);
+                    _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[2]);
                     break;
             }
             _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
@@ -74,10 +78,17 @@ namespace Nano.Player
             });
             for (int i = 0; i < shieldList.Count; i++)
             {
-                shieldList[i].shieldRenderer.material.DOFloat(shieldList.Count - .5f, "_bubble_angle", .2f);
+                Shield _sizeFixShield = shieldList[i];
+                _sizeFixShield.fixedScale = maxShieldSize - shieldSizeAugmentation * i;
+                _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale + 0.3f, .3f).OnComplete(() =>
+                {
+                    _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale, .1f);
+                });
+                _sizeFixShield.shieldRenderer.material.DOFloat(i - .5f, "_bubble_angle", .2f);
             }
         }
 
+        [Button("REMOVE ALL SHIELDS")]
         public void RemoveAllShields()
         {
             //if (shieldList.Count == 0) return;
@@ -110,10 +121,23 @@ namespace Nano.Player
                 {
                     Debug.Log("Good shield");
                     RemoveShield(shieldList[0]);
+
+                    if (_bullet.convertingBullet)
+                    {
+                        _bullet.BackToSender();
+                        DOVirtual.DelayedCall(.5f, () => player.squadronManager.AddFollower());
+                    } else
+                    {
+                        //SHOW JUICY SCORE
+                        _bullet.ExplodeBullet();
+                    }
+
                 }
                 else //WRONG SHIELD
                 {
                     Debug.Log("Wrong shield");
+                    RemoveShield(shieldList[0]);
+                    Destroy(other.gameObject);
                 }
             }
         }

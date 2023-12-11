@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5216102549423524151}
   - component: {fileID: -7559465850241745288}
   - component: {fileID: -1020480622508531567}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EnemyAverage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,14 +162,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5fac2f829d9644d991bbb184bc251e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 9041946037074857555, guid: ad4bf7b433c145f45841aab267b02a34,
+  bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
-  speed: 2
+  speed: 100
   playerTransforms: []
   fireDelay: 2
-  shortfireRate: 1
   fireRate: 0.15
+  shortfireRate: 1
 --- !u!1 &6309771476874003866
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1992840943113698969}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

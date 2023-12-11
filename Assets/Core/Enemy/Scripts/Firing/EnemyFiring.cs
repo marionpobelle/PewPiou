@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Nano.Combat;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,8 @@ public class EnemyFiring : MonoBehaviour
     public enum Phase { Phase0, Phase1, Phase2 };
 
     protected Transform firePoint;
-    [SerializeField] protected GameObject bulletPrefab;
-    public List<GameObject> firedBulletSequence;
-
-    [SerializeField, Tooltip("How fast the bullet goes, float")] protected float speed = 100.0f;
-
+    [SerializeField] protected Bullet bulletPrefab;
+    public List<Bullet> firedBulletSequence;
     public List<Transform> playerTransforms;
 
 
@@ -29,19 +27,18 @@ public class EnemyFiring : MonoBehaviour
         //remplir playerTransforms
         currentPhase = (Phase)gameObject.GetComponent<EnemyMovement>().GetPhase();
     }
-    protected void Fire()
+    protected void Fire(bool _convertingBullet = false)
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = Instantiate(bulletPrefab, firePoint.position + Vector3.left, Quaternion.identity);
         firedBulletSequence.Add(bullet);
-
-        int randomPlayer = Random.Range(0, 2);
-        Vector3 directionTowardsPlayer;
-        if (randomPlayer == 0) directionTowardsPlayer = ComputePlayerDirection(playerTransforms[0]);
-        else directionTowardsPlayer = ComputePlayerDirection(playerTransforms[1]);
-
-        Rigidbody rigidbodyBullet = bullet.GetComponent<Rigidbody>();
-        //Changer Vector3.left pour direction du player quand se sera bon
-        rigidbodyBullet.AddForce(Vector3.left * speed, ForceMode.Impulse);
+        bullet.SetParentEnemy(gameObject);
+        bullet.convertingBullet = _convertingBullet;
+        //int randomPlayer = Random.Range(0, 2);
+        //Vector3 directionTowardsPlayer;
+        //if (randomPlayer == 0) directionTowardsPlayer = ComputePlayerDirection(playerTransforms[0]);
+        //else directionTowardsPlayer = ComputePlayerDirection(playerTransforms[1]);
+        //Changer Vector3.left pour direction du player quand ce sera bon
+        bullet.Init(Vector3.left);
     }
 
     protected Vector3 ComputePlayerDirection(Transform player)

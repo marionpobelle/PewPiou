@@ -10,7 +10,6 @@ public class EnemyAverageFiring : EnemyFiring
     void Start()
     {
         InitFiring();
-        InitSequence();
     }
 
     // Update is called once per frame
@@ -20,6 +19,7 @@ public class EnemyAverageFiring : EnemyFiring
         if (currentPhase == Phase.Phase1 && isFiringSequencePlaying == false)
         {
             isFiringSequencePlaying = true;
+            InitSequence();
             firingSequence.Play();
         }
     }
@@ -32,7 +32,7 @@ public class EnemyAverageFiring : EnemyFiring
         firingSequence.AppendInterval(fireRate);
         firingSequence.AppendCallback(() => Fire());
         firingSequence.AppendInterval(shortfireRate);
-        firingSequence.AppendCallback(() => Fire());
+        firingSequence.AppendCallback(() => Fire(true));
     }
 
 }
