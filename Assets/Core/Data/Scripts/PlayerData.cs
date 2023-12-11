@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Nano.Data
@@ -7,5 +8,7 @@ namespace Nano.Data
         public Vector2 CurrentInput { get => currentInput; set => currentInput = value ; }
 
         private Vector2 currentInput;
+
+        public List<BulletType> shieldTypeList = new List<BulletType>();
     }
 }

@@ -11,7 +11,7 @@ namespace Nano.Managers
         [SerializeField] InputAction joinPlayerInput;
         public static event Action<PlayerEntity> OnPlayerAdded;
         int spawnedPlayers = 0;
-        int deviceId;
+        int connectedDeviceId = -1;
 
         private void Awake()
         {
@@ -34,17 +34,19 @@ namespace Nano.Managers
 
         private void JoinPlayer(InputAction.CallbackContext obj)
         {
-            Debug.Log("Start");
-            if (obj.control.device.deviceId == deviceId)
+            Debug.Log($"{this.GetType()} >> Pressed Join Input");
+            if (obj.control.device.deviceId == connectedDeviceId)
             {
-                Debug.Log(deviceId);
+                Debug.Log($"{this.GetType()} >> Already connected to device with id {connectedDeviceId}");
                 return;
             }
 
             var joinedPlayer = manager.JoinPlayer(spawnedPlayers, -1, "Player", obj.control.device);
             spawnedPlayers++;
+            connectedDeviceId = obj.control.device.deviceId;
 
-            deviceId = obj.control.device.deviceId;
+            Debug.Log($"{this.GetType()} >> Spawend player {spawnedPlayers} using device with id {connectedDeviceId}");
+
             OnPlayerAdded?.Invoke(joinedPlayer.GetComponent<PlayerEntity>());
         }
     }
