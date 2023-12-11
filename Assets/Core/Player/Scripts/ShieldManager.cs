@@ -19,8 +19,6 @@ namespace Nano.Player
         float shieldTimer;
         [SerializeField] int maxNumberShield;
         List<Shield> shieldList = new List<Shield>();
-        //bool deletingShield; //used because deleting shields takes time because of tween, to avoid repetition
-
 
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
@@ -55,7 +53,7 @@ namespace Nano.Player
                     break;
             }
             _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
-            Debug.Log(_newShield.shieldRenderer.material.GetFloat("_wiggle_seed"));
+            _newShield.shieldRenderer.material.SetFloat("_bubble_angle", shieldList.Count - .5f);
         }
 
         public void RemoveShield(Shield _shield)
@@ -74,6 +72,10 @@ namespace Nano.Player
                     shieldCollider.radius = .5f;
                 });
             });
+            for (int i = 0; i < shieldList.Count; i++)
+            {
+                shieldList[i].shieldRenderer.material.DOFloat(shieldList.Count - .5f, "_bubble_angle", .2f);
+            }
         }
 
         public void RemoveAllShields()

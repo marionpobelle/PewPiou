@@ -60,6 +60,7 @@ public class EnemyMovement : MonoBehaviour
                                          UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundX[0] - screenInnerOffset), 0.0f);
         //Movement sequence
         EnemyMovementLoop();
+        transform.position = spawnPoint;
     }
 
     protected virtual void EnemyMovementLoop()
