@@ -15,11 +15,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField, Tooltip("Duration Phase 2 in seconds")] protected float maxDurationPhase2 = 5.0f;
 
     protected Vector3 spawnPoint;
-    float screenBorderOffset = 2.0f;
+    float screenBorderOffset = 3.0f;
     Vector2 screenBoundX;
     Vector2 screenBoundY;
 
-    float screenInnerOffset = 2.0f;
+    [SerializeField, Tooltip("How far the initial position for an enemy is from the right border of the screen, float")] float screenInnerOffset = 4.0f;
     protected Vector3 originScreenPoint;
 
     protected enum Pattern { Horizontal, Vertical, Circle };
@@ -32,32 +32,20 @@ public class EnemyMovement : MonoBehaviour
 
     protected void InitializeMovement()
     {
-        screenBoundX = new Vector2(0, 55);
+        screenBoundX = new Vector2(28, 55);
         screenBoundY = new Vector2(-34, 34);
         isRecruted = false;
         //Phase
         currentPhase = Phase.Phase0;
         //Spawn
-        bool isEnemyOutOfScreen = false;
         float spawnHalfOffset = 1.0f;
-        while (isEnemyOutOfScreen == false)
-        {
-            Vector2 randomSpawn = new Vector2(UnityEngine.Random.Range(screenBoundX[0] - screenBorderOffset, screenBoundX[1] + screenBorderOffset),
-                                         UnityEngine.Random.Range(screenBoundY[0] - screenBorderOffset, screenBoundX[0] + screenBorderOffset));
-            if (!((randomSpawn[0] > screenBoundX[0] - spawnHalfOffset) &&
-                (randomSpawn[0] < screenBoundX[1] + spawnHalfOffset) &&
-                (randomSpawn[1] > screenBoundY[0] - spawnHalfOffset) &&
-                (randomSpawn[1] < screenBoundY[1] + spawnHalfOffset)))
-            {
-                spawnPoint.x = randomSpawn.x;
-                spawnPoint.y = randomSpawn.y;
-                spawnPoint.z = 0.0f;
-                isEnemyOutOfScreen = true;
-            }
-        }
+        spawnPoint.x = UnityEngine.Random.Range(screenBoundX[1] + spawnHalfOffset, screenBoundX[1] + screenBorderOffset);
+        spawnPoint.y = UnityEngine.Random.Range(screenBoundY[0], screenBoundY[1]);
+        spawnPoint.z = 0.0f;
+    
         //Origin
-        originScreenPoint = new Vector3(UnityEngine.Random.Range(screenBoundX[0] + screenInnerOffset, screenBoundX[1] - screenInnerOffset),
-                                         UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundX[0] - screenInnerOffset), 0.0f);
+        originScreenPoint = new Vector3(UnityEngine.Random.Range(screenBoundX[1]/2, screenBoundX[1] - screenInnerOffset),
+                                         UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundY[1] - screenInnerOffset), 0.0f);
         //Movement sequence
         EnemyMovementLoop();
         transform.position = spawnPoint;
