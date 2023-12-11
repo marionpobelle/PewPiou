@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
 
     protected void InitializeMovement()
     {
-        screenBoundX = new Vector2(0, 535);
+        screenBoundX = new Vector2(0, 55);
         screenBoundY = new Vector2(-34, 34);
         isRecruted = false;
         //Phase
@@ -60,6 +60,7 @@ public class EnemyMovement : MonoBehaviour
                                          UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundX[0] - screenInnerOffset), 0.0f);
         //Movement sequence
         EnemyMovementLoop();
+        transform.position = spawnPoint;
     }
 
     protected virtual void EnemyMovementLoop()

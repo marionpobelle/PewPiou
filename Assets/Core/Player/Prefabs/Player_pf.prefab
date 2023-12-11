@@ -84,10 +84,14 @@ MonoBehaviour:
   shieldCollider: {fileID: 9066931282230283505}
   shieldPrefab: {fileID: 4134994799886400185, guid: 2a1d228c2be4b0d4d945069c31a7c854,
     type: 3}
-  shieldSizeAugmentation: 2
+  shieldSizeAugmentation: 3
   shieldResetTime: 3
   maxShieldSize: 10
   maxNumberShield: 3
+  angleList:
+  - 1
+  - 2
+  - 3
 --- !u!114 &-1819600930041283465
 MonoBehaviour:
   m_ObjectHideFlags: 0
