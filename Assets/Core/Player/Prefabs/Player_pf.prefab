@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squadronManager: {fileID: 1618316304505318745}
-  inputHandler: {fileID: 0}
+  inputHandler: {fileID: -1819600930041283465}
 --- !u!114 &3966735157569731449
 MonoBehaviour:
   m_ObjectHideFlags: 0
