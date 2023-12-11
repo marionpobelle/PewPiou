@@ -131,5 +131,10 @@ namespace Nano.Managers
                 player.InputHandler.UnfreezeInputs();
             }
         }
+
+        private void GameOver()
+        {
+            Debug.LogError("Not implemented yet");
+        }
     }
 }
