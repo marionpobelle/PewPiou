@@ -28,6 +28,8 @@ namespace Nano.UI
 
             hideTutorialInput.performed += OnReturnButtonPressed;
 
+            tutorialCanvasGroup.blocksRaycasts = true;
+            tutorialCanvasGroup.interactable = true;
             tutorialCanvasGroup.DOFade(1, menuFadeDuration);
 
             isTutorialShown = true;
@@ -48,9 +50,10 @@ namespace Nano.UI
             hideTutorialInput.performed -= OnReturnButtonPressed;
 
             quitTutorialButton.onClick.RemoveListener(HideTutorial);
-
             onHideTutorialScreenCallback?.Invoke();
 
+            tutorialCanvasGroup.blocksRaycasts = true;
+            tutorialCanvasGroup.interactable = true;
             tutorialCanvasGroup.DOFade(0, menuFadeDuration);
         }
     }
