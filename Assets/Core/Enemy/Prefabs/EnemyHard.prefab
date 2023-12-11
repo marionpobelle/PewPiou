@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5216102549423524151}
   - component: {fileID: -5501866639561462134}
   - component: {fileID: 3047614286235494139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EnemyHard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,8 +148,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   isRecruted: 0
-  movementHorizontalStep: 25
-  movementVerticalStep: 5
+  movementHorizontalStep: 5
+  movementVerticalStep: 2
 --- !u!114 &3047614286235494139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,14 +162,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a728967250945194cb357596a428a6eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 9041946037074857555, guid: ad4bf7b433c145f45841aab267b02a34,
+  bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
-  speed: 4
+  speed: 100
   playerTransforms: []
   fireDelay: 2
-  shortfireRate: 1
-  fireRate: 0.15
+  fireRate: 1
 --- !u!1 &6895370873951661601
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354392053758350820}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

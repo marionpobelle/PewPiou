@@ -9,7 +9,6 @@ public class EnemyHardFiring : EnemyFiring
     void Start()
     {
         InitFiring();
-        InitSequence();
     }
 
     // Update is called once per frame
@@ -19,6 +18,7 @@ public class EnemyHardFiring : EnemyFiring
         if (currentPhase == Phase.Phase1 && isFiringSequencePlaying == false)
         {
             isFiringSequencePlaying = true;
+            InitSequence();
             firingSequence.Play();
         }
     }
