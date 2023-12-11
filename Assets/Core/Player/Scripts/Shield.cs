@@ -9,6 +9,7 @@ namespace Nano.Player
     {
         public BulletType shieldType;
         public float fixedScale;
+        public MeshRenderer shieldRenderer;
     }
 }
 

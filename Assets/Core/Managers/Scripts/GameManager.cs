@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Nano.Data;
 
 namespace Nano.Managers
 {
@@ -16,9 +17,53 @@ namespace Nano.Managers
 
         private List<PlayerEntity> players = new List<PlayerEntity>();
 
+        [Header("LEVEL")]
+        public List<GameObject> enemyList = new List<GameObject>();
+        public LevelScriptable currentLevel;
+        float levelTimer;
+        int phaseNumber = 0;
+
         void Awake()
         {
             PlayerJoinManager.OnPlayerAdded += OnPlayerAdded;
+        }
+
+        private void Update()
+        {
+            levelTimer += Time.deltaTime;
+            if (phaseNumber < currentLevel.phaseList.Count && levelTimer >= currentLevel.phaseList[phaseNumber].startTime)
+            {
+                SpawnPhase(phaseNumber);
+            } 
+            //else if (phaseNumber >= currentLevel.phaseList.Count) //AND NO ENEMY FOUND 
+            //{
+            //    //GAME OVER
+            //}
+        }
+
+        private void SpawnPhase(int _phaseNumber)
+        {
+            phaseNumber++;
+            float _waitBetweenSpawnTime = 0f;
+            for (int i = 0; i < currentLevel.phaseList[_phaseNumber].enemyEntryList.Count; i++)
+            {
+                for (int j = 0; j < currentLevel.phaseList[_phaseNumber].enemyEntryList[i].number; j++)
+                {
+                    StartCoroutine(WaitSpawnEnemy(currentLevel.phaseList[_phaseNumber].enemyEntryList[i].enemyType, _waitBetweenSpawnTime));
+                    _waitBetweenSpawnTime += currentLevel.phaseList[_phaseNumber].timeBetweenEachSpawn;
+                }
+            }
+        }
+
+        IEnumerator WaitSpawnEnemy(LevelScriptable.EnemyType _enemyType, float _wait)
+        {
+            yield return new WaitForSeconds(_wait);
+            SpawnEnemy(_enemyType);
+        }
+
+        private void SpawnEnemy(LevelScriptable.EnemyType _enemyType)
+        {
+            Instantiate(enemyList[(int)_enemyType]);
         }
 
         private void OnPlayerAdded(PlayerEntity newPlayer)
