@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61118e2db1064b4dbf3d08db5cdc745, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
+  levelTime: 180
   phaseList:
   - startTime: 10
     timeBetweenEachSpawn: 1

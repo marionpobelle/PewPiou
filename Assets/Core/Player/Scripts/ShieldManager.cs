@@ -19,6 +19,7 @@ namespace Nano.Player
         float shieldTimer;
         [SerializeField] int maxNumberShield;
         List<Shield> shieldList = new List<Shield>();
+        [SerializeField] List<Texture> inputSpriteList = new List<Texture>();
 
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
@@ -44,12 +45,15 @@ namespace Nano.Player
             {
                 case Data.BulletType.Red:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.red);
+                    _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[0]);
                     break;
                 case Data.BulletType.Blue:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.blue);
+                    _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[1]);
                     break;
                 case Data.BulletType.Green:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.green);
+                    _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[2]);
                     break;
             }
             _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
@@ -78,6 +82,7 @@ namespace Nano.Player
             }
         }
 
+        [Button("REMOVE ALL SHIELDS")]
         public void RemoveAllShields()
         {
             //if (shieldList.Count == 0) return;
