@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Nano.Data;
+using Nano.UI;
 
 namespace Nano.Managers
 {
@@ -69,6 +70,8 @@ namespace Nano.Managers
         private void OnPlayerAdded(PlayerEntity newPlayer)
         {
             players.Add(newPlayer);
+
+            ScoreUI.Instance.AddPlayer(newPlayer.playerData);
 
             if (players.Count == MAX_PLAYER_AMOUNT)
             {

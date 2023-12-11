@@ -130,6 +130,7 @@ namespace Nano.Player
                     {
                         //SHOW JUICY SCORE
                         _bullet.ExplodeBullet();
+                        gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote();
                     }
 
                 }

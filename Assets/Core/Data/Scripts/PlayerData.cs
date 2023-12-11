@@ -10,5 +10,7 @@ namespace Nano.Data
         private Vector2 currentInput;
 
         public List<BulletType> shieldTypeList = new List<BulletType>();
+
+        public float score;
     }
 }

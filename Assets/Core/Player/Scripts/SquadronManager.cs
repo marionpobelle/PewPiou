@@ -83,6 +83,7 @@ namespace Nano.Player
         {
             Transform _follower = followers[followers.Count - 1];
             followers.Remove(_follower);
+            gameObject.GetComponent<PlayerScore>().DecreaseScoreRemoveBird();
             _follower.DOScale(.9f, .2f).OnComplete(() =>
             {
                 _follower.DOScale(1.1f, .1f).OnComplete(() =>

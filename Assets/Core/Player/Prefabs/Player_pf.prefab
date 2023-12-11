@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -1819600930041283465}
   - component: {fileID: 6263265036738986578}
   - component: {fileID: 3019712171074787442}
+  - component: {fileID: 4702441199385647886}
   m_Layer: 0
   m_Name: Player_pf
   m_TagString: Untagged
@@ -187,6 +188,22 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &4702441199385647886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045446031766755295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c56011c3784f640bbbd5d4f1ed910b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3102294281736776593}
+  scoreIncrAddBird: 300
+  scoreDecrRemoveBird: 300
+  scoreIncrHitNote: 100
 --- !u!1 &3342101304754074761
 GameObject:
   m_ObjectHideFlags: 0
