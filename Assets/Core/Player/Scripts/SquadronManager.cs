@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using DG.Tweening;
 
 namespace Nano.Player
 {
@@ -75,11 +76,26 @@ namespace Nano.Player
             }
         }
 
+        [Button("REMOVE SQUADRON FOLLOWER")]
+        public void RemoveFollower()
+        {
+            Transform _follower = followers[followers.Count - 1];
+            followers.Remove(_follower);
+            _follower.DOScale(.9f, .2f).OnComplete(() =>
+            {
+                _follower.DOScale(1.1f, .1f).OnComplete(() =>
+                {
+                    _follower.DOKill();
+                    Destroy(_follower.gameObject);
+                });
+            });
+        }
+
 #if UNITY_EDITOR
         [SerializeField]
         Transform TestFollowerObject;
 
-        [Button(nameof(TestAddSquadronMember))]
+        [Button("ADD SQUADRON FOLLOWER")]
         public void TestAddSquadronMember()
         {
             AddFollower(Instantiate(TestFollowerObject));
