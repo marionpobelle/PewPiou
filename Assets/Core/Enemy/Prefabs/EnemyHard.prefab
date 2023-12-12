@@ -73,7 +73,6 @@ MonoBehaviour:
   maxDurationPhase0: 5
   maxDurationPhase1: 10
   maxDurationPhase2: 5
-  screenInnerOffset: 4
   animCurve:
     serializedVersion: 2
     m_Curve:
@@ -116,7 +115,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
-  playerTransforms: []
+  bulletSpeed: 30
   fireDelay: 2
   fireRate: 1
 --- !u!1 &3946388900254241348
@@ -147,8 +146,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.67449, y: 0.67449, z: 0.67449}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -1.09, y: 1.09, z: 1.09}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2327391864376607072}
   m_Father: {fileID: 4428436085327462907}

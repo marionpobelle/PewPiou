@@ -4,29 +4,40 @@ using UnityEngine;
 using Nano.Data;
 using System;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 namespace Nano.Combat
 {
     public class Bullet : MonoBehaviour
     {
-        [SerializeField, Tooltip("pas touche à celui là")] Rigidbody rb;
-        [SerializeField, Tooltip("How fast the bullet goes, float")] float speed;
-        public BulletType bulletType;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
+        [SerializeField, Tooltip("pas touche ï¿½ celui lï¿½")] Rigidbody rb;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] MeshRenderer bulletRenderer;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
+        [SerializeField] SpriteRenderer spriteRenderer;
+        [Space]
+        float bulletSpeed = 10;
+        public BulletType bulletType;
         Vector3 bulletDir;
         GameObject parentEnemy;
         bool backToSender = false;
         public bool convertingBullet = false;
         [SerializeField, Tooltip("How many seconds the bullet waits before getting destroyed automatically, float")] float destroyAfterTime = 15.0f;
+        [SerializeField] List<Sprite> spriteList = new List<Sprite>();
+        [SerializeField] GameObject hitEffect;
 
         [SerializeField] AK.Wwise.Event EnemyNote1_00_SFX;
         [SerializeField] AK.Wwise.Event EnemyNote2_00_SFX;
         [SerializeField] AK.Wwise.Event EnemyNote3_00_SFX;
 
-        public void Init(Vector3 dir)
+      
+        public void Init(Vector3 dir, float speed)
         {
             bulletDir = dir;
+            bulletSpeed = speed;
             bulletType = (BulletType)UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(BulletType)).Length);
+            spriteRenderer.sprite = spriteList[(int)bulletType];
             switch (bulletType)
             {
                 case BulletType.Red:
@@ -50,10 +61,15 @@ namespace Nano.Combat
             parentEnemy = enemy;
         }
 
+        public GameObject GetParentEnemy()
+        {
+            return parentEnemy;
+        }
+
         private void FixedUpdate()
         {
             if (backToSender) return;
-            rb.velocity = bulletDir * speed;   
+            rb.velocity = bulletDir * bulletSpeed;   
         }
 
         public void BackToSender()
@@ -62,7 +78,8 @@ namespace Nano.Combat
             rb.velocity = Vector3.zero;
             if (parentEnemy == null) return;
             transform.DORotate(new Vector3(0, 0, 180), .2f);
-            transform.DOMove(parentEnemy.transform.position, .5f).OnComplete(() =>
+            DOVirtual.DelayedCall(.35f, () => Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity));
+            transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
             {
                 Destroy(parentEnemy.gameObject);
                 Destroy(this.gameObject);

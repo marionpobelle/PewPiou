@@ -30,7 +30,10 @@ namespace Nano.Player
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
         {
-            if (shieldList.Count >= maxNumberShield) return;
+            if (shieldList.Count >= maxNumberShield)
+            {
+                RemoveShield(shieldList[0]);
+            }
             Shield _newShield = Instantiate(shieldPrefab, transform);
             _newShield.shieldType = _shieldType;
             _newShield.fixedScale = maxShieldSize - shieldSizeAugmentation * shieldList.Count;
@@ -139,8 +142,10 @@ namespace Nano.Player
                     if (_bullet.convertingBullet)
                     {
                         _bullet.BackToSender();
-                        DOVirtual.DelayedCall(.5f, () => player.squadronManager.AddFollower());
-                    } else
+                        //Add anim enemy teleport out
+                        RecruitEnemy(_bullet);
+                    }
+                    else
                     {
                         //SHOW JUICY SCORE
                         _bullet.ExplodeBullet();
@@ -155,6 +160,13 @@ namespace Nano.Player
                     Destroy(other.gameObject);
                 }
             }
+        }
+
+        private void RecruitEnemy(Bullet _bullet)
+        {
+            Animator animEnemy = _bullet.GetParentEnemy().GetComponentInChildren<Animator>();
+            animEnemy.SetBool("enemyGotRecrutedOut", true);
+            DOVirtual.DelayedCall(.5f, () => player.squadronManager.AddFollower());
         }
     }
 }

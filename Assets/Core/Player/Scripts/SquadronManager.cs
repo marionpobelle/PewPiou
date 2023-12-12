@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using DG.Tweening;
+using Nano.Combat;
 
 namespace Nano.Player
 {
@@ -73,7 +74,7 @@ namespace Nano.Player
         {
             Transform _newFollower = Instantiate(followerObject);
             followers.Add(_newFollower);
-
+            gameObject.GetComponent<PlayerScore>().IncreaseScoreAddBird();
             if (followers.Count % 2 == 1)
             {
                 storedPlayerPos.Add(transform.position);
@@ -83,8 +84,15 @@ namespace Nano.Player
         [Button("REMOVE SQUADRON FOLLOWER")]
         public void RemoveFollower()
         {
-            if (followers.Count == 0) return;
+            Animator animHit = gameObject.transform.GetChild(4).GetComponent<Animator>();
+            if (followers.Count == 0)
+            {
+                animHit.SetTrigger("playerIsHit");
+                gameObject.GetComponent<PlayerScore>().DecreaseScoreRemoveBird();
+                return;
+            }
             Transform _follower = followers[followers.Count - 1];
+            animHit.SetTrigger("playerIsHit");
             followers.Remove(_follower);
             gameObject.GetComponent<PlayerScore>().DecreaseScoreRemoveBird();
             _follower.DOScale(.9f, .2f).OnComplete(() =>

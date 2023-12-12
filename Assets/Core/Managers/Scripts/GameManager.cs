@@ -25,8 +25,8 @@ namespace Nano.Managers
         float levelTimer;
         int phaseNumber = 0;
         bool isGamePaused = false;
-        Vector2 screenBoundX = new Vector2(28, 55);
-        Vector2 screenBoundY = new Vector2(-25, 25);
+        [Header("SPAWN ZONE")]
+        [SerializeField] float height;
 
         [Header("UI")]
         [SerializeField] PauseMenu pauseMenu;
@@ -66,8 +66,6 @@ namespace Nano.Managers
             phaseNumber++;
             float _waitBetweenSpawnTime = 0f;
             int _spawnNumber = 0;
-            float range = screenBoundY.y - screenBoundY.x;
-            Debug.Log("range is : " + range);
             for (int i = 0; i < currentLevel.phaseList[_phaseNumber].enemyEntryList.Count; i++)
             {
                 _spawnNumber += currentLevel.phaseList[_phaseNumber].enemyEntryList[i].number;
@@ -82,10 +80,10 @@ namespace Nano.Managers
                     switch (currentLevel.phaseList[_phaseNumber].spawnShape)
                     {
                         case LevelScriptable.SpawnShape.TopToBottom:
-                            _position = new Vector2(100, screenBoundY.y - (range / _spawnNumber * _spawnStep));
+                            _position = new Vector2(100, height / 2 - (height / (_spawnNumber-1) * _spawnStep) + transform.position.y);
                             break;
                         case LevelScriptable.SpawnShape.BottomToTop:
-                            _position = new Vector2(100, screenBoundY.x + (range / _spawnNumber * _spawnStep) + range / _spawnNumber);
+                            _position = new Vector2(100, -height / 2 + (height / (_spawnNumber - 1) * _spawnStep) + height / _spawnNumber + transform.position.y);
                             break;
                     }
                     StartCoroutine(WaitSpawnEnemy(currentLevel.phaseList[_phaseNumber].enemyEntryList[i].enemyType, _waitBetweenSpawnTime, _position));
@@ -175,6 +173,12 @@ namespace Nano.Managers
         private void GameOver()
         {
             Debug.LogError("Not implemented yet");
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            Gizmos.color = new Color(1, 0, 0, 0.5f);
+            Gizmos.DrawCube(new Vector3(25, transform.position.y, 0), new Vector3(50, height, 1));
         }
     }
 }
