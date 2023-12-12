@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Nano.Entity;
 using Nano.Level;
+using Sirenix.OdinInspector;
 
 namespace Nano.Managers
 {
@@ -130,6 +131,14 @@ namespace Nano.Managers
                 StartGame();
             }
         }
+
+        [Button("START GAME WITH ONE PLAYER")]
+        private void StartGameWithOnePlayer()
+        {
+            joinCanvas.RemoveAToJoin();
+            StartGame();
+        }
+
 
         private void StartGame()
         {
