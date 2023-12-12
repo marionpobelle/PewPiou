@@ -102,7 +102,15 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 639939d0-8fd0-47d1-aee1-f7ea5987bb92
-      m_Path: <Gamepad>/buttonWest
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join Player Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: d72a5833-a425-4ecf-93fc-5ee408539347
+      m_Path: <Keyboard>/e
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -126,6 +134,7 @@ MonoBehaviour:
   - {fileID: 1127147056238669463, guid: 04626d73c054dae4f85aac573f8dcc19, type: 3}
   - {fileID: 1127147056238669463, guid: fab8460b0feb2594195d39d410bf4ebd, type: 3}
   currentLevel: {fileID: 11400000, guid: 21c445b16e16ff1499169e73ca9d6534, type: 2}
+  height: 0
   pauseMenu: {fileID: 0}
   pauseBGM:
     idInternal: 0
@@ -137,3 +146,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c7dc74444847b5549b819686b3869065,
       type: 2}
+  UiMenuSelect_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  UiMenuBack_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}

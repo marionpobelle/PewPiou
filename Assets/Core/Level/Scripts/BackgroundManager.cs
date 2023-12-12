@@ -18,10 +18,10 @@ namespace Nano.Level
 
         private void Start()
         {
-            StartBackground();
+            //StartBackground();
         }
 
-        private void StartBackground()
+        public void StartBackground()
         {
             currentPhaseIndex = 0;
             SetupBackground();
@@ -74,8 +74,7 @@ namespace Nano.Level
             float scale = (1 / newPropTransform.position.z) * backgroundElement.ScaleByDistanceMultiplier;
 
             float randomValue = ((.1f) * Random.Range(-backgroundElement.RandomScaleMultiplierByDistance, backgroundElement.RandomScaleMultiplierByDistance));
-                Debug.Log(randomValue);
-
+           
             scale += scale * randomValue;
 
             return new Vector3(scale, scale, scale);

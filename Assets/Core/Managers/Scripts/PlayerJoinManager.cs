@@ -12,6 +12,7 @@ namespace Nano.Managers
         public static event Action<PlayerEntity> OnPlayerAdded;
         int spawnedPlayers = 0;
         int connectedDeviceId = -1;
+        float startJoinTime;
 
         private void Awake()
         {
@@ -19,6 +20,7 @@ namespace Nano.Managers
 
             joinPlayerInput.performed += JoinPlayer;
             GameManager.onGameStart += UnsubscribeEvent;
+            startJoinTime = Time.time + .1f;
         }
 
         private void OnDestroy()
@@ -34,6 +36,9 @@ namespace Nano.Managers
 
         private void JoinPlayer(InputAction.CallbackContext obj)
         {
+            if (Time.time < startJoinTime)
+                return;
+
             Debug.Log($"{this.GetType()} >> Pressed Join Input");
             if (obj.control.device.deviceId == connectedDeviceId)
             {
