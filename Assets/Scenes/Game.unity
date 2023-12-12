@@ -1499,6 +1499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
+      propertyPath: height
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
+        type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1522046834}
@@ -1516,7 +1521,7 @@ PrefabInstance:
     - target: {fileID: 8029995094987822421, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8029995094987822421, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
@@ -1571,6 +1576,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 33227023584970477, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1103593515917553355, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1800,8 +1810,8 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 2047112571}
   - {fileID: 856041468}
-  - {fileID: 540825893630458199}
   - {fileID: 94499981}
+  - {fileID: 540825893630458199}
   - {fileID: 994878821}
   - {fileID: 1271369352}
   - {fileID: 326754954}
