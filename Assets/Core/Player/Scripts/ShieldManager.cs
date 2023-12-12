@@ -57,7 +57,7 @@ namespace Nano.Player
                     break;
             }
             _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
-            _newShield.shieldRenderer.material.SetFloat("_bubble_angle", shieldList.Count - .5f);
+            _newShield.shieldRenderer.material.SetFloat("_bubble_angle", shieldList.Count);
         }
 
         public void RemoveShield(Shield _shield)
@@ -66,6 +66,7 @@ namespace Nano.Player
             player.playerData.shieldTypeList.Remove(player.playerData.shieldTypeList[0]);
             _shield.shieldRenderer.material.DOFloat(0.19f, "_wiggle_size", .1f);
             _shield.shieldRenderer.material.DOFloat(0f, "_circle_stroke_width", .1f);
+            _shield.shieldRenderer.material.DOFloat(0f, "_bubble_size", .1f);
             _shield.transform.DOScale(_shield.fixedScale - 2f, .1f).OnComplete(() =>
             {
                 _shield.shieldRenderer.material.DOColor(new Color(0,0,0,0), "_Color", .05f);
@@ -84,7 +85,7 @@ namespace Nano.Player
                 {
                     _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale, .1f);
                 });
-                _sizeFixShield.shieldRenderer.material.DOFloat(i - .5f, "_bubble_angle", .2f);
+                _sizeFixShield.shieldRenderer.material.DOFloat(i, "_bubble_angle", .2f);
             }
         }
 
