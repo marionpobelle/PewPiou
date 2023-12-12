@@ -79,6 +79,8 @@ namespace Nano.Player
             {
                 storedPlayerPos.Add(transform.position);
             }
+
+            _newFollower.transform.position = GetTargetPosition(followers.IndexOf(_newFollower));
         }
 
         [Button("REMOVE SQUADRON FOLLOWER")]
