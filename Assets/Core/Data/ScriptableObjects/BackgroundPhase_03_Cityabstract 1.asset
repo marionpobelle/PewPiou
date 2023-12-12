@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614d8a1c2f3288a4884e9556fe0ad751, type: 3}
+  m_Name: BackgroundPhase_03_Cityabstract 1
+  m_EditorClassIdentifier: 
+  phaseDuration: 60
+  backgroundElements:
+  - prefab: {fileID: 4839871361412171669, guid: c5690f75d5bf6494598ef5f24d5d7cad,
+      type: 3}
+    averageSpawnTime: 4
+    variation: 2
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 22.263733, y: 375.05515}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 200
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1, y: 2.9299004}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 7690802479254661131, guid: c7862fae6c61e804cb7d621d638eaf26,
+      type: 3}
+    averageSpawnTime: 4
+    variation: 2
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 42.423244, y: 385.13492}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 200
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1.2302049, y: 2.5511782}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 7682794650645629074, guid: ac8382134e7390d4fa486450031cdbee,
+      type: 3}
+    averageSpawnTime: 4
+    variation: 3
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 42.423244, y: 334.73615}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 200
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1, y: 2}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 5039482323117373024, guid: ea219058796a38847907fa71fe3a685b,
+      type: 3}
+    averageSpawnTime: 4
+    variation: 3
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 103.26776, y: 595.1462}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 300
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1, y: 2.8110073}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 1058734381969558698, guid: bc561b3bca77be944aa48d8e467f108e,
+      type: 3}
+    averageSpawnTime: 4
+    variation: 3
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 194.07608, y: 534.6073}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 300
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1, y: 2}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 7054360341391169959, guid: 2824d50c8b4bf4241a7bfad4f4b24279,
+      type: 3}
+    averageSpawnTime: 4
+    variation: 3
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 103.26776, y: 489.20316}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 300
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1, y: 2}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 2762354071588037322, guid: 8b372104ecd31a142a83e7d8cff89d96,
+      type: 3}
+    averageSpawnTime: 35
+    variation: 3
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 352.99066, y: 591.3625}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 350
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1, y: 2}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 3718586559443468360, guid: 082b932af84673a4e89ab3da0a28a3a6,
+      type: 3}
+    averageSpawnTime: 15
+    variation: 3
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 23.810469, y: 160.02296}
+    useAutoScale: 0
+    scaleByDistanceMultiplier: 100
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 4.227021, y: 8.14829}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
+  - prefab: {fileID: 607469036057312956, guid: 3e73799c98995e848b178b9b54ae127a, type: 3}
+    averageSpawnTime: 1000
+    variation: 3
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 30, y: 200}
+    useAutoScale: 1
+    scaleByDistanceMultiplier: 100
+    randomScaleMultiplierByDistance: 0
+    minMaxScale: {x: 1, y: 2}
+    useAutoSpeed: 1
+    speedByDistanceMultiplier: 700
+    minMaxSpeed: {x: 0.5, y: 1.5}
