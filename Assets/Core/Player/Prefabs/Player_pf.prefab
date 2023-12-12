@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3102294281736776593}
   scoreIncrAddBird: 300
-  scoreDecrRemoveBird: 300
+  scoreDecrRemoveBird: -300
   scoreIncrHitNote: 100
 --- !u!1 &3342101304754074761
 GameObject:

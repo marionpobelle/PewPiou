@@ -72,7 +72,7 @@ namespace Nano.Player
         {
             Transform _newFollower = Instantiate(followerObject);
             followers.Add(_newFollower);
-
+            gameObject.GetComponent<PlayerScore>().IncreaseScoreAddBird();
             if (followers.Count % 2 == 1)
             {
                 storedPlayerPos.Add(transform.position);
@@ -86,6 +86,7 @@ namespace Nano.Player
             if (followers.Count == 0)
             {
                 animHit.SetTrigger("playerIsHit");
+                gameObject.GetComponent<PlayerScore>().DecreaseScoreRemoveBird();
                 return;
             }
             Transform _follower = followers[followers.Count - 1];

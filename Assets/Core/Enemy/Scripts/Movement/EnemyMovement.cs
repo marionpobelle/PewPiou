@@ -22,11 +22,9 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField, Tooltip("Duration Phase 2 in seconds")] protected float maxDurationPhase2 = 5.0f;
 
     protected Vector3 spawnPoint;
-    float screenBorderOffset = 3.0f;
     Vector2 screenBoundX;
     Vector2 screenBoundY;
 
-    [SerializeField, Tooltip("How far the initial position for an enemy is from the right border of the screen, float")] float screenInnerOffset = 4.0f;
     protected Vector3 originScreenPoint;
 
     protected enum Pattern { Horizontal, Vertical, Circle };
@@ -45,19 +43,11 @@ public class EnemyMovement : MonoBehaviour
         //Phase
         currentPhase = Phase.Phase0;
         //Spawn
-        float spawnHalfOffset = 1.0f;
-        //spawnPoint.x = UnityEngine.Random.Range(screenBoundX[1] + spawnHalfOffset, screenBoundX[1] + screenBorderOffset);
-        //spawnPoint.y = UnityEngine.Random.Range(screenBoundY[0], screenBoundY[1]);
-        //spawnPoint.z = 0.0f;
-
         spawnPoint = transform.position;
         //Origin
         originScreenPoint = new Vector3(50, transform.position.y, 0.0f);
-        //UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundY[1] - screenInnerOffset) Y
-        //UnityEngine.Random.Range(screenBoundX[1] / 2, screenBoundX[1] - screenInnerOffset) X
-        //Movement sequence
+        //Mouvement
         EnemyMovementLoop();
-        //transform.position = spawnPoint;
     }
 
     protected virtual void EnemyMovementLoop()

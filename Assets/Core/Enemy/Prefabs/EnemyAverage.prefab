@@ -73,7 +73,6 @@ MonoBehaviour:
   maxDurationPhase0: 5
   maxDurationPhase1: 10
   maxDurationPhase2: 5
-  screenInnerOffset: 4
   animCurve:
     serializedVersion: 2
     m_Curve:
@@ -116,7 +115,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
-  playerTransforms: []
+  bulletSpeed: 20
   fireDelay: 2
   fireRate: 0.15
   shortfireRate: 1
