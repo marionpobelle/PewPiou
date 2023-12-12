@@ -18,7 +18,7 @@ namespace Nano.UI
         [SerializeField] Button returnToTitleButton;
         [SerializeField] Button quitButton;
         [SerializeField] CanvasGroup pauseMenuGroup;
-        [SerializeField] TutorialScreen tutorialScreen;
+        [SerializeField] SimpleScreen tutorialScreen;
         [SerializeField] OptionsMenu optionsScreen;
         [SerializeField] List<Selectable> availableButtons;
 
@@ -72,7 +72,7 @@ namespace Nano.UI
             if (!isMenuShown)
                 return;
             HidePauseMenu();
-            tutorialScreen.ShowTutorialScreen(ShowPauseMenu);
+            tutorialScreen.ShowScreen(ShowPauseMenu);
             UiMenuSelect_00_SFX.Post(gameObject);
         }
 
