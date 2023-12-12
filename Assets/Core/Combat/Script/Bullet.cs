@@ -15,6 +15,8 @@ namespace Nano.Combat
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] MeshRenderer bulletRenderer;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
+        [SerializeField] MeshRenderer specialBulletRenderer;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] SpriteRenderer spriteRenderer;
         [Space]
         [SerializeField, Tooltip("How fast the bullet goes, float")] float speed;
@@ -43,6 +45,15 @@ namespace Nano.Combat
                 case BulletType.Green:
                     bulletRenderer.material.SetColor("_Color", Color.green);
                     break;
+            }
+            if (convertingBullet)
+            {
+                specialBulletRenderer.gameObject.SetActive(true);
+                specialBulletRenderer.material.SetColor("_Color", Color.white);
+                specialBulletRenderer.transform.DOScale(1.0f, .3f).SetLoops(-1, LoopType.Yoyo);
+            } else
+            {
+                specialBulletRenderer.gameObject.SetActive(false);
             }
             Destroy(gameObject, destroyAfterTime);
         }
