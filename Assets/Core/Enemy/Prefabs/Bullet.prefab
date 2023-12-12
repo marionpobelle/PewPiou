@@ -218,11 +218,15 @@ MonoBehaviour:
   rb: {fileID: -2184900755691303232}
   bulletRenderer: {fileID: 3946219304564420928}
   spriteRenderer: {fileID: 3699910266950814596}
-  speed: 10
   bulletType: 1
-  bulletRenderer: {fileID: 3946219304564420928}
   convertingBullet: 0
   destroyAfterTime: 15
+  spriteList:
+  - {fileID: 21300000, guid: 3331117cddc8f184abdb3834dc2248d3, type: 3}
+  - {fileID: 21300000, guid: 4545ec5bd9fac2344815ef32ac872a92, type: 3}
+  - {fileID: 21300000, guid: 427192779cc6cd74c8d6c2aec777e539, type: 3}
+  hitEffect: {fileID: 1666503528478782300, guid: 7d42a9cc41ebc0243a28e5459ff0de7a,
+    type: 3}
   EnemyNote1_00_SFX:
     idInternal: 0
     valueGuidInternal: 
