@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Nano.Data;
 using Nano.UI;
+using Nano.Level;
 
 namespace Nano.Managers
 {
@@ -18,10 +19,12 @@ namespace Nano.Managers
         public static event Action onGameStart;
 
         private List<PlayerEntity> players = new List<PlayerEntity>();
+        bool isGameRunning = false;
 
         [Header("LEVEL")]
         public List<GameObject> enemyList = new List<GameObject>();
         public LevelScriptable currentLevel;
+        [SerializeField] BackgroundManager backgroundManager;
         float levelTimer;
         int phaseNumber = 0;
         bool isGamePaused = false;
@@ -50,6 +53,8 @@ namespace Nano.Managers
 
         private void Update()
         {
+            if (!isGameRunning) return;
+
             levelTimer += Time.deltaTime;
             if (phaseNumber < currentLevel.phaseList.Count && levelTimer >= currentLevel.phaseList[phaseNumber].startTime)
             {
@@ -120,7 +125,8 @@ namespace Nano.Managers
         private void StartGame()
         {
             Debug.Log($"{this.GetType()} >> Starting Game");
-
+            isGameRunning = true;
+            backgroundManager.StartBackground();
             onGameStart?.Invoke();
         }
 
@@ -173,6 +179,7 @@ namespace Nano.Managers
         private void GameOver()
         {
             Debug.LogError("Not implemented yet");
+            isGameRunning = false;
         }
 
         void OnDrawGizmosSelected()
