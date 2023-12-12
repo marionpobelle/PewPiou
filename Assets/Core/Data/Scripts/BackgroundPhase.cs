@@ -62,8 +62,12 @@ namespace Nano.Data
         [Tooltip("X is the min scale, Y is the max scale.")]
         Vector2 minMaxScale = new Vector2(1, 2);
 
-        [Header("Speed Settings")]
+        [Header("Speed Settings"), Tooltip("Handles speed automatically by distance")]
+        [SerializeField] bool useAutoSpeed = true;
+        [Tooltip("The higher it is, the faster the prop will go"),ShowIf(nameof(useAutoSpeed))]
+        [SerializeField] float speedByDistanceMultiplier = 700;
         [SerializeField][MinMaxSlider(0, 10)]
+        [HideIf(nameof(UseAutoSpeed))]
         [Tooltip("X is the min speed, Y is the max speed.")]
         Vector2 minMaxSpeed = new Vector2(.5f, 1.5f);
 
@@ -76,6 +80,8 @@ namespace Nano.Data
         public Vector2 MinMaxSpawnDistance { get => minMaxSpawnDistance; set => minMaxSpawnDistance = value; }
         public Vector2 MinMaxScale { get => minMaxScale; set => minMaxScale = value; }
         public Vector2 MinMaxSpeed { get => minMaxSpeed; set => minMaxSpeed = value; }
+        public bool UseAutoSpeed { get => useAutoSpeed; set => useAutoSpeed = value; }
+        public float SpeedByDistanceRatio { get => speedByDistanceMultiplier; set => speedByDistanceMultiplier = value; }
         public float NextSpawnTime { get => nextSpawnTime; set => nextSpawnTime = value; }
     }
 }

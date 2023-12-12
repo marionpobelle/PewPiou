@@ -23,9 +23,11 @@ namespace Nano.Level
         private void StartBackground()
         {
             currentPhaseIndex = 0;
-            nextPhaseTime = Time.time + phases[currentPhaseIndex].PhaseDuration;
+            SetupBackground();
             isBackgroundRunning = true;
         }
+
+        
 
         private void Update()
         {
@@ -44,12 +46,7 @@ namespace Nano.Level
                 }
                 else
                 {
-                    nextPhaseTime = Time.time + phases[currentPhaseIndex].PhaseDuration;
-
-                    foreach (var backgroundElement in phases[currentPhaseIndex].BackgroundElements)
-                    {
-                        backgroundElement.NextSpawnTime = Time.time + backgroundElement.StartupDelay;
-                    }
+                    SetupBackground();
                 }
 
             }
@@ -63,9 +60,25 @@ namespace Nano.Level
 
                     BackgroundProp newProp = InstantiateBackgroundProp(backgroundElement).GetComponent<BackgroundProp>();
 
-                    newProp.Init(Random.Range(backgroundElement.MinMaxSpeed.x, backgroundElement.MinMaxSpeed.y));
+                    newProp.Init(GetPropSpeed(backgroundElement, newProp.transform));
                     newProp.transform.localScale = GetRandomUniformVector3(backgroundElement.MinMaxScale);
                 }
+            }
+        }
+
+        private static float GetPropSpeed(BackgroundElement backgroundElement, Transform newPropTransform)
+        {
+            float propSpeed = backgroundElement.UseAutoSpeed ? (1/ newPropTransform.position.z ) * backgroundElement.SpeedByDistanceRatio : Random.Range(backgroundElement.MinMaxSpeed.x, backgroundElement.MinMaxSpeed.y);
+            return propSpeed;
+        }
+
+        private void SetupBackground()
+        {
+            nextPhaseTime = Time.time + phases[currentPhaseIndex].PhaseDuration;
+
+            foreach (var backgroundElement in phases[currentPhaseIndex].BackgroundElements)
+            {
+                backgroundElement.NextSpawnTime = Time.time + backgroundElement.StartupDelay;
             }
         }
 
