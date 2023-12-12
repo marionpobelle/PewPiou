@@ -2,7 +2,8 @@
     "name": "Nano.Combat",
     "rootNamespace": "",
     "references": [
-        "GUID:12801b610db72d7459e9ccd6e76884a1"
+        "Nano.Data",
+        "AK.Wwise.Unity.API.WwiseTypes"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

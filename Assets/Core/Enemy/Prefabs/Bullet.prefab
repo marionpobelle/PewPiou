@@ -303,7 +303,6 @@ MonoBehaviour:
   bulletRenderer: {fileID: 3946219304564420928}
   specialBulletRenderer: {fileID: 6414202042529726867}
   spriteRenderer: {fileID: 3699910266950814596}
-  speed: 10
   bulletType: 1
   convertingBullet: 0
   destroyAfterTime: 15
@@ -313,6 +312,21 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 427192779cc6cd74c8d6c2aec777e539, type: 3}
   hitEffect: {fileID: 1666503528478782300, guid: 7d42a9cc41ebc0243a28e5459ff0de7a,
     type: 3}
+  EnemyNote1_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a45161f44db88864187a2021b45a37dd,
+      type: 2}
+  EnemyNote2_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c62fe533f667f84296ca22fcf2af209,
+      type: 2}
+  EnemyNote3_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2c499c39696efc7458320e20c5f02a5f,
+      type: 2}
 --- !u!135 &5849271828151121678
 SphereCollider:
   m_ObjectHideFlags: 0

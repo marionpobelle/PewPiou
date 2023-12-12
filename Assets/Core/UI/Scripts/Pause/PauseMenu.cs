@@ -22,6 +22,13 @@ namespace Nano.UI
         [SerializeField] OptionsMenu optionsScreen;
         [SerializeField] List<Selectable> availableButtons;
 
+        [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuSelect_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuUp_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuDown_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuSliderTickDown_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuSliderTickUp_00_SFX;
+
         Selectable selectedOption;
 
         bool isMoving = false;
@@ -39,6 +46,7 @@ namespace Nano.UI
             quitButton.onClick.AddListener(QuitButton);
             optionsScreen.CheckPlayerPrefsInitiated();
             SelectNewOption(0);
+
         }
 
         private void OnDestroy()
@@ -48,6 +56,7 @@ namespace Nano.UI
             optionsButton.onClick.RemoveListener(OptionsButton);
             returnToTitleButton.onClick.RemoveListener(ReturnToTitleButton);
             quitButton.onClick.RemoveListener(QuitButton);
+
         }
 
         private void ResumeButton()
@@ -64,6 +73,7 @@ namespace Nano.UI
                 return;
             HidePauseMenu();
             tutorialScreen.ShowTutorialScreen(ShowPauseMenu);
+            UiMenuSelect_00_SFX.Post(gameObject);
         }
 
         private void OptionsButton()
@@ -71,6 +81,7 @@ namespace Nano.UI
             if (!isMenuShown)
                 return;
             HidePauseMenu();
+            UiMenuSelect_00_SFX.Post(gameObject);
             optionsScreen.ShowOptionsScreen(ShowPauseMenu);
         }
 
@@ -80,6 +91,7 @@ namespace Nano.UI
                 return;
             HidePauseMenu();
             onReturnToTitleButtonClicked?.Invoke();
+            UiMenuSelect_00_SFX.Post(gameObject);
         }
 
         private void QuitButton()
@@ -87,6 +99,7 @@ namespace Nano.UI
             if (!isMenuShown)
                 return;
             Debug.Log("Quitting app.");
+            UiMenuBack_00_SFX.Post(gameObject);
 
             Application.Quit();
         }
@@ -115,6 +128,16 @@ namespace Nano.UI
                 isMoving = true;
                 int dir = Mathf.RoundToInt(obj.ReadValue<Vector2>().y);
                 SelectNewOption(availableButtons.IndexOf(selectedOption) - dir);
+
+                if (dir > 0)
+                {
+                    UiMenuUp_00_SFX.Post(gameObject);
+                }
+                if (dir < 0)
+                {
+                    UiMenuDown_00_SFX.Post(gameObject);
+                }
+
             }
         }
 
@@ -134,6 +157,9 @@ namespace Nano.UI
             {
                 selectedOption = availableButtons[listIndex];
                 selectedOption.Select();
+
+                
+
             }
         }
     }

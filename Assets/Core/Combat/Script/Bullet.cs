@@ -29,6 +29,11 @@ namespace Nano.Combat
         [SerializeField] List<Sprite> spriteList = new List<Sprite>();
         [SerializeField] GameObject hitEffect;
 
+        [SerializeField] AK.Wwise.Event EnemyNote1_00_SFX;
+        [SerializeField] AK.Wwise.Event EnemyNote2_00_SFX;
+        [SerializeField] AK.Wwise.Event EnemyNote3_00_SFX;
+
+      
         public void Init(Vector3 dir, float speed)
         {
             bulletDir = dir;
@@ -39,12 +44,15 @@ namespace Nano.Combat
             {
                 case BulletType.Red:
                     bulletRenderer.material.SetColor("_Color", Color.red);
+                    EnemyNote1_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Blue:
                     bulletRenderer.material.SetColor("_Color", Color.blue);
+                    EnemyNote2_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Green:
                     bulletRenderer.material.SetColor("_Color", Color.green);
+                    EnemyNote3_00_SFX.Post(gameObject);
                     break;
             }
             if (convertingBullet)

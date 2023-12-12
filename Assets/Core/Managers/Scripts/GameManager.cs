@@ -30,6 +30,10 @@ namespace Nano.Managers
 
         [Header("UI")]
         [SerializeField] PauseMenu pauseMenu;
+        [SerializeField] AK.Wwise.Event pauseBGM;
+        [SerializeField] AK.Wwise.Event resumeBGM;
+        [SerializeField] AK.Wwise.Event UiMenuSelect_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
 
         void Awake()
         {
@@ -138,6 +142,11 @@ namespace Nano.Managers
             isGamePaused = true;
             pauseMenu.ShowPauseMenu();
             PauseMenu.onResumeButtonClicked += UnpauseGame;
+            
+            
+            pauseBGM.Post(gameObject);
+            UiMenuBack_00_SFX.Post(gameObject);
+
 
             foreach (PlayerEntity player in players)
             {
@@ -151,6 +160,10 @@ namespace Nano.Managers
             isGamePaused = false;
             pauseMenu.HidePauseMenu();
             PauseMenu.onResumeButtonClicked -= UnpauseGame;
+            
+            resumeBGM.Post(gameObject);
+            UiMenuSelect_00_SFX.Post(gameObject);
+
             foreach (PlayerEntity player in players)
             {
                 player.InputHandler.UnfreezeInputs();

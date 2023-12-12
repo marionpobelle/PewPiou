@@ -374,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -43.6}
+  m_LocalPosition: {x: 0, y: 3.2, z: -43.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -649,6 +649,9 @@ GameObject:
   m_Component:
   - component: {fileID: 856041468}
   - component: {fileID: 856041467}
+  - component: {fileID: 856041471}
+  - component: {fileID: 856041470}
+  - component: {fileID: 856041469}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -697,6 +700,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856041469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856041466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbc81fa777f1df4caf1aae611372e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d0ca7077a58e9204687278285f0331f9,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &856041470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856041466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959f69d2a1ef5734db0434a005cc300f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &856041471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856041466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3cf34ff9e840f439c7166c60685f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cc2781eee3cd67f43b09e895dc8c9cf0,
+      type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &994878821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -790,6 +876,12 @@ PrefabInstance:
       propertyPath: useTweening
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2503550822628525698, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuBack_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 46bf484891ed9ce4bb8f4c282638fc58,
+        type: 2}
     - target: {fileID: 2529395173962039029, guid: 15cdfe15b71e7f4479572f55a09811b8,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -895,6 +987,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2621983918762293307, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuBack_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 42725a09dbf4d114d9a9771cde35a88c,
+        type: 2}
+    - target: {fileID: 2621983918762293307, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSelect_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 609093d239657004ba3c68277f567594,
+        type: 2}
     - target: {fileID: 2874419560216362842, guid: 15cdfe15b71e7f4479572f55a09811b8,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -930,6 +1034,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5193069462045800910, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSliderTickUp_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f669ebf4b411a3144b68d04e2644949a,
+        type: 2}
+    - target: {fileID: 5193069462045800910, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSliderTickDown_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cc185b96c5c657345ab41825f7bcc43b,
+        type: 2}
     - target: {fileID: 5396880171033169430, guid: 15cdfe15b71e7f4479572f55a09811b8,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -995,6 +1111,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400722409279767589, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSliderTickUp_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f669ebf4b411a3144b68d04e2644949a,
+        type: 2}
+    - target: {fileID: 6400722409279767589, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSliderTickDown_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cc185b96c5c657345ab41825f7bcc43b,
+        type: 2}
     - target: {fileID: 6452513723225679573, guid: 15cdfe15b71e7f4479572f55a09811b8,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1060,6 +1188,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7821337673524556925, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSliderTickUp_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f669ebf4b411a3144b68d04e2644949a,
+        type: 2}
+    - target: {fileID: 7821337673524556925, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSliderTickDown_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cc185b96c5c657345ab41825f7bcc43b,
+        type: 2}
     - target: {fileID: 8016185717408318450, guid: 15cdfe15b71e7f4479572f55a09811b8,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1149,6 +1289,12 @@ PrefabInstance:
       propertyPath: useTweening
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3244695170315512756, guid: f91259569b4352e43a2efd739fe89cae,
+        type: 3}
+      propertyPath: UiMenuBack_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 46bf484891ed9ce4bb8f4c282638fc58,
+        type: 2}
     - target: {fileID: 4400516760406643333, guid: f91259569b4352e43a2efd739fe89cae,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1279,23 +1425,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 326754954}
     m_Modifications:
-    - target: {fileID: 4095919918481050878, guid: 5c8bbf19e2634654eaa024e33cd36266,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 182a8ece106719847b3e3ae0a3c8793b,
-        type: 2}
-    - target: {fileID: 4095919918481050878, guid: 5c8bbf19e2634654eaa024e33cd36266,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 8805424183898995527, guid: 182a8ece106719847b3e3ae0a3c8793b,
-        type: 2}
-    - target: {fileID: 4095919918481050878, guid: 5c8bbf19e2634654eaa024e33cd36266,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5029731875309374075, guid: 5c8bbf19e2634654eaa024e33cd36266,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1421,23 +1550,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6727821163526417085, guid: 5c8bbf19e2634654eaa024e33cd36266,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 182a8ece106719847b3e3ae0a3c8793b,
-        type: 2}
-    - target: {fileID: 6727821163526417085, guid: 5c8bbf19e2634654eaa024e33cd36266,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 8805424183898995527, guid: 182a8ece106719847b3e3ae0a3c8793b,
-        type: 2}
-    - target: {fileID: 6727821163526417085, guid: 5c8bbf19e2634654eaa024e33cd36266,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1519,6 +1631,18 @@ PrefabInstance:
       propertyPath: currentLevel
       value: 
       objectReference: {fileID: 11400000, guid: 21c445b16e16ff1499169e73ca9d6534,
+        type: 2}
+    - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
+        type: 3}
+      propertyPath: UiMenuBack_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 46bf484891ed9ce4bb8f4c282638fc58,
+        type: 2}
+    - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
+        type: 3}
+      propertyPath: UiMenuSelect_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 609093d239657004ba3c68277f567594,
         type: 2}
     - target: {fileID: 8029995094987822421, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
@@ -1638,6 +1762,66 @@ PrefabInstance:
       propertyPath: tutorialScreen
       value: 
       objectReference: {fileID: 831285602}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: PauseBGM.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 71741e8690c00a242a73d8bf9fe7648d,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: pauseBGM.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 71741e8690c00a242a73d8bf9fe7648d,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: ResumeBGM.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c7dc74444847b5549b819686b3869065,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: resumeBGM.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c7dc74444847b5549b819686b3869065,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: UiMenuUp_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 78db781e35117ae4398539b167bd9af2,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: UiMenuBack_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 46bf484891ed9ce4bb8f4c282638fc58,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: UiMenuDown_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 42725a09dbf4d114d9a9771cde35a88c,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: UiMenuSelect_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 609093d239657004ba3c68277f567594,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: UiMenuSliderTickUp_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cc185b96c5c657345ab41825f7bcc43b,
+        type: 2}
+    - target: {fileID: 3873129856566513151, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
+        type: 3}
+      propertyPath: UiMenuSliderTickDown_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f669ebf4b411a3144b68d04e2644949a,
+        type: 2}
     - target: {fileID: 6002067831315105270, guid: 3afea03e38fc792439c7fa99d2eb5cc1,
         type: 3}
       propertyPath: m_AnchorMax.y

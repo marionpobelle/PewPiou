@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: d666f49026b4984396bcd7fb196c1056
     GuidInternal: 
-    m_lastTime: -8584993068752647153
+    m_lastTime: -8584995751965519893
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,8 +38,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 15be22d0e294f44ba968902040c01d1a
     GuidInternal: 
-    m_lastTime: -8584993068752961966
+    m_lastTime: -8584992146443858761
     List:
+    - name: BGM
+      guid: fe3bfec838fdf04fb9d695f3ce6366e1
+      id: 412724365
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 15be22d0e294f44ba968902040c01d1a
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: BGM
+        ObjectType: 2
+        guid: fe3bfec838fdf04fb9d695f3ce6366e1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BGM
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +71,80 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: RVB
+      guid: b3d99bb4e58c3949b08e3c60b6f11a18
+      id: 695384145
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 15be22d0e294f44ba968902040c01d1a
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 107a097aab237a41a47716b90482c724
+      - ElementName: RVB
+        ObjectType: 1
+        guid: b3d99bb4e58c3949b08e3c60b6f11a18
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB
+    - name: SFX
+      guid: 107a097aab237a41a47716b90482c724
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 15be22d0e294f44ba968902040c01d1a
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 107a097aab237a41a47716b90482c724
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
+    - name: UI
+      guid: b36c9b686144364fa0ce3660544e36cc
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 15be22d0e294f44ba968902040c01d1a
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UI
+        ObjectType: 2
+        guid: b36c9b686144364fa0ce3660544e36cc
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
+    - name: UI_RVB
+      guid: e67487a2b29045409072fc2020dd9f75
+      id: 3261336756
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 15be22d0e294f44ba968902040c01d1a
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UI
+        ObjectType: 2
+        guid: b36c9b686144364fa0ce3660544e36cc
+      - ElementName: UI_RVB
+        ObjectType: 1
+        guid: e67487a2b29045409072fc2020dd9f75
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI\UI_RVB
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +157,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fa12e6d2938f424d8a372d986358cf9f
     GuidInternal: 
-    m_lastTime: -8584993068752667141
+    m_lastTime: -8584992178960623299
     List:
     - name: NanoSoundbank
       guid: be919c1646030c42a6dd5d023f51402d
@@ -94,11 +185,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
     GuidInternal: 
-    m_lastTime: -8584993068753013034
+    m_lastTime: -8584992180178646363
     List:
-    - name: TestDefaultWwiseEvent
-      guid: 1d7af758ba8ca843a5081ce439e0f3ca
-      id: 1611267153
+    - name: BGM_Test
+      guid: 69f58737f54e384c838c22715eb8afcc
+      id: 3438580564
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,13 +197,455 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
-      - ElementName: TestDefaultWwiseEvent
+      - ElementName: BGM_Test
         ObjectType: 3
-        guid: 1d7af758ba8ca843a5081ce439e0f3ca
-      Path: Events\Default Work Unit\TestDefaultWwiseEvent
+        guid: 69f58737f54e384c838c22715eb8afcc
+      Path: Events\Default Work Unit\BGM_Test
+      maxAttenuation: 0
+      maxDuration: 22.656055
+      minDuration: 22.656055
+    - name: EnemyNote1_00_SFX
+      guid: 6c549a0aa026df4cae59d38b51279e70
+      id: 1961931039
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: EnemyNote1_00_SFX
+        ObjectType: 3
+        guid: 6c549a0aa026df4cae59d38b51279e70
+      Path: Events\Default Work Unit\EnemyNote1_00_SFX
+      maxAttenuation: 0
+      maxDuration: 2.981175
+      minDuration: 0.96253544
+    - name: EnemyNote2_00_SFX
+      guid: 00047211aa9a3848a87c1d96ea5fd868
+      id: 686611850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: EnemyNote2_00_SFX
+        ObjectType: 3
+        guid: 00047211aa9a3848a87c1d96ea5fd868
+      Path: Events\Default Work Unit\EnemyNote2_00_SFX
+      maxAttenuation: 0
+      maxDuration: 2.6923606
+      minDuration: 1.4308937
+    - name: EnemyNote3_00_SFX
+      guid: d16e7a410cbfb14e8c4d430ef825e13d
+      id: 3953467349
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: EnemyNote3_00_SFX
+        ObjectType: 3
+        guid: d16e7a410cbfb14e8c4d430ef825e13d
+      Path: Events\Default Work Unit\EnemyNote3_00_SFX
+      maxAttenuation: 0
+      maxDuration: 2.2617111
+      minDuration: 0.8206235
+    - name: P1DamageBird_00_SFX
+      guid: 5a7f454f672da54c995642e8fe2db1bf
+      id: 3391800229
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1DamageBird_00_SFX
+        ObjectType: 3
+        guid: 5a7f454f672da54c995642e8fe2db1bf
+      Path: Events\Default Work Unit\P1DamageBird_00_SFX
+      maxAttenuation: 0
+      maxDuration: 2.1644342
+      minDuration: 1.4557656
+    - name: P1ShieldBreak1_00_SFX
+      guid: 3d7147db539a474aa0120dc08a301d82
+      id: 4183514192
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1ShieldBreak1_00_SFX
+        ObjectType: 3
+        guid: 3d7147db539a474aa0120dc08a301d82
+      Path: Events\Default Work Unit\P1ShieldBreak1_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.1251498
+      minDuration: 1.0023944
+    - name: P1ShieldBreak2_00_SFX
+      guid: cb2e93e96702b84d95c3a86201f60f1e
+      id: 95130393
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1ShieldBreak2_00_SFX
+        ObjectType: 3
+        guid: cb2e93e96702b84d95c3a86201f60f1e
+      Path: Events\Default Work Unit\P1ShieldBreak2_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.5358905
+      minDuration: 1.3683226
+    - name: P1ShieldBreak3_00_SFX
+      guid: 52ae3f865e82f34b96c677db97d20345
+      id: 2079705822
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1ShieldBreak3_00_SFX
+        ObjectType: 3
+        guid: 52ae3f865e82f34b96c677db97d20345
+      Path: Events\Default Work Unit\P1ShieldBreak3_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.4180253
+      minDuration: 1.2633168
+    - name: P1ShieldGet1_00_SFX
+      guid: a112f25b35a97e498e53e715eb547180
+      id: 2750937717
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1ShieldGet1_00_SFX
+        ObjectType: 3
+        guid: a112f25b35a97e498e53e715eb547180
+      Path: Events\Default Work Unit\P1ShieldGet1_00_SFX
+      maxAttenuation: 0
+      maxDuration: 2.1609375
+      minDuration: 2.1609375
+    - name: P1ShieldGet2_00_SFX
+      guid: 1887b977d2eac74d9eae1105163e9163
+      id: 2257478380
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1ShieldGet2_00_SFX
+        ObjectType: 3
+        guid: 1887b977d2eac74d9eae1105163e9163
+      Path: Events\Default Work Unit\P1ShieldGet2_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.7793542
+      minDuration: 1.7793542
+    - name: P1ShieldGet3_00_SFX
+      guid: 33f33f51a282a24597a4174082e49f72
+      id: 2849764031
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1ShieldGet3_00_SFX
+        ObjectType: 3
+        guid: 33f33f51a282a24597a4174082e49f72
+      Path: Events\Default Work Unit\P1ShieldGet3_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.5414166
+      minDuration: 1.5414166
+    - name: P2DamageBird_00_SFX
+      guid: bfd5039c8c773a468a149f8ce79f156d
+      id: 911512040
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2DamageBird_00_SFX
+        ObjectType: 3
+        guid: bfd5039c8c773a468a149f8ce79f156d
+      Path: Events\Default Work Unit\P2DamageBird_00_SFX
+      maxAttenuation: 0
+      maxDuration: 2.1333327
+      minDuration: 1.5392687
+    - name: P2ShieldBreak1_00_SFX
+      guid: 8e624a545639bd409f263ef5bce3fe34
+      id: 1676409973
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2ShieldBreak1_00_SFX
+        ObjectType: 3
+        guid: 8e624a545639bd409f263ef5bce3fe34
+      Path: Events\Default Work Unit\P2ShieldBreak1_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.9975961
+      minDuration: 0.70540696
+    - name: P2ShieldBreak2_00_SFX
+      guid: f4ba6da79bbd2943bc3273f06dd43ca6
+      id: 1182950636
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2ShieldBreak2_00_SFX
+        ObjectType: 3
+        guid: f4ba6da79bbd2943bc3273f06dd43ca6
+      Path: Events\Default Work Unit\P2ShieldBreak2_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.2297639
+      minDuration: 0.8695744
+    - name: P2ShieldBreak3_00_SFX
+      guid: b39ab1f2dfbfd041a7baad12aecee69a
+      id: 1775236287
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2ShieldBreak3_00_SFX
+        ObjectType: 3
+        guid: b39ab1f2dfbfd041a7baad12aecee69a
+      Path: Events\Default Work Unit\P2ShieldBreak3_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.5252076
+      minDuration: 1.0784847
+    - name: P2ShieldGet1_00_SFX
+      guid: 0f1a38a3c9936c47837493afeb0f0e4a
+      id: 1708052252
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2ShieldGet1_00_SFX
+        ObjectType: 3
+        guid: 0f1a38a3c9936c47837493afeb0f0e4a
+      Path: Events\Default Work Unit\P2ShieldGet1_00_SFX
+      maxAttenuation: 0
+      maxDuration: 2.0153334
+      minDuration: 2.0153334
+    - name: P2ShieldGet2_00_SFX
+      guid: a67a2052b04c33449331c7ec9e31e231
+      id: 1711082405
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2ShieldGet2_00_SFX
+        ObjectType: 3
+        guid: a67a2052b04c33449331c7ec9e31e231
+      Path: Events\Default Work Unit\P2ShieldGet2_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.51975
+      minDuration: 1.51975
+    - name: P2ShieldGet3_00_SFX
+      guid: f731334af59d094d9356cdf1d82226f1
+      id: 3228990490
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2ShieldGet3_00_SFX
+        ObjectType: 3
+        guid: f731334af59d094d9356cdf1d82226f1
+      Path: Events\Default Work Unit\P2ShieldGet3_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.6093125
+      minDuration: 1.6093125
+    - name: pauseBGM
+      guid: 575bcc4bb2faad43a6474f52e058d5e1
+      id: 3403017773
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: pauseBGM
+        ObjectType: 3
+        guid: 575bcc4bb2faad43a6474f52e058d5e1
+      Path: Events\Default Work Unit\pauseBGM
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: resumeBGM
+      guid: b3f62bf88986e6428a530425af233eff
+      id: 3056597442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: resumeBGM
+        ObjectType: 3
+        guid: b3f62bf88986e6428a530425af233eff
+      Path: Events\Default Work Unit\resumeBGM
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: UiMenuBack_00_SFX
+      guid: 5c2f5115ac538146bea78e686bb4413e
+      id: 207152438
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: UiMenuBack_00_SFX
+        ObjectType: 3
+        guid: 5c2f5115ac538146bea78e686bb4413e
+      Path: Events\Default Work Unit\UiMenuBack_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.27322033
+      minDuration: 0.19319595
+    - name: UiMenuDown_00_SFX
+      guid: 872ea4c852c808468f4e82ec30ec5707
+      id: 2305575365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: UiMenuDown_00_SFX
+        ObjectType: 3
+        guid: 872ea4c852c808468f4e82ec30ec5707
+      Path: Events\Default Work Unit\UiMenuDown_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.08622707
+      minDuration: 0.077712186
+    - name: UiMenuSelect_00_SFX
+      guid: 8c90929e6055784ebf775651e6062be5
+      id: 2622648053
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: UiMenuSelect_00_SFX
+        ObjectType: 3
+        guid: 8c90929e6055784ebf775651e6062be5
+      Path: Events\Default Work Unit\UiMenuSelect_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.16164544
+      minDuration: 0.114300594
+    - name: UiMenuSliderTickDown_00_SFX
+      guid: 408c28ec1466b74897eeca4ef4cdc3c0
+      id: 1415547993
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: UiMenuSliderTickDown_00_SFX
+        ObjectType: 3
+        guid: 408c28ec1466b74897eeca4ef4cdc3c0
+      Path: Events\Default Work Unit\UiMenuSliderTickDown_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.07110095
+      minDuration: 0.05643286
+    - name: UiMenuSliderTickUp_00_SFX
+      guid: b6762ecadb229844acb95a6863df1928
+      id: 918622992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: UiMenuSliderTickUp_00_SFX
+        ObjectType: 3
+        guid: b6762ecadb229844acb95a6863df1928
+      Path: Events\Default Work Unit\UiMenuSliderTickUp_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.07260926
+      minDuration: 0.05763001
+    - name: UiMenuUp_00_SFX
+      guid: 248f7a0c1b10da49a6c282db697fbc66
+      id: 2394293572
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: UiMenuUp_00_SFX
+        ObjectType: 3
+        guid: 248f7a0c1b10da49a6c282db697fbc66
+      Path: Events\Default Work Unit\UiMenuUp_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.10213191
+      minDuration: 0.08526435
+    - name: WingFlap_00_SFX
+      guid: eac7b8d092e86844bdd84a18527a06de
+      id: 227607944
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: WingFlap_00_SFX
+        ObjectType: 3
+        guid: eac7b8d092e86844bdd84a18527a06de
+      Path: Events\Default Work Unit\WingFlap_00_SFX
+      maxAttenuation: 0
+      maxDuration: 1.5169189
+      minDuration: 1.1665246
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -125,8 +658,106 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f327d2b9819f5c4f9a811460bd761a28
     GuidInternal: 
-    m_lastTime: -8584993068753013034
-    List: []
+    m_lastTime: -8584992191620379404
+    List:
+    - name: ActionDuck
+      guid: 146e40a4ae56624da89b2589a1b8c298
+      id: 1722410376
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: ActionDuck
+        ObjectType: 13
+        guid: 146e40a4ae56624da89b2589a1b8c298
+      Path: Game Parameters\Default Work Unit\ActionDuck
+    - name: DamageLowCut
+      guid: d10ad5b80f0fdc4ab0f679239342f65e
+      id: 3953516820
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: DamageLowCut
+        ObjectType: 13
+        guid: d10ad5b80f0fdc4ab0f679239342f65e
+      Path: Game Parameters\Default Work Unit\DamageLowCut
+    - name: DuckNote1
+      guid: 6edef31a2820104698e55349e1448a47
+      id: 1864835855
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: DuckNote1
+        ObjectType: 13
+        guid: 6edef31a2820104698e55349e1448a47
+      Path: Game Parameters\Default Work Unit\DuckNote1
+    - name: DuckNote2
+      guid: 04c2ea48a833064da8355ea9f1975c7a
+      id: 1864835852
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: DuckNote2
+        ObjectType: 13
+        guid: 04c2ea48a833064da8355ea9f1975c7a
+      Path: Game Parameters\Default Work Unit\DuckNote2
+    - name: DuckNote3
+      guid: ca61e11a2f5397499aeadd03f783aa16
+      id: 1864835853
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: DuckNote3
+        ObjectType: 13
+        guid: ca61e11a2f5397499aeadd03f783aa16
+      Path: Game Parameters\Default Work Unit\DuckNote3
+    - name: pauseBGMRTPC
+      guid: 1aeb68cff414234ba3b84b7d4977b66a
+      id: 3969718864
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: pauseBGMRTPC
+        ObjectType: 13
+        guid: 1aeb68cff414234ba3b84b7d4977b66a
+      Path: Game Parameters\Default Work Unit\pauseBGMRTPC
+    - name: pauseMusicRTPC
+      guid: 2515a5176f7e4841962c5734beabca0a
+      id: 1925204343
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: pauseMusicRTPC
+        ObjectType: 13
+        guid: 2515a5176f7e4841962c5734beabca0a
+      Path: Game Parameters\Default Work Unit\pauseMusicRTPC
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +770,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 6bcd0fe46b7a2042a2326c83d23c1140
     GuidInternal: 
-    m_lastTime: -8584993068752657139
+    m_lastTime: -8584995751965549548
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -153,7 +784,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: e83bbf91ffa6bf47996acba53ec69d1d
     GuidInternal: 
-    m_lastTime: -8584993068752657139
+    m_lastTime: -8584995751965539854
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -167,11 +798,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: a92f00023d26a2479a8c9a073bea5bf8
     GuidInternal: 
-    m_lastTime: -8584993068752647153
+    m_lastTime: -8584995751965529876
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 0200000003000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
-  autoPopulateEnabled: 1
-  currentDataSource: 0
+  autoPopulateEnabled: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

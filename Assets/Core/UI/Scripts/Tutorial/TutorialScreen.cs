@@ -17,6 +17,8 @@ namespace Nano.UI
         [SerializeField] Button quitTutorialButton;
         [SerializeField] bool useTweening = true;
 
+        [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
+
         Action onHideTutorialScreenCallback;
         bool isTutorialShown = false;
 
@@ -44,6 +46,7 @@ namespace Nano.UI
         {
             if (obj.performed)
                 HideTutorial();
+                UiMenuBack_00_SFX.Post(gameObject);
         }
 
         private void HideTutorial()
