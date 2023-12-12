@@ -24,7 +24,10 @@ namespace Nano.Player
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
         {
-            if (shieldList.Count >= maxNumberShield) return;
+            if (shieldList.Count >= maxNumberShield)
+            {
+                RemoveShield(shieldList[0]);
+            }
             Shield _newShield = Instantiate(shieldPrefab, transform);
             _newShield.shieldType = _shieldType;
             _newShield.fixedScale = maxShieldSize - shieldSizeAugmentation * shieldList.Count;
