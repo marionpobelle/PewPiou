@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FD3A7B39-8785-4D9D-909A-38BB50659922}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{FD3A7B39-8785-4D9D-909A-38BB50659922}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FD3A7B39-8785-4D9D-909A-38BB50659922}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="MAIN" ID="{110623D5-E6AF-4F37-ADFD-54EF5AC13B93}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="EnemyNote1_00_SFX" ID="{0A9A546C-26A0-4CDF-AE59-D38B51279E70}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="EnemyNote2_00_SFX" ID="{11720400-9AAA-4838-A87C-1D96EA5FD868}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="EnemyNote3_00_SFX" ID="{417A6ED1-BF0C-4EB1-8C4D-430EF825E13D}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1ShieldGet1_00_SFX" ID="{5BF212A1-A935-497E-8E53-E715EB547180}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1ShieldGet2_00_SFX" ID="{77B98718-EAD2-4DC7-9EAE-1105163E9163}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1ShieldGet3_00_SFX" ID="{513FF333-82A2-45A2-97A4-174082E49F72}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2ShieldGet1_00_SFX" ID="{A3381A0F-93C9-476C-8374-93AFEB0F0E4A}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2ShieldGet2_00_SFX" ID="{52207AA6-4CB0-4433-9331-C7EC9E31E231}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2ShieldGet3_00_SFX" ID="{4A3331F7-9DF5-4D09-9356-CDF1D82226F1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1ShieldBreak1_00_SFX" ID="{DB47713D-9A53-4A47-A012-0DC08A301D82}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1ShieldBreak2_00_SFX" ID="{E9932ECB-0267-4DB8-95C3-A86201F60F1E}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1ShieldBreak3_00_SFX" ID="{863FAE52-825E-4BF3-96C6-77DB97D20345}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2ShieldBreak1_00_SFX" ID="{544A628E-3956-40BD-9F26-3EF5BCE3FE34}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2ShieldBreak2_00_SFX" ID="{A76DBAF4-BD9B-4329-BC32-73F06DD43CA6}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2ShieldBreak3_00_SFX" ID="{F2B19AB3-BFDF-41D0-A7BA-AD12AECEE69A}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pauseBGM" ID="{4BCC5B57-FAB2-43AD-A647-4F52E058D5E1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="resumeBGM" ID="{F82BF6B3-8689-42E6-8A53-0425AF233EFF}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BGM_Test" ID="{3787F569-4EF5-4C38-838C-22715EB8AFCC}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1DamageBird_00_SFX" ID="{4F457F5A-2D67-4CA5-9956-42E8FE2DB1BF}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2DamageBird_00_SFX" ID="{9C03D5BF-778C-463A-8A14-9F8CE79F156D}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="DuckNote1" ID="{1AF3DE6E-2028-4610-98E5-5349E1448A47}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DuckNote3" ID="{1AE161CA-532F-4997-9AEA-DD03F783AA16}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DamageLowCut" ID="{B8D50AD1-0F0F-4ADC-B0F6-79239342F65E}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="pauseBGMRTPC" ID="{CF68EB1A-14F4-4B23-A3B8-4B7D4977B66A}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DuckNote2" ID="{48EAC204-33A8-4D06-A835-5EA9F1975C7A}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

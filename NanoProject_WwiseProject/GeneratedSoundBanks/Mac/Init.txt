@@ -1,5 +1,18 @@
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1722410376	ActionDuck			\Default Work Unit\ActionDuck	
+	3953516820	DamageLowCut			\Default Work Unit\DamageLowCut	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	412724365	BGM			\Default Work Unit\Master Audio Bus\BGM	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	695384145	RVB			\Default Work Unit\Master Audio Bus\SFX\RVB	
+
+Effect plug-ins	ID	Name	Type				Notes
+	820714092	RoomVerb (Custom)	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

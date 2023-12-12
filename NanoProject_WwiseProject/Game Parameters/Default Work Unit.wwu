@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="DamageLowCut" ID="{B8D50AD1-0F0F-4ADC-B0F6-79239342F65E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="DuckNote2" ID="{48EAC204-33A8-4D06-A835-5EA9F1975C7A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="DuckNote3" ID="{1AE161CA-532F-4997-9AEA-DD03F783AA16}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="DuckNote1" ID="{1AF3DE6E-2028-4610-98E5-5349E1448A47}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="pauseBGMRTPC" ID="{CF68EB1A-14F4-4B23-A3B8-4B7D4977B66A}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

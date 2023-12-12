@@ -1,0 +1,68 @@
+Event	ID	Name			Wwise Object Path	Notes
+	95130393	P1ShieldBreak2_00_SFX			\Default Work Unit\P1ShieldBreak2_00_SFX	
+	207152438	UiMenuBack_00_SFX			\Default Work Unit\UiMenuBack_00_SFX	
+	227607944	WingFlap_00_SFX			\Default Work Unit\WingFlap_00_SFX	
+	686611850	EnemyNote2_00_SFX			\Default Work Unit\EnemyNote2_00_SFX	
+	911512040	P2DamageBird_00_SFX			\Default Work Unit\P2DamageBird_00_SFX	
+	918622992	UiMenuSliderTickUp_00_SFX			\Default Work Unit\UiMenuSliderTickUp_00_SFX	
+	1182950636	P2ShieldBreak2_00_SFX			\Default Work Unit\P2ShieldBreak2_00_SFX	
+	1415547993	UiMenuSliderTickDown_00_SFX			\Default Work Unit\UiMenuSliderTickDown_00_SFX	
+	1676409973	P2ShieldBreak1_00_SFX			\Default Work Unit\P2ShieldBreak1_00_SFX	
+	1708052252	P2ShieldGet1_00_SFX			\Default Work Unit\P2ShieldGet1_00_SFX	
+	1711082405	P2ShieldGet2_00_SFX			\Default Work Unit\P2ShieldGet2_00_SFX	
+	1775236287	P2ShieldBreak3_00_SFX			\Default Work Unit\P2ShieldBreak3_00_SFX	
+	1961931039	EnemyNote1_00_SFX			\Default Work Unit\EnemyNote1_00_SFX	
+	2079705822	P1ShieldBreak3_00_SFX			\Default Work Unit\P1ShieldBreak3_00_SFX	
+	2257478380	P1ShieldGet2_00_SFX			\Default Work Unit\P1ShieldGet2_00_SFX	
+	2305575365	UiMenuDown_00_SFX			\Default Work Unit\UiMenuDown_00_SFX	
+	2394293572	UiMenuUp_00_SFX			\Default Work Unit\UiMenuUp_00_SFX	
+	2622648053	UiMenuSelect_00_SFX			\Default Work Unit\UiMenuSelect_00_SFX	
+	2750937717	P1ShieldGet1_00_SFX			\Default Work Unit\P1ShieldGet1_00_SFX	
+	2849764031	P1ShieldGet3_00_SFX			\Default Work Unit\P1ShieldGet3_00_SFX	
+	3228990490	P2ShieldGet3_00_SFX			\Default Work Unit\P2ShieldGet3_00_SFX	
+	3391800229	P1DamageBird_00_SFX			\Default Work Unit\P1DamageBird_00_SFX	
+	3438580564	BGM_Test			\Default Work Unit\BGM_Test	
+	3953467349	EnemyNote3_00_SFX			\Default Work Unit\EnemyNote3_00_SFX	
+	4183514192	P1ShieldBreak1_00_SFX			\Default Work Unit\P1ShieldBreak1_00_SFX	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1864835852	DuckNote2			\Default Work Unit\DuckNote2	
+	1864835853	DuckNote3			\Default Work Unit\DuckNote3	
+	1864835855	DuckNote1			\Default Work Unit\DuckNote1	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	502237	SFX_OS_Player2_ShieldBreakLV1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_OS_Player2_ShieldBreakLV1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV1_v1		161160
+	69321827	SFX_OS_Player1_ShieldGetLV1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_Player1_ShieldGetLV1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV1_v2		414996
+	96687508	SFX_RC_Player1_DamageBirdLost_var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_Player1_DamageBirdLost_var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_DamageBirdLost\SFX_RC_Player1_DamageBirdLost_var1_v1		313832
+	149651723	SFX_OS_PlayerWing_Var4_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_PlayerWing_Var4_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var4_v1		251676
+	155023041	SFX_RC_Player1_DamageBirdLost_var2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_Player1_DamageBirdLost_var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_DamageBirdLost\SFX_RC_Player1_DamageBirdLost_var2_v1		370328
+	169486366	SFX_OS_Player2_ShieldBreakLV3_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_OS_Player2_ShieldBreakLV3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV3_v1		246344
+	181342345	SFX_RC_UI_MenuBack	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_UI_MenuBack_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuBack		44208
+	197518976	SFX_OS_PlayerWing_Var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_PlayerWing_Var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var1_v1		267172
+	214589433	nonote3var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\nonote3var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote3\note3seq\nonote3var1_v1		409972
+	248078246	SFX_OS_Player1_ShieldBreakLV1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_OS_Player1_ShieldBreakLV1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV1_v1		204000
+	262920733	land pad emergence in nature proj rp band dem	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\land pad emergence in nature proj rp band dem_2D2959CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\land pad emergence in nature proj rp band dem		23950316
+	345409603	nonote2var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\nonote2var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote2\note2seq\nonote2var1_v1		488016
+	577295149	SFX_OS_Player2_PlayerShieldGetLV2_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_Player2_PlayerShieldGetLV2_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV2_v2		291888
+	593522447	SFX_OS_Player2_PlayerShieldGetLV3_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_Player2_PlayerShieldGetLV3_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV3_v2		309084
+	606396919	SFX_OS_PlayerWing_Var3_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_PlayerWing_Var3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var3_v1		244340
+	611403929	SFX_RC_UI_MenuSliderTickDown	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_UI_MenuSliderTickDown_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSliderTickDown		12256
+	616407851	SFX_OS_Player1_ShieldBreakLV3_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_OS_Player1_ShieldBreakLV3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV3_v1		257076
+	617385544	SFX_RC_Player2_DamageBirdLost_var2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_RC_Player2_DamageBirdLost_var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_DamageBirdLost\SFX_RC_Player2_DamageBirdLost_var2_v1		365008
+	620043824	SFX_RC_UI_MenuUp_var2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_UI_MenuUp_var2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuUp\SFX_RC_UI_MenuUp_var2		18180
+	630560012	SFX_RC_UI_MenuUp_var1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_UI_MenuUp_var1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuUp\SFX_RC_UI_MenuUp_var1		18576
+	633104925	SFX_RC_UI_MenuSelect	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_UI_MenuSelect_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSelect		26192
+	643153017	SFX_OS_Player1_ShieldGetLV3_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_Player1_ShieldGetLV3_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV3_v2		296048
+	695203907	SFX_OS_PlayerWing_Var2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_PlayerWing_Var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var2_v1		258956
+	714734111	SFX_OS_Player1_ShieldBreakLV2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_OS_Player1_ShieldBreakLV2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV2_v1		278436
+	716732255	SFX_OS_Player2_PlayerShieldGetLV1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_Player2_PlayerShieldGetLV1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV1_v2		387040
+	776832282	SFX_OS_Player2_ShieldBreakLV2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_OS_Player2_ShieldBreakLV2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV2_v1		198644
+	789248214	SFX_RC_UI_MenuDown_var1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_UI_MenuDown_var1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuDown\SFX_RC_UI_MenuDown_var1		18572
+	812673967	SFX_RC_Player2_DamageBirdLost_var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\V1\SFX_RC_Player2_DamageBirdLost_var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_DamageBirdLost\SFX_RC_Player2_DamageBirdLost_var1_v1		331828
+	855912340	SFX_RC_Enemy_ProjectileNote1_var1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_Enemy_ProjectileNote1_var1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote1\note1seq\SFX_RC_Enemy_ProjectileNote1_var1_v2		195892
+	883630151	SFX_RC_UI_MenuSliderTickUp	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_UI_MenuSliderTickUp_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSliderTickUp		12516
+	885815898	nonote1var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\nonote1var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote1\note1seq\nonote1var1_v1		540356
+	938214569	SFX_RC_Enemy_ProjectileNote2_var1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_Enemy_ProjectileNote2_var1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote2\note2seq\SFX_RC_Enemy_ProjectileNote2_var1_v2		291164
+	954882065	SFX_OS_Player1_ShieldGetLV2_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_OS_Player1_ShieldGetLV2_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV2_v2		341732
+	1010621008	SFX_RC_Enemy_ProjectileNote3_var1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Windows\SFX\SFX_RC_Enemy_ProjectileNote3_var1_v2_5C425D97.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote3\note3seq\SFX_RC_Enemy_ProjectileNote3_var1_v2		167024
+

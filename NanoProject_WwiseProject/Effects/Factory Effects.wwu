@@ -1241,16 +1241,18 @@
 										<Property Name="DecayTime" Type="Real32" Value="1.8"/>
 										<Property Name="Density" Type="Real32" Value="70"/>
 										<Property Name="Diffusion" Type="Real32" Value="46"/>
+										<Property Name="ERFrontBackDelay" Type="Real32" Value="25"/>
 										<Property Name="ERLevel" Type="Real32" Value="-23"/>
+										<Property Name="ERPattern" Type="int32" Value="28"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
 										<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
 										<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
 										<Property Name="HFDamping" Type="Real32" Value="2.7"/>
-										<Property Name="PreDelay" Type="Real32" Value="35"/>
+										<Property Name="PreDelay" Type="Real32" Value="22"/>
 										<Property Name="Quality" Type="int32" Value="12"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-23"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-10"/>
 										<Property Name="RoomShape" Type="Real32" Value="55"/>
-										<Property Name="RoomSize" Type="Real32" Value="15"/>
+										<Property Name="RoomSize" Type="Real32" Value="72"/>
 										<Property Name="StereoWidth" Type="Real32" Value="140"/>
 									</PropertyList>
 								</Effect>
@@ -1519,9 +1521,9 @@
 										<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
 										<Property Name="Filter3Gain" Type="Real32" Value="-4"/>
 										<Property Name="HFDamping" Type="Real32" Value="5.05"/>
-										<Property Name="PreDelay" Type="Real32" Value="145"/>
+										<Property Name="PreDelay" Type="Real32" Value="3"/>
 										<Property Name="Quality" Type="int32" Value="12"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-37"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-4"/>
 										<Property Name="RoomSize" Type="Real32" Value="73"/>
 										<Property Name="StereoWidth" Type="Real32" Value="28"/>
 									</PropertyList>

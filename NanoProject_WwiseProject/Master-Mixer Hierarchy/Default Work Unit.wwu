@@ -9,6 +9,238 @@
 							<ObjectRef Name="System" ID="{46DE98C6-27FC-4CFD-B384-FA1157C04456}" WorkUnitID="{3700B231-AD88-43D4-A8FF-0DECCD99DA81}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{7A097A10-23AB-417A-A477-16B90482C724}">
+							<PropertyList>
+								<Property Name="MaxDuckVolume" Type="Real64" Value="-3"/>
+							</PropertyList>
+							<ChildrenList>
+								<AuxBus Name="RVB" ID="{B49BD9B3-8CE5-4939-B08E-3C60B6F11A18}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{3D25C4A0-EC35-4F7C-A861-4E12F7BB0C1C}" ShortID="1021532398">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="RoomVerb (Custom)" ID="{DAAC988A-A9D4-45BE-8F45-50E7555ABF9E}" ShortID="820714092" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																		<PropertyList>
+																			<Property Name="DecayTime" Type="Real32" Value="2.8"/>
+																			<Property Name="Density" Type="Real32" Value="64"/>
+																			<Property Name="Diffusion" Type="Real32" Value="30"/>
+																			<Property Name="ERFrontBackDelay" Type="Real32" Value="74"/>
+																			<Property Name="ERLevel" Type="Real32" Value="-2"/>
+																			<Property Name="ERPattern" Type="int32" Value="27"/>
+																			<Property Name="PreDelay" Type="Real32" Value="12"/>
+																			<Property Name="RearLevel" Type="Real32" Value="-1"/>
+																			<Property Name="ReverbLevel" Type="Real32" Value="-17"/>
+																			<Property Name="RoomShape" Type="Real32" Value="10"/>
+																			<Property Name="RoomSize" Type="Real32" Value="-3"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="BGM" ID="{C8FE3BFE-FD38-4FF0-B9D6-95F3CE6366E1}">
+							<PropertyList>
+								<Property Name="MaxDuckVolume" Type="Real64" Value="-6"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{812404AD-1759-4D3D-B1D3-8C91E12D3743}" ShortID="785393565">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="DamageLowCut" ID="{B8D50AD1-0F0F-4ADC-B0F6-79239342F65E}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{576CB339-AE26-4ED2-A731-FF7F9ACDB9BB}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.001</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{E13036EF-40C6-4F46-AED5-A3D30407387B}" ShortID="237590786">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="DamageLowCut" ID="{B8D50AD1-0F0F-4ADC-B0F6-79239342F65E}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{35753E4B-E9C4-4BAC-90C6-4BE9AFDAACF7}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-0.19375</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>2.56233</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{405E36AF-60A9-4F8C-AC25-EA9933443D4E}" ShortID="937582031">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{63E2137A-C3E6-496B-928E-BC1151083A9F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-13.03663</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{FEF7EEB9-C214-446B-8BC7-A3C8DF597A8F}" ShortID="523411976">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Highpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{1E2A3DE0-BA41-4745-BFD0-64108FEDEAA8}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>17</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{BC959937-9C07-4540-8B8A-A9EC56E6B34C}" ShortID="641200510">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{49716DF3-4854-4B96-8C06-852F41A545F4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>34</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="UI" ID="{689B6CB3-4461-4F36-A0CE-3660544E36CC}"/>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
