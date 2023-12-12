@@ -18,6 +18,7 @@ namespace Nano.Combat
         bool backToSender = false;
         public bool convertingBullet = false;
         [SerializeField, Tooltip("How many seconds the bullet waits before getting destroyed automatically, float")] float destroyAfterTime = 15.0f;
+        Animator anim;
 
         public void Init(Vector3 dir)
         {
@@ -36,11 +37,17 @@ namespace Nano.Combat
                     break;
             }
             Destroy(gameObject, destroyAfterTime);
+            anim = GetComponentInChildren<Animator>();
         }
 
         public void SetParentEnemy(GameObject enemy)
         {
             parentEnemy = enemy;
+        }
+
+        public GameObject GetParentEnemy()
+        {
+            return parentEnemy;
         }
 
         private void FixedUpdate()
@@ -57,6 +64,7 @@ namespace Nano.Combat
             transform.DORotate(new Vector3(0, 0, 180), .2f);
             transform.DOMove(parentEnemy.transform.position, .5f).OnComplete(() =>
             {
+                anim.SetTrigger("bulletIsHittingEnemy");
                 Destroy(parentEnemy.gameObject);
                 Destroy(this.gameObject);
             });
