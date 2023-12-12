@@ -1269,8 +1269,8 @@ CanvasGroup:
   m_GameObject: {fileID: 7066580526115154336}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &3873129856566513151
 MonoBehaviour:
@@ -1347,6 +1347,30 @@ MonoBehaviour:
   - {fileID: 5039826158053591128}
   - {fileID: 4417823735754687724}
   - {fileID: 1734464527869808355}
+  UiMenuBack_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  UiMenuSelect_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  UiMenuUp_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  UiMenuDown_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  UiMenuSliderTickDown_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  UiMenuSliderTickUp_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &7829946281972783226
 GameObject:
   m_ObjectHideFlags: 0

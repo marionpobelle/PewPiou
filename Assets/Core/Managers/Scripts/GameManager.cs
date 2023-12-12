@@ -33,6 +33,7 @@ namespace Nano.Managers
 
         [Header("UI")]
         [SerializeField] JoinCanvas joinCanvas;
+        [SerializeField] GameOverScreen gameOverScreen;
         [SerializeField] PauseMenu pauseMenu;
         [SerializeField] AK.Wwise.Event pauseBGM;
         [SerializeField] AK.Wwise.Event resumeBGM;
@@ -185,8 +186,15 @@ namespace Nano.Managers
 
         private void GameOver()
         {
-            Debug.LogError("Not implemented yet");
             isGameRunning = false;
+
+            foreach (PlayerEntity player in players)
+            {
+                player.InputHandler.FreezeInputs();
+            }
+
+            //TODO : tie handling. I am NOT doing this now
+            gameOverScreen.PlayAnimation(players[0].playerData.score > players[1].playerData.score);
         }
 
         void OnDrawGizmosSelected()
