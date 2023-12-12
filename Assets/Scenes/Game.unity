@@ -1272,6 +1272,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 326754954}
     m_Modifications:
+    - target: {fileID: 4095919918481050878, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 182a8ece106719847b3e3ae0a3c8793b,
+        type: 2}
+    - target: {fileID: 4095919918481050878, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8805424183898995527, guid: 182a8ece106719847b3e3ae0a3c8793b,
+        type: 2}
+    - target: {fileID: 4095919918481050878, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5029731875309374075, guid: 5c8bbf19e2634654eaa024e33cd36266,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1396,6 +1413,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScoreCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727821163526417085, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 182a8ece106719847b3e3ae0a3c8793b,
+        type: 2}
+    - target: {fileID: 6727821163526417085, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8805424183898995527, guid: 182a8ece106719847b3e3ae0a3c8793b,
+        type: 2}
+    - target: {fileID: 6727821163526417085, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
