@@ -13,7 +13,6 @@ public class EnemyAverageMovement : EnemyMovement
     {
         InitializeMovement();
         InitSequence();
-
     }
 
     private void FixedUpdate()

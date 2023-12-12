@@ -23,6 +23,8 @@ namespace Nano.Managers
         float levelTimer;
         int phaseNumber = 0;
         bool isGamePaused = false;
+        Vector2 screenBoundX = new Vector2(28, 55);
+        Vector2 screenBoundY = new Vector2(-30, 30);
 
         [Header("UI")]
         [SerializeField] PauseMenu pauseMenu;
@@ -57,25 +59,46 @@ namespace Nano.Managers
         {
             phaseNumber++;
             float _waitBetweenSpawnTime = 0f;
+            int _spawnNumber = 0;
+            float range = screenBoundY.y - screenBoundY.x;
+            Debug.Log("range is : " + range);
+            for (int i = 0; i < currentLevel.phaseList[_phaseNumber].enemyEntryList.Count; i++)
+            {
+                _spawnNumber += currentLevel.phaseList[_phaseNumber].enemyEntryList[i].number;
+            }
+
+            int _spawnStep = 0;
             for (int i = 0; i < currentLevel.phaseList[_phaseNumber].enemyEntryList.Count; i++)
             {
                 for (int j = 0; j < currentLevel.phaseList[_phaseNumber].enemyEntryList[i].number; j++)
                 {
-                    StartCoroutine(WaitSpawnEnemy(currentLevel.phaseList[_phaseNumber].enemyEntryList[i].enemyType, _waitBetweenSpawnTime));
+                    Vector2 _position = Vector2.zero;
+                    _spawnStep++;
+                    switch (currentLevel.phaseList[_phaseNumber].spawnShape)
+                    {
+                        case LevelScriptable.SpawnShape.TopToBottom:
+                            _position = new Vector2(100, screenBoundY.y - (range / _spawnNumber * _spawnStep));
+                            break;
+                        case LevelScriptable.SpawnShape.BottomToTop:
+                            _position = new Vector2(100, screenBoundY.x + (range / _spawnNumber * _spawnStep));
+                            break;
+                    }
+                    StartCoroutine(WaitSpawnEnemy(currentLevel.phaseList[_phaseNumber].enemyEntryList[i].enemyType, _waitBetweenSpawnTime, _position));
                     _waitBetweenSpawnTime += currentLevel.phaseList[_phaseNumber].timeBetweenEachSpawn;
                 }
             }
         }
 
-        IEnumerator WaitSpawnEnemy(LevelScriptable.EnemyType _enemyType, float _wait)
+        IEnumerator WaitSpawnEnemy(LevelScriptable.EnemyType _enemyType, float _wait, Vector2 _position)
         {
             yield return new WaitForSeconds(_wait);
-            SpawnEnemy(_enemyType);
+            SpawnEnemy(_enemyType, _position);
         }
 
-        private void SpawnEnemy(LevelScriptable.EnemyType _enemyType)
+        private void SpawnEnemy(LevelScriptable.EnemyType _enemyType, Vector2 _position)
         {
-            Instantiate(enemyList[(int)_enemyType]);
+            GameObject _enemy = Instantiate(enemyList[(int)_enemyType]);
+            _enemy.transform.position = _position;
         }
 
         private void OnPlayerAdded(PlayerEntity newPlayer)

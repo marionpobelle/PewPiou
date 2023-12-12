@@ -64,12 +64,12 @@ namespace Nano.Player
         {
             shieldList.Remove(_shield);
             player.playerData.shieldTypeList.Remove(player.playerData.shieldTypeList[0]);
-            _shield.shieldRenderer.material.DOFloat(0.19f, "_wiggle_size", .3f);
-            _shield.shieldRenderer.material.DOFloat(0f, "_circle_stroke_width", .3f);
-            _shield.transform.DOScale(_shield.fixedScale - 2f, .3f).OnComplete(() =>
+            _shield.shieldRenderer.material.DOFloat(0.19f, "_wiggle_size", .1f);
+            _shield.shieldRenderer.material.DOFloat(0f, "_circle_stroke_width", .1f);
+            _shield.transform.DOScale(_shield.fixedScale - 2f, .1f).OnComplete(() =>
             {
-                _shield.shieldRenderer.material.DOColor(new Color(0,0,0,0), "_Color", .2f);
-                _shield.transform.DOScale(_shield.fixedScale + 5f, .2f).OnComplete(() =>
+                _shield.shieldRenderer.material.DOColor(new Color(0,0,0,0), "_Color", .05f);
+                _shield.transform.DOScale(_shield.fixedScale + 5f, .05f).OnComplete(() =>
                 {
                     _shield.DOKill();
                     Destroy(_shield.gameObject);
@@ -146,5 +146,4 @@ namespace Nano.Player
             }
         }
     }
-
 }

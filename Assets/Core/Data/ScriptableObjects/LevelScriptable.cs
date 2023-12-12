@@ -13,6 +13,12 @@ public class LevelScriptable : ScriptableObject
         Hard = 2
     }
 
+    public enum SpawnShape
+    {
+        TopToBottom = 0,
+        BottomToTop = 1
+    }
+
     [Serializable]
     public class EnemyEntry
     {
@@ -31,12 +37,14 @@ public class LevelScriptable : ScriptableObject
     {
         public float startTime;
         public float timeBetweenEachSpawn;
+        public SpawnShape spawnShape;
         public List<EnemyEntry> enemyEntryList = new List<EnemyEntry>();
 
-        Phase (List<EnemyEntry> _entry, float _startTime, float _timeBetweenSpawn)
+        Phase (List<EnemyEntry> _entry, float _startTime, float _timeBetweenSpawn, SpawnShape _spawnShape)
         {
             timeBetweenEachSpawn = _timeBetweenSpawn;
             startTime = _startTime;
+            spawnShape = _spawnShape;
             enemyEntryList = _entry;
         }
     }

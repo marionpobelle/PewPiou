@@ -42,13 +42,14 @@ public class EnemyMovement : MonoBehaviour
         spawnPoint.x = UnityEngine.Random.Range(screenBoundX[1] + spawnHalfOffset, screenBoundX[1] + screenBorderOffset);
         spawnPoint.y = UnityEngine.Random.Range(screenBoundY[0], screenBoundY[1]);
         spawnPoint.z = 0.0f;
-    
+
         //Origin
-        originScreenPoint = new Vector3(UnityEngine.Random.Range(screenBoundX[1]/2, screenBoundX[1] - screenInnerOffset),
-                                         UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundY[1] - screenInnerOffset), 0.0f);
+        originScreenPoint = new Vector3(60, transform.position.y, 0.0f);
+        //UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundY[1] - screenInnerOffset) Y
+        //UnityEngine.Random.Range(screenBoundX[1] / 2, screenBoundX[1] - screenInnerOffset) X
         //Movement sequence
         EnemyMovementLoop();
-        transform.position = spawnPoint;
+        //transform.position = spawnPoint;
     }
 
     protected virtual void EnemyMovementLoop()
