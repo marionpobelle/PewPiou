@@ -4,8 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Nano.Data;
-using Nano.UI;
+using Nano.Entity;
 using Nano.Level;
 
 namespace Nano.Managers
@@ -22,6 +21,7 @@ namespace Nano.Managers
         bool isGameRunning = false;
 
         [Header("LEVEL")]
+        [SerializeField] List<Transform> spawnPositions;
         public List<GameObject> enemyList = new List<GameObject>();
         public LevelScriptable currentLevel;
         [SerializeField] BackgroundManager backgroundManager;
@@ -32,6 +32,7 @@ namespace Nano.Managers
         [SerializeField] float height;
 
         [Header("UI")]
+        [SerializeField] JoinCanvas joinCanvas;
         [SerializeField] PauseMenu pauseMenu;
         [SerializeField] AK.Wwise.Event pauseBGM;
         [SerializeField] AK.Wwise.Event resumeBGM;
@@ -85,7 +86,7 @@ namespace Nano.Managers
                     switch (currentLevel.phaseList[_phaseNumber].spawnShape)
                     {
                         case LevelScriptable.SpawnShape.TopToBottom:
-                            _position = new Vector2(100, height / 2 - (height / (_spawnNumber-1) * _spawnStep) + transform.position.y);
+                            _position = new Vector2(100, height / 2 - (height / (_spawnNumber - 1) * _spawnStep) + transform.position.y);
                             break;
                         case LevelScriptable.SpawnShape.BottomToTop:
                             _position = new Vector2(100, -height / 2 + (height / (_spawnNumber - 1) * _spawnStep) + height / _spawnNumber + transform.position.y);
@@ -114,7 +115,14 @@ namespace Nano.Managers
         {
             players.Add(newPlayer);
 
+            if (players.IndexOf(newPlayer) < spawnPositions.Count)
+                newPlayer.transform.position = spawnPositions[players.IndexOf(newPlayer)].position;
+            else
+                newPlayer.transform.position = spawnPositions[0].position;
+
             ScoreUI.Instance.AddPlayer(newPlayer.playerData);
+
+            joinCanvas.RemoveAToJoin();
 
             if (players.Count == MAX_PLAYER_AMOUNT)
             {
@@ -148,8 +156,7 @@ namespace Nano.Managers
             isGamePaused = true;
             pauseMenu.ShowPauseMenu();
             PauseMenu.onResumeButtonClicked += UnpauseGame;
-            
-            
+
             pauseBGM.Post(gameObject);
             UiMenuBack_00_SFX.Post(gameObject);
 
@@ -166,7 +173,7 @@ namespace Nano.Managers
             isGamePaused = false;
             pauseMenu.HidePauseMenu();
             PauseMenu.onResumeButtonClicked -= UnpauseGame;
-            
+
             resumeBGM.Post(gameObject);
             UiMenuSelect_00_SFX.Post(gameObject);
 
