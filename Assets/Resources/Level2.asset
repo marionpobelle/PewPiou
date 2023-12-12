@@ -14,27 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelTime: 180
   phaseList:
-  - startTime: 2
+  - startTime: 0
     timeBetweenEachSpawn: 1
+    spawnShape: 0
     enemyEntryList:
-    - enemyType: 0
-      number: 3
-  - startTime: 30
-    timeBetweenEachSpawn: 0.1
-    enemyEntryList:
-    - enemyType: 1
-      number: 1
-    - enemyType: 0
-      number: 3
-  - startTime: 55
-    timeBetweenEachSpawn: 1
-    enemyEntryList:
-    - enemyType: 1
-      number: 3
     - enemyType: 0
       number: 2
+  - startTime: 25
+    timeBetweenEachSpawn: 0.1
+    spawnShape: 0
+    enemyEntryList:
+    - enemyType: 0
+      number: 4
+  - startTime: 45
+    timeBetweenEachSpawn: 0
+    spawnShape: 0
+    enemyEntryList:
+    - enemyType: 0
+      number: 3
+    - enemyType: 1
+      number: 1
   - startTime: 60
     timeBetweenEachSpawn: 1
+    spawnShape: 0
     enemyEntryList:
     - enemyType: 0
       number: 1
@@ -42,30 +44,35 @@ MonoBehaviour:
       number: 3
   - startTime: 80
     timeBetweenEachSpawn: 1
+    spawnShape: 0
     enemyEntryList:
     - enemyType: 1
       number: 5
   - startTime: 100
     timeBetweenEachSpawn: 3
+    spawnShape: 0
     enemyEntryList:
     - enemyType: 1
-      number: 5
+      number: 4
+    - enemyType: 2
+      number: 1
   - startTime: 120
     timeBetweenEachSpawn: 3
+    spawnShape: 0
     enemyEntryList:
     - enemyType: 1
-      number: 5
+      number: 2
+    - enemyType: 2
+      number: 3
   - startTime: 140
     timeBetweenEachSpawn: 3
+    spawnShape: 0
     enemyEntryList:
-    - enemyType: 1
-      number: 3
     - enemyType: 2
-      number: 2
+      number: 4
   - startTime: 160
     timeBetweenEachSpawn: 3
+    spawnShape: 0
     enemyEntryList:
-    - enemyType: 1
-      number: 2
     - enemyType: 2
-      number: 3
+      number: 6
