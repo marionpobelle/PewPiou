@@ -17,6 +17,7 @@ namespace Nano.Combat
         GameObject parentEnemy;
         bool backToSender = false;
         public bool convertingBullet = false;
+        [SerializeField, Tooltip("How many seconds the bullet waits before getting destroyed automatically, float")] float destroyAfterTime = 15.0f;
 
         public void Init(Vector3 dir)
         {
@@ -34,16 +35,12 @@ namespace Nano.Combat
                     bulletRenderer.material.SetColor("_Color", Color.green);
                     break;
             }
+            Destroy(gameObject, destroyAfterTime);
         }
 
         public void SetParentEnemy(GameObject enemy)
         {
             parentEnemy = enemy;
-        }
-
-        void OnBecameInvisible()
-        {
-            Destroy(gameObject);
         }
 
         private void FixedUpdate()
