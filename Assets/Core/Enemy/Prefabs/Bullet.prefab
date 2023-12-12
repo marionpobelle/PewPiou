@@ -134,6 +134,23 @@ MonoBehaviour:
   speed: 10
   bulletType: 1
   bulletRenderer: {fileID: 3946219304564420928}
+  convertingBullet: 0
+  destroyAfterTime: 15
+  EnemyNote1_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a45161f44db88864187a2021b45a37dd,
+      type: 2}
+  EnemyNote2_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c62fe533f667f84296ca22fcf2af209,
+      type: 2}
+  EnemyNote3_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2c499c39696efc7458320e20c5f02a5f,
+      type: 2}
 --- !u!135 &5849271828151121678
 SphereCollider:
   m_ObjectHideFlags: 0

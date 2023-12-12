@@ -28,7 +28,12 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="pauseBGMRTPC" ID="{CF68EB1A-14F4-4B23-A3B8-4B7D4977B66A}"/>
+				<GameParameter Name="pauseBGMRTPC" ID="{CF68EB1A-14F4-4B23-A3B8-4B7D4977B66A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

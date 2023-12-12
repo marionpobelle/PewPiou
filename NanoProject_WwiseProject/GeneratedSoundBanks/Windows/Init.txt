@@ -10,9 +10,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	695384145	RVB			\Default Work Unit\Master Audio Bus\SFX\RVB	
+	3261336756	UI_RVB			\Default Work Unit\Master Audio Bus\UI\UI_RVB	
 
 Effect plug-ins	ID	Name	Type				Notes
 	820714092	RoomVerb (Custom)	Wwise RoomVerb			
+	1551236760	Small_Wooden_Room1	Wwise Matrix Reverb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

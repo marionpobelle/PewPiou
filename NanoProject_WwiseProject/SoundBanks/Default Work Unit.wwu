@@ -7,7 +7,9 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="P2ShieldBreak1_00_SFX" ID="{544A628E-3956-40BD-9F26-3EF5BCE3FE34}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2ShieldBreak3_00_SFX" ID="{F2B19AB3-BFDF-41D0-A7BA-AD12AECEE69A}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="resumeBGM" ID="{F82BF6B3-8689-42E6-8A53-0425AF233EFF}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2ShieldBreak2_00_SFX" ID="{A76DBAF4-BD9B-4329-BC32-73F06DD43CA6}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="pauseBGM" ID="{4BCC5B57-FAB2-43AD-A647-4F52E058D5E1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2ShieldGet2_00_SFX" ID="{52207AA6-4CB0-4433-9331-C7EC9E31E231}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="WingFlap_00_SFX" ID="{D0B8C7EA-E892-4468-BDD8-4A18527A06DE}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiMenuSliderTickUp_00_SFX" ID="{CA2E76B6-22DB-4498-ACB9-5A6863DF1928}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>

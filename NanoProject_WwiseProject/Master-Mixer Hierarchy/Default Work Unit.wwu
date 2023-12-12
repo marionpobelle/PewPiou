@@ -239,7 +239,51 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
-						<Bus Name="UI" ID="{689B6CB3-4461-4F36-A0CE-3660544E36CC}"/>
+						<Bus Name="UI" ID="{689B6CB3-4461-4F36-A0CE-3660544E36CC}">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="UI_RVB" ID="{A28774E6-90B2-4045-9072-FC2020DD9F75}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AuxBus Name="UI_RVB" ID="{A28774E6-90B2-4045-9072-FC2020DD9F75}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{097E796D-A232-478A-A40F-ADF1F357D720}" ShortID="460317560">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+																<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

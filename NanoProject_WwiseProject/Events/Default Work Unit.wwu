@@ -825,6 +825,7 @@
 						<Action Name="" ID="{E741F2CC-2BF7-4316-8661-BDD10D8734EA}" ShortID="683050375">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -953,6 +954,7 @@
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.15"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -960,10 +962,33 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{6F0FD421-F14C-4666-A9DC-ED251B5AA60E}" ShortID="640956881">
+							<PropertyList>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="land carbon cycle pad proj reaper comp intro bande dem" ID="{AA7BEE0B-9544-4B88-95D1-655BA5C1B68F}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DD35D639-2D32-44EA-9875-8CFD7012A2EE}" ShortID="482914898">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{0A3AF4A2-4F4A-4516-AACB-C4A9A567E243}" ShortID="805105331">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="7"/>
 								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -971,10 +996,15 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{6F0FD421-F14C-4666-A9DC-ED251B5AA60E}" ShortID="640956881">
+						<Action Name="" ID="{8947AEBC-18C7-4DCE-9660-9652152CB8E7}" ShortID="538066478">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="land carbon cycle pad proj reaper comp intro bande dem" ID="{AA7BEE0B-9544-4B88-95D1-655BA5C1B68F}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+									<ObjectRef Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -986,6 +1016,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -996,6 +1027,7 @@
 						<Action Name="" ID="{1B337843-E253-40CF-B13F-46459C6ABF87}" ShortID="465946368">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -1008,10 +1040,22 @@
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="Delay" Type="Real64" Value="0.25"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="pauseBGMRTPC" ID="{CF68EB1A-14F4-4B23-A3B8-4B7D4977B66A}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A34A95C0-4902-4F3A-AD2B-14AF92E0794F}" ShortID="391157822">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="land carbon cycle pad proj reaper comp intro bande dem" ID="{AA7BEE0B-9544-4B88-95D1-655BA5C1B68F}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

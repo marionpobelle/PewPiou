@@ -19,6 +19,10 @@ namespace Nano.Combat
         public bool convertingBullet = false;
         [SerializeField, Tooltip("How many seconds the bullet waits before getting destroyed automatically, float")] float destroyAfterTime = 15.0f;
 
+        [SerializeField] AK.Wwise.Event EnemyNote1_00_SFX;
+        [SerializeField] AK.Wwise.Event EnemyNote2_00_SFX;
+        [SerializeField] AK.Wwise.Event EnemyNote3_00_SFX;
+
         public void Init(Vector3 dir)
         {
             bulletDir = dir;
@@ -27,12 +31,15 @@ namespace Nano.Combat
             {
                 case BulletType.Red:
                     bulletRenderer.material.SetColor("_Color", Color.red);
+                    EnemyNote1_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Blue:
                     bulletRenderer.material.SetColor("_Color", Color.blue);
+                    EnemyNote2_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Green:
                     bulletRenderer.material.SetColor("_Color", Color.green);
+                    EnemyNote3_00_SFX.Post(gameObject);
                     break;
             }
             Destroy(gameObject, destroyAfterTime);

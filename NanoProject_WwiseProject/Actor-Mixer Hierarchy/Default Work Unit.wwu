@@ -502,9 +502,10 @@
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="3.06657722904852"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="1.693482947385"/>
-										<Property Name="LoopBegin" Type="Real64" Value="3.1123470384373"/>
+										<Property Name="LoopBegin" Type="Real64" Value="2.47156970699433"/>
 										<Property Name="LoopEnd" Type="Real64" Value="22.3814367911153"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.55617351921865"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>land pad emergence in nature proj rp band dem-glued-01.wav</AudioFile>
@@ -1539,6 +1540,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1594,6 +1600,11 @@
 						<Sound Name="SFX_RC_UI_MenuSelect" ID="{6746FBFF-8E38-4750-AC41-F135A25F78FC}" ShortID="643505082">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1746,10 +1757,24 @@
 						</Sound>
 						<RandomSequenceContainer Name="SFX_RC_UI_MenuDown" ID="{7A94E168-820D-411D-8538-3299779D27E6}" ShortID="764797322">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>280</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{08726E28-A0BE-47C4-AA31-A5ED096951F0}"/>
+											<Modifier Name="" ID="{08726E28-A0BE-47C4-AA31-A5ED096951F0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
@@ -1798,8 +1823,8 @@
 													<Modifier Name="" ID="{C36C7F3E-5826-47D6-9293-4A301E3BDCAC}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
+															<Property Name="Max" Type="Real64" Value="40"/>
+															<Property Name="Min" Type="Real64" Value="-40"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -1838,14 +1863,19 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="SFX_RC_UI_MenuUp" ID="{0097E1C8-97AD-4047-8DA0-D015BC87C4EC}" ShortID="20664057">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{2E5FE5B6-D1E6-400A-8086-68B0B18CE1DB}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="100"/>
-													<Property Name="Min" Type="Real64" Value="-100"/>
+													<Property Name="Max" Type="Real64" Value="30"/>
+													<Property Name="Min" Type="Real64" Value="-30"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -1893,13 +1923,16 @@
 										</Property>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>150</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{D45D5581-5D23-4915-92F1-3CEE82B5AE43}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
+															<Property Name="Max" Type="Real64" Value="30"/>
+															<Property Name="Min" Type="Real64" Value="-30"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -1928,6 +1961,23 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_RC_UI_MenuUp_var2" ID="{976E2A67-0314-41FB-86F8-B81AF6133840}" ShortID="386110000">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-110</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D4162667-C0BB-4519-B4FB-96A0011C5284}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="30"/>
+															<Property Name="Min" Type="Real64" Value="-30"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
@@ -1968,19 +2018,25 @@
 										<Value>32</Value>
 									</ValueList>
 								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>72</Value>
+										<Value>50</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>16</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-2400</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2007,9 +2063,12 @@
 								</AudioFileSource>
 								<AudioFileSource Name="land carbon cycle pad proj reaper comp intro bande dem-glued" ID="{C2D7DE4A-B336-4D85-994A-009894D581EC}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="19.575633979206"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="20.3814106805293"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.473986294896027"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.70172188090737"/>
+										<Property Name="LoopBegin" Type="Real64" Value="3.36530269376181"/>
+										<Property Name="LoopEnd" Type="Real64" Value="19.1490463137996"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.70172188090737"/>
 										<Property Name="TrimEnd" Type="Real64" Value="22.1825586011342"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -2019,6 +2078,90 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{C91360EA-798B-40F7-BBC5-145042CA97EC}" ShortID="1051162912">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{011A623E-0F41-4769-AB70-FA3B1F14B4DC}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.001</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-1994</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{EE2092DB-FAD8-4AC9-A62C-48929D1ACF4E}" ShortID="821474599">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{937EEAC4-FD29-44DF-B5E5-A53BC4A0381F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>29.88506</XPos>
+																		<YPos>-0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>5.91658</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="land carbon cycle pad proj reaper comp intro bande dem-glued" ID="{C2D7DE4A-B336-4D85-994A-009894D581EC}" Platform="Linked"/>
 							</ActiveSourceList>

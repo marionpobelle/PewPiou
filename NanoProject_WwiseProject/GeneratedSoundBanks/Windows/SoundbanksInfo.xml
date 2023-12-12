@@ -9,13 +9,16 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6FA6F6B1-3217-C222-FE22-09D52E13BCE5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{ED017CE9-1201-AD7E-8327-4AE595069DE2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
 					<Plugin Id="820714092" Name="RoomVerb (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="1551236760" Name="Small_Wooden_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -24,7 +27,11 @@
 			<Busses>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="412724365" Name="BGM"/>
-				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="1551306167" Name="UI">
+					<AuxBusRefs>
+						<AuxBusRef Id="3261336756" Name="UI_RVB"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<AuxBusses>
@@ -35,16 +42,25 @@
 						</Custom>
 					</PluginRefs>
 				</AuxBus>
+				<AuxBus Id="3261336756" Name="UI_RVB">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1551236760"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1722410376" Name="ActionDuck"/>
 				<GameParameter Id="1864835852" Name="DuckNote2"/>
 				<GameParameter Id="1864835853" Name="DuckNote3"/>
 				<GameParameter Id="1864835855" Name="DuckNote1"/>
+				<GameParameter Id="1925204343" Name="pauseMusicRTPC"/>
 				<GameParameter Id="3953516820" Name="DamageLowCut"/>
+				<GameParameter Id="3969718864" Name="pauseBGMRTPC"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{B79006AA-984F-8239-3982-963E38A93704}">
+		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{B84710F7-3AA4-62E6-752C-B4B1E29AFD38}">
 			<ShortName>NanoSoundbank</ShortName>
 			<Path>NanoSoundbank.bnk</Path>
 			<Media>
@@ -59,6 +75,10 @@
 				<File Id="96687508" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_RC_Player1_DamageBirdLost_var1_v1.wav</ShortName>
 					<CachePath>SFX/SFX_RC_Player1_DamageBirdLost_var1_v1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="123716861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>land pad emergence in nature proj rp band dem-glued-01.wav</ShortName>
+					<CachePath>SFX/land pad emergence in nature proj rp band dem-glued-01_984F1054.wem</CachePath>
 				</File>
 				<File Id="149651723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_PlayerWing_Var4_v1.wav</ShortName>
@@ -88,13 +108,13 @@
 					<ShortName>V1\SFX_OS_Player1_ShieldBreakLV1_v1.wav</ShortName>
 					<CachePath>SFX/V1/SFX_OS_Player1_ShieldBreakLV1_v1_818F3B66.wem</CachePath>
 				</File>
-				<File Id="262920733" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>land pad emergence in nature proj rp band dem.wav</ShortName>
-					<CachePath>SFX/land pad emergence in nature proj rp band dem_2D2959CC.wem</CachePath>
-				</File>
 				<File Id="345409603" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>nonote2var1_v1.wav</ShortName>
 					<CachePath>SFX/nonote2var1_v1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="426248841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>land carbon cycle pad proj reaper comp intro bande dem-glued.wav</ShortName>
+					<CachePath>SFX/land carbon cycle pad proj reaper comp intro bande dem-glued_EBD6C652.wem</CachePath>
 				</File>
 				<File Id="577295149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_Player2_PlayerShieldGetLV2_v2.wav</ShortName>
@@ -186,9 +206,9 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3438580564" Name="BGM_Test" DurationType="OneShot" DurationMin="124.74073" DurationMax="124.74073">
+				<Event Id="3438580564" Name="BGM_Test" DurationType="OneShot" DurationMin="22.656055" DurationMax="22.656055">
 					<MediaRefs>
-						<MediaRef Id="262920733"/>
+						<MediaRef Id="123716861"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1961931039" Name="EnemyNote1_00_SFX" DurationType="OneShot" DurationMin="0.96253544" DurationMax="2.981175">
@@ -332,6 +352,12 @@
 						<AuxBusRef Id="695384145" Name="RVB"/>
 					</AuxBusRefs>
 				</Event>
+				<Event Id="3403017773" Name="pauseBGM" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="426248841"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3056597442" Name="resumeBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="207152438" Name="UiMenuBack_00_SFX" DurationType="OneShot" DurationMin="0.19319595" DurationMax="0.27322033">
 					<MediaRefs>
 						<MediaRef Id="181342345"/>
@@ -340,7 +366,7 @@
 						<AuxBusRef Id="695384145" Name="RVB"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2305575365" Name="UiMenuDown_00_SFX" DurationType="OneShot" DurationMin="0.09082823" DurationMax="0.10195126">
+				<Event Id="2305575365" Name="UiMenuDown_00_SFX" DurationType="OneShot" DurationMin="0.077712186" DurationMax="0.08622707">
 					<MediaRefs>
 						<MediaRef Id="789248214"/>
 					</MediaRefs>
@@ -360,7 +386,7 @@
 						<MediaRef Id="883630151"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2394293572" Name="UiMenuUp_00_SFX" DurationType="OneShot" DurationMin="0.08575828" DurationMax="0.10804866">
+				<Event Id="2394293572" Name="UiMenuUp_00_SFX" DurationType="OneShot" DurationMin="0.08526435" DurationMax="0.10213191">
 					<MediaRefs>
 						<MediaRef Id="620043824"/>
 						<MediaRef Id="630560012"/>
@@ -382,8 +408,10 @@
 				<GameParameter Id="1864835852" Name="DuckNote2"/>
 				<GameParameter Id="1864835853" Name="DuckNote3"/>
 				<GameParameter Id="1864835855" Name="DuckNote1"/>
+				<GameParameter Id="1925204343" Name="pauseMusicRTPC"/>
+				<GameParameter Id="3969718864" Name="pauseBGMRTPC"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3E15E910-9A75-0298-EA2D-24A1E09231CB}</FileHash>
+	<FileHash>{CF6D1DDB-560E-FE9B-C10C-F00AC5CD7F43}</FileHash>
 </SoundBanksInfo>

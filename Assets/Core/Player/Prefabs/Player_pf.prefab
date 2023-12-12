@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6263265036738986578}
   - component: {fileID: 3019712171074787442}
   - component: {fileID: 4702441199385647886}
+  - component: {fileID: 7716978386379083094}
   m_Layer: 0
   m_Name: Player_pf
   m_TagString: Untagged
@@ -98,6 +99,36 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 881ce7386361b4c429b32cfb1db394b0, type: 3}
   - {fileID: 2800000, guid: 766bd8cbd49e8dd4bb3b9b65912c0fa9, type: 3}
   - {fileID: 2800000, guid: 65be51184be5c714fa51e5add4260eda, type: 3}
+  P1ShieldGet1_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 937afa59528c102429fb87264a5891d3,
+      type: 2}
+  P1ShieldGet2_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 21e0aaaa1ae7c3b479af046fbfe7ba9c,
+      type: 2}
+  P1ShieldGet3_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d184b0d24859c674889d30f80f6d3c9f,
+      type: 2}
+  P2ShieldGet1_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d634c67426e73f43afc534bf43e28fb,
+      type: 2}
+  P2ShieldGet2_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 64b77992e628f66479173194fb1d3848,
+      type: 2}
+  P2ShieldGet3_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4ca1af2473e250b4e9abd94a6aacd436,
+      type: 2}
 --- !u!114 &1618316304505318745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +150,11 @@ MonoBehaviour:
   followerObject: {fileID: 6247949361240894289, guid: a9befcabb5bb7c54eb04dd1f6dd033da,
     type: 3}
   storedPlayerPos: []
+  P1ShieldGet1_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 937afa59528c102429fb87264a5891d3,
+      type: 2}
 --- !u!114 &-1819600930041283465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +243,23 @@ MonoBehaviour:
   scoreIncrAddBird: 300
   scoreDecrRemoveBird: 300
   scoreIncrHitNote: 100
+--- !u!114 &7716978386379083094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045446031766755295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4130a077f83dd864abbf35842c3f173d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WingFlap_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9491ddf6e440aff418e3e0b75f257441,
+      type: 2}
 --- !u!1 &3342101304754074761
 GameObject:
   m_ObjectHideFlags: 0

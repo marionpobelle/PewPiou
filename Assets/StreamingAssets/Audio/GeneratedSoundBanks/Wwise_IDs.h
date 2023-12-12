@@ -31,6 +31,8 @@ namespace AK
         static const AkUniqueID P2SHIELDGET1_00_SFX = 1708052252U;
         static const AkUniqueID P2SHIELDGET2_00_SFX = 1711082405U;
         static const AkUniqueID P2SHIELDGET3_00_SFX = 3228990490U;
+        static const AkUniqueID PAUSEBGM = 3403017773U;
+        static const AkUniqueID RESUMEBGM = 3056597442U;
         static const AkUniqueID UIMENUBACK_00_SFX = 207152438U;
         static const AkUniqueID UIMENUDOWN_00_SFX = 2305575365U;
         static const AkUniqueID UIMENUSELECT_00_SFX = 2622648053U;
@@ -47,6 +49,8 @@ namespace AK
         static const AkUniqueID DUCKNOTE1 = 1864835855U;
         static const AkUniqueID DUCKNOTE2 = 1864835852U;
         static const AkUniqueID DUCKNOTE3 = 1864835853U;
+        static const AkUniqueID PAUSEBGMRTPC = 3969718864U;
+        static const AkUniqueID PAUSEMUSICRTPC = 1925204343U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -66,6 +70,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID RVB = 695384145U;
+        static const AkUniqueID UI_RVB = 3261336756U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

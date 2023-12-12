@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 15be22d0e294f44ba968902040c01d1a
     GuidInternal: 
-    m_lastTime: -8584992735245340177
+    m_lastTime: -8584992146443858761
     List:
     - name: BGM
       guid: fe3bfec838fdf04fb9d695f3ce6366e1
@@ -125,6 +125,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: b36c9b686144364fa0ce3660544e36cc
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
+    - name: UI_RVB
+      guid: e67487a2b29045409072fc2020dd9f75
+      id: 3261336756
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 15be22d0e294f44ba968902040c01d1a
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UI
+        ObjectType: 2
+        guid: b36c9b686144364fa0ce3660544e36cc
+      - ElementName: UI_RVB
+        ObjectType: 1
+        guid: e67487a2b29045409072fc2020dd9f75
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI\UI_RVB
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -137,7 +157,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fa12e6d2938f424d8a372d986358cf9f
     GuidInternal: 
-    m_lastTime: -8584992734179484132
+    m_lastTime: -8584992178960623299
     List:
     - name: NanoSoundbank
       guid: be919c1646030c42a6dd5d023f51402d
@@ -165,7 +185,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
     GuidInternal: 
-    m_lastTime: -8584992262123252695
+    m_lastTime: -8584992180178646363
     List:
     - name: BGM_Test
       guid: 69f58737f54e384c838c22715eb8afcc
@@ -182,8 +202,8 @@ MonoBehaviour:
         guid: 69f58737f54e384c838c22715eb8afcc
       Path: Events\Default Work Unit\BGM_Test
       maxAttenuation: 0
-      maxDuration: 124.74073
-      minDuration: 124.74073
+      maxDuration: 22.656055
+      minDuration: 22.656055
     - name: EnemyNote1_00_SFX
       guid: 6c549a0aa026df4cae59d38b51279e70
       id: 1961931039
@@ -505,8 +525,8 @@ MonoBehaviour:
         guid: b3f62bf88986e6428a530425af233eff
       Path: Events\Default Work Unit\resumeBGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: UiMenuBack_00_SFX
       guid: 5c2f5115ac538146bea78e686bb4413e
       id: 207152438
@@ -539,8 +559,8 @@ MonoBehaviour:
         guid: 872ea4c852c808468f4e82ec30ec5707
       Path: Events\Default Work Unit\UiMenuDown_00_SFX
       maxAttenuation: 0
-      maxDuration: 0.10195126
-      minDuration: 0.09082823
+      maxDuration: 0.08622707
+      minDuration: 0.077712186
     - name: UiMenuSelect_00_SFX
       guid: 8c90929e6055784ebf775651e6062be5
       id: 2622648053
@@ -607,8 +627,8 @@ MonoBehaviour:
         guid: 248f7a0c1b10da49a6c282db697fbc66
       Path: Events\Default Work Unit\UiMenuUp_00_SFX
       maxAttenuation: 0
-      maxDuration: 0.10804866
-      minDuration: 0.08575828
+      maxDuration: 0.10213191
+      minDuration: 0.08526435
     - name: WingFlap_00_SFX
       guid: eac7b8d092e86844bdd84a18527a06de
       id: 227607944
@@ -638,7 +658,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f327d2b9819f5c4f9a811460bd761a28
     GuidInternal: 
-    m_lastTime: -8584992289401509117
+    m_lastTime: -8584992191620379404
     List:
     - name: ActionDuck
       guid: 146e40a4ae56624da89b2589a1b8c298
@@ -724,6 +744,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 1aeb68cff414234ba3b84b7d4977b66a
       Path: Game Parameters\Default Work Unit\pauseBGMRTPC
+    - name: pauseMusicRTPC
+      guid: 2515a5176f7e4841962c5734beabca0a
+      id: 1925204343
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: pauseMusicRTPC
+        ObjectType: 13
+        guid: 2515a5176f7e4841962c5734beabca0a
+      Path: Game Parameters\Default Work Unit\pauseMusicRTPC
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -769,6 +803,6 @@ MonoBehaviour:
   ExpandedFileSystemItemIds: 0200000003000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
-  autoPopulateEnabled: 1
+  autoPopulateEnabled: 0
   currentDataSource: 1
   CurrentPluginConfig: 

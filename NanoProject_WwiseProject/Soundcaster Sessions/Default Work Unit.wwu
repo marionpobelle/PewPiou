@@ -88,6 +88,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}"/>
+							<Value>11.0157367668097</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="DuckNote1" ID="{1AF3DE6E-2028-4610-98E5-5349E1448A47}"/>
 							<Value>0</Value>
 						</RTPCValue>

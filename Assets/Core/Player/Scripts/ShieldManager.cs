@@ -20,6 +20,12 @@ namespace Nano.Player
         [SerializeField] int maxNumberShield;
         List<Shield> shieldList = new List<Shield>();
         [SerializeField] List<Texture> inputSpriteList = new List<Texture>();
+        [SerializeField] AK.Wwise.Event P1ShieldGet1_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldGet2_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldGet3_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldGet1_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldGet2_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldGet3_00_SFX;
 
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
@@ -46,14 +52,17 @@ namespace Nano.Player
                 case Data.BulletType.Red:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.red);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[0]);
+                    P1ShieldGet1_00_SFX.Post(gameObject);
                     break;
                 case Data.BulletType.Blue:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.blue);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[1]);
+                    P1ShieldGet2_00_SFX.Post(gameObject);
                     break;
                 case Data.BulletType.Green:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.green);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[2]);
+                    P1ShieldGet3_00_SFX.Post(gameObject);
                     break;
             }
             _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
