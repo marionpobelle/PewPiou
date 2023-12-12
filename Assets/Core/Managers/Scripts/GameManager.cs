@@ -26,7 +26,7 @@ namespace Nano.Managers
         int phaseNumber = 0;
         bool isGamePaused = false;
         Vector2 screenBoundX = new Vector2(28, 55);
-        Vector2 screenBoundY = new Vector2(-30, 30);
+        Vector2 screenBoundY = new Vector2(-25, 25);
 
         [Header("UI")]
         [SerializeField] PauseMenu pauseMenu;
@@ -75,18 +75,18 @@ namespace Nano.Managers
                 for (int j = 0; j < currentLevel.phaseList[_phaseNumber].enemyEntryList[i].number; j++)
                 {
                     Vector2 _position = Vector2.zero;
-                    _spawnStep++;
                     switch (currentLevel.phaseList[_phaseNumber].spawnShape)
                     {
                         case LevelScriptable.SpawnShape.TopToBottom:
                             _position = new Vector2(100, screenBoundY.y - (range / _spawnNumber * _spawnStep));
                             break;
                         case LevelScriptable.SpawnShape.BottomToTop:
-                            _position = new Vector2(100, screenBoundY.x + (range / _spawnNumber * _spawnStep));
+                            _position = new Vector2(100, screenBoundY.x + (range / _spawnNumber * _spawnStep) + range / _spawnNumber);
                             break;
                     }
                     StartCoroutine(WaitSpawnEnemy(currentLevel.phaseList[_phaseNumber].enemyEntryList[i].enemyType, _waitBetweenSpawnTime, _position));
                     _waitBetweenSpawnTime += currentLevel.phaseList[_phaseNumber].timeBetweenEachSpawn;
+                    _spawnStep++;
                 }
             }
         }

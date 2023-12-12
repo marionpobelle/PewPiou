@@ -8,7 +8,6 @@ public class EnemyAverageMovement : EnemyMovement
     [SerializeField, Tooltip("Radius of the circle")] float rotationRadius = 10.0f;
     [SerializeField, Tooltip("Speed at which the enemy goes in a circle")] float rotationSpeed = 30.0f;
 
-    // Start is called before the first frame update
     void Start()
     {
         InitializeMovement();
@@ -38,9 +37,12 @@ public class EnemyAverageMovement : EnemyMovement
         //Phase 1
         movementSequence.AppendInterval(maxDurationPhase1);
         //Phase 2
+        movementSequence.AppendCallback(() => {
+            sprite.transform.localScale = new Vector3(-sprite.transform.localScale.x, sprite.transform.localScale.y, sprite.transform.localScale.z);
+            Debug.Log("CHANGE SIDE");
+        });
         movementSequence.Append(transform.DOMove(spawnPoint, maxDurationPhase2));
         movementSequence.AppendCallback(() => Destroy(gameObject));
-
     }
 
     private void SwitchPhase(Phase phase)

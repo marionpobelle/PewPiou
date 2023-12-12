@@ -4,10 +4,17 @@ using System.Linq;
 using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Sirenix.OdinInspector;
 
 public class EnemyMovement : MonoBehaviour
 {
     public enum Phase { Phase0, Phase1, Phase2 };
+
+    [BoxGroup("COMPONENTS", ShowLabel = true)]
+    public SpriteRenderer sprite;
+
+    [Space]
+
     protected Phase currentPhase;
 
     [SerializeField, Tooltip("Duration Phase 0 in seconds")] protected float maxDurationPhase0 = 5.0f;
@@ -39,12 +46,13 @@ public class EnemyMovement : MonoBehaviour
         currentPhase = Phase.Phase0;
         //Spawn
         float spawnHalfOffset = 1.0f;
-        spawnPoint.x = UnityEngine.Random.Range(screenBoundX[1] + spawnHalfOffset, screenBoundX[1] + screenBorderOffset);
-        spawnPoint.y = UnityEngine.Random.Range(screenBoundY[0], screenBoundY[1]);
-        spawnPoint.z = 0.0f;
+        //spawnPoint.x = UnityEngine.Random.Range(screenBoundX[1] + spawnHalfOffset, screenBoundX[1] + screenBorderOffset);
+        //spawnPoint.y = UnityEngine.Random.Range(screenBoundY[0], screenBoundY[1]);
+        //spawnPoint.z = 0.0f;
 
+        spawnPoint = transform.position;
         //Origin
-        originScreenPoint = new Vector3(60, transform.position.y, 0.0f);
+        originScreenPoint = new Vector3(50, transform.position.y, 0.0f);
         //UnityEngine.Random.Range(screenBoundY[0] + screenInnerOffset, screenBoundY[1] - screenInnerOffset) Y
         //UnityEngine.Random.Range(screenBoundX[1] / 2, screenBoundX[1] - screenInnerOffset) X
         //Movement sequence
