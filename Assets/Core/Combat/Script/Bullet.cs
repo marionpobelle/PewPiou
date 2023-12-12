@@ -17,7 +17,7 @@ namespace Nano.Combat
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] SpriteRenderer spriteRenderer;
         [Space]
-        [SerializeField, Tooltip("How fast the bullet goes, float")] float speed;
+        float bulletSpeed = 10;
         public BulletType bulletType;
         Vector3 bulletDir;
         GameObject parentEnemy;
@@ -27,9 +27,10 @@ namespace Nano.Combat
         [SerializeField] List<Sprite> spriteList = new List<Sprite>();
         [SerializeField] GameObject hitEffect;
 
-        public void Init(Vector3 dir)
+        public void Init(Vector3 dir, float speed)
         {
             bulletDir = dir;
+            bulletSpeed = speed;
             bulletType = (BulletType)UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(BulletType)).Length);
             spriteRenderer.sprite = spriteList[(int)bulletType];
             switch (bulletType)
@@ -60,7 +61,7 @@ namespace Nano.Combat
         private void FixedUpdate()
         {
             if (backToSender) return;
-            rb.velocity = bulletDir * speed;   
+            rb.velocity = bulletDir * bulletSpeed;   
         }
 
         public void BackToSender()
