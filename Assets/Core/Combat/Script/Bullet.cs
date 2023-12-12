@@ -25,7 +25,7 @@ namespace Nano.Combat
         public bool convertingBullet = false;
         [SerializeField, Tooltip("How many seconds the bullet waits before getting destroyed automatically, float")] float destroyAfterTime = 15.0f;
         [SerializeField] List<Sprite> spriteList = new List<Sprite>();
-        Animator anim;
+        [SerializeField] GameObject hitEffect;
 
         public void Init(Vector3 dir)
         {
@@ -45,7 +45,6 @@ namespace Nano.Combat
                     break;
             }
             Destroy(gameObject, destroyAfterTime);
-            anim = GetComponentInChildren<Animator>();
         }
 
         public void SetParentEnemy(GameObject enemy)
@@ -70,9 +69,9 @@ namespace Nano.Combat
             rb.velocity = Vector3.zero;
             if (parentEnemy == null) return;
             transform.DORotate(new Vector3(0, 0, 180), .2f);
-            transform.DOMove(parentEnemy.transform.position, .5f).OnComplete(() =>
+            DOVirtual.DelayedCall(.35f, () => Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity));
+            transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
             {
-                anim.SetTrigger("bulletIsHittingEnemy");
                 Destroy(parentEnemy.gameObject);
                 Destroy(this.gameObject);
             });
