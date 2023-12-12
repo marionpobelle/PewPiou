@@ -19,6 +19,6 @@ public class ScoreCounter : MonoBehaviour
 
     public void UpdateScore()
     {
-        text.text = "Score P" + playerNumber + ": " + associatedPlayer.score.ToString();
+        text.text = associatedPlayer.score.ToString();
     }
 }
