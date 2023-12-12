@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Nano.Data;
+using UnityEngine.UIElements;
 
 namespace Nano.Level
 {
@@ -27,7 +28,7 @@ namespace Nano.Level
             isBackgroundRunning = true;
         }
 
-        
+
 
         private void Update()
         {
@@ -61,14 +62,28 @@ namespace Nano.Level
                     BackgroundProp newProp = InstantiateBackgroundProp(backgroundElement).GetComponent<BackgroundProp>();
 
                     newProp.Init(GetPropSpeed(backgroundElement, newProp.transform));
-                    newProp.transform.localScale = GetRandomUniformVector3(backgroundElement.MinMaxScale);
+                    newProp.transform.localScale = backgroundElement.UseAutoScale ?
+                        GetPropScaleByDistance(backgroundElement, newProp.transform) :
+                        GetRandomUniformVector3(backgroundElement.MinMaxScale);
                 }
             }
         }
 
+        private Vector3 GetPropScaleByDistance(BackgroundElement backgroundElement, Transform newPropTransform)
+        {
+            float scale = (1 / newPropTransform.position.z) * backgroundElement.ScaleByDistanceMultiplier;
+
+            float randomValue = ((.1f) * Random.Range(-backgroundElement.RandomScaleMultiplierByDistance, backgroundElement.RandomScaleMultiplierByDistance));
+                Debug.Log(randomValue);
+
+            scale += scale * randomValue;
+
+            return new Vector3(scale, scale, scale);
+        }
+
         private static float GetPropSpeed(BackgroundElement backgroundElement, Transform newPropTransform)
         {
-            float propSpeed = backgroundElement.UseAutoSpeed ? (1/ newPropTransform.position.z ) * backgroundElement.SpeedByDistanceRatio : Random.Range(backgroundElement.MinMaxSpeed.x, backgroundElement.MinMaxSpeed.y);
+            float propSpeed = backgroundElement.UseAutoSpeed ? (1 / newPropTransform.position.z) * backgroundElement.SpeedByDistanceRatio : Random.Range(backgroundElement.MinMaxSpeed.x, backgroundElement.MinMaxSpeed.y);
             return propSpeed;
         }
 

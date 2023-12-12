@@ -12,7 +12,7 @@ public class BackgroundProp : MonoBehaviour
 
     private void Update()
     {
-        if(transform.position.x < -100)
+        if(transform.position.x < -200)
         {
             Destroy(gameObject);
         }
