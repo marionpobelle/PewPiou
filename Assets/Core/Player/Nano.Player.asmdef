@@ -1,3 +1,21 @@
 {
-	"name": "Nano.Player"
+    "name": "Nano.Player",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:12801b610db72d7459e9ccd6e76884a1",
+        "GUID:71b46394e3d9268479165a5f7f746498",
+        "GUID:eeed7d378828971469d9676927a169d6",
+        "GUID:1d59c118e6d8003448840fabcdbe340c",
+        "GUID:ee63c6ed643a675499b6d094ace311dc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
