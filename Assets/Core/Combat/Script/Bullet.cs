@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Nano.Data;
-using System;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 
@@ -40,6 +39,9 @@ namespace Nano.Combat
             bulletSpeed = speed;
             bulletType = (BulletType)UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(BulletType)).Length);
             spriteRenderer.sprite = spriteList[(int)bulletType];
+            float _seed = Random.Range(0.0f, 10.0f);
+            bulletRenderer.material.SetFloat("_seed", _seed);
+            specialBulletRenderer.material.SetFloat("_seed", _seed);
             switch (bulletType)
             {
                 case BulletType.Red:
