@@ -61,7 +61,9 @@ namespace Nano.Data
         [Header("Speed Settings"), Tooltip("Handles scale automatically by distance")]
         [SerializeField] bool useAutoScale = true;
         [Tooltip("The higher it is, the bigger the prop will be"),ShowIf(nameof(useAutoScale))]
-        [SerializeField] float scaleByDistanceMultiplier = .0001f;
+        [SerializeField] float scaleByDistanceMultiplier = 100f;
+        [Tooltip("The higher it is, the more random the scale of the prop will be"),ShowIf(nameof(useAutoScale))]
+        [SerializeField] float randomScaleMultiplierByDistance = 0;
         [SerializeField][MinMaxSlider(.5f, 10)]
         [HideIf(nameof(useAutoScale))]
         [Tooltip("X is the min scale, Y is the max scale.")]
@@ -90,5 +92,6 @@ namespace Nano.Data
         public float NextSpawnTime { get => nextSpawnTime; set => nextSpawnTime = value; }
         public bool UseAutoScale { get => useAutoScale; set => useAutoScale = value; }
         public float ScaleByDistanceMultiplier { get => scaleByDistanceMultiplier; set => scaleByDistanceMultiplier = value; }
+        public float RandomScaleMultiplierByDistance { get => randomScaleMultiplierByDistance; set => randomScaleMultiplierByDistance = value; }
     }
 }
