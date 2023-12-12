@@ -8,7 +8,7 @@ public class PlayerScore : MonoBehaviour
 {
     [SerializeField] PlayerEntity player;
     [SerializeField, Tooltip("by how much the score increases when you get a bird")] float scoreIncrAddBird = 300.0f;
-    [SerializeField, Tooltip("by how much the score decreases when you lose a bird")] float scoreDecrRemoveBird = 300.0f;
+    [SerializeField, Tooltip("by how much the score decreases when you lose a bird")] float scoreDecrRemoveBird = -300.0f;
     [SerializeField, Tooltip("by how much the score increases when you hit a note")] float scoreIncrHitNote = 100.0f;
 
     public void IncreaseScoreAddBird()
