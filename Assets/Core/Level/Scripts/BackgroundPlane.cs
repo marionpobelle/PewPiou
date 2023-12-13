@@ -1,4 +1,5 @@
 using Nano.Level;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class BackgroundPlane : BackgroundProp
@@ -15,11 +16,13 @@ public class BackgroundPlane : BackgroundProp
         mpb = new MaterialPropertyBlock();
         BackgroundManager.onSunsetBlendStart += SunsetBlend;
     }
+
     private void OnDestroy()
     {
         BackgroundManager.onSunsetBlendStart -= SunsetBlend;
     }
 
+    [Button]
     private void SunsetBlend()
     {
         isSunsetBlending = true;
