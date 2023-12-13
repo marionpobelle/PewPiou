@@ -42,6 +42,16 @@ namespace Nano.Managers
         [SerializeField] AK.Wwise.Event UiMenuSelect_00_SFX;
         [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
 
+        [HideInInspector] public bool onePlayerStart;
+        [HideIf("onePlayerStart")]
+        [BoxGroup("DEBUG", ShowLabel = true)]
+        [Button]
+        public void OnePlayerModeDeactivated () { onePlayerStart = true; }
+        [ShowIf("onePlayerStart")]
+        [BoxGroup("DEBUG", ShowLabel = true)]
+        [Button, GUIColor(0f, 1f, 0f)]
+        public void OnePlayerModeActivated() { onePlayerStart = false; }
+
         void Awake()
         {
             PlayerJoinManager.OnPlayerAdded += OnPlayerAdded;
@@ -135,15 +145,14 @@ namespace Nano.Managers
             {
                 StartGame();
             }
+#if UNITY_EDITOR
+            else if (onePlayerStart)
+            {
+                StartGame();
+                joinCanvas.RemoveAToJoin();
+            }
+#endif
         }
-
-        [Button("START GAME WITH ONE PLAYER")]
-        private void StartGameWithOnePlayer()
-        {
-            joinCanvas.RemoveAToJoin();
-            StartGame();
-        }
-
 
         private void StartGame()
         {

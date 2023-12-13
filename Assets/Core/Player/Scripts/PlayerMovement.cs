@@ -3,13 +3,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 namespace Nano.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] PlayerEntity player;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] Rigidbody rb;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
+        [SerializeField] Animator animator;
         [SerializeField] float screenHeigt = 33.3f;
         [SerializeField] float screenLength = 55f;
 
@@ -44,6 +49,7 @@ namespace Nano.Player
         public void OnNewMoveInput(Vector2 newMoveInput)
         {
             player.playerData.CurrentInput = newMoveInput;
+            animator.SetFloat("InputVertical", newMoveInput.y);
         }
     }
 }

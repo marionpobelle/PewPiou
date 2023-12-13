@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3102294281736776593}
   rb: {fileID: 3019712171074787442}
+  animator: {fileID: 911935915718506305}
   screenHeigt: 25
   screenLength: 51
   moveSpeed: 35
@@ -133,6 +134,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4ca1af2473e250b4e9abd94a6aacd436,
       type: 2}
+  floatingPoints: {fileID: 0}
 --- !u!114 &1618316304505318745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +296,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8206931367373716518}
@@ -536,7 +538,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8206931367373716518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}

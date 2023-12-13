@@ -192,7 +192,6 @@ namespace Nano.Player
                             previousEnemy = null;
                             combo2bullets = false;
                         }
-                        
                     }
                     else
                     {
