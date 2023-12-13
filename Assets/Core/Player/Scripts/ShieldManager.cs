@@ -33,6 +33,9 @@ namespace Nano.Player
         [SerializeField] AK.Wwise.Event P2ShieldGet2_00_SFX;
         [SerializeField] AK.Wwise.Event P2ShieldGet3_00_SFX;
 
+        GameObject previousEnemy = null;
+        bool combo2bullets = false;
+
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
         {
@@ -137,6 +140,7 @@ namespace Nano.Player
                 {
                     TakeDamage();
                     _bullet.ExplodeBullet();
+                    previousEnemy = null;
                     //DAMAGE ?
                 }
                 else if (_bullet.bulletType == shieldList[0].shieldType) //GOOD SHIELD
@@ -145,15 +149,42 @@ namespace Nano.Player
 
                     if (_bullet.convertingBullet)
                     {
-                        _bullet.BackToSender();
-                        //Add anim enemy teleport out
-                        RecruitEnemy(_bullet);
+                        if(GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy) && combo2bullets == true)
+                        {
+                            _bullet.BackToSender();
+                            //Add anim enemy teleport out
+                            RecruitEnemy(_bullet, true);
+                            previousEnemy = null;
+                            combo2bullets = false;
+                        }
+                        else
+                        {
+                            _bullet.BackToSender();
+                            //Add anim enemy teleport out
+                            RecruitEnemy(_bullet);
+                            previousEnemy = null;
+                            combo2bullets = false;
+                        }
+                        
                     }
                     else
                     {
-                        //SHOW JUICY SCORE
-                        _bullet.ExplodeBullet();
-                        gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote();
+                        //Here check if it's the first bullet received from that enemy
+                        if (GameObject.ReferenceEquals(null, previousEnemy) || !GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy))
+                        {
+                            //SHOW JUICY SCORE
+                            _bullet.ExplodeBullet();
+                            gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote();
+                            previousEnemy = _bullet.GetParentEnemy();
+                        }
+                        //Combo 2
+                        else if (GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy) && combo2bullets == false)
+                        {
+                            //SHOW JUICY SCORE
+                            _bullet.ExplodeBullet();
+                            gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote(true);
+                            combo2bullets = true;
+                        }
                     }
 
                 }
@@ -161,15 +192,16 @@ namespace Nano.Player
                 {
                     RemoveShield(shieldList[0]);
                     _bullet.ExplodeBullet();
+                    previousEnemy = null;
                 }
             }
         }
 
-        private void RecruitEnemy(Bullet _bullet)
+        private void RecruitEnemy(Bullet _bullet, bool combo3bullets = false)
         {
             Animator animEnemy = _bullet.GetParentEnemy().GetComponentInChildren<Animator>();
             animEnemy.SetBool("enemyGotRecrutedOut", true);
-            DOVirtual.DelayedCall(.5f, () => player.squadronManager.AddFollower());
+            DOVirtual.DelayedCall(.5f, () => player.squadronManager.AddFollower(combo3bullets));
         }
 
         private void TakeDamage()
