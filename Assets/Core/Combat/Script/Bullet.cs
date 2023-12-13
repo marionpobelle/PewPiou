@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Nano.Data;
-using System;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 
@@ -14,6 +13,8 @@ namespace Nano.Combat
         [SerializeField, Tooltip("pas touche � celui l�")] Rigidbody rb;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] MeshRenderer bulletRenderer;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
+        [SerializeField] MeshRenderer specialBulletRenderer;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] SpriteRenderer spriteRenderer;
         [Space]
@@ -27,23 +28,43 @@ namespace Nano.Combat
         [SerializeField] List<Sprite> spriteList = new List<Sprite>();
         [SerializeField] GameObject hitEffect;
 
+        [SerializeField] AK.Wwise.Event EnemyNote1_00_SFX;
+        [SerializeField] AK.Wwise.Event EnemyNote2_00_SFX;
+        [SerializeField] AK.Wwise.Event EnemyNote3_00_SFX;
+
+      
         public void Init(Vector3 dir, float speed)
         {
             bulletDir = dir;
             bulletSpeed = speed;
             bulletType = (BulletType)UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(BulletType)).Length);
             spriteRenderer.sprite = spriteList[(int)bulletType];
+            float _seed = Random.Range(0.0f, 10.0f);
+            bulletRenderer.material.SetFloat("_seed", _seed);
+            specialBulletRenderer.material.SetFloat("_seed", _seed);
             switch (bulletType)
             {
                 case BulletType.Red:
                     bulletRenderer.material.SetColor("_Color", Color.red);
+                    EnemyNote1_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Blue:
                     bulletRenderer.material.SetColor("_Color", Color.blue);
+                    EnemyNote2_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Green:
                     bulletRenderer.material.SetColor("_Color", Color.green);
+                    EnemyNote3_00_SFX.Post(gameObject);
                     break;
+            }
+            if (convertingBullet)
+            {
+                specialBulletRenderer.gameObject.SetActive(true);
+                specialBulletRenderer.material.SetColor("_Color", Color.white);
+                specialBulletRenderer.transform.DOScale(1.0f, .3f).SetLoops(-1, LoopType.Yoyo);
+            } else
+            {
+                specialBulletRenderer.gameObject.SetActive(false);
             }
             Destroy(gameObject, destroyAfterTime);
         }
@@ -70,18 +91,18 @@ namespace Nano.Combat
             rb.velocity = Vector3.zero;
             if (parentEnemy == null) return;
             transform.DORotate(new Vector3(0, 0, 180), .2f);
-            DOVirtual.DelayedCall(.35f, () => Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity));
+            //DOVirtual.DelayedCall(.35f, () => Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity));
             transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
             {
                 Destroy(parentEnemy.gameObject);
-                Destroy(this.gameObject);
+                ExplodeBullet();
             });
         }
 
         public void ExplodeBullet()
         {
+            Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
-
     }
 }

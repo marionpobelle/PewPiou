@@ -4,8 +4,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Nano.Data;
-using Nano.UI;
+using Nano.Entity;
+using Nano.Level;
+using Sirenix.OdinInspector;
 
 namespace Nano.Managers
 {
@@ -18,10 +19,13 @@ namespace Nano.Managers
         public static event Action onGameStart;
 
         private List<PlayerEntity> players = new List<PlayerEntity>();
+        bool isGameRunning = false;
 
         [Header("LEVEL")]
+        [SerializeField] List<Transform> spawnPositions;
         public List<GameObject> enemyList = new List<GameObject>();
         public LevelScriptable currentLevel;
+        [SerializeField] BackgroundManager backgroundManager;
         float levelTimer;
         int phaseNumber = 0;
         bool isGamePaused = false;
@@ -29,7 +33,13 @@ namespace Nano.Managers
         [SerializeField] float height;
 
         [Header("UI")]
+        [SerializeField] JoinCanvas joinCanvas;
+        [SerializeField] GameOverScreen gameOverScreen;
         [SerializeField] PauseMenu pauseMenu;
+        [SerializeField] AK.Wwise.Event pauseBGM;
+        [SerializeField] AK.Wwise.Event resumeBGM;
+        [SerializeField] AK.Wwise.Event UiMenuSelect_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
 
         void Awake()
         {
@@ -46,6 +56,8 @@ namespace Nano.Managers
 
         private void Update()
         {
+            if (!isGameRunning) return;
+
             levelTimer += Time.deltaTime;
             if (phaseNumber < currentLevel.phaseList.Count && levelTimer >= currentLevel.phaseList[phaseNumber].startTime)
             {
@@ -76,7 +88,7 @@ namespace Nano.Managers
                     switch (currentLevel.phaseList[_phaseNumber].spawnShape)
                     {
                         case LevelScriptable.SpawnShape.TopToBottom:
-                            _position = new Vector2(100, height / 2 - (height / (_spawnNumber-1) * _spawnStep) + transform.position.y);
+                            _position = new Vector2(100, height / 2 - (height / (_spawnNumber - 1) * _spawnStep) + transform.position.y);
                             break;
                         case LevelScriptable.SpawnShape.BottomToTop:
                             _position = new Vector2(100, -height / 2 + (height / (_spawnNumber - 1) * _spawnStep) + height / _spawnNumber + transform.position.y);
@@ -105,7 +117,14 @@ namespace Nano.Managers
         {
             players.Add(newPlayer);
 
+            if (players.IndexOf(newPlayer) < spawnPositions.Count)
+                newPlayer.transform.position = spawnPositions[players.IndexOf(newPlayer)].position;
+            else
+                newPlayer.transform.position = spawnPositions[0].position;
+
             ScoreUI.Instance.AddPlayer(newPlayer.playerData);
+
+            joinCanvas.RemoveAToJoin();
 
             if (players.Count == MAX_PLAYER_AMOUNT)
             {
@@ -113,10 +132,19 @@ namespace Nano.Managers
             }
         }
 
+        [Button("START GAME WITH ONE PLAYER")]
+        private void StartGameWithOnePlayer()
+        {
+            joinCanvas.RemoveAToJoin();
+            StartGame();
+        }
+
+
         private void StartGame()
         {
             Debug.Log($"{this.GetType()} >> Starting Game");
-
+            isGameRunning = true;
+            backgroundManager.StartBackground();
             onGameStart?.Invoke();
         }
 
@@ -139,6 +167,10 @@ namespace Nano.Managers
             pauseMenu.ShowPauseMenu();
             PauseMenu.onResumeButtonClicked += UnpauseGame;
 
+            pauseBGM.Post(gameObject);
+            UiMenuBack_00_SFX.Post(gameObject);
+
+
             foreach (PlayerEntity player in players)
             {
                 player.InputHandler.FreezeInputs();
@@ -151,6 +183,10 @@ namespace Nano.Managers
             isGamePaused = false;
             pauseMenu.HidePauseMenu();
             PauseMenu.onResumeButtonClicked -= UnpauseGame;
+
+            resumeBGM.Post(gameObject);
+            UiMenuSelect_00_SFX.Post(gameObject);
+
             foreach (PlayerEntity player in players)
             {
                 player.InputHandler.UnfreezeInputs();
@@ -159,7 +195,15 @@ namespace Nano.Managers
 
         private void GameOver()
         {
-            Debug.LogError("Not implemented yet");
+            isGameRunning = false;
+
+            foreach (PlayerEntity player in players)
+            {
+                player.InputHandler.FreezeInputs();
+            }
+
+            //TODO : tie handling. I am NOT doing this now
+            gameOverScreen.PlayAnimation(players[0].playerData.score > players[1].playerData.score);
         }
 
         void OnDrawGizmosSelected()
