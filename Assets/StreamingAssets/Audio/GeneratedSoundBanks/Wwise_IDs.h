@@ -56,6 +56,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BGM_RTPC_SLIDER_VALUE = 36824089U;
+        static const AkUniqueID DAMAGE_FILTER = 3716010367U;
         static const AkUniqueID DAMAGELOWCUT = 3953516820U;
         static const AkUniqueID DUCKNOTE1 = 1864835855U;
         static const AkUniqueID DUCKNOTE2 = 1864835852U;

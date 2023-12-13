@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 15be22d0e294f44ba968902040c01d1a
     GuidInternal: 
-    m_lastTime: -8584991277827354196
+    m_lastTime: -8584991027083028760
     List:
     - name: BGM
       guid: fe3bfec838fdf04fb9d695f3ce6366e1
@@ -185,7 +185,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
     GuidInternal: 
-    m_lastTime: -8584991186066625195
+    m_lastTime: -8584991022062376661
     List:
     - name: BGM_Main
       guid: 355191ed2057184780ca51669d3af036
@@ -253,7 +253,7 @@ MonoBehaviour:
         guid: 6c549a0aa026df4cae59d38b51279e70
       Path: Events\Default Work Unit\EnemyNote1_00_SFX
       maxAttenuation: 0
-      maxDuration: 2.981175
+      maxDuration: 1.5651652
       minDuration: 0.96253544
     - name: EnemyNote2_00_SFX
       guid: 00047211aa9a3848a87c1d96ea5fd868
@@ -270,7 +270,7 @@ MonoBehaviour:
         guid: 00047211aa9a3848a87c1d96ea5fd868
       Path: Events\Default Work Unit\EnemyNote2_00_SFX
       maxAttenuation: 0
-      maxDuration: 2.6923606
+      maxDuration: 1.8561369
       minDuration: 1.4308937
     - name: EnemyNote3_00_SFX
       guid: d16e7a410cbfb14e8c4d430ef825e13d
@@ -287,7 +287,7 @@ MonoBehaviour:
         guid: d16e7a410cbfb14e8c4d430ef825e13d
       Path: Events\Default Work Unit\EnemyNote3_00_SFX
       maxAttenuation: 0
-      maxDuration: 2.2617111
+      maxDuration: 1.5533649
       minDuration: 0.8206235
     - name: P1BulletShieldAbsorb_00_SFX
       guid: 66ff6d56ea7b5b4e8acbad2bdd8de7eb
@@ -304,8 +304,8 @@ MonoBehaviour:
         guid: 66ff6d56ea7b5b4e8acbad2bdd8de7eb
       Path: Events\Default Work Unit\P1BulletShieldAbsorb_00_SFX
       maxAttenuation: 0
-      maxDuration: 0.15907612
-      minDuration: 0.117633075
+      maxDuration: 0.17347376
+      minDuration: 0.12827976
     - name: P1DamageBird_00_SFX
       guid: 5a7f454f672da54c995642e8fe2db1bf
       id: 3391800229
@@ -474,8 +474,8 @@ MonoBehaviour:
         guid: fca1411fd2f3f845bc3907ecb6d74f17
       Path: Events\Default Work Unit\P2BulletShieldAbsorb_00_SFX
       maxAttenuation: 0
-      maxDuration: 0.29513687
-      minDuration: 0.21824679
+      maxDuration: 0.27857208
+      minDuration: 0.20599754
     - name: P2DamageBird_00_SFX
       guid: bfd5039c8c773a468a149f8ce79f156d
       id: 911512040
@@ -678,8 +678,8 @@ MonoBehaviour:
         guid: 32c48bb9d08dc54ba9fab29bf50b0a0b
       Path: Events\Default Work Unit\SpecialBullet_00_SFX
       maxAttenuation: 0
-      maxDuration: 1.4259167
-      minDuration: 1.4259167
+      maxDuration: 1.7956355
+      minDuration: 0.8765469
     - name: UiMenuBack_00_SFX
       guid: 5c2f5115ac538146bea78e686bb4413e
       id: 207152438
@@ -845,7 +845,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f327d2b9819f5c4f9a811460bd761a28
     GuidInternal: 
-    m_lastTime: -8584991236557881291
+    m_lastTime: -8584991021570993769
     List:
     - name: BGM_RTPC_SLIDER_VALUE
       guid: d9a0060504de4441acb8ad17d1f2d100
@@ -861,6 +861,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: d9a0060504de4441acb8ad17d1f2d100
       Path: Game Parameters\Default Work Unit\BGM_RTPC_SLIDER_VALUE
+    - name: damage_filter
+      guid: e79a4932572ce94db2f5a49eb6152dc0
+      id: 3716010367
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f327d2b9819f5c4f9a811460bd761a28
+      - ElementName: damage_filter
+        ObjectType: 13
+        guid: e79a4932572ce94db2f5a49eb6152dc0
+      Path: Game Parameters\Default Work Unit\damage_filter
     - name: DamageLowCut
       guid: d10ad5b80f0fdc4ab0f679239342f65e
       id: 3953516820

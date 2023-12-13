@@ -34,7 +34,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-16</Value>
+										<Value>-21</Value>
 									</ValueList>
 								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -344,7 +344,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-16</Value>
+										<Value>-21</Value>
 									</ValueList>
 								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -632,7 +632,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -692,6 +692,11 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
 										</Property>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -1166,6 +1171,11 @@
 								<Sound Name="SFX_OS_Player1_ShieldGetLV2_v2" ID="{DB55037C-2673-4A66-AD89-816DEBFABFC9}" ShortID="877887048">
 									<PropertyList>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>1</Value>
@@ -1201,6 +1211,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_OS_Player2_PlayerShieldGetLV3_v2" ID="{D539CA62-47C3-4397-9E4D-003C8BEAB02E}" ShortID="620751976">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
@@ -1225,6 +1242,11 @@
 								<Sound Name="SFX_OS_Player1_ShieldGetLV1_v2" ID="{E8BD1FF1-206C-4170-85A6-ECCD359B2327}" ShortID="12998958">
 									<PropertyList>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>1</Value>
@@ -1268,7 +1290,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
@@ -1301,6 +1323,11 @@
 								<Sound Name="SFX_OS_Player1_ShieldGetLV3_v2" ID="{CC66F13A-AA57-425B-8540-5C498438CADA}" ShortID="996647129">
 									<PropertyList>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>1</Value>
@@ -1339,7 +1366,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>1</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1577,11 +1604,6 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>4</Value>
-									</ValueList>
-								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1639,7 +1661,7 @@
 								<Property Name="Color" Type="int16" Value="16"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -1693,6 +1715,11 @@
 						<Sound Name="SFX_RC_UI_MenuSliderTickDown" ID="{5C05732C-85C7-4C5E-815C-0762FEFF9A53}" ShortID="607629418">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1744,6 +1771,11 @@
 						<Sound Name="SFX_RC_UI_MenuSliderTickUp" ID="{4FDAC220-AF5C-4D77-A7DA-33C81B3E8154}" ShortID="819187405">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2299,12 +2331,12 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>710</Value>
+										<Value>560</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -2483,7 +2515,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>5</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2531,13 +2563,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="SFX_OS_UI_Player1 Connectedv1" ID="{D72BD518-88F7-4E68-A382-BACCC57F77F5}" ShortID="276573408">
-							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
@@ -2560,13 +2585,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="SFX_OS_UI_Player2Connectedv1" ID="{2EB0018D-90CB-48AB-ACFC-66791A2A9EF2}" ShortID="913864072">
-							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
@@ -2592,7 +2610,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2835,7 +2853,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2844,7 +2862,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+									<ObjectRef Name="SFX" ID="{7A097A10-23AB-417A-A477-16B90482C724}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2920,7 +2938,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2929,7 +2947,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+									<ObjectRef Name="SFX" ID="{7A097A10-23AB-417A-A477-16B90482C724}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3001,47 +3019,6 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Sound Name="SFX_RC_Player_SpecialBullet" ID="{8B96354A-1F97-479B-AE7F-2DBC9F0AB067}" ShortID="966463926">
-							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>-22</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UserAuxSendVolume0" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{7A097A10-23AB-417A-A477-16B90482C724}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
-								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="RVB" ID="{B49BD9B3-8CE5-4939-B08E-3C60B6F11A18}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_RC_Player_SpecialBullet" ID="{8C3AA523-5144-4788-B587-07B7C7E4EFF5}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.11776178781925"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>SFX_RC_Player_SpecialBullet.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="378315970"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_RC_Player_SpecialBullet" ID="{8C3AA523-5144-4788-B587-07B7C7E4EFF5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<RandomSequenceContainer Name="SFX_RC_Player2_BulletShieldAbsorb" ID="{AB3A5BD6-19A4-4915-BAE4-AACDF3FC2196}" ShortID="383033501">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
@@ -3052,12 +3029,12 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-14</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>-360</Value>
+										<Value>-260</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -3617,6 +3594,11 @@
 										<Sound Name="SFX_RC_Enemy_ProjectileNote1_var1_v2" ID="{BC6EA2DF-1824-4EA1-80F3-908DF671CDFE}" ShortID="34512237">
 											<PropertyList>
 												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
@@ -3700,11 +3682,6 @@
 										<Sound Name="nonote1var1_v1" ID="{97702D92-EBEC-42A2-A607-DA5E8F845B5A}" ShortID="623943087">
 											<PropertyList>
 												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-												<Property Name="Lowpass" Type="int16">
-													<ValueList>
-														<Value>20</Value>
-													</ValueList>
-												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -3735,6 +3712,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="nonote1var1_v1" ID="{D0BC94E7-7A84-47C5-A66C-0F5888CCE952}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0292538444877626"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.02205619179121"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.47731914663201"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>nonote1var1_v1.wav</AudioFile>
 													<MediaIDList>
@@ -4178,6 +4161,11 @@
 										<Sound Name="SFX_RC_Enemy_ProjectileNote2_var1_v2" ID="{1E57D422-F3B1-4F80-A2CB-49A652D0C86D}" ShortID="518182004">
 											<PropertyList>
 												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
@@ -4261,11 +4249,6 @@
 										<Sound Name="nonote2var1_v1" ID="{9BBDBAD4-1C10-45A8-9CEE-897E2D48B765}" ShortID="353179135">
 											<PropertyList>
 												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-												<Property Name="Lowpass" Type="int16">
-													<ValueList>
-														<Value>20</Value>
-													</ValueList>
-												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -4296,6 +4279,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="nonote2var1_v1" ID="{AAD2A468-3187-4AF7-8622-58842528D1E9}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.4646450617284"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.75195987654321"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>nonote2var1_v1.wav</AudioFile>
 													<MediaIDList>
@@ -4723,6 +4711,11 @@
 										<Sound Name="SFX_RC_Enemy_ProjectileNote3_var1_v2" ID="{A9CEA1B0-A9AE-40E3-86A3-869DAD04A991}" ShortID="470985193">
 											<PropertyList>
 												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
@@ -4811,11 +4804,6 @@
 										<Sound Name="nonote3var1_v1" ID="{2CD4DB9C-5465-4D87-850A-7774055CAFFA}" ShortID="906446257">
 											<PropertyList>
 												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-												<Property Name="Lowpass" Type="int16">
-													<ValueList>
-														<Value>20</Value>
-													</ValueList>
-												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -4846,6 +4834,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="nonote3var1_v1" ID="{69EE744B-305C-44FB-A3BF-00A51239997E}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.32608246696989"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.46618113764349"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>nonote3var1_v1.wav</AudioFile>
 													<MediaIDList>
@@ -4974,6 +4967,99 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
+				<RandomSequenceContainer Name="SFX_RC_Player_SpecialBullet" ID="{9F8A41C6-DD32-48E8-BA68-AA1F452A1EE8}" ShortID="77223213">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{177C0F1B-D36F-4C0B-BF04-7F12FA9617AC}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="300"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{7A097A10-23AB-417A-A477-16B90482C724}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_RC_Player_SpecialBulletvar1" ID="{CFA458D6-BB69-4E0D-B23B-846679DA55FF}" ShortID="746252239">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_RC_Player_SpecialBulletvar1" ID="{7023724C-39D7-41C2-BDE4-354556155CF6}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_RC_Player_SpecialBulletvar1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="390516055"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_RC_Player_SpecialBulletvar1" ID="{7023724C-39D7-41C2-BDE4-354556155CF6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_RC_Player_SpecialBulletvar2" ID="{25C25FC0-2C58-46E2-A671-9F86B02B1099}" ShortID="627442128">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_RC_Player_SpecialBulletvar2" ID="{C0A95FDA-E930-40C2-961B-CDE76BAD29B4}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_RC_Player_SpecialBulletvar2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1023591767"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_RC_Player_SpecialBulletvar2" ID="{C0A95FDA-E930-40C2-961B-CDE76BAD29B4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_RC_Player_SpecialBulletvar3" ID="{DA030D6F-2797-48A7-A93E-6B7DCBD82B9B}" ShortID="611343434">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_RC_Player_SpecialBulletvar3" ID="{9F5C3BBA-24C2-4775-86AD-BC8585027157}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_RC_Player_SpecialBulletvar3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="171613043"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_RC_Player_SpecialBulletvar3" ID="{9F5C3BBA-24C2-4775-86AD-BC8585027157}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

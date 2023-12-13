@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{515DE217-016B-C06A-629C-6F86B7FB48A0}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E0E78186-42DB-A8C2-E863-C1002A081F87}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -58,11 +58,12 @@
 				<GameParameter Id="1864835855" Name="DuckNote1"/>
 				<GameParameter Id="1925204343" Name="pauseMusicRTPC"/>
 				<GameParameter Id="2002689035" Name="MASTER_RTPC_SLIDER_VALUE"/>
+				<GameParameter Id="3716010367" Name="damage_filter"/>
 				<GameParameter Id="3953516820" Name="DamageLowCut"/>
 				<GameParameter Id="3969718864" Name="pauseBGMRTPC"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{17CEE528-949F-58FE-B3DD-D47515D3FA82}">
+		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{B20A0513-EC09-E7C5-863C-47D14C9233E2}">
 			<ShortName>NanoSoundbank</ShortName>
 			<Path>NanoSoundbank.bnk</Path>
 			<Media>
@@ -86,6 +87,10 @@
 					<ShortName>V1\SFX_OS_Player2_ShieldBreakLV3_v1.wav</ShortName>
 					<CachePath>SFX/V1/SFX_OS_Player2_ShieldBreakLV3_v1_818F3B66.wem</CachePath>
 				</File>
+				<File Id="171613043" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_RC_Player_SpecialBulletvar3.wav</ShortName>
+					<CachePath>SFX/SFX_RC_Player_SpecialBulletvar3_818F3B66.wem</CachePath>
+				</File>
 				<File Id="176861567" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_RC_Player1_SummonFriend.wav</ShortName>
 					<CachePath>SFX/SFX_RC_Player1_SummonFriend_818F3B66.wem</CachePath>
@@ -104,7 +109,7 @@
 				</File>
 				<File Id="214589433" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>nonote3var1_v1.wav</ShortName>
-					<CachePath>SFX/nonote3var1_v1_818F3B66.wem</CachePath>
+					<CachePath>SFX/nonote3var1_v1_4473A6E5.wem</CachePath>
 				</File>
 				<File Id="236622689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_RC_Player1_DamageBirdLost_var1v2.wav</ShortName>
@@ -128,11 +133,11 @@
 				</File>
 				<File Id="345409603" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>nonote2var1_v1.wav</ShortName>
-					<CachePath>SFX/nonote2var1_v1_818F3B66.wem</CachePath>
+					<CachePath>SFX/nonote2var1_v1_8B92FA75.wem</CachePath>
 				</File>
-				<File Id="378315970" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_RC_Player_SpecialBullet.wav</ShortName>
-					<CachePath>SFX/SFX_RC_Player_SpecialBullet_E04B9296.wem</CachePath>
+				<File Id="390516055" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_RC_Player_SpecialBulletvar1.wav</ShortName>
+					<CachePath>SFX/SFX_RC_Player_SpecialBulletvar1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="426248841" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>land carbon cycle pad proj reaper comp intro bande dem-glued.wav</ShortName>
@@ -256,7 +261,7 @@
 				</File>
 				<File Id="885815898" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>nonote1var1_v1.wav</ShortName>
-					<CachePath>SFX/nonote1var1_v1_818F3B66.wem</CachePath>
+					<CachePath>SFX/nonote1var1_v1_4D679FB9.wem</CachePath>
 				</File>
 				<File Id="938214569" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_RC_Enemy_ProjectileNote2_var1_v2.wav</ShortName>
@@ -290,6 +295,10 @@
 					<ShortName>SFX_RC_Player_CollideShield_var5.wav</ShortName>
 					<CachePath>SFX/SFX_RC_Player_CollideShield_var5_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1023591767" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_RC_Player_SpecialBulletvar2.wav</ShortName>
+					<CachePath>SFX/SFX_RC_Player_SpecialBulletvar2_818F3B66.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="2633060887" Name="BGM_Main" DurationType="OneShot" DurationMin="180.92308" DurationMax="180.92308">
@@ -311,7 +320,7 @@
 						<MediaRef Id="1023479748"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1961931039" Name="EnemyNote1_00_SFX" DurationType="OneShot" DurationMin="0.96253544" DurationMax="2.981175">
+				<Event Id="1961931039" Name="EnemyNote1_00_SFX" DurationType="OneShot" DurationMin="0.96253544" DurationMax="1.5651652">
 					<MediaRefs>
 						<MediaRef Id="855912340"/>
 						<MediaRef Id="885815898"/>
@@ -320,7 +329,7 @@
 						<AuxBusRef Id="695384145" Name="RVB"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="686611850" Name="EnemyNote2_00_SFX" DurationType="OneShot" DurationMin="1.4308937" DurationMax="2.6923606">
+				<Event Id="686611850" Name="EnemyNote2_00_SFX" DurationType="OneShot" DurationMin="1.4308937" DurationMax="1.8561369">
 					<MediaRefs>
 						<MediaRef Id="345409603"/>
 						<MediaRef Id="938214569"/>
@@ -329,7 +338,7 @@
 						<AuxBusRef Id="695384145" Name="RVB"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3953467349" Name="EnemyNote3_00_SFX" DurationType="OneShot" DurationMin="0.8206235" DurationMax="2.2617111">
+				<Event Id="3953467349" Name="EnemyNote3_00_SFX" DurationType="OneShot" DurationMin="0.8206235" DurationMax="1.5533649">
 					<MediaRefs>
 						<MediaRef Id="214589433"/>
 						<MediaRef Id="1010621008"/>
@@ -338,7 +347,7 @@
 						<AuxBusRef Id="695384145" Name="RVB"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3338041995" Name="P1BulletShieldAbsorb_00_SFX" DurationType="OneShot" DurationMin="0.117633075" DurationMax="0.15907612">
+				<Event Id="3338041995" Name="P1BulletShieldAbsorb_00_SFX" DurationType="OneShot" DurationMin="0.12827976" DurationMax="0.17347376">
 					<MediaRefs>
 						<MediaRef Id="160642253"/>
 						<MediaRef Id="519196225"/>
@@ -416,7 +425,7 @@
 						<MediaRef Id="975446710"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="76898198" Name="P2BulletShieldAbsorb_00_SFX" DurationType="OneShot" DurationMin="0.21824679" DurationMax="0.29513687">
+				<Event Id="76898198" Name="P2BulletShieldAbsorb_00_SFX" DurationType="OneShot" DurationMin="0.20599754" DurationMax="0.27857208">
 					<MediaRefs>
 						<MediaRef Id="160642253"/>
 						<MediaRef Id="519196225"/>
@@ -500,13 +509,12 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3056597442" Name="resumeBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1500580661" Name="SpecialBullet_00_SFX" DurationType="OneShot" DurationMin="1.4259167" DurationMax="1.4259167">
+				<Event Id="1500580661" Name="SpecialBullet_00_SFX" DurationType="OneShot" DurationMin="0.8765469" DurationMax="1.7956355">
 					<MediaRefs>
-						<MediaRef Id="378315970"/>
+						<MediaRef Id="171613043"/>
+						<MediaRef Id="390516055"/>
+						<MediaRef Id="1023591767"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="695384145" Name="RVB"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="207152438" Name="UiMenuBack_00_SFX" DurationType="OneShot" DurationMin="0.19319595" DurationMax="0.27322033">
 					<MediaRefs>
@@ -574,5 +582,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CF2A1F27-3D1A-1ECB-666E-E14C095F78A9}</FileHash>
+	<FileHash>{34352A7A-F4E5-58D9-B017-02B0F70965BE}</FileHash>
 </SoundBanksInfo>

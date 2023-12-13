@@ -34,7 +34,7 @@ namespace Nano.Combat
         [SerializeField] AK.Wwise.Event EnemyNote1_00_SFX;
         [SerializeField] AK.Wwise.Event EnemyNote2_00_SFX;
         [SerializeField] AK.Wwise.Event EnemyNote3_00_SFX;
-
+        [SerializeField] AK.Wwise.Event SpecialBullet_00_SFX;
         [SerializeField] GameObject floatingPoints;
 
         public void Init(Vector3 dir, float speed)
@@ -62,6 +62,9 @@ namespace Nano.Combat
             }
             if (convertingBullet)
             {
+
+                //MagicBullet.Post
+                SpecialBullet_00_SFX.Post(gameObject);
                 bulletRenderer.material.SetFloat("_lastbullet", 1.0f);
                 specialParticleSystem.gameObject.SetActive(true);
             } else

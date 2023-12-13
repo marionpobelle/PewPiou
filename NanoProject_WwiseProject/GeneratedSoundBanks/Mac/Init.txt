@@ -2,6 +2,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	36824089	BGM_RTPC_SLIDER_VALUE			\Default Work Unit\BGM_RTPC_SLIDER_VALUE	
 	623593826	SFX_RTPC_SLIDER_VALUE			\Default Work Unit\SFX_RTPC_SLIDER_VALUE	
 	2002689035	MASTER_RTPC_SLIDER_VALUE			\Default Work Unit\MASTER_RTPC_SLIDER_VALUE	
+	3716010367	damage_filter			\Default Work Unit\damage_filter	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	

@@ -18,6 +18,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="P1SummonFriend_00_SFX" ID="{1F9D3901-CDB0-4D77-B70F-61397542880F}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="P1ShieldGet1_00_SFX" ID="{5BF212A1-A935-497E-8E53-E715EB547180}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -40,6 +44,10 @@
 						<Module>
 							<ObjectRef Name="P2ShieldGet3_00_SFX" ID="{4A3331F7-9DF5-4D09-9356-CDF1D82226F1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
 							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P2SummonFriend_00_SFX" ID="{329C5D55-A987-4B99-BA69-9247343FBA23}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="1" Y="6"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="P1ShieldBreak1_00_SFX" ID="{DB47713D-9A53-4A47-A012-0DC08A301D82}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
@@ -66,6 +74,10 @@
 							<Position X="2" Y="5"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="P2BulletShieldAbsorb_00_SFX" ID="{1F41A1FC-F3D2-45F8-BC39-07ECB6D74F17}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="pauseBGM" ID="{4BCC5B57-FAB2-43AD-A647-4F52E058D5E1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -76,6 +88,14 @@
 						<Module>
 							<ObjectRef Name="BGM_Main" ID="{ED915135-5720-4718-80CA-51669D3AF036}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
 							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BGM_Title" ID="{8E6E18EA-5750-4B75-B258-CF8FA40647E9}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="P1MainDamage_00_SFX" ID="{9232B004-929E-4E39-9EE0-9E9809AC1DF3}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="P1DamageBird_00_SFX" ID="{4F457F5A-2D67-4CA5-9956-42E8FE2DB1BF}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
@@ -89,7 +109,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}"/>
-							<Value>11.0157367668097</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DuckNote1" ID="{1AF3DE6E-2028-4610-98E5-5349E1448A47}"/>
@@ -113,6 +133,10 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DuckNote2" ID="{48EAC204-33A8-4D06-A835-5EA9F1975C7A}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="damage_filter" ID="{32499AE7-2C57-4DE9-B2F5-A49EB6152DC0}"/>
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>

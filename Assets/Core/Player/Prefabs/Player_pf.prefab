@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 6263265036738986578}
   - component: {fileID: 3019712171074787442}
   - component: {fileID: 4702441199385647886}
-  - component: {fileID: 7716978386379083094}
   m_Layer: 0
   m_Name: Player_pf
   m_TagString: Untagged
@@ -183,6 +182,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: dfc8df0e5c5ea51469613b62758e4b6e,
       type: 2}
+  floatingPoints: {fileID: 0}
 --- !u!114 &1618316304505318745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,23 +315,6 @@ MonoBehaviour:
   scoreIncrHitNote: 100
   scoreCombo2Bullets: 50
   scoreCombo3Bullets: 200
---- !u!114 &7716978386379083094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045446031766755295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4130a077f83dd864abbf35842c3f173d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WingFlap_00_SFX:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9491ddf6e440aff418e3e0b75f257441,
-      type: 2}
 --- !u!1 &3342101304754074761
 GameObject:
   m_ObjectHideFlags: 0
