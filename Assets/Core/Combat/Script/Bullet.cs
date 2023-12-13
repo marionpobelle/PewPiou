@@ -48,7 +48,7 @@ namespace Nano.Combat
             switch (bulletType)
             {
                 case BulletType.Red:
-                    bulletRenderer.material.SetColor("_Color", Color.red);
+                    bulletRenderer.material.SetColor("_Color", new Color32(255, 0, 30, 0));
                     EnemyNote1_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Blue:
@@ -93,8 +93,7 @@ namespace Nano.Combat
             backToSender = true;
             rb.velocity = Vector3.zero;
             if (parentEnemy == null) return;
-            transform.DORotate(new Vector3(0, 0, 180), .2f);
-            //DOVirtual.DelayedCall(.35f, () => Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity));
+            spriteRenderer.transform.DORotate(new Vector3(0, 0, 180), .2f);
             transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
             {
                 Destroy(parentEnemy.gameObject);

@@ -11,7 +11,7 @@ namespace Nano.UI
         const string MASTER_VOLUME_KEY = "masterVolume";
         const string BGM_VOLUME_KEY = "BGMVolume";
         const string SFX_VOLUME_KEY = "SoundEffectsVolume";
-        const string BACKGROUND_ANIMATIONS_DISABLED_KEY = "SFXVolume";
+        const string BACKGROUND_ANIMATIONS_DISABLED_KEY = "IsBackgroundDisabled";
 
         [Header("Settings")]
         [SerializeField] float menuFadeDuration = .3f;
@@ -30,6 +30,8 @@ namespace Nano.UI
 
         Action onHideOptionsScreenCallback;
         bool isOptionsShown = false;
+
+        public static event Action onShowBackgroundValueChanged;
 
         public void ShowOptionsScreen(Action onHideTutorialCallback)
         {
@@ -58,6 +60,8 @@ namespace Nano.UI
 
             isOptionsShown = true;
             masterVolumeSlider.Select();
+
+            backgroundEnabledToggle.onValueChanged += ChangeBackgroundVisibility;
         }
 
         private void OnReturnButtonPressed(InputAction.CallbackContext obj)
@@ -91,6 +95,13 @@ namespace Nano.UI
                 optionsCanvasGroup.DOFade(0, menuFadeDuration);
             else
                 optionsCanvasGroup.alpha = 0;
+
+            backgroundEnabledToggle.onValueChanged -= ChangeBackgroundVisibility;
+        }
+
+        private void ChangeBackgroundVisibility()
+        {
+            onShowBackgroundValueChanged?.Invoke();
         }
 
         public void CheckPlayerPrefsInitiated()

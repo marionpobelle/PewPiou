@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2191342458232904868}
   - component: {fileID: 1069592809302106589}
   - component: {fileID: 7732561747696579329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3138799793646830530}
   - component: {fileID: 7728959014312562527}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_construction_03_pf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91c91e36f6fdf64da8d1f344a3457bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendDuration: 5
   meshRenderer: {fileID: 1069592809302106589}
 --- !u!1 &4789523099803921405
 GameObject:
@@ -164,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7120938295640903956}
   - component: {fileID: 4017788452961304713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_construction_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

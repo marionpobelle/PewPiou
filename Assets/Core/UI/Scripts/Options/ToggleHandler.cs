@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ namespace Nano.UI
 
         string key;
         bool isOptionsDisplayed = false;
+
+        public event Action onValueChanged;
 
         public void Init(string playerPrefKey)
         {
@@ -41,12 +44,9 @@ namespace Nano.UI
             if (!isOptionsDisplayed)
                 return;
 
-            Debug.Log((newValue ? 1 : 0));
-
             PlayerPrefs.SetInt(key, (newValue ? 1 : 0));
-    
-                
-           
+
+            onValueChanged?.Invoke();
         }
     }
 }

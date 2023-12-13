@@ -217,6 +217,11 @@ namespace Nano.Player
                 }
                 else //WRONG SHIELD
                 {
+                    if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(0, 10);
+                    DOVirtual.DelayedCall(.15f, () =>
+                    {
+                        if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(0, 0);
+                    });
                     BreakShield(shieldList[0]);
                     _bullet.ExplodeBullet("Ouch!");
                     previousEnemy = null;
@@ -234,10 +239,12 @@ namespace Nano.Player
         private void TakeDamage()
         {
             spriteRenderer.material = damageMaterial;
+            if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(10, 10);
             DOVirtual.DelayedCall(.2f, () => {
                 spriteRenderer.material = basicMaterial;
                 DOVirtual.DelayedCall(.1f, () =>
                 {
+                    if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(0, 0);
                     spriteRenderer.material = damageMaterial;
                     DOVirtual.DelayedCall(.05f, () => {
                         spriteRenderer.material = basicMaterial;
