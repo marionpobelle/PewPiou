@@ -120,22 +120,22 @@ MonoBehaviour:
     minMaxSpeed: {x: 0.5, y: 1.5}
   - prefab: {fileID: 5849942684066239561, guid: 489f1b6f53c47494ab8f4645c608725d,
       type: 3}
-    averageSpawnTime: 1
+    averageSpawnTime: 6
     variation: 1
-    startupDelay: 0
+    startupDelay: 20
     minMaxSpawnDistance: {x: 89.4621, y: 401.9345}
     useAutoScale: 1
-    scaleByDistanceMultiplier: 0
+    scaleByDistanceMultiplier: 300
     randomScaleMultiplierByDistance: 0
     minMaxScale: {x: 1, y: 2}
     useAutoSpeed: 1
     speedByDistanceMultiplier: 700
     minMaxSpeed: {x: 0.5, y: 1.5}
   - prefab: {fileID: 607469036057312956, guid: 3e73799c98995e848b178b9b54ae127a, type: 3}
-    averageSpawnTime: 5
-    variation: 3
-    startupDelay: 30
-    minMaxSpawnDistance: {x: 112.98153, y: 496.01224}
+    averageSpawnTime: 4
+    variation: 2
+    startupDelay: 0
+    minMaxSpawnDistance: {x: 51.457287, y: 280.3015}
     useAutoScale: 1
     scaleByDistanceMultiplier: 150
     randomScaleMultiplierByDistance: 0
