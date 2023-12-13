@@ -100,7 +100,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   isRecruted: 0
   movementHorizontalStep: 5
-  movementVerticalStep: 5
+  movementVerticalStep: 3
 --- !u!114 &3047614286235494139
 MonoBehaviour:
   m_ObjectHideFlags: 0
