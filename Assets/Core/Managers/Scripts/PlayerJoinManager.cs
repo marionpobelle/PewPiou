@@ -49,10 +49,15 @@ namespace Nano.Managers
             var joinedPlayer = manager.JoinPlayer(spawnedPlayers, -1, "Player", obj.control.device);
             spawnedPlayers++;
             connectedDeviceId = obj.control.device.deviceId;
-
             Debug.Log($"{this.GetType()} >> Spawend player {spawnedPlayers} using device with id {connectedDeviceId}");
 
             OnPlayerAdded?.Invoke(joinedPlayer.GetComponent<PlayerEntity>());
+            if (obj.control.device is Gamepad)
+            {
+                Debug.Log("DEVICE CLASS : " + obj.control.device);
+                joinedPlayer.GetComponent<PlayerEntity>().InputHandler.gamepad = Gamepad.all[Gamepad.all.Count - 1];
+
+            }
         }
     }
 }

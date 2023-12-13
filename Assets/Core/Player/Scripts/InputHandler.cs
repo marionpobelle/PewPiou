@@ -8,6 +8,7 @@ namespace Nano.Player
     {
         [SerializeField] PlayerMovement playerMovement;
         [SerializeField] ShieldManager shieldManager;
+        public Gamepad gamepad;
 
         public static event Action onPausePressed;
 

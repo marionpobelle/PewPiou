@@ -29,6 +29,7 @@ namespace Nano.Managers
         float levelTimer;
         int phaseNumber = 0;
         bool isGamePaused = false;
+
         [Header("SPAWN ZONE")]
         [SerializeField] float height;
 

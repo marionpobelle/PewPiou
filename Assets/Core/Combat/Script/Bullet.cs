@@ -90,8 +90,7 @@ namespace Nano.Combat
             backToSender = true;
             rb.velocity = Vector3.zero;
             if (parentEnemy == null) return;
-            transform.DORotate(new Vector3(0, 0, 180), .2f);
-            //DOVirtual.DelayedCall(.35f, () => Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity));
+            spriteRenderer.transform.DORotate(new Vector3(0, 0, 180), .2f);
             transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
             {
                 Destroy(parentEnemy.gameObject);
