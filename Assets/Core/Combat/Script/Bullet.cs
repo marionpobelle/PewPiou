@@ -104,6 +104,7 @@ namespace Nano.Combat
             Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity);
             transform.DOScale(1.7f, .2f).OnComplete(() =>
             {
+                GetComponent<Collider>().enabled = false;
                 transform.DOScale(.7f, .1f).OnComplete(() =>
                 {
                     Destroy(this.gameObject);
