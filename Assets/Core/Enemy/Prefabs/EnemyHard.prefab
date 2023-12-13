@@ -70,10 +70,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 2170179532037380028}
-  maxDurationPhase0: 5
+  maxDurationPhase0: 8
   maxDurationPhase1: 10
-  maxDurationPhase2: 5
-  screenInnerOffset: 4
+  maxDurationPhase2: 6
   animCurve:
     serializedVersion: 2
     m_Curve:
@@ -100,7 +99,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   isRecruted: 0
   movementHorizontalStep: 5
-  movementVerticalStep: 2
+  movementVerticalStep: 3
 --- !u!114 &3047614286235494139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +115,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
-  playerTransforms: []
-  fireDelay: 2
-  fireRate: 1
+  bulletSpeed: 20
+  fireDelay: 1.4
+  fireRate: 1.7
 --- !u!1 &3946388900254241348
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,8 +146,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.67449, y: 0.67449, z: 0.67449}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -1.26, y: 1.26, z: 1.26}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2327391864376607072}
   m_Father: {fileID: 4428436085327462907}
@@ -284,9 +283,9 @@ Transform:
   m_GameObject: {fileID: 7937688185818037143}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.68199676, y: -0.03409984, z: 0.13788195}
-  m_LocalScale: {x: -0.44478047, y: 0.1482602, z: 0.44478053}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.68199676, y: -0.03409984, z: 0.159}
+  m_LocalScale: {x: -0.3, y: 0.10000004, z: 0.30000007}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8035641244146329155}
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: -90}
