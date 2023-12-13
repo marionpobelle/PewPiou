@@ -73,7 +73,7 @@ MonoBehaviour:
   sprite: {fileID: 4652559798871061232}
   maxDurationPhase0: 5
   maxDurationPhase1: 8
-  maxDurationPhase2: 6
+  maxDurationPhase2: 10
   animCurve:
     serializedVersion: 2
     m_Curve:

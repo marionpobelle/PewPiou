@@ -4,6 +4,8 @@ using UnityEngine;
 using Nano.Data;
 using DG.Tweening;
 using Sirenix.OdinInspector;
+using TMPro;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 
 namespace Nano.Combat
 {
@@ -33,7 +35,8 @@ namespace Nano.Combat
         [SerializeField] AK.Wwise.Event EnemyNote2_00_SFX;
         [SerializeField] AK.Wwise.Event EnemyNote3_00_SFX;
 
-      
+        [SerializeField] GameObject floatingPoints;
+
         public void Init(Vector3 dir, float speed)
         {
             bulletDir = dir;
@@ -85,23 +88,26 @@ namespace Nano.Combat
             rb.velocity = bulletDir * bulletSpeed;   
         }
 
-        public void BackToSender()
+        public void BackToSender(string textHit)
         {
             backToSender = true;
             rb.velocity = Vector3.zero;
             if (parentEnemy == null) return;
-            transform.DORotate(new Vector3(0, 0, 180), .2f);
-            //DOVirtual.DelayedCall(.35f, () => Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity));
+            spriteRenderer.transform.DORotate(new Vector3(0, 0, 180), .2f);
             transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
             {
                 Destroy(parentEnemy.gameObject);
-                ExplodeBullet();
+                ExplodeBullet(textHit);
             });
         }
 
-        public void ExplodeBullet()
+        public void ExplodeBullet(string textHit = " ")
         {
             Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity);
+            GameObject points = Instantiate(floatingPoints, parentEnemy.transform.position, Quaternion.identity) as GameObject;
+            TextMeshPro pointText = points.transform.GetChild(0).GetComponent<TextMeshPro>();
+
+           pointText.SetText(textHit);
             transform.DOScale(1.7f, .2f).OnComplete(() =>
             {
                 GetComponent<Collider>().enabled = false;

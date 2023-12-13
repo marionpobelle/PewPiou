@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655030859263442181}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.08, y: -0.5, z: 5.334598}
-  m_LocalScale: {x: 1.6393442, y: 1.6393442, z: 1.6393442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9749333, y: -4.338806, z: -0.40666613}
+  m_LocalScale: {x: 1.3333334, y: 1.3333337, z: 1.3333337}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7717626347705603909}
+  m_Father: {fileID: 2672134691450481848}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &7106216920300375840
 ParticleSystem:
@@ -4857,10 +4857,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.61, y: 0.61, z: 0.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1240906127111082903}
+  m_Children: []
   m_Father: {fileID: 5365782109275259897}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3699910266950814596
@@ -4942,10 +4941,11 @@ Transform:
   m_GameObject: {fileID: 8634240304403081358}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0.78, y: 0, z: 0}
+  m_LocalPosition: {x: 0.73, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1240906127111082903}
   m_Father: {fileID: 5365782109275259897}
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: -90}
 --- !u!33 &4867238396717432175
@@ -5048,11 +5048,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: -2184900755691303232}
   bulletRenderer: {fileID: 3946219304564420928}
-  specialBulletRenderer: {fileID: 0}
   spriteRenderer: {fileID: 3699910266950814596}
   specialParticleSystem: {fileID: 7106216920300375840}
   bulletType: 1
   convertingBullet: 0
+  hasCollided: 0
   destroyAfterTime: 15
   spriteList:
   - {fileID: 21300000, guid: 3331117cddc8f184abdb3834dc2248d3, type: 3}
@@ -5075,6 +5075,8 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2c499c39696efc7458320e20c5f02a5f,
       type: 2}
+  floatingPoints: {fileID: 1763736298534557127, guid: f6fba0a4b8fa378429cfb80e2072eff3,
+    type: 3}
 --- !u!135 &5849271828151121678
 SphereCollider:
   m_ObjectHideFlags: 0
