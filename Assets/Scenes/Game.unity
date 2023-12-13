@@ -2020,7 +2020,7 @@ PrefabInstance:
     - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
       propertyPath: height
-      value: 45
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
@@ -2036,7 +2036,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentLevel
       value: 
-      objectReference: {fileID: 11400000, guid: d95f787cc7344534db43bbb1e6d8e9ad,
+      objectReference: {fileID: 11400000, guid: c26836cd5055cf344a781bf3f124f1e3,
         type: 2}
     - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
