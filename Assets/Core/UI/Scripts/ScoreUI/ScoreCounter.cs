@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class ScoreCounter : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class ScoreCounter : MonoBehaviour
 
     public void UpdateScore()
     {
-        text.text = associatedPlayer.score.ToString();
+        text.transform.DOScale(1.2f, .1f).OnComplete(() =>
+        {
+            text.text = associatedPlayer.score.ToString();
+            text.transform.DOScale(1f, .1f);
+        });
     }
 }
