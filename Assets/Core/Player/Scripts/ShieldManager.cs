@@ -41,7 +41,7 @@ namespace Nano.Player
         {
             if (shieldList.Count >= maxNumberShield)
             {
-                RemoveShield(shieldList[0]);
+                DissolveShield(shieldList[0]);
             }
             Shield _newShield = Instantiate(shieldPrefab, transform);
             _newShield.shieldType = _shieldType;
@@ -81,7 +81,7 @@ namespace Nano.Player
             _newShield.shieldRenderer.material.SetFloat("_bubble_angle", shieldList.Count);
         }
 
-        public void RemoveShield(Shield _shield)
+        public void DissolveShield(Shield _shield)
         {
             shieldList.Remove(_shield);
             player.playerData.shieldTypeList.Remove(player.playerData.shieldTypeList[0]);
@@ -110,6 +110,30 @@ namespace Nano.Player
             }
         }
 
+        public void BreakShield(Shield _shield)
+        {
+            shieldList.Remove(_shield);
+            player.playerData.shieldTypeList.Remove(player.playerData.shieldTypeList[0]);
+            _shield.shieldRenderer.material.DOFloat(0.8f, "_wiggle_size", .1f);
+            _shield.shieldRenderer.material.DOFloat(0f, "_color_alpha", .1f);
+            _shield.transform.DOScale(_shield.fixedScale + 5f, .1f).OnComplete(() =>
+            {
+                _shield.DOKill();
+                Destroy(_shield.gameObject);
+                shieldCollider.radius = .5f;
+            });
+            for (int i = 0; i < shieldList.Count; i++)
+            {
+                Shield _sizeFixShield = shieldList[i];
+                _sizeFixShield.fixedScale = maxShieldSize - shieldSizeAugmentation * i;
+                _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale + 0.3f, .3f).OnComplete(() =>
+                {
+                    _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale, .1f);
+                });
+                _sizeFixShield.shieldRenderer.material.DOFloat(i, "_bubble_angle", .2f);
+            }
+        }
+
         [Button("REMOVE ALL SHIELDS")]
         public void RemoveAllShields()
         {
@@ -117,7 +141,7 @@ namespace Nano.Player
             for (int i = 0; i < shieldList.Count; i++)
             {
                 Shield _shield = shieldList[i];
-                RemoveShield(_shield);
+                DissolveShield(_shield);
             }
         }
 
@@ -145,7 +169,7 @@ namespace Nano.Player
                 }
                 else if (_bullet.bulletType == shieldList[0].shieldType) //GOOD SHIELD
                 {
-                    RemoveShield(shieldList[0]);
+                    DissolveShield(shieldList[0]);
 
                     if (_bullet.convertingBullet)
                     {
@@ -190,7 +214,7 @@ namespace Nano.Player
                 }
                 else //WRONG SHIELD
                 {
-                    RemoveShield(shieldList[0]);
+                    BreakShield(shieldList[0]);
                     _bullet.ExplodeBullet();
                     previousEnemy = null;
                 }

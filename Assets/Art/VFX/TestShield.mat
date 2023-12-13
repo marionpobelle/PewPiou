@@ -78,7 +78,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_232caf2348774ca0a4afa7f4a9acaed9_Texture_1_Texture2D:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e283d02448297cf41b9148db5e9cb568, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -139,6 +139,7 @@ Material:
     - _button_label_size: 1.05
     - _circle_size: 1.5
     - _circle_stroke_width: 0.35
+    - _color_alpha: 1
     - _wiggle_seed: 0
     - _wiggle_size: 0.09
     m_Colors:

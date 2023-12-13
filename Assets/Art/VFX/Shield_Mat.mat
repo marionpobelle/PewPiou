@@ -139,7 +139,7 @@ Material:
     - _button_label_size: 1.05
     - _circle_size: 1
     - _circle_stroke_width: 0.1
-    - _color_alpha: 0.857
+    - _color_alpha: 1
     - _wiggle_seed: 0
     - _wiggle_size: 0.09
     m_Colors:
