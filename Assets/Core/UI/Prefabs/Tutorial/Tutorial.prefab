@@ -354,8 +354,8 @@ MonoBehaviour:
   m_text: Use the matching shield to intercept incoming projectiles and score more
     than your opponent !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c2bd81e6bd2f928418898b7b09e6ff30, type: 2}
-  m_sharedMaterial: {fileID: 7628833683433492735, guid: c2bd81e6bd2f928418898b7b09e6ff30,
+  m_fontAsset: {fileID: 11400000, guid: 700989239f9e8b54395dbdb33a8b32b4, type: 2}
+  m_sharedMaterial: {fileID: -102129670023200874, guid: 700989239f9e8b54395dbdb33a8b32b4,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -646,7 +646,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8878884744805621140}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
