@@ -1,8 +1,9 @@
-using System.Collections;
+using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 using Nano.Data;
 using UnityEngine.UIElements;
+using System;
 
 namespace Nano.Level
 {
@@ -11,10 +12,21 @@ namespace Nano.Level
         [SerializeField] List<BackgroundPhase> phases;
         [SerializeField] float xSpawnPos;
         [SerializeField] float ySpawnPos;
+        [SerializeField] float startSunsetDelay = 140;
+        [SerializeField] float alphaBlendDuration = 5;
 
+        float startSunsetTime;
         int currentPhaseIndex;
         float nextPhaseTime;
         bool isBackgroundRunning;
+        public static event Action onAlphaBlendStart;
+        public static event Action onSunsetBlendStart;
+
+        bool isSunsetStarted;
+
+        public static float startBlendTime;
+        public static float endBlendTime;
+        public static float BlendValue() { return Mathf.InverseLerp(endBlendTime, startBlendTime, Time.time); }
 
         private void Start()
         {
@@ -23,17 +35,22 @@ namespace Nano.Level
 
         public void StartBackground()
         {
+            startSunsetTime = Time.time + startSunsetDelay;
             currentPhaseIndex = 0;
             SetupBackground();
             isBackgroundRunning = true;
         }
 
-
-
         private void Update()
         {
             if (!isBackgroundRunning)
                 return;
+
+            if (!isSunsetStarted && Time.time > startSunsetTime)
+            {
+                isSunsetStarted = true;
+                onSunsetBlendStart?.Invoke();
+            }
 
             if (Time.time > nextPhaseTime)
             {
@@ -43,13 +60,13 @@ namespace Nano.Level
                 {
                     Debug.Log($"{nameof(BackgroundManager)} >> last Phases ended. Stopping background");
                     isBackgroundRunning = false;
+                    StartAlphaEvent();
                     return;
                 }
                 else
                 {
                     SetupBackground();
                 }
-
             }
 
             foreach (var backgroundElement in phases[currentPhaseIndex].BackgroundElements)
@@ -57,7 +74,7 @@ namespace Nano.Level
                 if (backgroundElement.NextSpawnTime <= Time.time)
                 {
                     backgroundElement.NextSpawnTime = Time.time + backgroundElement.AverageSpawnTime +
-                        Random.Range(-backgroundElement.Variation, backgroundElement.Variation);
+                        UnityEngine.Random.Range(-backgroundElement.Variation, backgroundElement.Variation);
 
                     BackgroundProp newProp = InstantiateBackgroundProp(backgroundElement).GetComponent<BackgroundProp>();
 
@@ -69,12 +86,19 @@ namespace Nano.Level
             }
         }
 
+        private void StartAlphaEvent()
+        {
+            onAlphaBlendStart?.Invoke();
+            startBlendTime = Time.time;
+            endBlendTime = Time.time + alphaBlendDuration;
+        }
+
         private Vector3 GetPropScaleByDistance(BackgroundElement backgroundElement, Transform newPropTransform)
         {
             float scale = (1 / newPropTransform.position.z) * backgroundElement.ScaleByDistanceMultiplier;
 
-            float randomValue = ((.1f) * Random.Range(-backgroundElement.RandomScaleMultiplierByDistance, backgroundElement.RandomScaleMultiplierByDistance));
-           
+            float randomValue = ((.1f) * UnityEngine.Random.Range(-backgroundElement.RandomScaleMultiplierByDistance, backgroundElement.RandomScaleMultiplierByDistance));
+
             scale += scale * randomValue;
 
             return new Vector3(scale, scale, scale);
@@ -82,7 +106,7 @@ namespace Nano.Level
 
         private static float GetPropSpeed(BackgroundElement backgroundElement, Transform newPropTransform)
         {
-            float propSpeed = backgroundElement.UseAutoSpeed ? (1 / newPropTransform.position.z) * backgroundElement.SpeedByDistanceRatio : Random.Range(backgroundElement.MinMaxSpeed.x, backgroundElement.MinMaxSpeed.y);
+            float propSpeed = backgroundElement.UseAutoSpeed ? (1 / newPropTransform.position.z) * backgroundElement.SpeedByDistanceRatio : UnityEngine.Random.Range(backgroundElement.MinMaxSpeed.x, backgroundElement.MinMaxSpeed.y);
             return propSpeed;
         }
 
@@ -98,7 +122,7 @@ namespace Nano.Level
 
         private Vector3 GetRandomUniformVector3(Vector2 minMaxScale)
         {
-            float randomScale = Random.Range(minMaxScale.x, minMaxScale.y);
+            float randomScale = UnityEngine.Random.Range(minMaxScale.x, minMaxScale.y);
 
             return new Vector3(randomScale, randomScale, randomScale);
         }
@@ -107,6 +131,15 @@ namespace Nano.Level
             Instantiate(backgroundElement.Prefab, GetSpawnPosition(backgroundElement), Quaternion.identity);
 
         private Vector3 GetSpawnPosition(BackgroundElement backgroundElement) =>
-            new Vector3(xSpawnPos, ySpawnPos, Random.Range(backgroundElement.MinMaxSpawnDistance.x, backgroundElement.MinMaxSpawnDistance.y));
+            new Vector3(xSpawnPos, ySpawnPos, UnityEngine.Random.Range(backgroundElement.MinMaxSpawnDistance.x, backgroundElement.MinMaxSpawnDistance.y));
+
+
+
+        [Button]
+        void TestAlphaBlending()
+        {
+            isBackgroundRunning = false;
+            StartAlphaEvent();
+        }
     }
 }

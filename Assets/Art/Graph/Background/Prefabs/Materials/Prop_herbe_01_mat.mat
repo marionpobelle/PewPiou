@@ -48,6 +48,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _blend: 1
     - _hue_shift: 56
     - _saturation: 0
     m_Colors:
