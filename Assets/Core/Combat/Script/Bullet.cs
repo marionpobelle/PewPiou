@@ -17,6 +17,8 @@ namespace Nano.Combat
         [SerializeField] MeshRenderer specialBulletRenderer;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] SpriteRenderer spriteRenderer;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
+        [SerializeField] ParticleSystem specialParticleSystem;
         [Space]
         float bulletSpeed = 10;
         public BulletType bulletType;
@@ -62,9 +64,11 @@ namespace Nano.Combat
                 specialBulletRenderer.gameObject.SetActive(true);
                 specialBulletRenderer.material.SetColor("_Color", Color.white);
                 specialBulletRenderer.transform.DOScale(1.0f, .3f).SetLoops(-1, LoopType.Yoyo);
+                specialParticleSystem.gameObject.SetActive(true);
             } else
             {
                 specialBulletRenderer.gameObject.SetActive(false);
+                specialParticleSystem.gameObject.SetActive(false);
             }
             Destroy(gameObject, destroyAfterTime);
         }
