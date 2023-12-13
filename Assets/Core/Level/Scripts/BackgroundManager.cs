@@ -128,7 +128,7 @@ namespace Nano.Level
         }
 
         private GameObject InstantiateBackgroundProp(BackgroundElement backgroundElement) =>
-            Instantiate(backgroundElement.Prefab, GetSpawnPosition(backgroundElement), Quaternion.identity);
+            Instantiate(backgroundElement.Prefab, GetSpawnPosition(backgroundElement), Quaternion.identity, transform);
 
         private Vector3 GetSpawnPosition(BackgroundElement backgroundElement) =>
             new Vector3(xSpawnPos, ySpawnPos, UnityEngine.Random.Range(backgroundElement.MinMaxSpawnDistance.x, backgroundElement.MinMaxSpawnDistance.y));
