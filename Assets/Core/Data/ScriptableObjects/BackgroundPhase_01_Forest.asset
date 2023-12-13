@@ -94,8 +94,8 @@ MonoBehaviour:
     minMaxSpeed: {x: 0.5, y: 1.5}
   - prefab: {fileID: 1217262180993834758, guid: 23b5f35e64a9ac949abcf2e42a0e15c6,
       type: 3}
-    averageSpawnTime: 1
-    variation: 0.8
+    averageSpawnTime: 3
+    variation: 1.2
     startupDelay: 20
     minMaxSpawnDistance: {x: 32.343487, y: 364.97543}
     useAutoScale: 1

@@ -29,7 +29,7 @@ namespace Nano.Managers
         float levelTimer;
         int phaseNumber = 0;
         bool isGamePaused = false;
-
+        [SerializeField] MainCameraLayerHandler camHandler;
         [Header("SPAWN ZONE")]
         [SerializeField] float height;
 
@@ -46,7 +46,9 @@ namespace Nano.Managers
         {
             PlayerJoinManager.OnPlayerAdded += OnPlayerAdded;
             InputHandler.onPausePressed += PauseInput;
-            Time.timeScale = 1;
+            Time.timeScale = 1; 
+            OnBackgroundOptionChanged();
+            OptionsMenu.onShowBackgroundValueChanged += OnBackgroundOptionChanged;
         }
 
 
@@ -54,6 +56,7 @@ namespace Nano.Managers
         {
             InputHandler.onPausePressed -= PauseInput;
             PlayerJoinManager.OnPlayerAdded -= OnPlayerAdded;
+            OptionsMenu.onShowBackgroundValueChanged -= OnBackgroundOptionChanged;
         }
 
         private void Update()
@@ -213,5 +216,12 @@ namespace Nano.Managers
             Gizmos.color = new Color(1, 0, 0, 0.5f);
             Gizmos.DrawCube(new Vector3(25, transform.position.y, 0), new Vector3(50, height, 1));
         }
-    }
+
+        void OnBackgroundOptionChanged()
+        {
+            camHandler.SetBackgroundVisibility(isBackgroundVisible);
+        }
+
+        //dirty af
+        bool isBackgroundVisible => PlayerPrefs.GetInt("IsBackgroundDisabled") == 0;    }
 }

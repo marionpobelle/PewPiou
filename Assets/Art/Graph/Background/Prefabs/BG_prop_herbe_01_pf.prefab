@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166688330636627253}
   - component: {fileID: 2816811557649250213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_herbe_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 877682194454607995}
   - component: {fileID: 5221427627836889337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_herbe_01_pf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91c91e36f6fdf64da8d1f344a3457bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendDuration: 5
   meshRenderer: {fileID: 7225775538690417756}
 --- !u!1 &7551338442571253209
 GameObject:
@@ -144,7 +143,7 @@ GameObject:
   - component: {fileID: 3585625961579831548}
   - component: {fileID: 7225775538690417756}
   - component: {fileID: 3900427288795081292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

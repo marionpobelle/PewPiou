@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4274552037442899971}
   - component: {fileID: 284954211925765275}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_arbre_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 9108567725786044443}
   - component: {fileID: 7576891210284110192}
   - component: {fileID: 6702613726136958039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2874035586626571601}
   - component: {fileID: 3018437427510619514}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_arbre_01_pf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,5 +236,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91c91e36f6fdf64da8d1f344a3457bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendDuration: 5
   meshRenderer: {fileID: 7576891210284110192}

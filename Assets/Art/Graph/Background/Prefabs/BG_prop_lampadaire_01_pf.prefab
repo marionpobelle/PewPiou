@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7090175696465135480}
   - component: {fileID: 9164964478643926182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_lampadaire_01_pf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91c91e36f6fdf64da8d1f344a3457bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendDuration: 5
   meshRenderer: {fileID: 3529045535206707739}
 --- !u!1 &3740058807934896637
 GameObject:
@@ -60,7 +59,7 @@ GameObject:
   - component: {fileID: 3908153990155924034}
   - component: {fileID: 3529045535206707739}
   - component: {fileID: 2317259521935753191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6791954544873373702}
   - component: {fileID: 3891297801800307933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG_prop_lampadaire_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
