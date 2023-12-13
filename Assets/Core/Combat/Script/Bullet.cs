@@ -102,7 +102,13 @@ namespace Nano.Combat
         public void ExplodeBullet()
         {
             Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            transform.DOScale(1.7f, .2f).OnComplete(() =>
+            {
+                transform.DOScale(.7f, .1f).OnComplete(() =>
+                {
+                    Destroy(this.gameObject);
+                });
+            });
         }
     }
 }
