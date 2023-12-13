@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 namespace Nano.UI
 {
@@ -19,7 +20,7 @@ namespace Nano.UI
         [Header("Setup - Do not modify")]
         [SerializeField] InputAction hideOptionsInput;
         [SerializeField] CanvasGroup optionsCanvasGroup;
-        [SerializeField] Button quitOptionsButton;
+        [SerializeField] UnityEngine.UI.Button quitOptionsButton;
         [SerializeField] SliderHandler masterVolumeSlider;
         [SerializeField] SliderHandler bgmVolumeSlider;
         [SerializeField] SliderHandler sfxVolumeSlider;
@@ -107,16 +108,20 @@ namespace Nano.UI
         public void CheckPlayerPrefsInitiated()
         {
             if (!PlayerPrefs.HasKey(MASTER_VOLUME_KEY))
-                PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, 1);
+                PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, 100);
 
             if (!PlayerPrefs.HasKey(BGM_VOLUME_KEY))
-                PlayerPrefs.SetFloat(BGM_VOLUME_KEY, 1);
+                PlayerPrefs.SetFloat(BGM_VOLUME_KEY, 100);
 
             if (!PlayerPrefs.HasKey(SFX_VOLUME_KEY))
-                PlayerPrefs.SetFloat(SFX_VOLUME_KEY, 1);
+                PlayerPrefs.SetFloat(SFX_VOLUME_KEY, 100);
 
             if (!PlayerPrefs.HasKey(BACKGROUND_ANIMATIONS_DISABLED_KEY))
                 PlayerPrefs.SetInt(BACKGROUND_ANIMATIONS_DISABLED_KEY, 0);
+            Debug.Log(PlayerPrefs.GetFloat(MASTER_VOLUME_KEY));
+            AkSoundEngine.SetRTPCValue(masterVolumeSlider.wwiseParameter, PlayerPrefs.GetFloat(MASTER_VOLUME_KEY)); 
+            AkSoundEngine.SetRTPCValue(bgmVolumeSlider.wwiseParameter, PlayerPrefs.GetFloat(BGM_VOLUME_KEY)); 
+            AkSoundEngine.SetRTPCValue(sfxVolumeSlider.wwiseParameter, PlayerPrefs.GetFloat(SFX_VOLUME_KEY)); 
         }
     }
 }

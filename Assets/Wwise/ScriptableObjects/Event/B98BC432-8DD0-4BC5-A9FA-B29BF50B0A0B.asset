@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5665bb1c4e8198443bab8f809a9caa2b, type: 3}
+  m_Name: B98BC432-8DD0-4BC5-A9FA-B29BF50B0A0B
+  m_EditorClassIdentifier: 
+  objectName: SpecialBullet_00_SFX
+  id: 1500580661
+  guid: B98BC432-8DD0-4BC5-A9FA-B29BF50B0A0B

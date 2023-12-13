@@ -37,10 +37,16 @@ namespace Nano.Managers
         [SerializeField] JoinCanvas joinCanvas;
         [SerializeField] GameOverScreen gameOverScreen;
         [SerializeField] PauseMenu pauseMenu;
+
+        [Header("Audio")]
         [SerializeField] AK.Wwise.Event pauseBGM;
         [SerializeField] AK.Wwise.Event resumeBGM;
         [SerializeField] AK.Wwise.Event UiMenuSelect_00_SFX;
         [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
+        [SerializeField] AK.Wwise.Event BGM_Title;
+        [SerializeField] AK.Wwise.Event BGM_Main;
+      
+
 
         [HideInInspector] public bool onePlayerStart;
         [HideIf("onePlayerStart")]
@@ -60,7 +66,6 @@ namespace Nano.Managers
             OnBackgroundOptionChanged();
             OptionsMenu.onShowBackgroundValueChanged += OnBackgroundOptionChanged;
         }
-
 
         private void OnDestroy()
         {
@@ -141,6 +146,8 @@ namespace Nano.Managers
 
             joinCanvas.RemoveAToJoin();
 
+            newPlayer.playerData.PlayerID = players.IndexOf(newPlayer);
+
             if (players.Count == MAX_PLAYER_AMOUNT)
             {
                 StartGame();
@@ -157,6 +164,8 @@ namespace Nano.Managers
         private void StartGame()
         {
             Debug.Log($"{this.GetType()} >> Starting Game");
+           
+            BGM_Main.Post(gameObject);
             isGameRunning = true;
             backgroundManager.StartBackground();
             onGameStart?.Invoke();

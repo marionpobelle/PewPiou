@@ -5075,6 +5075,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2c499c39696efc7458320e20c5f02a5f,
       type: 2}
+  SpecialBullet_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6a841384db0b5bd4eb4ee702d6237976,
+      type: 2}
   floatingPoints: {fileID: 1763736298534557127, guid: f6fba0a4b8fa378429cfb80e2072eff3,
     type: 3}
 --- !u!135 &5849271828151121678

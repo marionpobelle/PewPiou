@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5665bb1c4e8198443bab8f809a9caa2b, type: 3}
+  m_Name: 1F41A1FC-F3D2-45F8-BC39-07ECB6D74F17
+  m_EditorClassIdentifier: 
+  objectName: P2BulletShieldAbsorb_00_SFX
+  id: 76898198
+  guid: 1F41A1FC-F3D2-45F8-BC39-07ECB6D74F17
