@@ -74,6 +74,10 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="BGM_Main" ID="{ED915135-5720-4718-80CA-51669D3AF036}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="BGM_Test" ID="{3787F569-4EF5-4C38-838C-22715EB8AFCC}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
 							<Position X="4" Y="0"/>
 						</Module>

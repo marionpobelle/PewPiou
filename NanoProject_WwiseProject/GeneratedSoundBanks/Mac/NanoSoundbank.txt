@@ -1,30 +1,42 @@
 Event	ID	Name			Wwise Object Path	Notes
 	95130393	P1ShieldBreak2_00_SFX			\Default Work Unit\P1ShieldBreak2_00_SFX	
+	144612902	UiP1Connected_00_SFX			\Default Work Unit\UiP1Connected_00_SFX	
 	207152438	UiMenuBack_00_SFX			\Default Work Unit\UiMenuBack_00_SFX	
 	227607944	WingFlap_00_SFX			\Default Work Unit\WingFlap_00_SFX	
+	511490290	UiP1Disconnected_00_SFX			\Default Work Unit\UiP1Disconnected_00_SFX	
 	686611850	EnemyNote2_00_SFX			\Default Work Unit\EnemyNote2_00_SFX	
+	878447239	UiP2Disconnected_00_SFX			\Default Work Unit\UiP2Disconnected_00_SFX	
 	911512040	P2DamageBird_00_SFX			\Default Work Unit\P2DamageBird_00_SFX	
 	918622992	UiMenuSliderTickUp_00_SFX			\Default Work Unit\UiMenuSliderTickUp_00_SFX	
+	1099326559	P1MainDamage_00_SFX			\Default Work Unit\P1MainDamage_00_SFX	
 	1182950636	P2ShieldBreak2_00_SFX			\Default Work Unit\P2ShieldBreak2_00_SFX	
+	1390461277	CollideShield_00_SFX			\Default Work Unit\CollideShield_00_SFX	
 	1415547993	UiMenuSliderTickDown_00_SFX			\Default Work Unit\UiMenuSliderTickDown_00_SFX	
+	1500580661	SpecialBullet_00_SFX			\Default Work Unit\SpecialBullet_00_SFX	
+	1625499748	BulletShieldAbsorb_00_SFX			\Default Work Unit\BulletShieldAbsorb_00_SFX	
 	1676409973	P2ShieldBreak1_00_SFX			\Default Work Unit\P2ShieldBreak1_00_SFX	
 	1708052252	P2ShieldGet1_00_SFX			\Default Work Unit\P2ShieldGet1_00_SFX	
 	1711082405	P2ShieldGet2_00_SFX			\Default Work Unit\P2ShieldGet2_00_SFX	
 	1775236287	P2ShieldBreak3_00_SFX			\Default Work Unit\P2ShieldBreak3_00_SFX	
 	1961931039	EnemyNote1_00_SFX			\Default Work Unit\EnemyNote1_00_SFX	
 	2079705822	P1ShieldBreak3_00_SFX			\Default Work Unit\P1ShieldBreak3_00_SFX	
+	2250873037	UiP2Connected_00_SFX			\Default Work Unit\UiP2Connected_00_SFX	
 	2257478380	P1ShieldGet2_00_SFX			\Default Work Unit\P1ShieldGet2_00_SFX	
 	2305575365	UiMenuDown_00_SFX			\Default Work Unit\UiMenuDown_00_SFX	
 	2394293572	UiMenuUp_00_SFX			\Default Work Unit\UiMenuUp_00_SFX	
 	2622648053	UiMenuSelect_00_SFX			\Default Work Unit\UiMenuSelect_00_SFX	
+	2633060887	BGM_Main			\Default Work Unit\BGM_Main	
+	2684841102	P2mainDamage_00_SFX			\Default Work Unit\P2mainDamage_00_SFX	
 	2750937717	P1ShieldGet1_00_SFX			\Default Work Unit\P1ShieldGet1_00_SFX	
 	2849764031	P1ShieldGet3_00_SFX			\Default Work Unit\P1ShieldGet3_00_SFX	
 	3056597442	resumeBGM			\Default Work Unit\resumeBGM	
+	3115393712	P1SummonFriend_00_SFX			\Default Work Unit\P1SummonFriend_00_SFX	
 	3228990490	P2ShieldGet3_00_SFX			\Default Work Unit\P2ShieldGet3_00_SFX	
 	3391800229	P1DamageBird_00_SFX			\Default Work Unit\P1DamageBird_00_SFX	
 	3403017773	pauseBGM			\Default Work Unit\pauseBGM	
 	3438580564	BGM_Test			\Default Work Unit\BGM_Test	
 	3953467349	EnemyNote3_00_SFX			\Default Work Unit\EnemyNote3_00_SFX	
+	4011626009	P2SummonFriend_00_SFX			\Default Work Unit\P2SummonFriend_00_SFX	
 	4183514192	P1ShieldBreak1_00_SFX			\Default Work Unit\P1ShieldBreak1_00_SFX	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -35,39 +47,57 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3969718864	pauseBGMRTPC			\Default Work Unit\pauseBGMRTPC	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	502237	SFX_OS_Player2_ShieldBreakLV1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player2_ShieldBreakLV1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV1_v1		161160
-	69321827	SFX_OS_Player1_ShieldGetLV1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player1_ShieldGetLV1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV1_v2		414996
-	96687508	SFX_RC_Player1_DamageBirdLost_var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player1_DamageBirdLost_var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_DamageBirdLost\SFX_RC_Player1_DamageBirdLost_var1_v1		313832
-	123716861	land pad emergence in nature proj rp band dem	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\land pad emergence in nature proj rp band dem-glued-01_984F1054.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\land pad emergence in nature proj rp band dem		4350060
-	149651723	SFX_OS_PlayerWing_Var4_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var4_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var4_v1		251676
-	155023041	SFX_RC_Player1_DamageBirdLost_var2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player1_DamageBirdLost_var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_DamageBirdLost\SFX_RC_Player1_DamageBirdLost_var2_v1		370328
-	169486366	SFX_OS_Player2_ShieldBreakLV3_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player2_ShieldBreakLV3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV3_v1		246344
-	181342345	SFX_RC_UI_MenuBack	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuBack_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuBack		44208
-	197518976	SFX_OS_PlayerWing_Var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var1_v1		267172
-	214589433	nonote3var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\nonote3var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote3\note3seq\nonote3var1_v1		409972
-	248078246	SFX_OS_Player1_ShieldBreakLV1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player1_ShieldBreakLV1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV1_v1		204000
-	345409603	nonote2var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\nonote2var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote2\note2seq\nonote2var1_v1		488016
-	426248841	land carbon cycle pad proj reaper comp intro bande dem	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\land carbon cycle pad proj reaper comp intro bande dem-glued_EBD6C652.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\land carbon cycle pad proj reaper comp intro bande dem		3740464
-	577295149	SFX_OS_Player2_PlayerShieldGetLV2_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player2_PlayerShieldGetLV2_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV2_v2		291888
-	593522447	SFX_OS_Player2_PlayerShieldGetLV3_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player2_PlayerShieldGetLV3_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV3_v2		309084
-	606396919	SFX_OS_PlayerWing_Var3_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var3_v1		244340
-	611403929	SFX_RC_UI_MenuSliderTickDown	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuSliderTickDown_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSliderTickDown		12256
-	616407851	SFX_OS_Player1_ShieldBreakLV3_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player1_ShieldBreakLV3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV3_v1		257076
-	617385544	SFX_RC_Player2_DamageBirdLost_var2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_RC_Player2_DamageBirdLost_var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_DamageBirdLost\SFX_RC_Player2_DamageBirdLost_var2_v1		365008
-	620043824	SFX_RC_UI_MenuUp_var2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuUp_var2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuUp\SFX_RC_UI_MenuUp_var2		18180
-	630560012	SFX_RC_UI_MenuUp_var1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuUp_var1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuUp\SFX_RC_UI_MenuUp_var1		18576
-	633104925	SFX_RC_UI_MenuSelect	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuSelect_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSelect		26192
-	643153017	SFX_OS_Player1_ShieldGetLV3_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player1_ShieldGetLV3_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV3_v2		296048
-	695203907	SFX_OS_PlayerWing_Var2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var2_v1		258956
-	714734111	SFX_OS_Player1_ShieldBreakLV2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player1_ShieldBreakLV2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV2_v1		278436
-	716732255	SFX_OS_Player2_PlayerShieldGetLV1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player2_PlayerShieldGetLV1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV1_v2		387040
-	776832282	SFX_OS_Player2_ShieldBreakLV2_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player2_ShieldBreakLV2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV2_v1		198644
-	789248214	SFX_RC_UI_MenuDown_var1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuDown_var1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuDown\SFX_RC_UI_MenuDown_var1		18572
-	812673967	SFX_RC_Player2_DamageBirdLost_var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_RC_Player2_DamageBirdLost_var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_DamageBirdLost\SFX_RC_Player2_DamageBirdLost_var1_v1		331828
-	855912340	SFX_RC_Enemy_ProjectileNote1_var1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Enemy_ProjectileNote1_var1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote1\note1seq\SFX_RC_Enemy_ProjectileNote1_var1_v2		195892
-	883630151	SFX_RC_UI_MenuSliderTickUp	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuSliderTickUp_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSliderTickUp		12516
-	885815898	nonote1var1_v1	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\nonote1var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote1\note1seq\nonote1var1_v1		540356
-	938214569	SFX_RC_Enemy_ProjectileNote2_var1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Enemy_ProjectileNote2_var1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote2\note2seq\SFX_RC_Enemy_ProjectileNote2_var1_v2		291164
-	954882065	SFX_OS_Player1_ShieldGetLV2_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player1_ShieldGetLV2_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV2_v2		341732
-	1010621008	SFX_RC_Enemy_ProjectileNote3_var1_v2	C:\Users\Artik\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Enemy_ProjectileNote3_var1_v2_5C425D97.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote3\note3seq\SFX_RC_Enemy_ProjectileNote3_var1_v2		167024
+	502237	SFX_OS_Player2_ShieldBreakLV1_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player2_ShieldBreakLV1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV1_v1		161160
+	69321827	SFX_OS_Player1_ShieldGetLV1_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player1_ShieldGetLV1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV1_v2		414996
+	123716861	land pad emergence in nature proj rp band dem	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\land pad emergence in nature proj rp band dem-glued-01_984F1054.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\land pad emergence in nature proj rp band dem		4350060
+	149651723	SFX_OS_PlayerWing_Var4_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var4_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var4_v1		251676
+	160642253	SFX_RC_Player_BulletShieldAbsorb_var3_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_BulletShieldAbsorb_var3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_BulletShieldAbsorb\SFX_RC_Player_BulletShieldAbsorb_var3_v1		40852
+	169486366	SFX_OS_Player2_ShieldBreakLV3_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player2_ShieldBreakLV3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV3_v1		246344
+	176861567	SFX_RC_Player1_SummonFriend	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player1_SummonFriend_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_SummonFriend\SFX_RC_Player1_SummonFriend		111792
+	181342345	SFX_RC_UI_MenuBack	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuBack_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuBack		44208
+	189768762	BGM_MainV0	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\BGM_MainV0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\BGM_MainV0		34737328
+	197518976	SFX_OS_PlayerWing_Var1_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var1_v1		267172
+	214589433	nonote3var1_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\nonote3var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote3\note3seq\nonote3var1_v1		409972
+	236622689	SFX_RC_Player1_DamageBirdLost_var1v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player1_DamageBirdLost_var1v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_DamageBirdLost\SFX_RC_Player1_DamageBirdLost_var1v2		263288
+	248078246	SFX_OS_Player1_ShieldBreakLV1_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player1_ShieldBreakLV1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV1_v1		204000
+	262583949	SFX_RC_Player_CollideShield_var1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_CollideShield_var1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_CollideShield\SFX_RC_Player_CollideShield_var1		72436
+	334791610	SFX_RC_Player_CollideShield_var4	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_CollideShield_var4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_CollideShield\SFX_RC_Player_CollideShield_var4		71520
+	345409603	nonote2var1_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\nonote2var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote2\note2seq\nonote2var1_v1		488016
+	378315970	SFX_RC_Player_SpecialBullet	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_SpecialBullet_089D8BA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_SpecialBullet		273872
+	426248841	land carbon cycle pad proj reaper comp intro bande dem	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\land carbon cycle pad proj reaper comp intro bande dem-glued_EBD6C652.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\land carbon cycle pad proj reaper comp intro bande dem		3740464
+	475709612	SFX_RC_Player1_SummonFriendVar3	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player1_SummonFriendVar3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_SummonFriend\SFX_RC_Player1_SummonFriendVar3		104876
+	519196225	SFX_RC_Player_BulletShieldAbsorb_var1_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_BulletShieldAbsorb_var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_BulletShieldAbsorb\SFX_RC_Player_BulletShieldAbsorb_var1_v1		43476
+	563089845	SFX_RC_Player_BulletShieldAbsorb_var5_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_BulletShieldAbsorb_var5_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_BulletShieldAbsorb\SFX_RC_Player_BulletShieldAbsorb_var5_v1		40572
+	570255942	SFX_RC_Player_CollideShield_var3	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_CollideShield_var3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_CollideShield\SFX_RC_Player_CollideShield_var3		99088
+	577295149	SFX_OS_Player2_PlayerShieldGetLV2_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player2_PlayerShieldGetLV2_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV2_v2		291888
+	593522447	SFX_OS_Player2_PlayerShieldGetLV3_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player2_PlayerShieldGetLV3_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV3_v2		309084
+	596512097	SFX_RC_Player2_SummonFriendVar3	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player2_SummonFriendVar3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_SummonFriend\SFX_RC_Player2_SummonFriendVar3		86748
+	606396919	SFX_OS_PlayerWing_Var3_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var3_v1		244340
+	611403929	SFX_RC_UI_MenuSliderTickDown	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuSliderTickDown_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSliderTickDown		12256
+	616407851	SFX_OS_Player1_ShieldBreakLV3_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player1_ShieldBreakLV3_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV3_v1		257076
+	620043824	SFX_RC_UI_MenuUp_var2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuUp_var2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuUp\SFX_RC_UI_MenuUp_var2		18180
+	630560012	SFX_RC_UI_MenuUp_var1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuUp_var1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuUp\SFX_RC_UI_MenuUp_var1		18576
+	633104925	SFX_RC_UI_MenuSelect	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuSelect_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSelect		26192
+	643153017	SFX_OS_Player1_ShieldGetLV3_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player1_ShieldGetLV3_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV3_v2		296048
+	695203907	SFX_OS_PlayerWing_Var2_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_PlayerWing_Var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_PlayerWing\SFX_OS_PlayerWing_Var2_v1		258956
+	711572818	SFX_RC_Player_BulletShieldAbsorb_var2_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_BulletShieldAbsorb_var2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_BulletShieldAbsorb\SFX_RC_Player_BulletShieldAbsorb_var2_v1		42784
+	714734111	SFX_OS_Player1_ShieldBreakLV2_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player1_ShieldBreakLV2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldBreakLV2_v1		278436
+	716732255	SFX_OS_Player2_PlayerShieldGetLV1_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player2_PlayerShieldGetLV1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_PlayerShieldGetLV1_v2		387040
+	736761609	SFX_RC_Player2_SummonFriend	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player2_SummonFriend_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_SummonFriend\SFX_RC_Player2_SummonFriend		84096
+	776832282	SFX_OS_Player2_ShieldBreakLV2_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\V1\SFX_OS_Player2_ShieldBreakLV2_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player2_ShieldBreakLV2_v1		198644
+	789248214	SFX_RC_UI_MenuDown_var1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuDown_var1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuDown\SFX_RC_UI_MenuDown_var1		18572
+	855912340	SFX_RC_Enemy_ProjectileNote1_var1_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Enemy_ProjectileNote1_var1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote1\note1seq\SFX_RC_Enemy_ProjectileNote1_var1_v2		195892
+	858229503	SFX_RC_Player_BulletShieldAbsorb_var4_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_BulletShieldAbsorb_var4_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_BulletShieldAbsorb\SFX_RC_Player_BulletShieldAbsorb_var4_v1		43540
+	861606238	SFX_RC_Player2_SummonFriendVar2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player2_SummonFriendVar2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_SummonFriend\SFX_RC_Player2_SummonFriendVar2		67980
+	862004436	SFX_RC_Player1_DamageBirdLost_var2v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player1_DamageBirdLost_var2v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_DamageBirdLost\SFX_RC_Player1_DamageBirdLost_var2v2		368520
+	883630151	SFX_RC_UI_MenuSliderTickUp	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_UI_MenuSliderTickUp_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_UI_MenuSliderTickUp		12516
+	885815898	nonote1var1_v1	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\nonote1var1_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote1\note1seq\nonote1var1_v1		540356
+	938214569	SFX_RC_Enemy_ProjectileNote2_var1_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Enemy_ProjectileNote2_var1_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote2\note2seq\SFX_RC_Enemy_ProjectileNote2_var1_v2		291164
+	941653733	SFX_RC_Player_CollideShield_var2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_CollideShield_var2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_CollideShield\SFX_RC_Player_CollideShield_var2		68544
+	954882065	SFX_OS_Player1_ShieldGetLV2_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_OS_Player1_ShieldGetLV2_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SHIELDS\SFX_OS_Player1_ShieldGetLV2_v2		341732
+	961395272	SFX_RC_Player2_DamageBirdLost_var1v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player2_DamageBirdLost_var1v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_DamageBirdLost\SFX_RC_Player2_DamageBirdLost_var1v2		345448
+	961867450	SFX_RC_Player2_DamageBirdLost_var2v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player2_DamageBirdLost_var2v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player2_DamageBirdLost\SFX_RC_Player2_DamageBirdLost_var2v2		386296
+	975446710	SFX_RC_Player1_SummonFriendVar2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player1_SummonFriendVar2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player1_SummonFriend\SFX_RC_Player1_SummonFriendVar2		90868
+	1010621008	SFX_RC_Enemy_ProjectileNote3_var1_v2	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Enemy_ProjectileNote3_var1_v2_5C425D97.wem		\Actor-Mixer Hierarchy\Default Work Unit\PROJECTILES\SFX_RC_Enemy_ProjectileNote3\note3seq\SFX_RC_Enemy_ProjectileNote3_var1_v2		167024
+	1023479748	SFX_RC_Player_CollideShield_var5	C:\Unity Projects\NANOS\NanoProject\NanoProject_WwiseProject\.cache\Mac\SFX\SFX_RC_Player_CollideShield_var5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\V1\SFX_RC_Player_CollideShield\SFX_RC_Player_CollideShield_var5		62636
 

@@ -34,6 +34,9 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="pauseMusicRTPC" ID="{17A51525-7E6F-4148-962C-5734BEABCA0A}"/>
+				<GameParameter Name="BGM_RTPC_SLIDER_VALUE" ID="{0506A0D9-DE04-4144-ACB8-AD17D1F2D100}"/>
+				<GameParameter Name="SFX_RTPC_SLIDER_VALUE" ID="{58F20595-5319-49D7-8DB0-97450FF47130}"/>
+				<GameParameter Name="MASTER_RTPC_SLIDER_VALUE" ID="{426E9C50-A9BD-4A51-AD9E-F7B64C5297E8}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

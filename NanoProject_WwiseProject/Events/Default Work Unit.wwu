@@ -952,7 +952,7 @@
 						<Action Name="" ID="{C79C552F-20B1-40BA-AB68-7BFCCA1E04D9}" ShortID="548908988">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.65"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
@@ -992,7 +992,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="land pad emergence in nature proj rp band dem" ID="{5726458C-9981-40BE-ADF3-8C8F3D928096}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+									<ObjectRef Name="BGM_MainV0" ID="{A09BA7DC-12C2-42BC-804A-57B4E01760FD}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -1031,7 +1031,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="land pad emergence in nature proj rp band dem" ID="{5726458C-9981-40BE-ADF3-8C8F3D928096}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+									<ObjectRef Name="BGM_MainV0" ID="{A09BA7DC-12C2-42BC-804A-57B4E01760FD}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -1061,6 +1061,89 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="BGM_Main" ID="{ED915135-5720-4718-80CA-51669D3AF036}">
+					<ChildrenList>
+						<Action Name="" ID="{2149DCA0-57BF-4D67-998A-69D516D6A16E}" ShortID="265608575">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pauseBGMRTPC" ID="{CF68EB1A-14F4-4B23-A3B8-4B7D4977B66A}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{37BAEF85-E28D-4AA9-AB0B-E2E6B26676F8}" ShortID="1038675142">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM_MainV0" ID="{A09BA7DC-12C2-42BC-804A-57B4E01760FD}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UiP1Connected_00_SFX" ID="{9A355B3D-D5F8-49C1-A848-AD9E4F6E1B62}"/>
+				<Event Name="UiP2Connected_00_SFX" ID="{C4F84051-EFD0-4790-90BA-3FF1963704C1}"/>
+				<Event Name="UiP1Disconnected_00_SFX" ID="{81448928-37F7-4830-A59C-29C996921499}"/>
+				<Event Name="UiP2Disconnected_00_SFX" ID="{7852F43C-063F-4934-AE17-13523B022982}"/>
+				<Event Name="BulletShieldAbsorb_00_SFX" ID="{566DFF66-7BEA-4E5B-8ACB-AD2BDD8DE7EB}">
+					<ChildrenList>
+						<Action Name="" ID="{B502748E-06B9-4E47-B1B2-1131A57464E3}" ShortID="434470378">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_RC_Player_BulletShieldAbsorb" ID="{BEB0E60E-6FC4-467D-845B-F9B8F2FB40D2}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="P1SummonFriend_00_SFX" ID="{1F9D3901-CDB0-4D77-B70F-61397542880F}">
+					<ChildrenList>
+						<Action Name="" ID="{D7BE61B6-BD2A-4D7E-A351-E229B95B7AE4}" ShortID="1025381027">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_RC_Player1_SummonFriend" ID="{AD1C639A-B2A3-4F0D-92FF-14B03176818C}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="P2SummonFriend_00_SFX" ID="{329C5D55-A987-4B99-BA69-9247343FBA23}">
+					<ChildrenList>
+						<Action Name="" ID="{344CB2C7-3DF1-4CA3-8174-43E109735B67}" ShortID="391573989">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_RC_Player2_SummonFriend" ID="{8A8EAABA-D0A3-4BC6-9286-E0DBBC02F47B}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SpecialBullet_00_SFX" ID="{B98BC432-8DD0-4BC5-A9FA-B29BF50B0A0B}">
+					<ChildrenList>
+						<Action Name="" ID="{8FA0399A-EAA2-4CB4-BB0A-3F67A32E1093}" ShortID="75613786">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_RC_Player_SpecialBullet" ID="{8B96354A-1F97-479B-AE7F-2DBC9F0AB067}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CollideShield_00_SFX" ID="{8EB58503-1FC8-4966-BEFE-BDB81D86DCC5}">
+					<ChildrenList>
+						<Action Name="" ID="{0D8510EE-A297-4F79-9E9E-56CEBBDCE8EF}" ShortID="888245760">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_RC_Player_CollideShield" ID="{918B0CCB-6D95-4843-B84E-FA92113030D4}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="P1MainDamage_00_SFX" ID="{9232B004-929E-4E39-9EE0-9E9809AC1DF3}"/>
+				<Event Name="P2mainDamage_00_SFX" ID="{D0F4300A-B212-47C5-8962-81058819AFA3}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
