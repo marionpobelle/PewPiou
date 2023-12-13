@@ -45,6 +45,7 @@ namespace Nano.Managers
         {
             PlayerJoinManager.OnPlayerAdded += OnPlayerAdded;
             InputHandler.onPausePressed += PauseInput;
+            Time.timeScale = 1;
         }
 
 

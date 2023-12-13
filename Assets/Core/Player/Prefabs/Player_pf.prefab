@@ -90,6 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3102294281736776593}
   shieldCollider: {fileID: 9066931282230283505}
+  spriteRenderer: {fileID: 270066188799034118}
+  damageMaterial: {fileID: 2100000, guid: 804f1e61f68699a49a3d4d37fb773f5e, type: 2}
+  basicMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   shieldPrefab: {fileID: 4134994799886400185, guid: 2a1d228c2be4b0d4d945069c31a7c854,
     type: 3}
   shieldSizeAugmentation: 3.5
@@ -97,8 +100,8 @@ MonoBehaviour:
   maxShieldSize: 11
   maxNumberShield: 3
   inputSpriteList:
-  - {fileID: 2800000, guid: 881ce7386361b4c429b32cfb1db394b0, type: 3}
   - {fileID: 2800000, guid: 766bd8cbd49e8dd4bb3b9b65912c0fa9, type: 3}
+  - {fileID: 2800000, guid: 881ce7386361b4c429b32cfb1db394b0, type: 3}
   - {fileID: 2800000, guid: 65be51184be5c714fa51e5add4260eda, type: 3}
   P1ShieldGet1_00_SFX:
     idInternal: 0

@@ -10,8 +10,14 @@ namespace Nano.Player
 {
     public class ShieldManager : MonoBehaviour
     {
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] PlayerEntity player;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] SphereCollider shieldCollider;
+        [BoxGroup("COMPONENTS", ShowLabel = true)]
+        [SerializeField] SpriteRenderer spriteRenderer;
+        [SerializeField] Material damageMaterial;
+        [SerializeField] Material basicMaterial;
         [SerializeField] Shield shieldPrefab;
         [SerializeField] float shieldSizeAugmentation;
         [SerializeField] float shieldResetTime;
@@ -132,7 +138,7 @@ namespace Nano.Player
             {
                 if (shieldList.Count == 0) //NO SHIELD
                 {
-                    player.squadronManager.RemoveFollower();
+                    TakeDamage();
                     _bullet.ExplodeBullet();
                     previousEnemy = null;
                     //DAMAGE ?
@@ -196,6 +202,33 @@ namespace Nano.Player
             Animator animEnemy = _bullet.GetParentEnemy().GetComponentInChildren<Animator>();
             animEnemy.SetBool("enemyGotRecrutedOut", true);
             DOVirtual.DelayedCall(.5f, () => player.squadronManager.AddFollower(combo3bullets));
+        }
+
+        private void TakeDamage()
+        {
+            spriteRenderer.material = damageMaterial;
+            DOVirtual.DelayedCall(.2f, () => {
+                spriteRenderer.material = basicMaterial;
+                DOVirtual.DelayedCall(.1f, () =>
+                {
+                    spriteRenderer.material = damageMaterial;
+                    DOVirtual.DelayedCall(.05f, () => {
+                        spriteRenderer.material = basicMaterial;
+                        DOVirtual.DelayedCall(.05f, () => {
+                            spriteRenderer.material = damageMaterial;
+                            DOVirtual.DelayedCall(.05f, () => {
+                                spriteRenderer.material = basicMaterial;
+
+                            });
+                        });
+                    });
+                });
+            });
+            transform.DOScale(1.3f, .1f).OnComplete(() =>
+            {
+                transform.DOScale(1, .1f);
+            });
+            player.squadronManager.RemoveFollower();
         }
     }
 }
