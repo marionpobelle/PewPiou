@@ -16,6 +16,7 @@ public class ScoreCounter : MonoBehaviour
     {
         associatedPlayer = playerData;
         playerNumber = thisPlayerNumber;
+        UpdateScore();
     }
 
     public void UpdateScore()

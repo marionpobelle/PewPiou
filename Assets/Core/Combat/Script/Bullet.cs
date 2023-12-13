@@ -45,7 +45,7 @@ namespace Nano.Combat
             switch (bulletType)
             {
                 case BulletType.Red:
-                    bulletRenderer.material.SetColor("_Color", Color.red);
+                    bulletRenderer.material.SetColor("_Color", new Color32(255, 0, 30, 0));
                     EnemyNote1_00_SFX.Post(gameObject);
                     break;
                 case BulletType.Blue:
