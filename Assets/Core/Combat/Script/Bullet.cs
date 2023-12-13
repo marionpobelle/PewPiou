@@ -14,8 +14,6 @@ namespace Nano.Combat
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] MeshRenderer bulletRenderer;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
-        [SerializeField] MeshRenderer specialBulletRenderer;
-        [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] SpriteRenderer spriteRenderer;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] ParticleSystem specialParticleSystem;
@@ -43,7 +41,6 @@ namespace Nano.Combat
             spriteRenderer.sprite = spriteList[(int)bulletType];
             float _seed = Random.Range(0.0f, 10.0f);
             bulletRenderer.material.SetFloat("_seed", _seed);
-            specialBulletRenderer.material.SetFloat("_seed", _seed);
             switch (bulletType)
             {
                 case BulletType.Red:
@@ -61,13 +58,11 @@ namespace Nano.Combat
             }
             if (convertingBullet)
             {
-                specialBulletRenderer.gameObject.SetActive(true);
-                specialBulletRenderer.material.SetColor("_Color", Color.white);
-                specialBulletRenderer.transform.DOScale(1.0f, .3f).SetLoops(-1, LoopType.Yoyo);
+                bulletRenderer.material.SetFloat("_lastbullet", 1.0f);
                 specialParticleSystem.gameObject.SetActive(true);
             } else
             {
-                specialBulletRenderer.gameObject.SetActive(false);
+                bulletRenderer.material.SetFloat("_lastbullet", 0f);
                 specialParticleSystem.gameObject.SetActive(false);
             }
             Destroy(gameObject, destroyAfterTime);

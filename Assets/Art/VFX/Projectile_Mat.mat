@@ -116,6 +116,7 @@ Material:
     - _ZWrite: 1
     - _circle_size: 0.81
     - _circle_stroke_width: 0.02
+    - _lastbullet: 0
     - _seed: 7.03
     - _time_factor: 1.31
     - _wiggle_size: 1.08
