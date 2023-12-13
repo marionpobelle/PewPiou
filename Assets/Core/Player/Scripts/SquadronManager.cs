@@ -23,6 +23,8 @@ namespace Nano.Player
         public List<Vector3> storedPlayerPos = new List<Vector3>();
         float nextPosUpdate;
 
+        [SerializeField] AK.Wwise.Event P1ShieldGet1_00_SFX;
+
         private void Awake()
         {
             storedPlayerPos.Add(transform.position);
@@ -77,6 +79,8 @@ namespace Nano.Player
             {
                 storedPlayerPos.Add(transform.position);
             }
+
+            _newFollower.transform.position = GetTargetPosition(followers.IndexOf(_newFollower));
         }
 
         [Button("REMOVE SQUADRON FOLLOWER")]

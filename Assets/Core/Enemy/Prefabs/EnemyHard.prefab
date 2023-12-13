@@ -117,6 +117,7 @@ MonoBehaviour:
     type: 3}
   firedBulletSequence: []
   playerTransforms: []
+    bulletSpeed: 30
   fireDelay: 1.4
   fireRate: 1.7
 --- !u!1 &3946388900254241348
@@ -147,7 +148,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1.09, y: 1.09, z: 1.09}
+  m_LocalScale: {x: -1.26, y: 1.26, z: 1.26}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2327391864376607072}
@@ -284,9 +285,9 @@ Transform:
   m_GameObject: {fileID: 7937688185818037143}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.68199676, y: -0.03409984, z: 0.13788195}
-  m_LocalScale: {x: -0.44478047, y: 0.1482602, z: 0.44478053}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.68199676, y: -0.03409984, z: 0.159}
+  m_LocalScale: {x: -0.3, y: 0.10000004, z: 0.30000007}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8035641244146329155}
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: -90}

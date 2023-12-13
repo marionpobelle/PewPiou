@@ -26,13 +26,15 @@ namespace Nano.UI
         [SerializeField] ToggleHandler backgroundEnabledToggle;
         [SerializeField] bool useTweening = true;
 
+        [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
+
         Action onHideOptionsScreenCallback;
         bool isOptionsShown = false;
 
         public void ShowOptionsScreen(Action onHideTutorialCallback)
         {
             hideOptionsInput.Enable();
-
+            
             CheckPlayerPrefsInitiated();
 
             masterVolumeSlider.Init(MASTER_VOLUME_KEY);
@@ -62,6 +64,7 @@ namespace Nano.UI
         {
             if (obj.performed)
                 HideOptions();
+                UiMenuBack_00_SFX.Post(gameObject);
         }
 
         private void HideOptions()

@@ -7,6 +7,9 @@ namespace Nano.UI
     {
         [SerializeField] Toggle toggle;
 
+        [SerializeField] AK.Wwise.Event UiMenuSelect_00_SFX;
+        [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
+
         string key;
         bool isOptionsDisplayed = false;
 
@@ -41,6 +44,9 @@ namespace Nano.UI
             Debug.Log((newValue ? 1 : 0));
 
             PlayerPrefs.SetInt(key, (newValue ? 1 : 0));
+    
+                
+           
         }
     }
 }

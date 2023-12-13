@@ -18,9 +18,11 @@ namespace Nano.UI
         [SerializeField] Button startButton;
         [SerializeField] Button tutorialButton;
         [SerializeField] Button optionsButton;
+        [SerializeField] Button creditsButton;
         [SerializeField] Button quitButton;
         [SerializeField] CanvasGroup mainMenuGroup;
-        [SerializeField] TutorialScreen tutorialScreen;
+        [SerializeField] SimpleScreen tutorialScreen;
+        [SerializeField] SimpleScreen creditsScreen;
         [SerializeField] OptionsMenu optionsScreen;
         [SerializeField] List<Selectable> availableButtons;
 
@@ -36,6 +38,7 @@ namespace Nano.UI
             startButton.onClick.AddListener(StartButton);
             tutorialButton.onClick.AddListener(TutorialButton);
             optionsButton.onClick.AddListener(OptionsButton);
+            creditsButton.onClick.AddListener(CreditsButton);
             quitButton.onClick.AddListener(QuitButton);
             optionsScreen.CheckPlayerPrefsInitiated();
             ShowMainMenu();
@@ -47,6 +50,7 @@ namespace Nano.UI
             startButton.onClick.RemoveListener(StartButton);
             tutorialButton.onClick.RemoveListener(TutorialButton);
             optionsButton.onClick.RemoveListener(OptionsButton);
+            creditsButton.onClick.RemoveListener(CreditsButton);
             quitButton.onClick.RemoveListener(QuitButton);
         }
 
@@ -63,7 +67,7 @@ namespace Nano.UI
             if (!isMenuShown)
                 return;
             HideMainMenu();
-            tutorialScreen.ShowTutorialScreen(ShowMainMenu);
+            tutorialScreen.ShowScreen(ShowMainMenu);
         }
 
         private void OptionsButton()
@@ -72,6 +76,14 @@ namespace Nano.UI
                 return;
             HideMainMenu();
             optionsScreen.ShowOptionsScreen(ShowMainMenu);
+        }
+
+        private void CreditsButton()
+        {
+            if (!isMenuShown)
+                return;
+            HideMainMenu();
+            creditsScreen.ShowScreen(ShowMainMenu);
         }
 
         private void QuitButton()

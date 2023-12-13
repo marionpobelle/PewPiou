@@ -11,8 +11,7 @@ public class EnemyFiring : MonoBehaviour
     protected Transform firePoint;
     [SerializeField] protected Bullet bulletPrefab;
     public List<Bullet> firedBulletSequence;
-    public List<Transform> playerTransforms;
-
+    [SerializeField, Tooltip("the speed at which the bullet for this type of enemy goes")] float bulletSpeed;
 
     protected Phase currentPhase;
     protected bool isFiringSequencePlaying = false;
@@ -38,7 +37,7 @@ public class EnemyFiring : MonoBehaviour
         //if (randomPlayer == 0) directionTowardsPlayer = ComputePlayerDirection(playerTransforms[0]);
         //else directionTowardsPlayer = ComputePlayerDirection(playerTransforms[1]);
         //Changer Vector3.left pour direction du player quand ce sera bon
-        bullet.Init(Vector3.left);
+        bullet.Init(Vector3.left, bulletSpeed);
     }
 
     protected Vector3 ComputePlayerDirection(Transform player)

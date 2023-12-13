@@ -1,4 +1,5 @@
 using Nano.Entity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,19 @@ namespace Nano.Player
 
         [Header("Movement Settings")]
         [SerializeField] float moveSpeed = 60;
+
+        private void Awake()
+        {
+            StartCoroutine(SetRbToInterpolateAfterDelay());
+        }
+
+        //This is done so that the player doesnt appear saky, but so that we can teleport it to its spawn point anyway
+        private IEnumerator SetRbToInterpolateAfterDelay()
+        {
+            rb.interpolation = RigidbodyInterpolation.None;
+            yield return new WaitForSeconds(.1f);
+            rb.interpolation = RigidbodyInterpolation.Interpolate;
+        }
 
         private void Update()
         {
