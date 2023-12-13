@@ -14,12 +14,12 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BGM_MAIN = 2633060887U;
-        static const AkUniqueID BGM_TEST = 3438580564U;
-        static const AkUniqueID BULLETSHIELDABSORB_00_SFX = 1625499748U;
+        static const AkUniqueID BGM_TITLE = 737535402U;
         static const AkUniqueID COLLIDESHIELD_00_SFX = 1390461277U;
         static const AkUniqueID ENEMYNOTE1_00_SFX = 1961931039U;
         static const AkUniqueID ENEMYNOTE2_00_SFX = 686611850U;
         static const AkUniqueID ENEMYNOTE3_00_SFX = 3953467349U;
+        static const AkUniqueID P1BULLETSHIELDABSORB_00_SFX = 3338041995U;
         static const AkUniqueID P1DAMAGEBIRD_00_SFX = 3391800229U;
         static const AkUniqueID P1MAINDAMAGE_00_SFX = 1099326559U;
         static const AkUniqueID P1SHIELDBREAK1_00_SFX = 4183514192U;
@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID P1SHIELDGET2_00_SFX = 2257478380U;
         static const AkUniqueID P1SHIELDGET3_00_SFX = 2849764031U;
         static const AkUniqueID P1SUMMONFRIEND_00_SFX = 3115393712U;
+        static const AkUniqueID P2BULLETSHIELDABSORB_00_SFX = 76898198U;
         static const AkUniqueID P2DAMAGEBIRD_00_SFX = 911512040U;
         static const AkUniqueID P2MAINDAMAGE_00_SFX = 2684841102U;
         static const AkUniqueID P2SHIELDBREAK1_00_SFX = 1676409973U;
@@ -48,15 +49,12 @@ namespace AK
         static const AkUniqueID UIMENUSLIDERTICKUP_00_SFX = 918622992U;
         static const AkUniqueID UIMENUUP_00_SFX = 2394293572U;
         static const AkUniqueID UIP1CONNECTED_00_SFX = 144612902U;
-        static const AkUniqueID UIP1DISCONNECTED_00_SFX = 511490290U;
         static const AkUniqueID UIP2CONNECTED_00_SFX = 2250873037U;
-        static const AkUniqueID UIP2DISCONNECTED_00_SFX = 878447239U;
         static const AkUniqueID WINGFLAP_00_SFX = 227607944U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID ACTIONDUCK = 1722410376U;
         static const AkUniqueID BGM_RTPC_SLIDER_VALUE = 36824089U;
         static const AkUniqueID DAMAGELOWCUT = 3953516820U;
         static const AkUniqueID DUCKNOTE1 = 1864835855U;

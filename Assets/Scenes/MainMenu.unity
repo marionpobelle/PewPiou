@@ -555,6 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1695235231}
   - component: {fileID: 1695235230}
+  - component: {fileID: 1695235232}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -603,6 +604,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1695235232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695235229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3cf34ff9e840f439c7166c60685f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cc2781eee3cd67f43b09e895dc8c9cf0,
+      type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &3751522156153101689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1182,6 +1209,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2503550822628525698, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuBack_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 46bf484891ed9ce4bb8f4c282638fc58,
+        type: 2}
     - target: {fileID: 2529395173962039029, guid: 15cdfe15b71e7f4479572f55a09811b8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1297,6 +1330,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2621983918762293307, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuBack_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cc185b96c5c657345ab41825f7bcc43b,
+        type: 2}
+    - target: {fileID: 2621983918762293307, guid: 15cdfe15b71e7f4479572f55a09811b8,
+        type: 3}
+      propertyPath: UiMenuSelect_00_SFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 609093d239657004ba3c68277f567594,
+        type: 2}
     - target: {fileID: 2874419560216362842, guid: 15cdfe15b71e7f4479572f55a09811b8,
         type: 3}
       propertyPath: m_AnchorMax.x

@@ -32,6 +32,16 @@ namespace Nano.Player
         [SerializeField] AK.Wwise.Event P2ShieldGet1_00_SFX;
         [SerializeField] AK.Wwise.Event P2ShieldGet2_00_SFX;
         [SerializeField] AK.Wwise.Event P2ShieldGet3_00_SFX;
+        [SerializeField] AK.Wwise.Event P1MainDamage_00_SFX;
+        [SerializeField] AK.Wwise.Event P2MainDamage_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldBreak1_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldBreak2_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldBreak3_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldBreak1_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldBreak2_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldBreak3_00_SFX;
+        [SerializeField] AK.Wwise.Event P1BulletShieldAbsorb_00_SFX;
+        [SerializeField] AK.Wwise.Event P2BulletShieldAbsorb_00_SFX;
 
         GameObject previousEnemy = null;
         bool combo2bullets = false;
@@ -64,17 +74,18 @@ namespace Nano.Player
                 case Data.BulletType.Red:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.red);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[0]);
-                    P1ShieldGet1_00_SFX.Post(gameObject);
+                    (player.playerData.PlayerID == 1 ? P1ShieldGet1_00_SFX : P2ShieldGet1_00_SFX).Post(gameObject);
+
                     break;
                 case Data.BulletType.Blue:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.blue);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[1]);
-                    P1ShieldGet2_00_SFX.Post(gameObject);
+                    (player.playerData.PlayerID == 1 ? P1ShieldGet2_00_SFX : P2ShieldGet2_00_SFX).Post(gameObject);
                     break;
                 case Data.BulletType.Green:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.green);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[2]);
-                    P1ShieldGet3_00_SFX.Post(gameObject);
+                    (player.playerData.PlayerID == 1 ? P1ShieldGet3_00_SFX : P2ShieldGet3_00_SFX).Post(gameObject);
                     break;
             }
             _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
@@ -166,12 +177,13 @@ namespace Nano.Player
                     TakeDamage();
                     _bullet.ExplodeBullet();
                     previousEnemy = null;
+                    (player.playerData.PlayerID == 1 ? P1MainDamage_00_SFX : P2MainDamage_00_SFX).Post(gameObject);
                     //DAMAGE ?
                 }
                 else if (_bullet.bulletType == shieldList[0].shieldType) //GOOD SHIELD
                 {
                     DissolveShield(shieldList[0]);
-
+                    (player.playerData.PlayerID == 1 ? P1BulletShieldAbsorb_00_SFX : P2BulletShieldAbsorb_00_SFX).Post(gameObject);
                     if (_bullet.convertingBullet)
                     {
                         if(GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy) && combo2bullets == true)
@@ -209,15 +221,31 @@ namespace Nano.Player
                             _bullet.ExplodeBullet();
                             gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote(true);
                             combo2bullets = true;
+
                         }
                     }
 
                 }
                 else //WRONG SHIELD
                 {
+                    switch (shieldList[0].shieldType)
+                    {
+                        case Data.BulletType.Red:
+                            (player.playerData.PlayerID == 1 ? P1ShieldBreak1_00_SFX : P2ShieldBreak1_00_SFX).Post(gameObject);
+                            break;
+                        case Data.BulletType.Blue:
+                            (player.playerData.PlayerID == 1 ? P1ShieldBreak2_00_SFX : P2ShieldBreak2_00_SFX).Post(gameObject);
+                            break;
+                        case Data.BulletType.Green:
+                            (player.playerData.PlayerID == 1 ? P1ShieldBreak3_00_SFX : P2ShieldBreak3_00_SFX).Post(gameObject);
+                            break;
+                    }
+                   
                     BreakShield(shieldList[0]);
                     _bullet.ExplodeBullet();
                     previousEnemy = null;
+                    (player.playerData.PlayerID == 1 ? P1MainDamage_00_SFX : P2MainDamage_00_SFX).Post(gameObject);
+
                 }
             }
         }

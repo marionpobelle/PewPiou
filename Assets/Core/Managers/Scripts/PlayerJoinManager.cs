@@ -14,6 +14,10 @@ namespace Nano.Managers
         int connectedDeviceId = -1;
         float startJoinTime;
 
+        [SerializeField] AK.Wwise.Event UiP1Connected_00_SFX;
+        [SerializeField] AK.Wwise.Event UiP2Connected_00_SFX;
+        [SerializeField] AK.Wwise.Event BGM_Title;
+
         private void Awake()
         {
             joinPlayerInput.Enable();
@@ -50,9 +54,9 @@ namespace Nano.Managers
             spawnedPlayers++;
             connectedDeviceId = obj.control.device.deviceId;
 
-            Debug.Log($"{this.GetType()} >> Spawend player {spawnedPlayers} using device with id {connectedDeviceId}");
-
             OnPlayerAdded?.Invoke(joinedPlayer.GetComponent<PlayerEntity>());
+
+            (spawnedPlayers == 1 ? UiP1Connected_00_SFX : UiP2Connected_00_SFX).Post(gameObject);
         }
     }
 }

@@ -78,10 +78,6 @@
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="BGM_Test" ID="{3787F569-4EF5-4C38-838C-22715EB8AFCC}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
-							<Position X="4" Y="0"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="P1DamageBird_00_SFX" ID="{4F457F5A-2D67-4CA5-9956-42E8FE2DB1BF}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
 							<Position X="4" Y="1"/>
 						</Module>
@@ -104,6 +100,10 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="SFX_RTPC_SLIDER_VALUE" ID="{58F20595-5319-49D7-8DB0-97450FF47130}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="DamageLowCut" ID="{B8D50AD1-0F0F-4ADC-B0F6-79239342F65E}"/>
 							<Value>0</Value>
 						</RTPCValue>
@@ -113,10 +113,6 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DuckNote2" ID="{48EAC204-33A8-4D06-A835-5EA9F1975C7A}"/>
-							<Value>0</Value>
-						</RTPCValue>
-						<RTPCValue>
-							<GameParameterRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}"/>
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>

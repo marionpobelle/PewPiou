@@ -133,6 +133,56 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4ca1af2473e250b4e9abd94a6aacd436,
       type: 2}
+  P1MainDamage_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a3dfd9840b99acc42b9178cdfba85a64,
+      type: 2}
+  P2MainDamage_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 396ea667b723a4f4d9996ba48fa0bbb3,
+      type: 2}
+  P1ShieldBreak1_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2501b241c7b83f44a9a313c413fac337,
+      type: 2}
+  P1ShieldBreak2_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 055da0a76d71b8e4bb81c2de240d8e32,
+      type: 2}
+  P1ShieldBreak3_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 32f2917b1d4ac8f4ca43877714c82425,
+      type: 2}
+  P2ShieldBreak1_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ef205420d83d9c24abe0e94e18da63a3,
+      type: 2}
+  P2ShieldBreak2_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 055da0a76d71b8e4bb81c2de240d8e32,
+      type: 2}
+  P2ShieldBreak3_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d5a6f7fb30404e840a2c19d5f73c9f53,
+      type: 2}
+  P1BulletShieldAbsorb_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5f3912e1514d6564cb56ec30afe1b5a7,
+      type: 2}
+  P2BulletShieldAbsorb_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dfc8df0e5c5ea51469613b62758e4b6e,
+      type: 2}
 --- !u!114 &1618316304505318745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,11 +203,27 @@ MonoBehaviour:
   noiseStrength: 1
   followerObject: {fileID: 6247949361240894289, guid: a9befcabb5bb7c54eb04dd1f6dd033da,
     type: 3}
+  player: {fileID: 3102294281736776593}
   storedPlayerPos: []
-  P1ShieldGet1_00_SFX:
+  P1SummonFriend_00_SFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 937afa59528c102429fb87264a5891d3,
+    WwiseObjectReference: {fileID: 11400000, guid: 30a9848447049aa4f9360a0ca20814d5,
+      type: 2}
+  P2SummonFriend_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 708a5aa2cf0e3ce44acdeae51e239f7e,
+      type: 2}
+  P1DamageBird_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 423d6c509c61a764397bf574efa13aa2,
+      type: 2}
+  P2DamageBird_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c36d30116659d7047bca3701d61db2f2,
       type: 2}
 --- !u!114 &-1819600930041283465
 MonoBehaviour:

@@ -19,11 +19,16 @@ namespace Nano.Player
         [SerializeField] float noiseSpeed = 1f;
         [SerializeField] float noiseStrength = 1f;
         [SerializeField] Transform followerObject;
+        [SerializeField] PlayerEntity player;
         List<Transform> followers = new List<Transform>();
         public List<Vector3> storedPlayerPos = new List<Vector3>();
         float nextPosUpdate;
 
-        [SerializeField] AK.Wwise.Event P1ShieldGet1_00_SFX;
+        [SerializeField] AK.Wwise.Event P1SummonFriend_00_SFX;
+        [SerializeField] AK.Wwise.Event P2SummonFriend_00_SFX;
+        [SerializeField] AK.Wwise.Event P1DamageBird_00_SFX;
+        [SerializeField] AK.Wwise.Event P2DamageBird_00_SFX;
+
 
         private void Awake()
         {
@@ -72,6 +77,7 @@ namespace Nano.Player
         [Button("ADD SQUADRON FOLLOWER")]
         public void AddFollower(bool combo3bullets = false)
         {
+            (player.playerData.PlayerID == 1 ? P1SummonFriend_00_SFX : P2SummonFriend_00_SFX).Post(gameObject);
             Transform _newFollower = Instantiate(followerObject);
             followers.Add(_newFollower);
             gameObject.GetComponent<PlayerScore>().IncreaseScoreAddBird(combo3bullets);
@@ -86,6 +92,8 @@ namespace Nano.Player
         [Button("REMOVE SQUADRON FOLLOWER")]
         public void RemoveFollower()
         {
+            (player.playerData.PlayerID == 1 ? P1DamageBird_00_SFX : P2DamageBird_00_SFX).Post(gameObject);
+
             Animator animHit = gameObject.transform.GetChild(4).GetComponent<Animator>();
             if (followers.Count == 0)
             {

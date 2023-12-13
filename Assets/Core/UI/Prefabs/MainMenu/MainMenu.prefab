@@ -291,6 +291,11 @@ MonoBehaviour:
   - {fileID: 8542295884022036362}
   - {fileID: 4349377224037785309}
   - {fileID: 9046436085202580257}
+  BGM_Title:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e32c870564bd90d4da51935c5178f342,
+      type: 2}
 --- !u!225 &440445072623483583
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{D2E612FA-8F93-4D42-8A37-2D986358CF9F}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="NanoSoundbank" ID="{169C91BE-0346-420C-A6DD-5D023F51402D}">
+					<Comment>ABS</Comment>
 					<ObjectInclusionList>
 						<ObjectRef Name="P2ShieldBreak1_00_SFX" ID="{544A628E-3956-40BD-9F26-3EF5BCE3FE34}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2ShieldBreak3_00_SFX" ID="{F2B19AB3-BFDF-41D0-A7BA-AD12AECEE69A}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
@@ -14,6 +15,7 @@
 						<ObjectRef Name="WingFlap_00_SFX" ID="{D0B8C7EA-E892-4468-BDD8-4A18527A06DE}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiMenuSliderTickUp_00_SFX" ID="{CA2E76B6-22DB-4498-ACB9-5A6863DF1928}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P1ShieldGet3_00_SFX" ID="{513FF333-82A2-45A2-97A4-174082E49F72}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="P2BulletShieldAbsorb_00_SFX" ID="{1F41A1FC-F3D2-45F8-BC39-07ECB6D74F17}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiMenuDown_00_SFX" ID="{C8A42E87-C852-4608-8F4E-82EC30EC5707}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2DamageBird_00_SFX" ID="{9C03D5BF-778C-463A-8A14-9F8CE79F156D}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiMenuBack_00_SFX" ID="{15512F5C-53AC-4681-BEA7-8E686BB4413E}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
@@ -21,19 +23,17 @@
 						<ObjectRef Name="P2ShieldGet1_00_SFX" ID="{A3381A0F-93C9-476C-8374-93AFEB0F0E4A}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiP2Connected_00_SFX" ID="{C4F84051-EFD0-4790-90BA-3FF1963704C1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2mainDamage_00_SFX" ID="{D0F4300A-B212-47C5-8962-81058819AFA3}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="UiP1Disconnected_00_SFX" ID="{81448928-37F7-4830-A59C-29C996921499}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="EnemyNote2_00_SFX" ID="{11720400-9AAA-4838-A87C-1D96EA5FD868}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiMenuSliderTickDown_00_SFX" ID="{EC288C40-6614-48B7-97EE-CA4EF4CDC3C0}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="UiP2Disconnected_00_SFX" ID="{7852F43C-063F-4934-AE17-13523B022982}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="CollideShield_00_SFX" ID="{8EB58503-1FC8-4966-BEFE-BDB81D86DCC5}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P1ShieldGet1_00_SFX" ID="{5BF212A1-A935-497E-8E53-E715EB547180}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiP1Connected_00_SFX" ID="{9A355B3D-D5F8-49C1-A848-AD9E4F6E1B62}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiMenuUp_00_SFX" ID="{0C7A8F24-101B-49DA-A6C2-82DB697FBC66}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P1ShieldBreak1_00_SFX" ID="{DB47713D-9A53-4A47-A012-0DC08A301D82}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="BGM_Title" ID="{8E6E18EA-5750-4B75-B258-CF8FA40647E9}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2SummonFriend_00_SFX" ID="{329C5D55-A987-4B99-BA69-9247343FBA23}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SpecialBullet_00_SFX" ID="{B98BC432-8DD0-4BC5-A9FA-B29BF50B0A0B}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P1ShieldBreak3_00_SFX" ID="{863FAE52-825E-4BF3-96C6-77DB97D20345}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="BGM_Test" ID="{3787F569-4EF5-4C38-838C-22715EB8AFCC}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P1DamageBird_00_SFX" ID="{4F457F5A-2D67-4CA5-9956-42E8FE2DB1BF}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="EnemyNote1_00_SFX" ID="{0A9A546C-26A0-4CDF-AE59-D38B51279E70}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2ShieldGet3_00_SFX" ID="{4A3331F7-9DF5-4D09-9356-CDF1D82226F1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
@@ -41,7 +41,7 @@
 						<ObjectRef Name="P1ShieldBreak2_00_SFX" ID="{E9932ECB-0267-4DB8-95C3-A86201F60F1E}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P1ShieldGet2_00_SFX" ID="{77B98718-EAD2-4DC7-9EAE-1105163E9163}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P1MainDamage_00_SFX" ID="{9232B004-929E-4E39-9EE0-9E9809AC1DF3}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="BulletShieldAbsorb_00_SFX" ID="{566DFF66-7BEA-4E5B-8ACB-AD2BDD8DE7EB}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="P1BulletShieldAbsorb_00_SFX" ID="{566DFF66-7BEA-4E5B-8ACB-AD2BDD8DE7EB}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UiMenuSelect_00_SFX" ID="{9E92908C-5560-4E78-BF77-5651E6062BE5}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="EnemyNote3_00_SFX" ID="{417A6ED1-BF0C-4EB1-8C4D-430EF825E13D}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

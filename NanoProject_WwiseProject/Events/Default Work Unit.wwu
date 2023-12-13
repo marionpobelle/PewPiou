@@ -9,36 +9,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{240B9491-8B23-495C-BDD4-4C134375A01B}" ShortID="893227686">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{F6B9B5BC-2BDA-47B5-86AF-587CDED6DC9D}" ShortID="525897866">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player1_ShieldGetLV1_v2" ID="{E8BD1FF1-206C-4170-85A6-ECCD359B2327}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{71D61104-8214-49B4-BAC4-95D6F35BD9F1}" ShortID="334757646">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -50,36 +24,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{98D27114-86B6-48E9-882B-9557A8DB14F7}" ShortID="644463883">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{D1F157E7-DEBF-45DF-8FB9-045C1DB37329}" ShortID="729318788">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player1_ShieldGetLV2_v2" ID="{DB55037C-2673-4A66-AD89-816DEBFABFC9}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{538172AD-ADC9-4258-9DE5-E2AD7D45F90B}" ShortID="327186045">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -91,36 +39,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{B85AFFAF-A9E3-4125-AE71-26BD71432D29}" ShortID="637572792">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{1C6A6987-9B59-4EAB-BA4B-BC9B0FC05423}" ShortID="458125456">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player1_ShieldGetLV3_v2" ID="{CC66F13A-AA57-425B-8540-5C498438CADA}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{18FB9EFD-3455-480B-A37B-C26E57200649}" ShortID="989409397">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -132,36 +54,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{59A233D4-0EB5-4448-ACB4-0D8F6C2E0971}" ShortID="360045593">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{86A41F31-5158-4399-9E7E-28FE870924E9}" ShortID="714571832">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player1_ShieldBreakLV1_v1" ID="{B8EB4E20-C23A-4EDD-95E1-2292AA0D19EA}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{88195A84-AA93-48BA-B624-3CEE82BD6B9E}" ShortID="662749222">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -173,36 +69,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{D5A45F61-82E9-4598-ADB8-CFCC36969202}" ShortID="568823123">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{CBCBC9B0-3D00-4B51-B6FA-922248CB5338}" ShortID="96767086">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player1_ShieldBreakLV2_v1" ID="{D08C9D2E-AC05-4164-B7EE-57181E850FD3}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{9547F96D-16FC-48CE-988D-AD9B9566ACD3}" ShortID="123000202">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -214,36 +84,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{8729FFCD-B18E-45E0-BA04-924FED91E379}" ShortID="1067642458">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{7A88300B-4DA9-49D3-A1B5-86DEE0979FF8}" ShortID="39081237">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player1_ShieldBreakLV3_v1" ID="{3CBF4BB4-3D08-4AE8-8684-BB3B6D8483C6}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{3DCF8122-A902-4777-B354-6F51D67C852C}" ShortID="284864096">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -296,36 +140,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{059BAA50-FEF8-4506-89D3-A1972927F8BF}" ShortID="833776874">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{D86EB2C9-EC8A-49CE-AA6F-B55DD10FE45E}" ShortID="460519853">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player2_PlayerShieldGetLV1_v2" ID="{CE88D4DD-6DD7-495A-9BE6-996FEB62DBE3}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{AD9F5C54-7CB4-4FD8-BD05-4E76AB69DBDD}" ShortID="729244967">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -337,36 +155,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{0FF4B9B9-70DB-48A9-A000-F4BEF31FF32F}" ShortID="912359595">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{4768D1F4-1581-48CD-97D9-B53D05FCAEA9}" ShortID="94712115">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player2_PlayerShieldGetLV2_v2" ID="{8619D853-ECF9-465A-8296-6AD3D2E05DCD}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{5554F47E-0471-48D4-9AA0-A93A64F4D6A6}" ShortID="665657126">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -378,36 +170,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{0750D02A-BAEC-4424-9F81-35495A659A48}" ShortID="704628277">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{A3A233B3-1002-4658-AD56-122C739EEF6F}" ShortID="933670628">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player2_PlayerShieldGetLV3_v2" ID="{D539CA62-47C3-4397-9E4D-003C8BEAB02E}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{269C6767-5BF4-4EDE-82BF-F7860FB38FE1}" ShortID="695377404">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -419,36 +185,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{0A7E0373-CA50-4DE4-BBFD-074FBFEE5757}" ShortID="1023438098">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{57A06CA2-A0FD-47D6-AB98-F0675DE7B249}" ShortID="541509655">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player2_ShieldBreakLV1_v1" ID="{57C6B894-B7D9-4CBD-912E-597294C59EA8}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{F612E99A-23B3-43A1-A6CA-04E332D950A1}" ShortID="764629341">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -460,36 +200,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{67F6143C-02A2-47BB-839B-1D7BA9CF4BC4}" ShortID="683541276">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{4069208C-EADA-49A4-AAB3-5823A671AA06}" ShortID="858669362">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player2_ShieldBreakLV2_v1" ID="{0A1FA8C0-720C-4AD2-9182-8DB1ECC57645}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{001F31B2-C4BF-499F-8655-2CB1DC56884F}" ShortID="472084487">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -501,36 +215,10 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{6AB9EE03-68A1-4A9C-87C0-2469B893E502}" ShortID="869960318">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{E21A77D9-9316-4A17-8320-D929C226C84C}" ShortID="386136001">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_OS_Player2_ShieldBreakLV3_v1" ID="{B1F972E9-B4A9-47B0-A662-8DC8F5A6512C}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{77D0DF0C-FB78-4375-8C0E-6B95224675DF}" ShortID="994228383">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -623,36 +311,10 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{21561CF4-021F-468A-9F91-A042388D8F2A}" ShortID="235693868">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{79434DB9-0D3B-427D-BC33-7B008D8FACC2}" ShortID="243272447">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_RC_Enemy_ProjectileNote1" ID="{E703163B-5ECA-428E-B636-662845FAC8F7}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{E4F4F537-2AEA-40CD-B0A3-75D2AE49B027}" ShortID="819439091">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -704,36 +366,10 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{4D439AB2-B9CF-4414-BAB1-FE802B6FDCED}" ShortID="713776905">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{26A0C239-4A08-4A43-B548-D40318555A91}" ShortID="512936260">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_RC_Enemy_ProjectileNote2" ID="{0A11F46A-39D7-4A3D-9DE2-F8E69CE3EA1C}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{5889738C-54E4-45DC-9CA6-8044E0F8E941}" ShortID="382093925">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -785,58 +421,10 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{D8C4640F-B61C-4240-99E2-E9231121A777}" ShortID="175350436">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="FadeInCurve" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="93"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{A4F47F86-2791-4998-8F4B-613509DBAE3C}" ShortID="493436583">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_RC_Enemy_ProjectileNote3" ID="{A8FA4C5F-334C-4C55-B29A-28AAD1814508}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{188D6B9C-12D4-4262-B960-CCB6878CB340}" ShortID="676984886">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.8"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ActionDuck" ID="{A4406E14-56AE-4D62-A89B-2589A1B8C298}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="BGM_Test" ID="{3787F569-4EF5-4C38-838C-22715EB8AFCC}">
-					<ChildrenList>
-						<Action Name="" ID="{E741F2CC-2BF7-4316-8661-BDD10D8734EA}" ShortID="683050375">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="pauseBGMRTPC" ID="{CF68EB1A-14F4-4B23-A3B8-4B7D4977B66A}" WorkUnitID="{B9D227F3-9F81-4F5C-9A81-1460BD761A28}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{567AAB37-2665-4EA2-B69F-0EE55E02B6D1}" ShortID="560606985">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="land pad emergence in nature proj rp band dem" ID="{5726458C-9981-40BE-ADF3-8C8F3D928096}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -1063,6 +651,16 @@
 				</Event>
 				<Event Name="BGM_Main" ID="{ED915135-5720-4718-80CA-51669D3AF036}">
 					<ChildrenList>
+						<Action Name="" ID="{5C92460D-4A5D-42FD-B575-511525849D1D}" ShortID="502098701">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="land carbon cycle pad proj reaper comp intro bande dem" ID="{AA7BEE0B-9544-4B88-95D1-655BA5C1B68F}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{2149DCA0-57BF-4D67-998A-69D516D6A16E}" ShortID="265608575">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
@@ -1083,16 +681,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="UiP1Connected_00_SFX" ID="{9A355B3D-D5F8-49C1-A848-AD9E4F6E1B62}"/>
-				<Event Name="UiP2Connected_00_SFX" ID="{C4F84051-EFD0-4790-90BA-3FF1963704C1}"/>
-				<Event Name="UiP1Disconnected_00_SFX" ID="{81448928-37F7-4830-A59C-29C996921499}"/>
-				<Event Name="UiP2Disconnected_00_SFX" ID="{7852F43C-063F-4934-AE17-13523B022982}"/>
-				<Event Name="BulletShieldAbsorb_00_SFX" ID="{566DFF66-7BEA-4E5B-8ACB-AD2BDD8DE7EB}">
+				<Event Name="UiP1Connected_00_SFX" ID="{9A355B3D-D5F8-49C1-A848-AD9E4F6E1B62}">
+					<ChildrenList>
+						<Action Name="" ID="{BE246635-629C-4CF3-A037-810468A9704C}" ShortID="684083408">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_OS_UI_Player1 Connectedv1" ID="{D72BD518-88F7-4E68-A382-BACCC57F77F5}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UiP2Connected_00_SFX" ID="{C4F84051-EFD0-4790-90BA-3FF1963704C1}">
+					<ChildrenList>
+						<Action Name="" ID="{5016EE95-8E1A-4662-8916-5419373CA3A8}" ShortID="29063174">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_OS_UI_Player2Connectedv1" ID="{2EB0018D-90CB-48AB-ACFC-66791A2A9EF2}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="P1BulletShieldAbsorb_00_SFX" ID="{566DFF66-7BEA-4E5B-8ACB-AD2BDD8DE7EB}">
 					<ChildrenList>
 						<Action Name="" ID="{B502748E-06B9-4E47-B1B2-1131A57464E3}" ShortID="434470378">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_RC_Player_BulletShieldAbsorb" ID="{BEB0E60E-6FC4-467D-845B-F9B8F2FB40D2}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+									<ObjectRef Name="SFX_RC_Player1_BulletShieldAbsorb" ID="{BEB0E60E-6FC4-467D-845B-F9B8F2FB40D2}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -1142,8 +758,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="P1MainDamage_00_SFX" ID="{9232B004-929E-4E39-9EE0-9E9809AC1DF3}"/>
-				<Event Name="P2mainDamage_00_SFX" ID="{D0F4300A-B212-47C5-8962-81058819AFA3}"/>
+				<Event Name="P1MainDamage_00_SFX" ID="{9232B004-929E-4E39-9EE0-9E9809AC1DF3}">
+					<ChildrenList>
+						<Action Name="" ID="{61B16A9C-39D6-4841-B4FD-A9D8566F2051}" ShortID="191817619">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="P1MainDamage_00_SFXv1" ID="{C0966624-290A-409F-BDB7-5515530DB46C}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="P2mainDamage_00_SFX" ID="{D0F4300A-B212-47C5-8962-81058819AFA3}">
+					<ChildrenList>
+						<Action Name="" ID="{796A3C7D-C71C-47E9-B2B9-BF061AC3E708}" ShortID="290718397">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="P2MainDamage_00_SFXv1" ID="{97C6E336-A953-4205-8E8A-E296F4BB42A4}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="P2BulletShieldAbsorb_00_SFX" ID="{1F41A1FC-F3D2-45F8-BC39-07ECB6D74F17}">
+					<ChildrenList>
+						<Action Name="" ID="{038BFAF3-A53B-43B2-B51D-1DAC60125E18}" ShortID="59215870">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_RC_Player2_BulletShieldAbsorb" ID="{AB3A5BD6-19A4-4915-BAE4-AACDF3FC2196}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BGM_Title" ID="{8E6E18EA-5750-4B75-B258-CF8FA40647E9}">
+					<ChildrenList>
+						<Action Name="" ID="{323D6458-D9CD-406B-BBAD-0F101F1D5FA4}" ShortID="184223488">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="land carbon cycle pad proj reaper comp intro bande dem" ID="{AA7BEE0B-9544-4B88-95D1-655BA5C1B68F}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

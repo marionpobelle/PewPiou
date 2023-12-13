@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 15be22d0e294f44ba968902040c01d1a
     GuidInternal: 
-    m_lastTime: -8584991309100316873
+    m_lastTime: -8584991277827354196
     List:
     - name: BGM
       guid: fe3bfec838fdf04fb9d695f3ce6366e1
@@ -157,7 +157,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fa12e6d2938f424d8a372d986358cf9f
     GuidInternal: 
-    m_lastTime: -8584991291221749369
+    m_lastTime: -8584991182281418935
     List:
     - name: NanoSoundbank
       guid: be919c1646030c42a6dd5d023f51402d
@@ -185,7 +185,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
     GuidInternal: 
-    m_lastTime: -8584991287417932843
+    m_lastTime: -8584991186066625195
     List:
     - name: BGM_Main
       guid: 355191ed2057184780ca51669d3af036
@@ -202,11 +202,11 @@ MonoBehaviour:
         guid: 355191ed2057184780ca51669d3af036
       Path: Events\Default Work Unit\BGM_Main
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: BGM_Test
-      guid: 69f58737f54e384c838c22715eb8afcc
-      id: 3438580564
+      maxDuration: 180.92308
+      minDuration: 180.92308
+    - name: BGM_Title
+      guid: ea186e8e5057754bb258cf8fa40647e9
+      id: 737535402
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -214,27 +214,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
-      - ElementName: BGM_Test
+      - ElementName: BGM_Title
         ObjectType: 3
-        guid: 69f58737f54e384c838c22715eb8afcc
-      Path: Events\Default Work Unit\BGM_Test
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: BulletShieldAbsorb_00_SFX
-      guid: 66ff6d56ea7b5b4e8acbad2bdd8de7eb
-      id: 1625499748
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
-      - ElementName: BulletShieldAbsorb_00_SFX
-        ObjectType: 3
-        guid: 66ff6d56ea7b5b4e8acbad2bdd8de7eb
-      Path: Events\Default Work Unit\BulletShieldAbsorb_00_SFX
+        guid: ea186e8e5057754bb258cf8fa40647e9
+      Path: Events\Default Work Unit\BGM_Title
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -253,8 +236,8 @@ MonoBehaviour:
         guid: 0385b58ec81f6649befebdb81d86dcc5
       Path: Events\Default Work Unit\CollideShield_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.51558334
+      minDuration: 0.32572916
     - name: EnemyNote1_00_SFX
       guid: 6c549a0aa026df4cae59d38b51279e70
       id: 1961931039
@@ -270,8 +253,8 @@ MonoBehaviour:
         guid: 6c549a0aa026df4cae59d38b51279e70
       Path: Events\Default Work Unit\EnemyNote1_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.981175
+      minDuration: 0.96253544
     - name: EnemyNote2_00_SFX
       guid: 00047211aa9a3848a87c1d96ea5fd868
       id: 686611850
@@ -287,8 +270,8 @@ MonoBehaviour:
         guid: 00047211aa9a3848a87c1d96ea5fd868
       Path: Events\Default Work Unit\EnemyNote2_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.6923606
+      minDuration: 1.4308937
     - name: EnemyNote3_00_SFX
       guid: d16e7a410cbfb14e8c4d430ef825e13d
       id: 3953467349
@@ -304,8 +287,25 @@ MonoBehaviour:
         guid: d16e7a410cbfb14e8c4d430ef825e13d
       Path: Events\Default Work Unit\EnemyNote3_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.2617111
+      minDuration: 0.8206235
+    - name: P1BulletShieldAbsorb_00_SFX
+      guid: 66ff6d56ea7b5b4e8acbad2bdd8de7eb
+      id: 3338041995
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P1BulletShieldAbsorb_00_SFX
+        ObjectType: 3
+        guid: 66ff6d56ea7b5b4e8acbad2bdd8de7eb
+      Path: Events\Default Work Unit\P1BulletShieldAbsorb_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.15907612
+      minDuration: 0.117633075
     - name: P1DamageBird_00_SFX
       guid: 5a7f454f672da54c995642e8fe2db1bf
       id: 3391800229
@@ -321,8 +321,8 @@ MonoBehaviour:
         guid: 5a7f454f672da54c995642e8fe2db1bf
       Path: Events\Default Work Unit\P1DamageBird_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.0329773
+      minDuration: 1.293855
     - name: P1MainDamage_00_SFX
       guid: 04b032929e92394e9ee09e9809ac1df3
       id: 1099326559
@@ -338,8 +338,8 @@ MonoBehaviour:
         guid: 04b032929e92394e9ee09e9809ac1df3
       Path: Events\Default Work Unit\P1MainDamage_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.095574
+      minDuration: 0.89503765
     - name: P1ShieldBreak1_00_SFX
       guid: 3d7147db539a474aa0120dc08a301d82
       id: 4183514192
@@ -355,8 +355,8 @@ MonoBehaviour:
         guid: 3d7147db539a474aa0120dc08a301d82
       Path: Events\Default Work Unit\P1ShieldBreak1_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.0317669
+      minDuration: 0.6886218
     - name: P1ShieldBreak2_00_SFX
       guid: cb2e93e96702b84d95c3a86201f60f1e
       id: 95130393
@@ -372,8 +372,8 @@ MonoBehaviour:
         guid: cb2e93e96702b84d95c3a86201f60f1e
       Path: Events\Default Work Unit\P1ShieldBreak2_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4247828
+      minDuration: 0.9509284
     - name: P1ShieldBreak3_00_SFX
       guid: 52ae3f865e82f34b96c677db97d20345
       id: 2079705822
@@ -389,8 +389,8 @@ MonoBehaviour:
         guid: 52ae3f865e82f34b96c677db97d20345
       Path: Events\Default Work Unit\P1ShieldBreak3_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2633168
+      minDuration: 0.84316283
     - name: P1ShieldGet1_00_SFX
       guid: a112f25b35a97e498e53e715eb547180
       id: 2750937717
@@ -406,8 +406,8 @@ MonoBehaviour:
         guid: a112f25b35a97e498e53e715eb547180
       Path: Events\Default Work Unit\P1ShieldGet1_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.4255702
+      minDuration: 1.8171246
     - name: P1ShieldGet2_00_SFX
       guid: 1887b977d2eac74d9eae1105163e9163
       id: 2257478380
@@ -423,8 +423,8 @@ MonoBehaviour:
         guid: 1887b977d2eac74d9eae1105163e9163
       Path: Events\Default Work Unit\P1ShieldGet2_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.9972576
+      minDuration: 1.4962527
     - name: P1ShieldGet3_00_SFX
       guid: 33f33f51a282a24597a4174082e49f72
       id: 2849764031
@@ -440,8 +440,8 @@ MonoBehaviour:
         guid: 33f33f51a282a24597a4174082e49f72
       Path: Events\Default Work Unit\P1ShieldGet3_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.7301817
+      minDuration: 1.2961718
     - name: P1SummonFriend_00_SFX
       guid: 01399d1fb0cd774db70f61397542880f
       id: 3115393712
@@ -457,8 +457,25 @@ MonoBehaviour:
         guid: 01399d1fb0cd774db70f61397542880f
       Path: Events\Default Work Unit\P1SummonFriend_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.58175
+      minDuration: 0.47277084
+    - name: P2BulletShieldAbsorb_00_SFX
+      guid: fca1411fd2f3f845bc3907ecb6d74f17
+      id: 76898198
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: P2BulletShieldAbsorb_00_SFX
+        ObjectType: 3
+        guid: fca1411fd2f3f845bc3907ecb6d74f17
+      Path: Events\Default Work Unit\P2BulletShieldAbsorb_00_SFX
+      maxAttenuation: 0
+      maxDuration: 0.29513687
+      minDuration: 0.21824679
     - name: P2DamageBird_00_SFX
       guid: bfd5039c8c773a468a149f8ce79f156d
       id: 911512040
@@ -474,8 +491,8 @@ MonoBehaviour:
         guid: bfd5039c8c773a468a149f8ce79f156d
       Path: Events\Default Work Unit\P2DamageBird_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.131066
+      minDuration: 1.6977545
     - name: P2mainDamage_00_SFX
       guid: 0a30f4d012b2c547896281058819afa3
       id: 2684841102
@@ -491,8 +508,8 @@ MonoBehaviour:
         guid: 0a30f4d012b2c547896281058819afa3
       Path: Events\Default Work Unit\P2mainDamage_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.0781032
+      minDuration: 0.8807647
     - name: P2ShieldBreak1_00_SFX
       guid: 8e624a545639bd409f263ef5bce3fe34
       id: 1676409973
@@ -508,8 +525,8 @@ MonoBehaviour:
         guid: 8e624a545639bd409f263ef5bce3fe34
       Path: Events\Default Work Unit\P2ShieldBreak1_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2424557
+      minDuration: 0.7177373
     - name: P2ShieldBreak2_00_SFX
       guid: f4ba6da79bbd2943bc3273f06dd43ca6
       id: 1182950636
@@ -525,8 +542,8 @@ MonoBehaviour:
         guid: f4ba6da79bbd2943bc3273f06dd43ca6
       Path: Events\Default Work Unit\P2ShieldBreak2_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4880072
+      minDuration: 0.8595865
     - name: P2ShieldBreak3_00_SFX
       guid: b39ab1f2dfbfd041a7baad12aecee69a
       id: 1775236287
@@ -542,8 +559,8 @@ MonoBehaviour:
         guid: b39ab1f2dfbfd041a7baad12aecee69a
       Path: Events\Default Work Unit\P2ShieldBreak3_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5698997
+      minDuration: 0.90689385
     - name: P2ShieldGet1_00_SFX
       guid: 0f1a38a3c9936c47837493afeb0f0e4a
       id: 1708052252
@@ -559,8 +576,8 @@ MonoBehaviour:
         guid: 0f1a38a3c9936c47837493afeb0f0e4a
       Path: Events\Default Work Unit\P2ShieldGet1_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.2621353
+      minDuration: 1.6946867
     - name: P2ShieldGet2_00_SFX
       guid: a67a2052b04c33449331c7ec9e31e231
       id: 1711082405
@@ -576,8 +593,8 @@ MonoBehaviour:
         guid: a67a2052b04c33449331c7ec9e31e231
       Path: Events\Default Work Unit\P2ShieldGet2_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.7058617
+      minDuration: 1.2779523
     - name: P2ShieldGet3_00_SFX
       guid: f731334af59d094d9356cdf1d82226f1
       id: 3228990490
@@ -593,8 +610,8 @@ MonoBehaviour:
         guid: f731334af59d094d9356cdf1d82226f1
       Path: Events\Default Work Unit\P2ShieldGet3_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8063922
+      minDuration: 1.3532652
     - name: P2SummonFriend_00_SFX
       guid: 555d9c3287a9994bba699247343fba23
       id: 4011626009
@@ -610,8 +627,8 @@ MonoBehaviour:
         guid: 555d9c3287a9994bba699247343fba23
       Path: Events\Default Work Unit\P2SummonFriend_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.4513125
+      minDuration: 0.3535625
     - name: pauseBGM
       guid: 575bcc4bb2faad43a6474f52e058d5e1
       id: 3403017773
@@ -644,8 +661,8 @@ MonoBehaviour:
         guid: b3f62bf88986e6428a530425af233eff
       Path: Events\Default Work Unit\resumeBGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SpecialBullet_00_SFX
       guid: 32c48bb9d08dc54ba9fab29bf50b0a0b
       id: 1500580661
@@ -661,8 +678,8 @@ MonoBehaviour:
         guid: 32c48bb9d08dc54ba9fab29bf50b0a0b
       Path: Events\Default Work Unit\SpecialBullet_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4259167
+      minDuration: 1.4259167
     - name: UiMenuBack_00_SFX
       guid: 5c2f5115ac538146bea78e686bb4413e
       id: 207152438
@@ -678,8 +695,8 @@ MonoBehaviour:
         guid: 5c2f5115ac538146bea78e686bb4413e
       Path: Events\Default Work Unit\UiMenuBack_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.27322033
+      minDuration: 0.19319595
     - name: UiMenuDown_00_SFX
       guid: 872ea4c852c808468f4e82ec30ec5707
       id: 2305575365
@@ -695,8 +712,8 @@ MonoBehaviour:
         guid: 872ea4c852c808468f4e82ec30ec5707
       Path: Events\Default Work Unit\UiMenuDown_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.08622707
+      minDuration: 0.077712186
     - name: UiMenuSelect_00_SFX
       guid: 8c90929e6055784ebf775651e6062be5
       id: 2622648053
@@ -712,8 +729,8 @@ MonoBehaviour:
         guid: 8c90929e6055784ebf775651e6062be5
       Path: Events\Default Work Unit\UiMenuSelect_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.16164544
+      minDuration: 0.114300594
     - name: UiMenuSliderTickDown_00_SFX
       guid: 408c28ec1466b74897eeca4ef4cdc3c0
       id: 1415547993
@@ -729,8 +746,8 @@ MonoBehaviour:
         guid: 408c28ec1466b74897eeca4ef4cdc3c0
       Path: Events\Default Work Unit\UiMenuSliderTickDown_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.07110095
+      minDuration: 0.05643286
     - name: UiMenuSliderTickUp_00_SFX
       guid: b6762ecadb229844acb95a6863df1928
       id: 918622992
@@ -746,8 +763,8 @@ MonoBehaviour:
         guid: b6762ecadb229844acb95a6863df1928
       Path: Events\Default Work Unit\UiMenuSliderTickUp_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.07260926
+      minDuration: 0.05763001
     - name: UiMenuUp_00_SFX
       guid: 248f7a0c1b10da49a6c282db697fbc66
       id: 2394293572
@@ -763,8 +780,8 @@ MonoBehaviour:
         guid: 248f7a0c1b10da49a6c282db697fbc66
       Path: Events\Default Work Unit\UiMenuUp_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.10213191
+      minDuration: 0.08526435
     - name: UiP1Connected_00_SFX
       guid: 3d5b359af8d5c149a848ad9e4f6e1b62
       id: 144612902
@@ -780,25 +797,8 @@ MonoBehaviour:
         guid: 3d5b359af8d5c149a848ad9e4f6e1b62
       Path: Events\Default Work Unit\UiP1Connected_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: UiP1Disconnected_00_SFX
-      guid: 28894481f7373048a59c29c996921499
-      id: 511490290
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
-      - ElementName: UiP1Disconnected_00_SFX
-        ObjectType: 3
-        guid: 28894481f7373048a59c29c996921499
-      Path: Events\Default Work Unit\UiP1Disconnected_00_SFX
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8871459
+      minDuration: 1.8871459
     - name: UiP2Connected_00_SFX
       guid: 5140f8c4d0ef904790ba3ff1963704c1
       id: 2250873037
@@ -814,25 +814,8 @@ MonoBehaviour:
         guid: 5140f8c4d0ef904790ba3ff1963704c1
       Path: Events\Default Work Unit\UiP2Connected_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: UiP2Disconnected_00_SFX
-      guid: 3cf452783f063449ae1713523b022982
-      id: 878447239
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
-      - ElementName: UiP2Disconnected_00_SFX
-        ObjectType: 3
-        guid: 3cf452783f063449ae1713523b022982
-      Path: Events\Default Work Unit\UiP2Disconnected_00_SFX
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.7235
+      minDuration: 1.7235
     - name: WingFlap_00_SFX
       guid: eac7b8d092e86844bdd84a18527a06de
       id: 227607944
@@ -848,8 +831,8 @@ MonoBehaviour:
         guid: eac7b8d092e86844bdd84a18527a06de
       Path: Events\Default Work Unit\WingFlap_00_SFX
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5169189
+      minDuration: 1.1665246
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -862,22 +845,8 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f327d2b9819f5c4f9a811460bd761a28
     GuidInternal: 
-    m_lastTime: -8584991309100187400
+    m_lastTime: -8584991236557881291
     List:
-    - name: ActionDuck
-      guid: 146e40a4ae56624da89b2589a1b8c298
-      id: 1722410376
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: f327d2b9819f5c4f9a811460bd761a28
-      - ElementName: ActionDuck
-        ObjectType: 13
-        guid: 146e40a4ae56624da89b2589a1b8c298
-      Path: Game Parameters\Default Work Unit\ActionDuck
     - name: BGM_RTPC_SLIDER_VALUE
       guid: d9a0060504de4441acb8ad17d1f2d100
       id: 36824089
@@ -1046,9 +1015,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584991330275070849
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 02000000030000002e0000002f000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
