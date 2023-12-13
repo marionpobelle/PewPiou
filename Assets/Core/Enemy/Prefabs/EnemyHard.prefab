@@ -70,9 +70,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 2170179532037380028}
-  maxDurationPhase0: 5
+  maxDurationPhase0: 8
   maxDurationPhase1: 10
-  maxDurationPhase2: 5
+  maxDurationPhase2: 6
+  screenInnerOffset: 10
   animCurve:
     serializedVersion: 2
     m_Curve:
@@ -99,7 +100,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   isRecruted: 0
   movementHorizontalStep: 5
-  movementVerticalStep: 2
+  movementVerticalStep: 3
 --- !u!114 &3047614286235494139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,9 +116,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
-  bulletSpeed: 30
-  fireDelay: 2
-  fireRate: 1
+  playerTransforms: []
+    bulletSpeed: 30
+  fireDelay: 1.4
+  fireRate: 1.7
 --- !u!1 &3946388900254241348
 GameObject:
   m_ObjectHideFlags: 0
