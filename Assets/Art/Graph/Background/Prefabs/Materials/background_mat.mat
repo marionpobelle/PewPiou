@@ -60,8 +60,10 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _blend: 1
     - _hue_shift: 56
     - _saturation: 0
+    - _sunset: 1
     m_Colors:
     - _Color: {r: 0.36792448, g: 0.20305267, b: 0.35418528, a: 0}
   m_BuildTextureStacks: []

@@ -1,22 +1,61 @@
+using Sirenix.OdinInspector;
+using System;
 using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
-public class BackgroundProp : MonoBehaviour
+namespace Nano.Level
 {
-    float speed;
-    public void Init(float speed)
+    public class BackgroundProp : MonoBehaviour
     {
-        this.speed = speed;
-    }
+        bool isBlending = false;
+        float speed;
 
-    private void Update()
-    {
-        if(transform.position.x < -200)
+        [SerializeField] protected MeshRenderer meshRenderer;
+        protected MaterialPropertyBlock mpb;
+
+        public void Init(float speed)
         {
-            Destroy(gameObject);
+            this.speed = speed;
         }
 
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        protected virtual void Awake()
+        {
+            BackgroundManager.onAlphaBlendStart += AlphaBlend;
+        }
+
+        private void OnDestroy()
+        {
+            BackgroundManager.onAlphaBlendStart -= AlphaBlend;
+        }
+
+        private void AlphaBlend()
+        {
+            isBlending = true;
+            mpb = new MaterialPropertyBlock();
+            meshRenderer.GetPropertyBlock(mpb);
+        }
+
+        protected virtual void Update()
+        {
+            if (transform.position.x < -200)
+            {
+                Destroy(gameObject);
+            }
+
+            transform.position += Vector3.left * speed * Time.deltaTime;
+
+            if (isBlending)
+            {
+                mpb.SetFloat("_blend", BackgroundManager.BlendValue());
+                meshRenderer.SetPropertyBlock(mpb);
+            }
+        }
+
+        [Button]
+        void AssignMeshRenderer()
+        {
+            meshRenderer = GetComponentInChildren<MeshRenderer>();
+        }
     }
 }
