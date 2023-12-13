@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class HitEffect : MonoBehaviour
 {
-    [SerializeField]Animator anim;
+    [SerializeField] Animator anim;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        anim.SetTrigger("bulletIsHittingEnemy");
-        Destroy(gameObject, 2.0f);
+        transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 360));
+        Destroy(gameObject, 0.2f);
     }
 
 }

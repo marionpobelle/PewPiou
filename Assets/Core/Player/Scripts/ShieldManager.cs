@@ -131,12 +131,10 @@ namespace Nano.Player
                 {
                     player.squadronManager.RemoveFollower();
                     _bullet.ExplodeBullet();
-                    Debug.Log("BIRD HIT");
                     //DAMAGE ?
                 }
                 else if (_bullet.bulletType == shieldList[0].shieldType) //GOOD SHIELD
                 {
-                    Debug.Log("Good shield");
                     RemoveShield(shieldList[0]);
 
                     if (_bullet.convertingBullet)
@@ -155,9 +153,8 @@ namespace Nano.Player
                 }
                 else //WRONG SHIELD
                 {
-                    Debug.Log("Wrong shield");
                     RemoveShield(shieldList[0]);
-                    Destroy(other.gameObject);
+                    _bullet.ExplodeBullet();
                 }
             }
         }
