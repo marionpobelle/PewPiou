@@ -19,10 +19,24 @@ public class PlayerScore : MonoBehaviour
         else OnChangeScore(scoreIncrAddBird);
     }
 
-    public void IncreaseScoreHitNote(bool combo2bullets = false)
+    public void IncreaseScoreHitNote(int comboIndex)
     {
-        if (combo2bullets) OnChangeScore(scoreIncrHitNote + scoreCombo2Bullets);
-        else OnChangeScore(scoreIncrHitNote);
+        //TODO DisplayText
+        switch (comboIndex)
+        {
+            case 1:
+                OnChangeScore(scoreIncrHitNote);
+                break;
+            case 2:
+                OnChangeScore(scoreCombo2Bullets);
+                break;
+            case >2:
+                OnChangeScore(scoreCombo3Bullets);
+                break;
+            default:
+                OnChangeScore(scoreIncrHitNote);
+                break;
+        }
     }
 
     public void DecreaseScoreRemoveBird()

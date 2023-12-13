@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3102294281736776593}
+  playerScore: {fileID: 4702441199385647886}
   shieldCollider: {fileID: 9066931282230283505}
   spriteRenderer: {fileID: 270066188799034118}
   damageMaterial: {fileID: 2100000, guid: 804f1e61f68699a49a3d4d37fb773f5e, type: 2}
@@ -183,7 +184,8 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: dfc8df0e5c5ea51469613b62758e4b6e,
       type: 2}
-  floatingPoints: {fileID: 0}
+  textFeedback: {fileID: 1763736298534557127, guid: f6fba0a4b8fa378429cfb80e2072eff3,
+    type: 3}
 --- !u!114 &1618316304505318745
 MonoBehaviour:
   m_ObjectHideFlags: 0
