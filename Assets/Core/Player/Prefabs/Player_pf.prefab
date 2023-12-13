@@ -247,6 +247,8 @@ MonoBehaviour:
   scoreIncrAddBird: 300
   scoreDecrRemoveBird: -300
   scoreIncrHitNote: 100
+  scoreCombo2Bullets: 50
+  scoreCombo3Bullets: 200
 --- !u!114 &7716978386379083094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +294,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8206931367373716518}
@@ -517,7 +519,7 @@ GameObject:
   - component: {fileID: 7839094822359638207}
   - component: {fileID: 8592599570148115175}
   m_Layer: 0
-  m_Name: Collider
+  m_Name: PlayerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
