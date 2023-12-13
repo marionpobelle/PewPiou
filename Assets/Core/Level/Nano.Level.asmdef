@@ -2,6 +2,8 @@
     "name": "Nano.Level",
     "rootNamespace": "",
     "references": [
+        "GUID:ad968d605628d06499b62cdc30f11cf8",
+        "GUID:94df7a1a1ff767743983d26e11a57e86",
         "GUID:12801b610db72d7459e9ccd6e76884a1"
     ],
     "includePlatforms": [],

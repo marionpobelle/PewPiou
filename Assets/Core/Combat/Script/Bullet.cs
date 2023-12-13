@@ -24,6 +24,7 @@ namespace Nano.Combat
         GameObject parentEnemy;
         bool backToSender = false;
         public bool convertingBullet = false;
+        public bool hasCollided = false;
         [SerializeField, Tooltip("How many seconds the bullet waits before getting destroyed automatically, float")] float destroyAfterTime = 15.0f;
         [SerializeField] List<Sprite> spriteList = new List<Sprite>();
         [SerializeField] GameObject hitEffect;

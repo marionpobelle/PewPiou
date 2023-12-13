@@ -236,3 +236,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91c91e36f6fdf64da8d1f344a3457bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blendDuration: 5
+  meshRenderer: {fileID: 7576891210284110192}

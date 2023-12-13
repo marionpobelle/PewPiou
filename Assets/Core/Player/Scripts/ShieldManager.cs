@@ -158,8 +158,9 @@ namespace Nano.Player
         {
             Bullet _bullet = other.GetComponent<Bullet>();
             //Here detect bullet type
-            if (_bullet != null)
+            if (_bullet != null && !_bullet.hasCollided)
             {
+                _bullet.hasCollided = true;
                 if (shieldList.Count == 0) //NO SHIELD
                 {
                     TakeDamage();
