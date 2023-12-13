@@ -3,7 +3,8 @@
     "rootNamespace": "",
     "references": [
         "Nano.Data",
-        "AK.Wwise.Unity.API.WwiseTypes"
+        "AK.Wwise.Unity.API.WwiseTypes",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
