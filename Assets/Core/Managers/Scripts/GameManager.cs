@@ -131,6 +131,8 @@ namespace Nano.Managers
 
             joinCanvas.RemoveAToJoin();
 
+            newPlayer.playerData.PlayerID = players.IndexOf(newPlayer);
+
             if (players.Count == MAX_PLAYER_AMOUNT)
             {
                 StartGame();
