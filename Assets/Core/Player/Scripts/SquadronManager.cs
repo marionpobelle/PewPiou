@@ -70,11 +70,11 @@ namespace Nano.Player
         }
 
         [Button("ADD SQUADRON FOLLOWER")]
-        public void AddFollower()
+        public void AddFollower(bool combo3bullets = false)
         {
             Transform _newFollower = Instantiate(followerObject);
             followers.Add(_newFollower);
-            gameObject.GetComponent<PlayerScore>().IncreaseScoreAddBird();
+            gameObject.GetComponent<PlayerScore>().IncreaseScoreAddBird(combo3bullets);
             if (followers.Count % 2 == 1)
             {
                 storedPlayerPos.Add(transform.position);

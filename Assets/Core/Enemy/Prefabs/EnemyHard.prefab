@@ -115,7 +115,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1487390563023644310, guid: ad4bf7b433c145f45841aab267b02a34,
     type: 3}
   firedBulletSequence: []
-  bulletSpeed: 30
+  bulletSpeed: 25
   fireDelay: 2
   fireRate: 1
 --- !u!1 &3946388900254241348
