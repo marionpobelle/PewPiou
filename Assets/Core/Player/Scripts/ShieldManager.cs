@@ -33,6 +33,8 @@ namespace Nano.Player
         [SerializeField] AK.Wwise.Event P2ShieldGet2_00_SFX;
         [SerializeField] AK.Wwise.Event P2ShieldGet3_00_SFX;
 
+        [SerializeField] GameObject floatingPoints;
+
         GameObject previousEnemy = null;
         bool combo2bullets = false;
 
@@ -164,7 +166,7 @@ namespace Nano.Player
                 if (shieldList.Count == 0) //NO SHIELD
                 {
                     TakeDamage();
-                    _bullet.ExplodeBullet();
+                    _bullet.ExplodeBullet("Ouch!");
                     previousEnemy = null;
                     //DAMAGE ?
                 }
@@ -176,7 +178,7 @@ namespace Nano.Player
                     {
                         if(GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy) && combo2bullets == true)
                         {
-                            _bullet.BackToSender();
+                            _bullet.BackToSender("Divine!");
                             //Add anim enemy teleport out
                             RecruitEnemy(_bullet, true);
                             previousEnemy = null;
@@ -184,7 +186,7 @@ namespace Nano.Player
                         }
                         else
                         {
-                            _bullet.BackToSender();
+                            _bullet.BackToSender("Awesome!");
                             //Add anim enemy teleport out
                             RecruitEnemy(_bullet);
                             previousEnemy = null;
@@ -206,7 +208,7 @@ namespace Nano.Player
                         else if (GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy) && combo2bullets == false)
                         {
                             //SHOW JUICY SCORE
-                            _bullet.ExplodeBullet();
+                            _bullet.ExplodeBullet("Good!");
                             gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote(true);
                             combo2bullets = true;
                         }
@@ -216,7 +218,7 @@ namespace Nano.Player
                 else //WRONG SHIELD
                 {
                     BreakShield(shieldList[0]);
-                    _bullet.ExplodeBullet();
+                    _bullet.ExplodeBullet("Ouch!");
                     previousEnemy = null;
                 }
             }
