@@ -131,7 +131,7 @@ MonoBehaviour:
     useAutoSpeed: 1
     speedByDistanceMultiplier: 700
     minMaxSpeed: {x: 0.5, y: 1.5}
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 607469036057312956, guid: 3e73799c98995e848b178b9b54ae127a, type: 3}
     averageSpawnTime: 5
     variation: 3
     startupDelay: 30

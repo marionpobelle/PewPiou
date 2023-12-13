@@ -31,6 +31,8 @@ namespace Nano.Level
 
         private void AlphaBlend()
         {
+            if (meshRenderer == null)
+                return;
             isBlending = true;
             mpb = new MaterialPropertyBlock();
             meshRenderer.GetPropertyBlock(mpb);
