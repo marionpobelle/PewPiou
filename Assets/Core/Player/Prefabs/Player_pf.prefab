@@ -97,8 +97,8 @@ MonoBehaviour:
   maxShieldSize: 11
   maxNumberShield: 3
   inputSpriteList:
-  - {fileID: 2800000, guid: 881ce7386361b4c429b32cfb1db394b0, type: 3}
   - {fileID: 2800000, guid: 766bd8cbd49e8dd4bb3b9b65912c0fa9, type: 3}
+  - {fileID: 2800000, guid: 881ce7386361b4c429b32cfb1db394b0, type: 3}
   - {fileID: 2800000, guid: 65be51184be5c714fa51e5add4260eda, type: 3}
   P1ShieldGet1_00_SFX:
     idInternal: 0
