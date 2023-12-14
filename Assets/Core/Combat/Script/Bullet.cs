@@ -5,7 +5,6 @@ using Nano.Data;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using TMPro;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 
 namespace Nano.Combat
 {
