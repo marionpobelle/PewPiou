@@ -17,6 +17,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1708052252	P2ShieldGet1_00_SFX			\Default Work Unit\P2ShieldGet1_00_SFX	
 	1711082405	P2ShieldGet2_00_SFX			\Default Work Unit\P2ShieldGet2_00_SFX	
 	1775236287	P2ShieldBreak3_00_SFX			\Default Work Unit\P2ShieldBreak3_00_SFX	
+	1921276897	BGM_stopall			\Default Work Unit\BGM_stopall	
 	1961931039	EnemyNote1_00_SFX			\Default Work Unit\EnemyNote1_00_SFX	
 	2079705822	P1ShieldBreak3_00_SFX			\Default Work Unit\P1ShieldBreak3_00_SFX	
 	2250873037	UiP2Connected_00_SFX			\Default Work Unit\UiP2Connected_00_SFX	

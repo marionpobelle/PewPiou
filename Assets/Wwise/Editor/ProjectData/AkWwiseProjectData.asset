@@ -157,7 +157,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fa12e6d2938f424d8a372d986358cf9f
     GuidInternal: 
-    m_lastTime: -8584990622710398023
+    m_lastTime: -8584990611602900822
     List:
     - name: NanoSoundbank
       guid: be919c1646030c42a6dd5d023f51402d
@@ -185,7 +185,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
     GuidInternal: 
-    m_lastTime: -8584990619330480605
+    m_lastTime: -8584990610849135059
     List:
     - name: BGM_Main
       guid: 355191ed2057184780ca51669d3af036

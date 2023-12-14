@@ -8,6 +8,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="P2ShieldBreak1_00_SFX" ID="{544A628E-3956-40BD-9F26-3EF5BCE3FE34}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2ShieldBreak3_00_SFX" ID="{F2B19AB3-BFDF-41D0-A7BA-AD12AECEE69A}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="BGM_stopall" ID="{8FBAFBBF-1567-4226-93B8-432681156414}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="resumeBGM" ID="{F82BF6B3-8689-42E6-8A53-0425AF233EFF}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="P2ShieldBreak2_00_SFX" ID="{A76DBAF4-BD9B-4329-BC32-73F06DD43CA6}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="pauseBGM" ID="{4BCC5B57-FAB2-43AD-A647-4F52E058D5E1}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}" Origin="Manual" Filter="7"/>

@@ -18,6 +18,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="BGM_stopall" ID="{8FBAFBBF-1567-4226-93B8-432681156414}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="P1SummonFriend_00_SFX" ID="{1F9D3901-CDB0-4D77-B70F-61397542880F}" WorkUnitID="{28EC34B3-1EFC-467C-AB2E-205AB2FA3F4F}"/>
 							<Position X="0" Y="6"/>
 						</Module>

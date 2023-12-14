@@ -63,7 +63,7 @@
 				<GameParameter Id="3969718864" Name="pauseBGMRTPC"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{B856DA95-8B0F-F0EE-4DE6-C4F812A44C38}">
+		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{2CE3E561-D976-0690-704D-98EDD8674E1C}">
 			<ShortName>NanoSoundbank</ShortName>
 			<Path>NanoSoundbank.bnk</Path>
 			<Media>
@@ -310,6 +310,7 @@
 						<MediaRef Id="189768762"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1921276897" Name="BGM_stopall" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="737535402" Name="BGM_Title" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="526674828"/>
@@ -586,5 +587,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ACC63614-8133-6BF5-058B-80A454150836}</FileHash>
+	<FileHash>{D7432076-70FA-AB6C-3484-2C58F7AF5B73}</FileHash>
 </SoundBanksInfo>

@@ -868,10 +868,11 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="BGM_Title" ID="{57C71B20-26AF-460D-831C-1C967E87EEBD}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+									<ObjectRef Name="BGM_MainV0" ID="{A09BA7DC-12C2-42BC-804A-57B4E01760FD}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

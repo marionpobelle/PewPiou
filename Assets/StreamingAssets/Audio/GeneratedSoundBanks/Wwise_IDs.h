@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BGM_MAIN = 2633060887U;
+        static const AkUniqueID BGM_STOPALL = 1921276897U;
         static const AkUniqueID BGM_TITLE = 737535402U;
         static const AkUniqueID COLLIDESHIELD_00_SFX = 1390461277U;
         static const AkUniqueID ENEMYNOTE1_00_SFX = 1961931039U;
