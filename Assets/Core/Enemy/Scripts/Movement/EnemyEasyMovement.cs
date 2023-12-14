@@ -37,7 +37,6 @@ public class EnemyEasyMovement : EnemyMovement
         //Phase 2
         movementSequence.AppendCallback(() => {
             sprite.transform.localScale = new Vector3(-sprite.transform.localScale.x, sprite.transform.localScale.y, sprite.transform.localScale.z);
-            Debug.Log("CHANGE SIDE");
         });
         movementSequence.Append(transform.DOMove(spawnPoint, maxDurationPhase2));
         movementSequence.AppendCallback(() => Destroy(gameObject));

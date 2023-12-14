@@ -34,6 +34,7 @@ namespace Nano.Player
         [SerializeField] AK.Wwise.Event P2ShieldGet3_00_SFX;
 
         [SerializeField] GameObject floatingPoints;
+        [SerializeField] GameObject collisionPrefab;
 
         GameObject previousEnemy = null;
         bool combo2bullets = false;
@@ -100,16 +101,7 @@ namespace Nano.Player
                     shieldCollider.radius = .5f;
                 });
             });
-            for (int i = 0; i < shieldList.Count; i++)
-            {
-                Shield _sizeFixShield = shieldList[i];
-                _sizeFixShield.fixedScale = maxShieldSize - shieldSizeAugmentation * i;
-                _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale + 0.3f, .3f).OnComplete(() =>
-                {
-                    _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale, .1f);
-                });
-                _sizeFixShield.shieldRenderer.material.DOFloat(i, "_bubble_angle", .2f);
-            }
+            UpdateAllShields();
         }
 
         public void BreakShield(Shield _shield)
@@ -124,6 +116,11 @@ namespace Nano.Player
                 Destroy(_shield.gameObject);
                 shieldCollider.radius = .5f;
             });
+            UpdateAllShields();
+        }
+
+        private void UpdateAllShields()
+        {
             for (int i = 0; i < shieldList.Count; i++)
             {
                 Shield _sizeFixShield = shieldList[i];
@@ -226,6 +223,19 @@ namespace Nano.Player
                     previousEnemy = null;
                 }
             }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            //Debug.Log(collision.gameObject.name);
+            //ShieldManager _shield = collision.gameObject.GetComponent<ShieldManager>();
+            //if (_shield != null)
+            //{
+            //    Debug.Log("SHIELD COLLISION");
+            //    ContactPoint _contact = collision.contacts[0];
+            //    GameObject _object = Instantiate(collisionPrefab, _contact.point, Quaternion.identity);
+            //    _object.GetComponentInChildren<SpriteRenderer>().color = shieldList[0].shieldRenderer.material.color;
+            //}
         }
 
         private void RecruitEnemy(Bullet _bullet, bool combo3bullets = false)
