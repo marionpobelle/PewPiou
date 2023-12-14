@@ -44,7 +44,7 @@ namespace Nano.UI
             optionsScreen.CheckPlayerPrefsInitiated();
             ShowMainMenu();
             SelectNewOption(0);
-            
+            Time.timeScale = 1;
             BGM_Title.Post(gameObject);
         }
 
