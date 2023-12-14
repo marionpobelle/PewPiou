@@ -64,16 +64,16 @@ namespace Nano.Combat
             }
             if (convertingBullet)
             {
-
-                //MagicBullet.Post
                 SpecialBullet_00_SFX.Post(gameObject);
                 bulletRenderer.material.SetFloat("_lastbullet", 1.0f);
                 specialParticleSystem.gameObject.SetActive(true);
+                transform.localScale = Vector3.one * 2.0f;
             }
             else
             {
                 bulletRenderer.material.SetFloat("_lastbullet", 0f);
                 specialParticleSystem.gameObject.SetActive(false);
+                transform.localScale = Vector3.one;
             }
             Destroy(gameObject, destroyAfterTime);
         }
@@ -100,8 +100,13 @@ namespace Nano.Combat
             backToSender = true;
             rb.velocity = Vector3.zero;
             if (parentEnemy == null) return;
-            spriteRenderer.transform.DORotate(new Vector3(0, 0, 180), .2f);
-            transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
+            spriteRenderer.transform.DOScale(new Vector3(-spriteRenderer.transform.localScale.x, spriteRenderer.transform.localScale.y, spriteRenderer.transform.localScale.z), .1f);
+            bulletRenderer.transform.DOScale(new Vector3(-bulletRenderer.transform.localScale.x / 2, bulletRenderer.transform.localScale.y / 2, bulletRenderer.transform.localScale.z / 2), .1f).OnComplete(() =>
+            {
+               bulletRenderer.transform.DOScale(new Vector3(bulletRenderer.transform.localScale.x * 2.2f, bulletRenderer.transform.localScale.y * 2.2f, bulletRenderer.transform.localScale.z * 2.2f), .1f);
+            });
+            specialParticleSystem.gameObject.SetActive(false);
+            transform.DOMove(parentEnemy.transform.position, .8f).OnComplete(() =>
             {
                 if (parentEnemy != null)
                     Destroy(parentEnemy.gameObject);
