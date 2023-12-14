@@ -43,7 +43,7 @@ namespace Nano.Managers
         [SerializeField] AK.Wwise.Event resumeBGM;
         [SerializeField] AK.Wwise.Event UiMenuSelect_00_SFX;
         [SerializeField] AK.Wwise.Event UiMenuBack_00_SFX;
-        [SerializeField] AK.Wwise.Event BGM_Title;
+        [SerializeField] AK.Wwise.Event BGM_stopall;
         [SerializeField] AK.Wwise.Event BGM_Main;
       
 
@@ -72,6 +72,7 @@ namespace Nano.Managers
             InputHandler.onPausePressed -= PauseInput;
             PlayerJoinManager.OnPlayerAdded -= OnPlayerAdded;
             OptionsMenu.onShowBackgroundValueChanged -= OnBackgroundOptionChanged;
+            BGM_stopall.Post(gameObject);
         }
 
         private void Update()

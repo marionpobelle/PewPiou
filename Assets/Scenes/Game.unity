@@ -1862,6 +1862,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1593368479095913947, guid: 90d32b12687680d4c94c7b803c244955,
+        type: 3}
+      propertyPath: BGM_Title.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e32c870564bd90d4da51935c5178f342,
+        type: 2}
     - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
       propertyPath: height
@@ -1913,6 +1919,12 @@ PrefabInstance:
       propertyPath: spawnPositions.Array.data[1]
       value: 
       objectReference: {fileID: 1947351303}
+    - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
+        type: 3}
+      propertyPath: BGM_stopall.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 91c84077d1af3ae49ac517922223c660,
+        type: 2}
     - target: {fileID: 4949345929017424026, guid: 90d32b12687680d4c94c7b803c244955,
         type: 3}
       propertyPath: UiMenuBack_00_SFX.WwiseObjectReference

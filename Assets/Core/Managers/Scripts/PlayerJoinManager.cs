@@ -16,7 +16,6 @@ namespace Nano.Managers
 
         [SerializeField] AK.Wwise.Event UiP1Connected_00_SFX;
         [SerializeField] AK.Wwise.Event UiP2Connected_00_SFX;
-        [SerializeField] AK.Wwise.Event BGM_Title;
 
         private void Awake()
         {

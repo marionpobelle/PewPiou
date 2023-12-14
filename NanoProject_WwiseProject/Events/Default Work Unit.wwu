@@ -862,6 +862,33 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="BGM_stopall" ID="{8FBAFBBF-1567-4226-93B8-432681156414}">
+					<ChildrenList>
+						<Action Name="" ID="{0A88B6E9-2C20-45B9-A6B1-27AA859C164E}" ShortID="980549442">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM_Title" ID="{57C71B20-26AF-460D-831C-1C967E87EEBD}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{603B124E-FE3B-4913-B9E3-091F42DCF6B4}" ShortID="145418977">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="land carbon cycle pad proj reaper comp intro bande dem" ID="{AA7BEE0B-9544-4B88-95D1-655BA5C1B68F}" WorkUnitID="{8290883E-6857-41B6-8948-3D852C4E3FDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
