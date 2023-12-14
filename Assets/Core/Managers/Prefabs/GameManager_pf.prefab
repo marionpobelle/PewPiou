@@ -117,6 +117,16 @@ MonoBehaviour:
       m_Action: Join Player Input
       m_Flags: 0
     m_Flags: 0
+  UiP1Connected_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c64e00b23cf5e424d92778651cba9098,
+      type: 2}
+  UiP2Connected_00_SFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4caa048739fe9be4ebc8caad95a2a9e9,
+      type: 2}
 --- !u!114 &4949345929017424026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,12 +139,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfbe7077a3dd010419cb5e3711479f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPositions: []
   enemyList:
   - {fileID: 1127147056238669463, guid: 0646fc9a0acd645449aae86c17786e30, type: 3}
   - {fileID: 1127147056238669463, guid: 04626d73c054dae4f85aac573f8dcc19, type: 3}
   - {fileID: 1127147056238669463, guid: fab8460b0feb2594195d39d410bf4ebd, type: 3}
-  currentLevel: {fileID: 11400000, guid: 21c445b16e16ff1499169e73ca9d6534, type: 2}
+  currentLevel: {fileID: 0}
+  backgroundManager: {fileID: 0}
+  camHandler: {fileID: 0}
   height: 0
+  joinCanvas: {fileID: 0}
+  gameOverScreen: {fileID: 0}
   pauseMenu: {fileID: 0}
   pauseBGM:
     idInternal: 0
@@ -149,8 +164,15 @@ MonoBehaviour:
   UiMenuSelect_00_SFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 609093d239657004ba3c68277f567594,
+      type: 2}
   UiMenuBack_00_SFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 46bf484891ed9ce4bb8f4c282638fc58,
+      type: 2}
+  BGM_Main:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e1ee6f6398cb5bd4e8eb686c5cc9e814,
+      type: 2}

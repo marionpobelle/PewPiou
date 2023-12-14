@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996fad1a0427b714a83314da51676f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shieldRenderer: {fileID: 8097398121245628343}
   shieldType: 0
   fixedScale: 0
-  shieldRenderer: {fileID: 8097398121245628343}

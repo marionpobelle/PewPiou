@@ -201,6 +201,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2874035586626571601, guid: 9cce7c708833f7a40a0637ca24bd1e33,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2874035586626571601, guid: 9cce7c708833f7a40a0637ca24bd1e33,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -247,6 +252,11 @@ PrefabInstance:
     - target: {fileID: 2874035586626571601, guid: 9cce7c708833f7a40a0637ca24bd1e33,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2874035586626571601, guid: 9cce7c708833f7a40a0637ca24bd1e33,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8280960951258980041, guid: 9cce7c708833f7a40a0637ca24bd1e33,
@@ -1511,6 +1521,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2058513707270267203, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_Spacing
+      value: 6.69
+      objectReference: {fileID: 0}
     - target: {fileID: 2237675586583837550, guid: 5c8bbf19e2634654eaa024e33cd36266,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1595,6 +1610,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095919918481050878, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 4239450584423452348, guid: 5c8bbf19e2634654eaa024e33cd36266,
         type: 3}
@@ -1726,10 +1748,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5283269500984487171, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_Spacing
+      value: 6.69
+      objectReference: {fileID: 0}
     - target: {fileID: 5627836661101969749, guid: 5c8bbf19e2634654eaa024e33cd36266,
         type: 3}
       propertyPath: m_Name
       value: ScoreCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727821163526417085, guid: 5c8bbf19e2634654eaa024e33cd36266,
+        type: 3}
+      propertyPath: m_text
+      value: '0
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8128811610958053347, guid: 5c8bbf19e2634654eaa024e33cd36266,
         type: 3}
@@ -2490,7 +2524,7 @@ PrefabInstance:
     - target: {fileID: 1066334459706460107, guid: 3bdd5c80731865b48932921929c0e83a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -43.6
+      value: -233
       objectReference: {fileID: 0}
     - target: {fileID: 1066334459706460107, guid: 3bdd5c80731865b48932921929c0e83a,
         type: 3}

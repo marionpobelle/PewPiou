@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using DG.Tweening;
+using TMPro;
 
 namespace Nano.Player
 {
@@ -12,6 +13,7 @@ namespace Nano.Player
     {
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] PlayerEntity player;
+        [SerializeField] PlayerScore playerScore;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
         [SerializeField] SphereCollider shieldCollider;
         [BoxGroup("COMPONENTS", ShowLabel = true)]
@@ -32,12 +34,20 @@ namespace Nano.Player
         [SerializeField] AK.Wwise.Event P2ShieldGet1_00_SFX;
         [SerializeField] AK.Wwise.Event P2ShieldGet2_00_SFX;
         [SerializeField] AK.Wwise.Event P2ShieldGet3_00_SFX;
+        [SerializeField] AK.Wwise.Event P1MainDamage_00_SFX;
+        [SerializeField] AK.Wwise.Event P2MainDamage_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldBreak1_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldBreak2_00_SFX;
+        [SerializeField] AK.Wwise.Event P1ShieldBreak3_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldBreak1_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldBreak2_00_SFX;
+        [SerializeField] AK.Wwise.Event P2ShieldBreak3_00_SFX;
+        [SerializeField] AK.Wwise.Event P1BulletShieldAbsorb_00_SFX;
+        [SerializeField] AK.Wwise.Event P2BulletShieldAbsorb_00_SFX;
+        [SerializeField] GameObject textFeedback;
 
-        [SerializeField] GameObject floatingPoints;
-        [SerializeField] GameObject collisionPrefab;
-
-        GameObject previousEnemy = null;
-        bool combo2bullets = false;
+        int previousEnemyID = -1;
+        int comboIndex = 0;
 
         [Button("ADD SHIELD")]
         public void AddShield(Data.BulletType _shieldType = Data.BulletType.Blue)
@@ -67,17 +77,18 @@ namespace Nano.Player
                 case Data.BulletType.Red:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.red);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[0]);
-                    P1ShieldGet1_00_SFX.Post(gameObject);
+                    (player.playerData.PlayerID == 1 ? P1ShieldGet1_00_SFX : P2ShieldGet1_00_SFX).Post(gameObject);
+
                     break;
                 case Data.BulletType.Blue:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.blue);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[1]);
-                    P1ShieldGet2_00_SFX.Post(gameObject);
+                    (player.playerData.PlayerID == 1 ? P1ShieldGet2_00_SFX : P2ShieldGet2_00_SFX).Post(gameObject);
                     break;
                 case Data.BulletType.Green:
                     _newShield.shieldRenderer.material.SetColor("_Color", Color.green);
                     _newShield.shieldRenderer.material.SetTexture("_button_label_texture", inputSpriteList[2]);
-                    P1ShieldGet3_00_SFX.Post(gameObject);
+                    (player.playerData.PlayerID == 1 ? P1ShieldGet3_00_SFX : P2ShieldGet3_00_SFX).Post(gameObject);
                     break;
             }
             _newShield.shieldRenderer.material.SetFloat("_wiggle_seed", Random.Range(0.0f, 10.0f));
@@ -93,7 +104,7 @@ namespace Nano.Player
             _shield.shieldRenderer.material.DOFloat(0f, "_bubble_size", .1f);
             _shield.transform.DOScale(_shield.fixedScale - 2f, .1f).OnComplete(() =>
             {
-                _shield.shieldRenderer.material.DOColor(new Color(0,0,0,0), "_Color", .05f);
+                _shield.shieldRenderer.material.DOColor(new Color(0, 0, 0, 0), "_Color", .05f);
                 _shield.transform.DOScale(_shield.fixedScale + 5f, .05f).OnComplete(() =>
                 {
                     _shield.DOKill();
@@ -101,7 +112,16 @@ namespace Nano.Player
                     shieldCollider.radius = .5f;
                 });
             });
-            UpdateAllShields();
+            for (int i = 0; i < shieldList.Count; i++)
+            {
+                Shield _sizeFixShield = shieldList[i];
+                _sizeFixShield.fixedScale = maxShieldSize - shieldSizeAugmentation * i;
+                _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale + 0.3f, .3f).OnComplete(() =>
+                {
+                    _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale, .1f);
+                });
+                _sizeFixShield.shieldRenderer.material.DOFloat(i, "_bubble_angle", .2f);
+            }
         }
 
         public void BreakShield(Shield _shield)
@@ -116,11 +136,6 @@ namespace Nano.Player
                 Destroy(_shield.gameObject);
                 shieldCollider.radius = .5f;
             });
-            UpdateAllShields();
-        }
-
-        private void UpdateAllShields()
-        {
             for (int i = 0; i < shieldList.Count; i++)
             {
                 Shield _sizeFixShield = shieldList[i];
@@ -163,79 +178,98 @@ namespace Nano.Player
                 if (shieldList.Count == 0) //NO SHIELD
                 {
                     TakeDamage();
-                    _bullet.ExplodeBullet("Ouch!");
-                    previousEnemy = null;
-                    //DAMAGE ?
+                    _bullet.ExplodeBullet();
+                    DisplayFeedbackText("Ouch!");
+                    previousEnemyID = -1;
+                    comboIndex = 0;
+                    (player.playerData.PlayerID == 1 ? P1MainDamage_00_SFX : P2MainDamage_00_SFX).Post(gameObject);
                 }
                 else if (_bullet.bulletType == shieldList[0].shieldType) //GOOD SHIELD
                 {
                     DissolveShield(shieldList[0]);
+                    (player.playerData.PlayerID == 1 ? P1BulletShieldAbsorb_00_SFX : P2BulletShieldAbsorb_00_SFX).Post(gameObject);
+
+                    if (_bullet.ParentID != previousEnemyID)
+                    {
+                        comboIndex = 0;
+                    }
+
+                    previousEnemyID = _bullet.ParentID;
+                    comboIndex++;
+
+                    string feedbackToDisplay = "";
+
+                    //TODO DisplayText
+                    switch (comboIndex)
+                    {
+                        case 1:
+                            feedbackToDisplay = "Good";
+                            break;
+                        case 2:
+                            feedbackToDisplay = "Great";
+                            break;
+                        case 3:
+                            feedbackToDisplay = "Awesome !";
+                            break;
+                        case > 3:
+                            feedbackToDisplay = "Divine !";
+                            break;
+                        default:
+                            break;
+                    }
+
+                    DisplayFeedbackText(feedbackToDisplay);
+
+                    playerScore.IncreaseScoreHitNote(comboIndex);
 
                     if (_bullet.convertingBullet)
                     {
-                        if(GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy) && combo2bullets == true)
-                        {
-                            _bullet.BackToSender("Divine!");
-                            //Add anim enemy teleport out
-                            RecruitEnemy(_bullet, true);
-                            previousEnemy = null;
-                            combo2bullets = false;
-                        }
-                        else
-                        {
-                            _bullet.BackToSender("Awesome!");
-                            //Add anim enemy teleport out
-                            RecruitEnemy(_bullet);
-                            previousEnemy = null;
-                            combo2bullets = false;
-                        }
+                        string textToDisplay = "Rallied !";
+                        _bullet.BackToSender(textToDisplay);
+                        RecruitEnemy(_bullet, true);
                     }
                     else
                     {
-                        //Here check if it's the first bullet received from that enemy
-                        if (GameObject.ReferenceEquals(null, previousEnemy) || !GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy))
-                        {
-                            //SHOW JUICY SCORE
-                            _bullet.ExplodeBullet();
-                            gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote();
-                            previousEnemy = _bullet.GetParentEnemy();
-                        }
-                        //Combo 2
-                        else if (GameObject.ReferenceEquals(_bullet.GetParentEnemy(), previousEnemy) && combo2bullets == false)
-                        {
-                            //SHOW JUICY SCORE
-                            _bullet.ExplodeBullet("Good!");
-                            gameObject.GetComponent<PlayerScore>().IncreaseScoreHitNote(true);
-                            combo2bullets = true;
-                        }
+                        _bullet.ExplodeBullet();
                     }
 
                 }
                 else //WRONG SHIELD
                 {
-                    if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(0, 10);
+                    if (player.InputHandler.gamepad != null)
+                        player.InputHandler.gamepad.SetMotorSpeeds(0, 10);
+
                     DOVirtual.DelayedCall(.15f, () =>
                     {
                         if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(0, 0);
                     });
+
+                    switch (shieldList[0].shieldType)
+                    {
+                        case Data.BulletType.Red:
+                            (player.playerData.PlayerID == 1 ? P1ShieldBreak1_00_SFX : P2ShieldBreak1_00_SFX).Post(gameObject);
+                            break;
+                        case Data.BulletType.Blue:
+                            (player.playerData.PlayerID == 1 ? P1ShieldBreak2_00_SFX : P2ShieldBreak2_00_SFX).Post(gameObject);
+                            break;
+                        case Data.BulletType.Green:
+                            (player.playerData.PlayerID == 1 ? P1ShieldBreak3_00_SFX : P2ShieldBreak3_00_SFX).Post(gameObject);
+                            break;
+                    }
+
                     BreakShield(shieldList[0]);
-                    _bullet.ExplodeBullet("Ouch!");
-                    previousEnemy = null;
+                    _bullet.ExplodeBullet();
+                    DisplayFeedbackText("Ouch!");
+                    previousEnemyID = -1;
+                    comboIndex = 0;
+                    (player.playerData.PlayerID == 1 ? P1MainDamage_00_SFX : P2MainDamage_00_SFX).Post(gameObject);
                 }
             }
         }
 
-        private void OnCollisionEnter(Collision collision)
+        void DisplayFeedbackText(string textToDisplay)
         {
-            //Debug.Log(collision.gameObject.name);
-            //ShieldManager _shield = collision.gameObject.GetComponent<ShieldManager>();
-            //if (_shield != null)
-            //{
-            //    Debug.Log("SHIELD COLLISION");
-            //    ContactPoint _contact = collision.contacts[0];
-            //    GameObject _object = Instantiate(collisionPrefab, _contact.point, Quaternion.identity);
-            //    _object.GetComponentInChildren<SpriteRenderer>().color = shieldList[0].shieldRenderer.material.color;
-            //}
+            Instantiate(textFeedback, transform.position, Quaternion.Euler(0,0,Random.Range(-20f,20f)), transform).GetComponentInChildren<TextMeshPro>().text = textToDisplay;
         }
 
         private void RecruitEnemy(Bullet _bullet, bool combo3bullets = false)
@@ -249,17 +283,21 @@ namespace Nano.Player
         {
             spriteRenderer.material = damageMaterial;
             if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(10, 10);
-            DOVirtual.DelayedCall(.2f, () => {
+            DOVirtual.DelayedCall(.2f, () =>
+            {
                 spriteRenderer.material = basicMaterial;
                 DOVirtual.DelayedCall(.1f, () =>
                 {
                     if (player.InputHandler.gamepad != null) player.InputHandler.gamepad.SetMotorSpeeds(0, 0);
                     spriteRenderer.material = damageMaterial;
-                    DOVirtual.DelayedCall(.05f, () => {
+                    DOVirtual.DelayedCall(.05f, () =>
+                    {
                         spriteRenderer.material = basicMaterial;
-                        DOVirtual.DelayedCall(.05f, () => {
+                        DOVirtual.DelayedCall(.05f, () =>
+                        {
                             spriteRenderer.material = damageMaterial;
-                            DOVirtual.DelayedCall(.05f, () => {
+                            DOVirtual.DelayedCall(.05f, () =>
+                            {
                                 spriteRenderer.material = basicMaterial;
 
                             });

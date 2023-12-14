@@ -15,14 +15,26 @@ public class PlayerScore : MonoBehaviour
 
     public void IncreaseScoreAddBird(bool combo3bullets = false)
     {
-        if (combo3bullets) OnChangeScore(scoreIncrAddBird + scoreCombo3Bullets);
-        else OnChangeScore(scoreIncrAddBird);
+        OnChangeScore(scoreIncrAddBird);
     }
 
-    public void IncreaseScoreHitNote(bool combo2bullets = false)
+    public void IncreaseScoreHitNote(int comboIndex)
     {
-        if (combo2bullets) OnChangeScore(scoreIncrHitNote + scoreCombo2Bullets);
-        else OnChangeScore(scoreIncrHitNote);
+        switch (comboIndex)
+        {
+            case 1:
+                OnChangeScore(scoreIncrHitNote);
+                break;
+            case 2:
+                OnChangeScore(scoreCombo2Bullets);
+                break;
+            case >2:
+                OnChangeScore(scoreCombo3Bullets);
+                break;
+            default:
+                OnChangeScore(scoreIncrHitNote);
+                break;
+        }
     }
 
     public void DecreaseScoreRemoveBird()

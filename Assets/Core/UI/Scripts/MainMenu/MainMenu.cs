@@ -25,6 +25,7 @@ namespace Nano.UI
         [SerializeField] SimpleScreen creditsScreen;
         [SerializeField] OptionsMenu optionsScreen;
         [SerializeField] List<Selectable> availableButtons;
+        [SerializeField] AK.Wwise.Event BGM_Title;
 
         Selectable selectedOption;
 
@@ -33,7 +34,7 @@ namespace Nano.UI
 
         public static event Action OnStartButtonClicked;
 
-        void Awake()
+        void Start()
         {
             startButton.onClick.AddListener(StartButton);
             tutorialButton.onClick.AddListener(TutorialButton);
@@ -43,6 +44,8 @@ namespace Nano.UI
             optionsScreen.CheckPlayerPrefsInitiated();
             ShowMainMenu();
             SelectNewOption(0);
+            Time.timeScale = 1;
+            BGM_Title.Post(gameObject);
         }
 
         private void OnDestroy()
@@ -58,6 +61,7 @@ namespace Nano.UI
         {
             if (!isMenuShown)
                 return;
+            BGM_Title.Stop(gameObject);
             OnStartButtonClicked?.Invoke();
             HideMainMenu();
         }

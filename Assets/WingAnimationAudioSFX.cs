@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PostWwiseEvent : MonoBehaviour
 {
-    [SerializeField] AK.Wwise.Event WingFlap_00_SFX;
+    public AK.Wwise.Event WingFlap_00_SFX;
     
-    // Use this for initialization.
+    
     public void PlayWingSound()
     {
         WingFlap_00_SFX.Post(gameObject);

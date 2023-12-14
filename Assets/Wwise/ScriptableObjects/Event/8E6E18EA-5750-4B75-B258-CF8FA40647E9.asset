@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5665bb1c4e8198443bab8f809a9caa2b, type: 3}
-  m_Name: 3787F569-4EF5-4C38-838C-22715EB8AFCC
+  m_Name: 8E6E18EA-5750-4B75-B258-CF8FA40647E9
   m_EditorClassIdentifier: 
-  objectName: BGM_Test
-  id: 3438580564
-  guid: 3787F569-4EF5-4C38-838C-22715EB8AFCC
+  objectName: BGM_Title
+  id: 737535402
+  guid: 8E6E18EA-5750-4B75-B258-CF8FA40647E9

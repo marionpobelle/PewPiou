@@ -5,7 +5,6 @@ using Nano.Data;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using TMPro;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 
 namespace Nano.Combat
 {
@@ -24,6 +23,7 @@ namespace Nano.Combat
         public BulletType bulletType;
         Vector3 bulletDir;
         GameObject parentEnemy;
+        int parentID;
         bool backToSender = false;
         public bool convertingBullet = false;
         public bool hasCollided = false;
@@ -34,8 +34,10 @@ namespace Nano.Combat
         [SerializeField] AK.Wwise.Event EnemyNote1_00_SFX;
         [SerializeField] AK.Wwise.Event EnemyNote2_00_SFX;
         [SerializeField] AK.Wwise.Event EnemyNote3_00_SFX;
-
+        [SerializeField] AK.Wwise.Event SpecialBullet_00_SFX;
         [SerializeField] GameObject floatingPoints;
+
+        public int ParentID { get => parentID; set => parentID = value; }
 
         public void Init(Vector3 dir, float speed)
         {
@@ -62,9 +64,13 @@ namespace Nano.Combat
             }
             if (convertingBullet)
             {
+
+                //MagicBullet.Post
+                SpecialBullet_00_SFX.Post(gameObject);
                 bulletRenderer.material.SetFloat("_lastbullet", 1.0f);
                 specialParticleSystem.gameObject.SetActive(true);
-            } else
+            }
+            else
             {
                 bulletRenderer.material.SetFloat("_lastbullet", 0f);
                 specialParticleSystem.gameObject.SetActive(false);
@@ -75,6 +81,7 @@ namespace Nano.Combat
         public void SetParentEnemy(GameObject enemy)
         {
             parentEnemy = enemy;
+            ParentID = enemy.GetInstanceID();
         }
 
         public GameObject GetParentEnemy()
@@ -85,7 +92,7 @@ namespace Nano.Combat
         private void FixedUpdate()
         {
             if (backToSender) return;
-            rb.velocity = bulletDir * bulletSpeed;   
+            rb.velocity = bulletDir * bulletSpeed;
         }
 
         public void BackToSender(string textHit)
@@ -96,7 +103,8 @@ namespace Nano.Combat
             spriteRenderer.transform.DORotate(new Vector3(0, 0, 180), .2f);
             transform.DOMove(parentEnemy.transform.position, .4f).OnComplete(() =>
             {
-                Destroy(parentEnemy.gameObject);
+                if (parentEnemy != null)
+                    Destroy(parentEnemy.gameObject);
                 ExplodeBullet(textHit);
             });
         }
@@ -104,10 +112,13 @@ namespace Nano.Combat
         public void ExplodeBullet(string textHit = " ")
         {
             Instantiate(hitEffect, gameObject.transform.position, Quaternion.identity);
-            GameObject points = Instantiate(floatingPoints, parentEnemy.transform.position, Quaternion.identity) as GameObject;
-            TextMeshPro pointText = points.transform.GetChild(0).GetComponent<TextMeshPro>();
+            if (parentEnemy != null)
+            {
+                GameObject points = Instantiate(floatingPoints, parentEnemy.transform.position, Quaternion.identity) as GameObject;
+                TextMeshPro pointText = points.transform.GetComponentInChildren<TextMeshPro>();
+                pointText.SetText(textHit);
+            }
 
-           pointText.SetText(textHit);
             transform.DOScale(1.7f, .2f).OnComplete(() =>
             {
                 GetComponent<Collider>().enabled = false;
