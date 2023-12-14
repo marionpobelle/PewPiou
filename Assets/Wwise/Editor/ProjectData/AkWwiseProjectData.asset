@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 15be22d0e294f44ba968902040c01d1a
     GuidInternal: 
-    m_lastTime: -8584991027083028760
+    m_lastTime: -8584990622720502967
     List:
     - name: BGM
       guid: fe3bfec838fdf04fb9d695f3ce6366e1
@@ -157,7 +157,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fa12e6d2938f424d8a372d986358cf9f
     GuidInternal: 
-    m_lastTime: -8584991182281418935
+    m_lastTime: -8584990622710398023
     List:
     - name: NanoSoundbank
       guid: be919c1646030c42a6dd5d023f51402d
@@ -185,7 +185,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
     GuidInternal: 
-    m_lastTime: -8584990663483344923
+    m_lastTime: -8584990619330480605
     List:
     - name: BGM_Main
       guid: 355191ed2057184780ca51669d3af036
@@ -204,6 +204,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 206.76926
       minDuration: 206.76926
+    - name: BGM_stopall
+      guid: bffbba8f6715264293b8432681156414
+      id: 1921276897
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
+      - ElementName: BGM_stopall
+        ObjectType: 3
+        guid: bffbba8f6715264293b8432681156414
+      Path: Events\Default Work Unit\BGM_stopall
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: BGM_Title
       guid: ea186e8e5057754bb258cf8fa40647e9
       id: 737535402
@@ -845,7 +862,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f327d2b9819f5c4f9a811460bd761a28
     GuidInternal: 
-    m_lastTime: -8584991021570993769
+    m_lastTime: -8584990622725908095
     List:
     - name: BGM_RTPC_SLIDER_VALUE
       guid: d9a0060504de4441acb8ad17d1f2d100
