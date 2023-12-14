@@ -185,7 +185,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b334ec28fc1e7c46ab2e205ab2fa3f4f
     GuidInternal: 
-    m_lastTime: -8584991022062376661
+    m_lastTime: -8584990663483344923
     List:
     - name: BGM_Main
       guid: 355191ed2057184780ca51669d3af036
@@ -202,8 +202,8 @@ MonoBehaviour:
         guid: 355191ed2057184780ca51669d3af036
       Path: Events\Default Work Unit\BGM_Main
       maxAttenuation: 0
-      maxDuration: 180.92308
-      minDuration: 180.92308
+      maxDuration: 206.76926
+      minDuration: 206.76926
     - name: BGM_Title
       guid: ea186e8e5057754bb258cf8fa40647e9
       id: 737535402

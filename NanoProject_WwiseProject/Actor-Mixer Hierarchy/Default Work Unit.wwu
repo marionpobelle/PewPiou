@@ -2610,7 +2610,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3209,6 +3209,36 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
+						<Sound Name="BGM_Title" ID="{57C71B20-26AF-460D-831C-1C967E87EEBD}" ShortID="905748340">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0F28F5A2-577E-4ED8-B2D6-D73AADBEEE6D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BGM" ID="{C8FE3BFE-FD38-4FF0-B9D6-95F3CE6366E1}" WorkUnitID="{D022BE15-94E2-4BF4-A968-902040C01D1A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BGM_Title" ID="{80E063C3-66C6-4843-AEB9-2D750AB47453}">
+									<Language>SFX</Language>
+									<AudioFile>BGM_Title.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="526674828"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BGM_Title" ID="{80E063C3-66C6-4843-AEB9-2D750AB47453}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<ActorMixer Name="PROJECTILES" ID="{E03A67EC-FE7D-4419-ACB4-11591CFBA897}" ShortID="1056528126">
