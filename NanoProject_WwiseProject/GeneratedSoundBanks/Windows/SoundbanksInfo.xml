@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BDF33895-0EC3-DF06-D8FF-9718CB2A5E62}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{498FF5A9-836A-270A-AEF2-5E0FC59E8AB1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -63,7 +63,7 @@
 				<GameParameter Id="3969718864" Name="pauseBGMRTPC"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{B20A0513-EC09-E7C5-863C-47D14C9233E2}">
+		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{B856DA95-8B0F-F0EE-4DE6-C4F812A44C38}">
 			<ShortName>NanoSoundbank</ShortName>
 			<Path>NanoSoundbank.bnk</Path>
 			<Media>
@@ -150,6 +150,10 @@
 				<File Id="519196225" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_RC_Player_BulletShieldAbsorb_var1_v1.wav</ShortName>
 					<CachePath>SFX/SFX_RC_Player_BulletShieldAbsorb_var1_v1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="526674828" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM_Title.wav</ShortName>
+					<CachePath>SFX/BGM_Title_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="563089845" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_RC_Player_BulletShieldAbsorb_var5_v1.wav</ShortName>
@@ -301,14 +305,14 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2633060887" Name="BGM_Main" DurationType="OneShot" DurationMin="180.92308" DurationMax="180.92308">
+				<Event Id="2633060887" Name="BGM_Main" DurationType="OneShot" DurationMin="206.76926" DurationMax="206.76926">
 					<MediaRefs>
 						<MediaRef Id="189768762"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="737535402" Name="BGM_Title" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="426248841"/>
+						<MediaRef Id="526674828"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1390461277" Name="CollideShield_00_SFX" DurationType="OneShot" DurationMin="0.32572916" DurationMax="0.51558334">
@@ -582,5 +586,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{21C3F1C9-FFE9-5467-F205-1E88E2C71B83}</FileHash>
+	<FileHash>{E1ABC3CE-B838-CB0D-5F9B-411095C21D5A}</FileHash>
 </SoundBanksInfo>
