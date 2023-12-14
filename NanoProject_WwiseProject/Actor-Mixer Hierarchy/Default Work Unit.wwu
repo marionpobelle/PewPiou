@@ -2856,6 +2856,11 @@
 										<Value>-4</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2939,6 +2944,11 @@
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -4999,6 +5009,11 @@
 				</ActorMixer>
 				<RandomSequenceContainer Name="SFX_RC_Player_SpecialBullet" ID="{9F8A41C6-DD32-48E8-BA68-AA1F452A1EE8}" ShortID="77223213">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>

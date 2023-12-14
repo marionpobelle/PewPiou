@@ -63,7 +63,7 @@
 				<GameParameter Id="3969718864" Name="pauseBGMRTPC"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{2CE3E561-D976-0690-704D-98EDD8674E1C}">
+		<SoundBank Id="4040659406" Type="User" Language="SFX" Hash="{53F32DB4-B17A-93EF-55CF-75D2F645282D}">
 			<ShortName>NanoSoundbank</ShortName>
 			<Path>NanoSoundbank.bnk</Path>
 			<Media>
@@ -587,5 +587,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D2E4E5A1-C0F9-F0B7-EFF9-C761CDBC8D76}</FileHash>
+	<FileHash>{D5B1856F-E4C6-4828-1454-8D588D0802B7}</FileHash>
 </SoundBanksInfo>
