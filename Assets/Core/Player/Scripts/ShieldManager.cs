@@ -24,6 +24,7 @@ namespace Nano.Player
         [SerializeField] float shieldSizeAugmentation;
         [SerializeField] float shieldResetTime;
         [SerializeField] float maxShieldSize;
+        [SerializeField] float shieldCollisionAngleOffset;
         float shieldTimer;
         [SerializeField] int maxNumberShield;
         List<Shield> shieldList = new List<Shield>();
@@ -45,6 +46,7 @@ namespace Nano.Player
         [SerializeField] AK.Wwise.Event P1BulletShieldAbsorb_00_SFX;
         [SerializeField] AK.Wwise.Event P2BulletShieldAbsorb_00_SFX;
         [SerializeField] GameObject textFeedback;
+        [SerializeField] GameObject collisionPrefab;
 
         int previousEnemyID = -1;
         int comboIndex = 0;
@@ -109,19 +111,9 @@ namespace Nano.Player
                 {
                     _shield.DOKill();
                     Destroy(_shield.gameObject);
-                    shieldCollider.radius = .5f;
                 });
             });
-            for (int i = 0; i < shieldList.Count; i++)
-            {
-                Shield _sizeFixShield = shieldList[i];
-                _sizeFixShield.fixedScale = maxShieldSize - shieldSizeAugmentation * i;
-                _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale + 0.3f, .3f).OnComplete(() =>
-                {
-                    _sizeFixShield.transform.DOScale(_sizeFixShield.fixedScale, .1f);
-                });
-                _sizeFixShield.shieldRenderer.material.DOFloat(i, "_bubble_angle", .2f);
-            }
+            UpdateAllShield();
         }
 
         public void BreakShield(Shield _shield)
@@ -134,8 +126,12 @@ namespace Nano.Player
             {
                 _shield.DOKill();
                 Destroy(_shield.gameObject);
-                shieldCollider.radius = .5f;
             });
+            UpdateAllShield();
+        }
+
+        private void UpdateAllShield()
+        {
             for (int i = 0; i < shieldList.Count; i++)
             {
                 Shield _sizeFixShield = shieldList[i];
@@ -146,6 +142,7 @@ namespace Nano.Player
                 });
                 _sizeFixShield.shieldRenderer.material.DOFloat(i, "_bubble_angle", .2f);
             }
+            if (shieldList.Count == 0) shieldCollider.radius = .5f;
         }
 
         [Button("REMOVE ALL SHIELDS")]
@@ -266,6 +263,28 @@ namespace Nano.Player
                 }
             }
         }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            Debug.Log(collision.gameObject.name);
+            ShieldManager _shield = collision.gameObject.GetComponent<ShieldManager>();
+            if (_shield != null && shieldList.Count > 0 && _shield.shieldList.Count > 0)
+            {
+                ContactPoint _contact = collision.contacts[0];
+                GameObject _object = Instantiate(collisionPrefab, _contact.point, Quaternion.identity);
+                //_object.GetComponentInChildren<SpriteRenderer>().color = shieldList[0].shieldRenderer.material.color;
+                float angle = -(Vector2.SignedAngle(_shield.transform.position - transform.position, Vector2.up) * (Mathf.PI * 2)) / 360 ;
+                shieldList[0].shieldRenderer.material.SetFloat("_anglewiggle_angle", angle - shieldCollisionAngleOffset);
+                if (shieldList.Count > 0)
+                {
+                    shieldList[0].shieldRenderer.material.DOFloat(1, "_anglewiggle_size", .5f).OnComplete(() =>
+                    {
+                        shieldList[0].shieldRenderer.material.DOFloat(0, "_anglewiggle_size", .2f);
+                    });
+                }
+            }
+        }
+
 
         void DisplayFeedbackText(string textToDisplay)
         {
