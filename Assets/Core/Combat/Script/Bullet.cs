@@ -106,7 +106,8 @@ namespace Nano.Combat
                bulletRenderer.transform.DOScale(new Vector3(bulletRenderer.transform.localScale.x * 2.2f, bulletRenderer.transform.localScale.y * 2.2f, bulletRenderer.transform.localScale.z * 2.2f), .1f);
             });
             specialParticleSystem.gameObject.SetActive(false);
-            transform.DOMove(parentEnemy.transform.position, .8f).OnComplete(() =>
+            float _bulletTravelTime = Vector3.Distance(parentEnemy.transform.position, transform.position) / bulletSpeed/4;
+            transform.DOMove(parentEnemy.transform.position, _bulletTravelTime).OnComplete(() =>
             {
                 if (parentEnemy != null)
                     Destroy(parentEnemy.gameObject);
