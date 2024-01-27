@@ -8,6 +8,7 @@ To do so, you must converse with the birds you encounter during your trip and co
 Find Pew Piou on Itch.io: [Pew Piou](https://skrimsly.itch.io/pew-piou).
 
 _______________________________________________________________________________________________________
+
 # Features
 
 Each player can manipulate their bird in different ways:
@@ -16,6 +17,7 @@ Each player can manipulate their bird in different ways:
 - Deploying waves that absorb and deflect enemies notes.
 - Rallying birds to your flock, showing your opponent which one of you is the lord of the skies
 _______________________________________________________________________________________________________
+
 # How to Play
 
 Each player's goal is to rally more birds to their flock than their competitive player.
