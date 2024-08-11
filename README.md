@@ -17,7 +17,6 @@ Each bird encountered will start the conversation by sending a series of notes r
 The players can each accumulate a total of 3 waves, if they wish to anticipate the incoming notes rather than relying on their reflexes. The player can push each other to steal their targets.
 
 The most notes you gather from one same bird, the more points you'll get. The player that recruited the most allies for its flock to win the competition.
-_______________________________________________________________________________________________________
 
 ### Controls
 
