@@ -40,28 +40,6 @@ It was realized in 4 days as part of our Master's degree curriculum at CNAM-ENJM
 
 [Pew Piou - TRAILER](https://www.youtube.com/watch?v=-s2jMla5faw)
 
-## Team
-
-🎵 Sound : [Mattéo BLIVET](https://mblivet.itch.io/)
-
-🎲 Game Design : [Gabriel DUCRAY](https://itch.io/profile/balbadur)
-
-🎲 Game Design : [Camille MISBACH](https://itch.io/profile/peanumi)
-
-🖌️ Visuals : [Anaïs DUBART](https://anaisdubart.itch.io/)
-
-🖌️ Visuals : [Benjamin PHILIPPOT](https://ben-phi.itch.io/)
-
-💻 Developer : [Alvina DAMASIO-RAZAFIARIZAKA](https://alvina-dr.itch.io/)
-
-💻 Developer : [Louis VOGEL](https://louis-vogel.itch.io/)
-
-💻 Developer : [Marion POBELLE](https://vitaminexe.itch.io/)
-
-👔 Project Manager : [Gaïa BROILLIARD](https://skrimsly.itch.io/)
-
-🧠 UX Designer : [Jessica TESO](https://itch.io/profile/meliastrale)
-
 ## Features  
   
 - [x] CONTROLLER
@@ -86,3 +64,25 @@ It was realized in 4 days as part of our Master's degree curriculum at CNAM-ENJM
 - [x] AUDIO
 - - [x] SFX
 - - [x] Music
+        
+## Team
+
+🎵 Sound : [Mattéo BLIVET](https://mblivet.itch.io/)
+
+🎲 Game Design : [Gabriel DUCRAY](https://itch.io/profile/balbadur)
+
+🎲 Game Design : [Camille MISBACH](https://itch.io/profile/peanumi)
+
+🖌️ Visuals : [Anaïs DUBART](https://anaisdubart.itch.io/)
+
+🖌️ Visuals : [Benjamin PHILIPPOT](https://ben-phi.itch.io/)
+
+💻 Developer : [Alvina DAMASIO-RAZAFIARIZAKA](https://alvina-dr.itch.io/)
+
+💻 Developer : [Louis VOGEL](https://louis-vogel.itch.io/)
+
+💻 Developer : [Marion POBELLE](https://vitaminexe.itch.io/)
+
+👔 Project Manager : [Gaïa BROILLIARD](https://skrimsly.itch.io/)
+
+🧠 UX Designer : [Jessica TESO](https://itch.io/profile/meliastrale)
