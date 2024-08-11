@@ -24,7 +24,7 @@ The most notes you gather from one same bird, the more points you'll get. The pl
 
 ## Development
 
-Thisgame was made using [Unity](https://unity.com/fr).
+This game was made using [Unity](https://unity.com/fr).
 
 It was realized in 4 days as part of our Master's degree curriculum at CNAM-ENJMIN with the following constraints: it had to be a shoot'em up with 2 players, using only 5 inputs in total and the interactive experience must last for 3 minutes.
 
